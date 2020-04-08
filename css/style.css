@@ -22,7 +22,7 @@ and (max-device-width : 1000px)
   width: 100%;
      padding-bottom: 20px;
 }
-   header {
+   #logo {
    font-size: 13px;
    }
 }

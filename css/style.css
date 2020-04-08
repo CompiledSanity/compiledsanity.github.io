@@ -21,6 +21,9 @@ and (max-device-width : 1000px)
   float: left;
   width: 100%;
 }
+   header {
+   font-size: 13px;
+   }
 }
 
 /* Clear floats after the columns */

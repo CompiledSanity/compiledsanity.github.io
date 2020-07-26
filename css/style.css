@@ -14,15 +14,15 @@
   width: 33.33%;
 }
 
-@media (max-width: 800px) {
-  #accordionExample {
-    max-width: 95%;
-  }
-}
-
 #accordionExample {
     max-width: 70%;
   }
+
+@media (max-width: 860px) {
+  #accordionExample {
+    max-width: 100%;
+  }
+}
 
 #pricing .block-pricing {
  border-radius: 8px; 

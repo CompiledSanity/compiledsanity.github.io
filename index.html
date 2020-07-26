@@ -439,129 +439,127 @@
 
     <div class="container" style="width: 70%;">
       <div class="accordion" id="faqaccordian">
+        
         <div class="card">
-          <div class="card-header" id="headingOne">
+          <div class="card-header" id="headingTwo">
             <h2 class="mb-0">
-              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 How do I manage DRP and Assets purchased through DRP?
+                </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              Distributions that are reinvested need to be entered as new units in the ETF/Stocks tab manually just as you would a normal ETF/Stock purchase. The key difference being that the brokerage is now $0, so overwrite what's in the brokerage Column and set this to $0. To determine the price and number of units purchased, you will need to confirm this with Sharesight or your Broker statement to be confirm these amounts.
+              </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Why do my brokerage amounts always change between 1x and 2x brokerage amounts?
               </button>
             </h2>
           </div>
-
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body">
-              Distributions that are reinvested need to be entered as new units in the ETF/Stocks tab manually just as you would a normal ETF/Stock purchase. The key difference being that the brokerage is now $0, so overwrite what's in the brokerage Column and set this to $0. To determine the price and number of units purchased, you will need to confirm this with Sharesight or your Broker statement to be confirm these amounts.
+              The Brokerage in the Template is based upon the logic that there is always 2x brokerage for your first purchase of a holding (buy/later sell) and then 1x brokerage for all purchases of that holding thereafter (only buy, as you'll likely eventually sell in 1 big batch under one parcel).
             </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Why do my brokerage amounts always change between 1x and 2x brokerage amounts?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-          <div class="card-body">
-            The Brokerage in the Template is based upon the logic that there is always 2x brokerage for your first purchase of a holding (buy/later sell) and then 1x brokerage for all purchases of that holding thereafter (only buy, as you'll likely eventually sell in 1 big batch under one parcel).
+
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                How do I use the tool if I'm paid fortnightly?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              First off, in the SheetOptions tab set your pay Cycle to fornightly and update your fornightly pay value. This will help the Template understand your monthly pay. When it comes to the Sheet however, all calculations are strictly performed in the month timescale. This is to enable a lot of date functions to work on a standardized timescale. So tracking and statistics will be performed at the monthly time scale.
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              How do I use the tool if I'm paid fortnightly?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-          <div class="card-body">
-            First off, in the SheetOptions tab set your pay Cycle to fornightly and update your fornightly pay value. This will help the Template understand your monthly pay. When it comes to the Sheet however, all calculations are strictly performed in the month timescale. This is to enable a lot of date functions to work on a standardized timescale. So tracking and statistics will be performed at the monthly time scale.
+
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                I get paid irregular amounts, how do I account for that?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+              2 ways. Either a) Enter in an average figure that you are comfortable with or b) Set your Salary to $0 and enter all your income into the Side Income tab. This was designed for irregular amounts and will automatically feed an averaged value into the rest of the Template.
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-header" id="headingFour">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              I get paid irregular amounts, how do I account for that?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-          <div class="card-body">
-            2 ways. Either a) Enter in an average figure that you are comfortable with or b) Set your Salary to $0 and enter all your income into the Side Income tab. This was designed for irregular amounts and will automatically feed an averaged value into the rest of the Template.
+
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                How do I know my Data is kept private?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              A very valid question! I've designed the Sheet to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg. You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only information needed is amounts and holdings, nothing else and this information is only held by you.
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-header" id="headingFive">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              How do I know my Data is kept private?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-          <div class="card-body">
-            A very valid question! I've designed the Sheet to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg. You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only information needed is amounts and holdings, nothing else and this information is only held by you.
+
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                How do I track with my partner?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+            <div class="card-body">
+              You'll either have to combine finances for the purposes of this Template or seperate your Sheets. There is no way for the Template to know what belongs to who :-)
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-header" id="headingSix">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-              How do I track with my partner?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-          <div class="card-body">
-            You'll either have to combine finances for the purposes of this Template or seperate your Sheets. There is no way for the Template to know what belongs to who :-)
+
+        <div class="card">
+          <div class="card-header" id="headingSeven">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                How do I migrate data between sheets?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+            <div class="card-body">
+              Please see the Migration Instructions tab in the Template as this may vary from version to version.
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-header" id="headingSeven">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-              How do I migrate data between sheets?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-          <div class="card-body">
-            Please see the Migration Instructions tab in the Template as this may vary from version to version.
+
+        <div class="card">
+          <div class="card-header" id="headingEight">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                How do I enter my own Historical data into a new Sheet?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+            <div class="card-body">
+              Starting in the History tab in Cell A2 and proceeding downwards, add in the ascending dates for all your prior months. Then add in the corresponding asset values for these months. The current month should automatically shift down as you go.
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-header" id="headingEight">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-              How do I enter my own Historical data into a new Sheet?
-            </button>
-          </h2>
-        </div>
-        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
-          <div class="card-body">
-            Starting in the History tab in Cell A2 and proceeding downwards, add in the ascending dates for all your prior months. Then add in the corresponding asset values for these months. The current month should automatically shift down as you go.
-          </div>
-        </div>
-      </div>
-    
-      
+      </div>    
     </div>
 
   </section>

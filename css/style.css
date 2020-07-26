@@ -14,6 +14,13 @@
   width: 33.33%;
 }
 
+#faqaccordian .btn {
+ color: #007bff !important;
+ font-size: 13px !important;
+ border: 0px !important;
+ padding: 0px 40px !important;
+}
+
 @media only screen 
 and (max-device-width : 1000px) 
  {

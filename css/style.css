@@ -29,6 +29,8 @@ section#changelog li {
     letter-spacing: 0px;
     line-height: 27px;
     text-align: left;
+    list-style-position: inside;
+    text-indent: -1.5em;
 }
 
 section#changelog .column_thirds{

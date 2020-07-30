@@ -25,6 +25,10 @@
   }
 }
 
+section#changelog li {
+    letter-spacing: 0px;
+}
+
 #pricing .block-pricing {
  border-radius: 8px; 
 }

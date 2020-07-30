@@ -27,6 +27,12 @@
 
 section#changelog li {
     letter-spacing: 0px;
+    line-height: 27px;
+    text-align: left;
+}
+
+section#changelog .column_thirds{
+    padding: 14px;
 }
 
 #pricing .block-pricing {

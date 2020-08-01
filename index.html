@@ -546,7 +546,28 @@
               A very valid question! I've designed the Sheet to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg. 
               </br>
               </br>
-              You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, no personally identifying information is needed or requested.
+              You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                How do I enter in a missed month?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              To backfill data for missed months, follow the below:
+                <li>In the History tab, enter in the dates you want to backfill for your recorded your data in Column A, in the correct ordering for your other months. <b>NOTE:</b> Do not Insert a new row. Simply make use of the rows already in the Sheet.</li>
+                <li>Proceed filling out the Asset values for these months, updating the <b>blue</b> columns only.</li>
+                <li>The current month should automatically shift down and have live data as you insert more months.</li>
+              </br>
+              </br>
+              You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed.
             </div>
           </div>
         </div>

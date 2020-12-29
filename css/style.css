@@ -730,7 +730,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 #features .feature-block {
   background: #fff none repeat scroll 0 0;
-  padding: 30px 20px;
+  padding: 25px 15px;
   margin-bottom: 30px;
   transition: all 0.5s ease-in-out 0s;
 }

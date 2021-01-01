@@ -479,6 +479,8 @@
     <div class="container">
       <div class="accordion" id="accordionExample">
         
+        <h3>Using the Sheet</h3>
+        
         <div class="card">
           <div class="card-header" id="headingEight">
             <h2 class="mb-0">
@@ -499,7 +501,25 @@
             </div>
           </div>
         </div>
-        
+
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                How do I know my Data is kept private?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg. 
+              </br>
+              </br>
+              You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your Networth & associated performance.
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <div class="card-header" id="headingSeven">
             <h2 class="mb-0">
@@ -510,26 +530,34 @@
           </div>
           <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
             <div class="card-body">
-              Please see the Migration Instructions tab in the Template as this may vary from version to version.
+              As of v2.9 a new Automated Migration Tool will now handle all Sheet migrations and updates for you.
             </div>
           </div>
         </div>
-        
+
         <div class="card">
-          <div class="card-header" id="headingOne">
+          <div class="card-header" id="headingNine">
             <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                How do I manage DRP and Assets purchased through DRP?
-                </button>
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                How do I enter in a missed month?
+              </button>
             </h2>
           </div>
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
             <div class="card-body">
-              Distributions that are reinvested need to be entered as new units in the ETF/Stocks tab manually just as you would a normal ETF/Stock purchase. The key difference being that the brokerage is now $0, so overwrite what's in the brokerage Column and set this to $0. To determine the price and number of units purchased, you will need to confirm this with Sharesight or your Broker statement to be confirm these amounts.
-              </div>
+              To backfill data for missed months, follow the below:
+                </br>
+                1.  In the History tab in Column A, enter in the date you want to backfill in the correct ordering compared to your existing months. If this is your first time running the Sheet, simply write in the date missed into Cell A3.
+                </br>    
+                <b>NOTE:</b><i> Do not Insert a new row. Simply make use of the rows already in the Sheet.</i>
+                </br>
+                2.  Proceed filling out the Asset values for the new month, updating the <b>blue</b> columns only.
+                </br>
+                3.  Done! The Date Column should automatically adapt and the current month should automatically shift down.
+            </div>
           </div>
         </div>
-        
+
         <div class="card">
           <div class="card-header" id="headingThree">
             <h2 class="mb-0">
@@ -560,11 +588,13 @@
           </div>
         </div>
 
+        <h3>Personal Circumstances</h3>
+
         <div class="card">
           <div class="card-header" id="headingFour">
             <h2 class="mb-0">
               <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                I get paid irregular amounts, how do I account for that?
+                I'm paid irreguarly or with irregular amounts, how do I account for that?
               </button>
             </h2>
           </div>
@@ -580,43 +610,17 @@
         </div>
 
         <div class="card">
-          <div class="card-header" id="headingFive">
+          <div class="card-header" id="headingOne">
             <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                How do I know my Data is kept private?
-              </button>
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                How do I manage DRP and Assets purchased through DRP?
+                </button>
             </h2>
           </div>
-          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-              A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg. 
-              </br>
-              </br>
-              You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your Networth & associated performance.
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingNine">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                How do I enter in a missed month?
-              </button>
-            </h2>
-          </div>
-          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
-            <div class="card-body">
-              To backfill data for missed months, follow the below:
-                </br>
-                1.  In the History tab in Column A, enter in the date you want to backfill in the correct ordering compared to your existing months. If this is your first time running the Sheet, simply write in the date missed into Cell A3.
-                </br>    
-                <b>NOTE:</b><i> Do not Insert a new row. Simply make use of the rows already in the Sheet.</i>
-                </br>
-                2.  Proceed filling out the Asset values for the new month, updating the <b>blue</b> columns only.
-                </br>
-                3.  Done! The Date Column should automatically adapt and the current month should automatically shift down.
-            </div>
+              Distributions that are reinvested need to be entered as new units in the ETF/Stocks tab manually just as you would a normal ETF/Stock purchase. The key difference being that the brokerage is now $0, so overwrite what's in the brokerage Column and set this to $0. To determine the price and number of units purchased, you will need to confirm this with Sharesight or your Broker statement to be confirm these amounts.
+              </div>
           </div>
         </div>
 
@@ -634,6 +638,7 @@
             </div>
           </div>
         </div>
+
 
       </div>    
     </div>

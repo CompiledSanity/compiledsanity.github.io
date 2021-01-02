@@ -24,6 +24,15 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/cssbox.css" rel="stylesheet">
+  
+  <style>
+      li {
+        text-align: left !important;
+      }
+  </style>
+  
+  text-align: left;
+  
 </head>
 
 <body>
@@ -92,15 +101,30 @@
       <br>
       <h3><b>v2.8</b></h3>
           <h4>12th July 2020</h4>
-            <li>Support for Generic Assets (Physical Gold, Cars etc.)</li>
-            <li>Brand new Crypto Tab - Full Transaction support like ETFs/Stocks/MF</li>
-            <li>Massively improved Stock/ETF support for wider range of tickers, less errors and more robust Live Price fetching</li>
-            <li>Hardening against errors from external sources interfering with Calculations in the Sheet</li>
-            <li>Fix to End of Month Script not writing to Sheet correctly</li>
-            <li>Lots of formula fixes/optimisations throughout Template</li> 
-            <li>Numerous user-reported bug fixes providing fixes to closing the end of the month and other important fixes throughout the sheet</li>
-            <li>Budget Sheet Improvements</li>
-            <li>A number of minor bug-fixes, see changelog inside for info</li>
+            <b>New Features</b><br>
+              <li>New Tracker for all your Generic Assets, see the new "Other Assets" tab</li>
+              <li>Massively improved Stock/ETF support for wider range of tickers and more robust Live Price fetching</li>
+              <li>Overhauled Crypto sheet to include full buy/sell support and performance tracking. NOTE: This is only supported in FIAT pairs, not Crypto-Crypto transactions. Please convert your Crypto-Crypto transactions to your Sheet base currency if needed.</li>
+              <li>Crypto purchases now included in Added investments</li>
+              <li>Added settings around House Deposit % targets and investment contribution allocation</li>
+              <li>Managed Funds & Liability progress now added to Monthly Email update</li>
+              <li>Hardening against errors from external sources interfering with Calculations in the Sheet</li>
+              <li>Converted Auto-brokerage columns into user-input columns</li>
+            <b>Bug fixes:</b><br>
+              <li>Fixes to Debt table in Net Worth tab not showing current past debt</li>
+              <li>Fixes to History Sheet if a month is missed in recording result in no data being written into the sheet</li>
+              <li>Fixed second issue where data was not being written into the Sheet</li>
+              <li>Removed need for day of month paid requirement</li>
+              <li>Performance improvements through optimisation of formulas</li>
+              <li>Fixes to House Deposit Savings calculations</li>
+              <li>Fixes to Managed Funds Graphs and History values</li>
+              <li>Fixes to Market return calculations in Investment Calculator</li>
+              <li>Fixes to lots of protected ranges not being applied correctly</li>
+              <li>Fixes to certain Funds (ie. ASX:BBOZ & ASX:BBUS) not showing correctly</li>
+              <li>Fixed issue with Dividends not filtering to current Financial Year</li>
+              <li>Fixes to Net Worth calculations not showing</li>
+              <li>Fixes to incorrect Values being reported in Progress emails</li>
+              <li>Fixes to Crypto Ticker errors</li>
       <br>
       <br>
        <h3><b>v2.7</b></h3>
@@ -119,7 +143,37 @@
             <li>General Code & Sheet optimisations & cleanup</li>
             <li>Bug fixes for monthly write process</li>
             <li>Fixes to Networth update script to increase ease of use</li>
-      
+      <br>
+      <br>
+      <h3><b>v2.6</b></h3>
+          <h4>3rd March 2020</h4>
+            <li>Managed Fund Support! Check out the fancy new tab.</li>
+            <li>Improved Investment contribution balance system (see disclaimer)</li>
+            <li>Sheet reorganisation to make future migrations quicker</li>
+            <li>Added Aus Tax Rate estimations (see disclaimer)</li>
+            <li>Lots of formula fixes/optimisations throughout sheet</li>
+            <li>UI Improvements</li>
+            <li>Budget Sheet improvements</li>
+            <li>Fixes to Net Worth Update Script (fixes Date errors, Stock values, general improvements)</li>
+            <li>Fixes to Stock gains figures</li>
+            <li>Performance fixes</li>
+            <li>Improved currency support for Dividends</li>
+      <br>
+      <br>
+      <h3><b>v2.5</b></h3>
+          <h4>18th February 2020</h4>
+            <li>Weekly/2-week pay support</li>
+            <li>Improvements to Stocks</li>
+            <li>Fixes to Monthly Update Scripts</li>
+            <li>Better Migration Support</li>
+            <li>Side Income (including Rental income) in your Budget</li>
+            <li>Numerous of fixes to Dividend sheet </li>
+            <li>Fixes to ETF/Stock prices to be more reliable</li>
+            <li>Fixes to Net Worth Calculations</li>
+            <li>Cleaned up and reduced permissions</li>
+            <li>Fixes to Net Worth recording for more miscelaneous situations</li>
+            <li>Fixes to Pension/Cash Date error</li>
+            <li>Efficiency fixes</li>
     </div>
   </section><!-- #hero -->
 

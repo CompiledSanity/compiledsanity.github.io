@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CompiledSanity Personal Finance Sheets</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+ 
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/cssbox.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="https://compiledsanity.github.io/#body"><img src="https://i.imgur.com/DJPmoUC.png" alt="" style="height:40px;" title="" /></a><a href="#body" class="scrollto"><span>CompiledSanity</span> Automated Finance</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="https://compiledsanity.github.io/#hero">Home</a></li>
+          <li><a href="https://compiledsanity.github.io/#about">About</a></li>
+          <li><a href="https://compiledsanity.github.io/#features">Features</a></li>
+          <li><a href="https://compiledsanity.github.io/#pricing">Download</a></li>
+          <li><a href="https://compiledsanity.github.io/#changelog">Changelog</a></li>
+          <li><a href="https://compiledsanity.github.io/#faq">FAQ</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="features" class="padd-section text-center wow fadeInUp">
+    <div class="container">
+      
+      <h2>LiveVersion Changelog</h2>
+      <br>
+      <br>
+      <h3><b>v2.9</b></h3>
+          <h4>19th September 2020</h4>
+            <b>New Features</b><br>
+              <li>Added Automatic Migration Tool! This will automatically copy all data from old Sheets to the new one, making upgrades take just 30 seconds now.</li>
+              <li>New Calender reminders to run monthly data recording.</li>
+              <li>Readded support for CoinMarketCap crypto prices. All cryptos now supported!</li>
+              <li>Added new end of month progression prompt</li>
+              <li>"Sold Units" are now automatically calculated FIFO for every asset class.</li>
+              <li>Added MorningStar support to Managed Fund pricing</li>
+              <li>Added international currency support for Bank accounts. If you would like to see the balance of international accounts in your local/base currency, please unhide column D.</li>
+              <li>Improvements to ETF/Stock price fetching performance</li>
+              <li>Dividends for international assets will try and return a converted automatic "Price @ Dividend" price</li>
+              <li>Added new sector classification system</li>
+              <li>Emergency fund duration is now configurable in the SheetOptions tab</li>
+            <b>Bug fixes:</b><br>
+              <li>Fix for Managed Fund, Stock and ETF prices when sourced from Bloomberg.</li>
+              <li>Fix for dividends not being included in total return values.</li>
+              <li>Patch for crypto prices returning "ERROR".</li>
+              <li>Patch for investment autobalance referencing incorrect cell.</li>
+              <li>Fixes to Managed Fund allocation formulas & filtering.</li>
+              <li>Fix for Managed Funds not appearing on Net Worth tracker graph in Net Worth tab.</li>
+              <li>Fix for migration script copying over the current unwritten month.</li>
+              <li>Fix for automatic stock brokerage missing.</li>
+              <li>Fix for GBX currency erroring.</li>
+              <li>Cleaned up all Asset type graphs to be consistent.</li>
+              <li>Readjusted layout of dividends tab to allow for dividends from more than 15 companies at once.</li>
+              <li>Fixes to Gain (%) and values if original purchase price was $0.</li>
+              <li>Fixed bug where reinvested dividends were double counted as contributions.</li>
+              <li>Fixed issue with History sheet not migrating all data.</li>
+      <br>
+      <br>
+      <h3><b>v2.8</b></h3>
+          <h4>12th July 2020</h4>
+            <li>Support for Generic Assets (Physical Gold, Cars etc.)</li>
+            <li>Brand new Crypto Tab - Full Transaction support like ETFs/Stocks/MF</li>
+            <li>Massively improved Stock/ETF support for wider range of tickers, less errors and more robust Live Price fetching</li>
+            <li>Hardening against errors from external sources interfering with Calculations in the Sheet</li>
+            <li>Fix to End of Month Script not writing to Sheet correctly</li>
+            <li>Lots of formula fixes/optimisations throughout Template</li> 
+            <li>Numerous user-reported bug fixes providing fixes to closing the end of the month and other important fixes throughout the sheet</li>
+            <li>Budget Sheet Improvements</li>
+            <li>A number of minor bug-fixes, see changelog inside for info</li>
+      <br>
+      <br>
+       <h3><b>v2.7</b></h3>
+          <h4>13th April 2020</h4>
+            <li>Full Debt/Loan Support - let me know what you think!</li>
+            <li>Better Property Tracking</li>
+            <li>Simplified monthly update process & removed Cash/Super date requirement rejoice!</li>
+            <li>Added graphs to see investment performance against contributions</li>
+            <li>Managed Fund Fees tracking</li>
+            <li>Full international support for Stocks/Managed Funds/ETFs in local currency</li>
+            <li>Fixed bug with International stocks not having a base currency of AUD</li>
+            <li>Added FAQ page on website</li>
+            <li>Bug fixes to Investment optimisation</li>
+            <li>Improved History Sheet migration instructions</li>
+            <li>Improved Stock failover support</li>
+            <li>General Code & Sheet optimisations & cleanup</li>
+            <li>Bug fixes for monthly write process</li>
+            <li>Fixes to Networth update script to increase ease of use</li>
+      
+    </div>
+  </section><!-- #hero -->
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer class="footer" style="padding-top: 0px !important;">
+    <div class="container" style="padding-top: 25px !important; padding-bottom: 5px !important;">
+      <p style="color:white; text-align: center;"><b>&copy; <script>document.write(new Date().getFullYear())</script> • Made with love by <a href="https://www.reddit.com/user/CompiledSanity/">u/CompiledSanity ❤️</a></b></p>
+    </div>
+  </footer>
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/modal-video/js/modal-video.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

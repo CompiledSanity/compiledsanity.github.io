@@ -1096,6 +1096,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   border-bottom: 1px solid rgba(153, 153, 153, 0.3);
   padding: 12px 0;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 #pricing .block-pricing ul li b {

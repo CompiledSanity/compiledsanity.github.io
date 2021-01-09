@@ -864,25 +864,6 @@
     <div class="container" style="max-width: 1400px;">
       <div class="row_thirds">
         <div class="column_thirds">
-          <h3><b>v2.7</b></h3>
-          <h4>13th April 2020</h4>
-            <li>Full Debt/Loan Support - let me know what you think!</li>
-            <li>Better Property Tracking</li>
-            <li>Simplified monthly update process & removed Cash/Super date requirement rejoice!</li>
-            <li>Added graphs to see investment performance against contributions</li>
-            <li>Managed Fund Fees tracking</li>
-            <li>Full international support for Stocks/Managed Funds/ETFs in local currency</li>
-            <li>Fixed bug with International stocks not having a base currency of AUD</li>
-            <li>Added FAQ page on website</li>
-            <li>Bug fixes to Investment optimisation</li>
-            <li>Improved History Sheet migration instructions</li>
-            <li>Improved Stock failover support</li>
-            <li>General Code & Sheet optimisations & cleanup</li>
-            <li>Bug fixes for monthly write process</li>
-            <li>Fixes to Networth update script to increase ease of use</li>
-        </div>
-        
-        <div class="column_thirds">
           <h3><b>v2.8</b></h3>
           <h4>12th July 2020</h4>
             <li>Support for Generic Assets (Physical Gold, Cars etc.)</li>
@@ -926,6 +907,52 @@
               <li>Fixes to Gain (%) and values if original purchase price was $0.</li>
               <li>Fixed bug where reinvested dividends were double counted as contributions.</li>
               <li>Fixed issue with History sheet not migrating all data.</li>
+        </div>
+        
+        <div class="column_thirds">
+          <h3><b>v2.10</b></h3>
+          <h4>9th January 2021</h4>
+            <b>New Features</b><br>
+              <li>New FIRE 🔥 Dashboard: Automatically ties in with the rest of the Sheet to show your progress to FIRE and forecasting until retirement. Minimal input is needed!</li>
+              <li>Spaceship Voyager Universe support in Managed Funds tab (Universe only, updates ~8-12hrs, see MF example)</li>
+              <li>Automatic Budget Tab Migration</li>
+              <li>Improved Consolidation of Property & Mortgages into one tab</li>
+              <li>Other Property tracking & Dashboard improvements</li>
+              <li>Retirement/Super Voluntary contribution support (inc. FHSS)</li>
+              <li>Added end of month Summary prompt alongisde Email</li>
+              <li>Budget & Loan Tabs now support weekly/fortnightly pay cycles</li>
+              <li>Graphical representation of mortgage repayments over time</li>
+              <li>New personalization system to simplify Sheet setup</li>
+              <li>New Property/Loan Figures: Total Interest paid predictions</li>
+              <li>US Sheet can now support other base-sheet currencies in Crypto tab</li>
+              <li>Added live spot prices for Silver and Gold in Other Assets tab.</li>
+              <li>International currency support in Other Assets tab.</li>
+              <li>Couple tax calculator to help with determining average Tax rate (see cell note)</li>
+              <li>EU Sheet Version</li>
+            <b>Bug fixes:</b><br>
+              <li>Fixed end of month email and prompt having savings rate and added savings swapped.</li>
+              <li>Fix for issue where historical months may show strange values (ie. December 3799)</li>
+              <li>Fix for issue with Gaps inbetween Months in the History tab</li>
+              <li>Fix for issues when upgrading from a v1.3 which resulted in gaps between months or date duplicates</li>
+              <li>Fixed issue with "Other Assets" not being included in "Liquid Assets" in the Net Worth tab.</li>
+              <li>Fix for Cash Tab savings dates showing December</li>
+              <li>Fixed issue with Savings Rate/Income not being correctly reported if Budget tab not used.</li>
+              <li>Fix for Month not saving correctly with .getMonth or .getYear error</li>
+              <li>Fixed issue with graphs not always showing correct months in labels</li>
+              <li>Fixes to Sheet names without spaces (ie. "ManagedFunds")</li>
+              <li>Hidden tabs now migrate</li>
+              <li>Fixed issue with past history property values not remaining static.</li>
+              <li>Fixed issue with Liabilities tab graphs showing currency instead of dates.</li>
+              <li>Fixed Managed Fund tab contributions still showing funds for sold off funds.</li>
+              <li>Removed and cleaned up redundant permissions</li>
+              <li>Fixed version number being incorrectly reported in Sheet</li>
+              <li>Lots and lots of back end code clean up leading to future features</li>
+              <li>Fix for MorningStar Funds showing as $0.</li>
+              <li>Fix for some ETF & Stocks showing incorrect prices.</li>
+              <li>Improvements to Sheet number crunching scripts to give clearer feedback about errors and what their causes are (hopefully this makes life easier debugging!)</li>
+              <li>Fix for Migration script not migration "Last Run" and "Last Refreshed" dates.</li>
+              <li>Improved feedback in Sheet if CoinMarketCap does not recognize a Crypto ticker.</li>
+              <li>Fix for Cash showing a huge gain if prior month wasn't recorded.</li>
         </div>
         
       </div>

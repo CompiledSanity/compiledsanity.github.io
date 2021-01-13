@@ -72,7 +72,13 @@
       <div class="changelog">
           <h3><b>v2.10</b></h3>
           <h4>8th January 2021</h4>
-            <hr>    
+            <hr>  
+            <b>v2.10.3</b><br>    
+            <li>Fixed Stocks Tab giving NaN error upon migration.</li>
+            <li>Migration Process now automatically corrects Liabilities/Mortgage data to correct positive/negative direction for v2.10.2 changes.</li>    
+            <li>Added data validation to Property/Liabilities cells in the History tabs to enforce correct positive/negative numbering when migrating.</li>    
+            <li>Fixed Cannot call method "abs" of undefined error that existed for 30 minutes in the middle of a patch.</li>
+            <hr>
             <b>v2.10.2</b><br>    
             <li>Fixes to liabilities values being incorrect and including property values.</li>
             <li>Fixes to show liability/mortgage debts as negative</li>    

@@ -75,12 +75,14 @@
             <hr>  
             <b>v2.10.4</b><br>    
             <li>Added support for Property & Liabilities migration from v2.9 and below. This may be glitchy, please report bugs if you have any! Note that if you have Mortgages mixed in with other debts in the Liabilities tab, migration is not supported (this is asked during the process).</li>    
+            <li>Side Income notes now included in migration.</li>    
+            <li>Fixed small bug in SheetOptions migration where not all options are copied.</li>    
             <hr>  
             <b>v2.10.3</b><br>    
             <li>Fixed Stocks Tab giving NaN error upon migration.</li>
             <li>Migration Process now automatically corrects Liabilities/Mortgage data to correct positive/negative direction for v2.10.2 changes.</li>    
             <li>Fixed "Cannot call method "abs" of undefined" error that may interfere with the end of month update.</li>
-            <li>Fixed .getName() error when migrating from v2.10 to v2.10.3</li>
+            <li>Fixed .getName() error in Retirement step when migrating from v2.10 to v2.10.3</li>
             <hr>
             <b>v2.10.2</b><br>    
             <li>Fixes to liabilities values being incorrect and including property values.</li>

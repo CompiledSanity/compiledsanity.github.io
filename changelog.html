@@ -73,13 +73,21 @@
           <h3><b>v2.10</b></h3>
           <h4>8th January 2021</h4>
             <hr>  
+            <b>v2.10.6</b><br>      
+            <li>Fixes to migration process to filter out errors from prior Sheets with errors in the History tab. This includes duplicate dates, out of order dates and incorrect dates (ie. Year 2670).</li>  
+            <li>Improved code of End of Month script to resolve an issue causing incorrect dates (as above) to appear in the History tab.</li>  
+            <li>Improved handling of months shown in History Tab if there are issues with dates. This will stop any dates cascading incorrectly.</li>  
+            <li>Improvements to end of month process to stop any errors appearing if Summary prompt is not clicked within 180s Google Script timeout window.</li>  
+            <li>Performance & efficiency increases when running end of month script.</li>  
+            <hr>  
             <b>v2.10.5</b><br>      
             <li>Fixed issue with ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live.</li>  
             <li>Fixed issue with certain tabs not resizing rows correctly and adjusting formulas during migration.</li>  
             <li>Fixed issue with .getMonth() error during End of Month update.</li>  
             <li>Fixed issue with the end of month update displaying "Timed out waiting for user response".</li>  
-            <li>Fixed issue with End of Month summary displaying "NULL" for values.</li>  
+            <li>Fixed issue with End of Month summary displaying "NaN" for values.</li>  
             <li>Fixed UK Sheet not showing Managed Funds summary correctly in Summary table and graphs.</li>  
+            <li>Fix going forward for weird duplicate and out of order dates in the History tab and after running the end of month script.</li>  
             <hr>  
             <b>v2.10.4</b><br>    
             <li>Added support for Property & Liabilities migration from v2.9 and below. This may be glitchy, please report bugs if you have any! Note that if you have Mortgages mixed in with other debts in the Liabilities tab, migration is not supported (this is asked during the process).</li>    

@@ -82,7 +82,7 @@ body {
 }
 
 .card-body li {
-  line-height: 0px !important;
+  line-height: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {

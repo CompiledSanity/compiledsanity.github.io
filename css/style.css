@@ -32,6 +32,13 @@
   }
 }
 
+@media (min-width: 1000px) {
+  section#changelog .row_thirds {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 section#changelog li {
     letter-spacing: 0px;
     line-height: 27px;

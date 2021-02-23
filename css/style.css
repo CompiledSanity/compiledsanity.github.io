@@ -56,13 +56,10 @@ section#changelog .column_thirds{
 and (max-device-width : 1000px) 
  {
    .column_thirds {
-  float: left;
-  width: 100%;
-     padding-bottom: 20px;
-}
-   #header #logo h1 {
-   font-size: 12px !important;
-   }
+      float: left;
+      width: 100%;
+         padding-bottom: 20px;
+    }
 }
 
 /* Clear floats after the columns */
@@ -320,6 +317,9 @@ span {
   #hero img {
     max-width: 90% !important;
   }
+   #header #logo h1 {
+    font-size: 12px !important;
+   }
 }
 
 #hero img {

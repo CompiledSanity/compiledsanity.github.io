@@ -11,7 +11,10 @@
 
 .column_thirds {
   float: left;
-  width: 33.33%;
+  width: 30%;
+  box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+  padding: 30px 40px !important;
+  margin: 10px;
 }
 
 #changelog li {

@@ -61,7 +61,7 @@ and (max-device-width : 1000px)
      padding-bottom: 20px;
 }
    #header #logo h1 {
-   font-size: 13px !important;
+   font-size: 12px !important;
    }
 }
 
@@ -317,11 +317,15 @@ span {
     line-height: 24px;
     margin-bottom: 30px;
   }
+  #hero img {
+    max-width: 90%; !important;
+  }
 }
 
 #hero img {
   max-width: 60%;
   margin-bottom: 30px;
+  max-height: 65% !important;
 }
 
 #hero .btn-get-started {

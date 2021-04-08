@@ -646,7 +646,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-weight: 100;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 
 .section-title .separator {
@@ -659,7 +659,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-size: 15px;
   font-weight: 300;
   margin-bottom: 30px;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 
 /* Get Started Section

@@ -1110,7 +1110,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 #pricing .block-pricing ul {
   list-style: outside none none;
   margin: 10px auto;
-  max-width: 280px;
+  max-width: 80%;
   padding: 0;
 }
 

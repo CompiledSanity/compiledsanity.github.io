@@ -341,6 +341,9 @@ span {
   #hero img {
     max-width: 90% !important;
   }
+  #hero h2 img {
+    height: 18px !important;
+  }
    #header #logo h1 {
     font-size: 12px !important;
    }

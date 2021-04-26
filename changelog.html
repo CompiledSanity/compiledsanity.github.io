@@ -101,6 +101,7 @@
           <h3><b>v2.11</b></h3>
           <h4>27th April 2021</h4>
             <hr>  
+            <p>Please note there have been <i>many</> significant changes in the minor releases of v2.10 that aren't shown here. If you upgrading from v2.10.0, please review all the way down to this release including v2.10 updates.<p>
             <b>New Features</b><br>
               <li>Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!</li>
               <li>Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts.</li>
@@ -124,29 +125,26 @@
               <li>Removed need for Email permission</li>
               <li>Many many improvements to the Migration Script for future versions</li>
             <b>Bug fixes:</b><br>
-              <li>Fixed end of month email and prompt having savings rate and added savings swapped.</li>
-              <li>Fix for issue where historical months may show strange values (ie. December 3799)</li>
-              <li>Fix for issue with Gaps inbetween Months in the History tab</li>
-              <li>Fix for issues when upgrading from a v1.3 which resulted in gaps between months or date duplicates</li>
-              <li>Fixed issue with "Other Assets" not being included in "Liquid Assets" in the Net Worth tab.</li>
-              <li>Fix for Cash Tab savings dates showing December</li>
-              <li>Fixed issue with Savings Rate/Income not being correctly reported if Budget tab not used.</li>
-              <li>Fix for Month not saving correctly with .getMonth or .getYear error</li>
-              <li>Fixed issue with graphs not always showing correct months in labels</li>
-              <li>Fixes to Sheet names without spaces (ie. "ManagedFunds")</li>
-              <li>Hidden tabs now migrate</li>
-              <li>Fixed issue with past history property values not remaining static.</li>
-              <li>Fixed issue with Liabilities tab graphs showing currency instead of dates.</li>
-              <li>Fixed Managed Fund tab contributions still showing funds for sold off funds.</li>
-              <li>Removed and cleaned up redundant permissions</li>
-              <li>Fixed version number being incorrectly reported in Sheet</li>
-              <li>Lots and lots of back end code clean up leading to future features</li>
-              <li>Fix for MorningStar Funds showing as $0.</li>
-              <li>Fix for some ETF & Stocks showing incorrect prices.</li>
-              <li>Improvements to Sheet number crunching scripts to give clearer feedback about errors and what their causes are (hopefully this makes life easier debugging!)</li>
-              <li>Fix for Migration script not migration "Last Run" and "Last Refreshed" dates.</li>
-              <li>Improved feedback in Sheet if CoinMarketCap does not recognize a Crypto ticker.</li>
-              <li>Fix for Cash showing a huge gain if prior month wasn't recorded.</li>
+              <li>Fixes to Timezones in Sheet that may lead to the End of Month script writing the wrong month or duplicating a month (with a blank gap above)</li>
+              <li>Fixed Dividends still showing in total returns when unit balance is 0</li>
+              <li>Fixed issue with Crypto purchases not migrating correctly</li>
+              <li>Fixed issue where "Added Savings" value only reported added investments in Email and End of Month Prompt</li>
+              <li>Fixed up handling of "Timed out waiting for user response" error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message.</li>
+              <li>"Price @ Dividend" column in the Dividend tab now included in the migration.</li>
+              <li>Fixed issue with ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live.</li>
+              <li>Fixed issue with certain tabs not resizing rows correctly and adjusting formulas during migration.</li>
+              <li>Fixed up numerous Graphs & figures in the Sheet.</li>
+              <li>Fixes to "Years to House" target date showing an error if no house target price</li>
+              <li>Fixes to Conditional Formatting and Highlighting</li>
+              <li>Fixed FIRE tab migrating values and not formulas</li>
+              <li>Spreadsheet Locale now migrates from prior Sheet</li>
+              <li>Fixed Crypto tab Live Price formatting in EU Sheet showing pounds symbol</li>
+              <li>Fixed Managed Funds Dividend amount in UK Sheet showing dollar symbol</li>
+              <li>Fix to Dividends tab not summing prior FY correctly according to FY dates</li>
+              <li>Fix to Crypto "Units purchased" column incorrectly formatting units as currency</li>
+              <li>Fix for incorrect spelling of Portfolio</li>
+              <li>Fix for Stocks Live Price column showing the currency instead of the live price.</li>
+              <li>Fixed Crypto Tab allocation graphs</li>
       </div>
       <br>
       <br>

@@ -98,6 +98,59 @@
       </h5>
       <br>
       <div class="changelog">
+          <h3><b>v2.11</b></h3>
+          <h4>27th April 2021</h4>
+            <hr>  
+            <b>New Features</b><br>
+              <li>Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!</li>
+              <li>Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts.</li>
+              <li>Added Crypto Staking support </li>
+              <li>Yahoo Finance pricing support for ETFs/Stocks/Managed Funds</li>
+              <li>Added support for Spaceship Origin & Earth Funds. See here for info.</li>
+              <li>Added support for using Stocks/ETFs/Managed Funds as Retirement balances (UK/EU)</li>
+              <li>Names now automatically prefill for Stocks/ETFs</li>
+              <li>Added Average Price of Unit to all Investment classes</li>
+              <li>Added 2 more Cash accounts</li>
+              <li>Added visual UI for end of month report</li>
+              <li>Added Retirement annual performance statistic</li>
+              <li>Added support for fixed investment amounts in the Budget Tab</li>
+              <li>Old Sheets will now have Crypto function disabled to save on API calls</li>
+              <li>Cleaned up Investment Columns for a more refined look</li>
+              <li>Added Net Worth breakdown graph in Net Worth tab</li>
+              <li>Many UI enhancements</li>
+              <li>Added Other Assets Purchases to Added Investments & Savings Rate calculations</li>
+              <li>Added Help links to all Tabs</li>
+              <li>Performance & efficiency increases when running end of month script.</li>
+              <li>Removed need for Email permission</li>
+              <li>Many many improvements to the Migration Script for future versions</li>
+            <b>Bug fixes:</b><br>
+              <li>Fixed end of month email and prompt having savings rate and added savings swapped.</li>
+              <li>Fix for issue where historical months may show strange values (ie. December 3799)</li>
+              <li>Fix for issue with Gaps inbetween Months in the History tab</li>
+              <li>Fix for issues when upgrading from a v1.3 which resulted in gaps between months or date duplicates</li>
+              <li>Fixed issue with "Other Assets" not being included in "Liquid Assets" in the Net Worth tab.</li>
+              <li>Fix for Cash Tab savings dates showing December</li>
+              <li>Fixed issue with Savings Rate/Income not being correctly reported if Budget tab not used.</li>
+              <li>Fix for Month not saving correctly with .getMonth or .getYear error</li>
+              <li>Fixed issue with graphs not always showing correct months in labels</li>
+              <li>Fixes to Sheet names without spaces (ie. "ManagedFunds")</li>
+              <li>Hidden tabs now migrate</li>
+              <li>Fixed issue with past history property values not remaining static.</li>
+              <li>Fixed issue with Liabilities tab graphs showing currency instead of dates.</li>
+              <li>Fixed Managed Fund tab contributions still showing funds for sold off funds.</li>
+              <li>Removed and cleaned up redundant permissions</li>
+              <li>Fixed version number being incorrectly reported in Sheet</li>
+              <li>Lots and lots of back end code clean up leading to future features</li>
+              <li>Fix for MorningStar Funds showing as $0.</li>
+              <li>Fix for some ETF & Stocks showing incorrect prices.</li>
+              <li>Improvements to Sheet number crunching scripts to give clearer feedback about errors and what their causes are (hopefully this makes life easier debugging!)</li>
+              <li>Fix for Migration script not migration "Last Run" and "Last Refreshed" dates.</li>
+              <li>Improved feedback in Sheet if CoinMarketCap does not recognize a Crypto ticker.</li>
+              <li>Fix for Cash showing a huge gain if prior month wasn't recorded.</li>
+      </div>
+      <br>
+      <br>
+      <div class="changelog">
           <h3><b>v2.10</b></h3>
           <h4>8th January 2021</h4>
             <hr>  

@@ -15,7 +15,7 @@ div.pricing-rates .text-muted {
 }
 
 @media screen and (max-width: 460px) {
-    a.logo {
+    span.logospantext {
         font-size: 3.3vw !important;
     }
 }

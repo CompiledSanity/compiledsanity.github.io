@@ -13,3 +13,9 @@ div.pricing-rates {
 div.pricing-rates .text-muted {
     color: #535c68 !important;
 }
+
+@media (max-width: 450px)
+    a.logo span {
+        font-size: 3.9vw !important;
+    }
+}

@@ -1,6 +1,8 @@
 .pricing-rates li {
     line-height: 2 !important;
     font-weight: 500 !important;
+    padding-left: 27px;
+    text-indent: -14px;
 }
 
 div.pricing-rates {

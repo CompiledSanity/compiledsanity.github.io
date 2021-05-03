@@ -14,8 +14,8 @@ div.pricing-rates .text-muted {
     color: #535c68 !important;
 }
 
-@media all and (max-width: 460px) {
-    a.logo {
+@media screen and (min-width: 460px) {
+    .logo a {
         font-size: 3.3vw !important;
     }
 }

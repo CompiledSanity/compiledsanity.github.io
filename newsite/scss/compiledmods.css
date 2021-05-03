@@ -15,7 +15,7 @@ div.pricing-rates .text-muted {
 }
 
 @media (max-width: 450px)
-    a.logo span {
+    #topnav > div > a > span {
         font-size: 3.9vw !important;
     }
 }

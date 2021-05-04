@@ -138,7 +138,7 @@
 					<div class="row">
 						<div class="col-lg-7 col-md-6">
 							<div class="rounded shadow-lg p-4">
-								<h5 class="mb-0">Billing Details :</h5>
+								<h5 class="mb-2">Billing Details :</h5>
 									<input type="hidden" name="cmd" value="_s-xclick">
 									<input type="hidden" name="hosted_button_id" value="K5DFNU8Z799ML">
 									<div class="row">
@@ -154,14 +154,12 @@
 												<label class="form-label">Region <span class="text-danger">*</span></label>
 												<input type="hidden" name="on0" value="Region" required>
 												<select class="form-select form-control" aria-label="Default select example"  name="os0">
+													  <option disabled selected value>Please specify</option>
 													  <option value="Australia">Australia </option>
 													  <option value="UK">UK </option>
 													  <option value="US">US </option>
 													  <option value="EU">EU </option>
 												</select>
-												<small id="passwordHelpBlock" class="form-text text-muted">
-												  You will receive all 4 versions of the Template. This is only used for region specific updates in the future.
-												</small>
 											</div>
 										</div><!--end col-->
 										<div class="col-md-6">
@@ -169,7 +167,7 @@
 												<label class="form-label">How did you hear about the Sheet? <span class="text-danger">*</span></label>
 												<input required type="hidden" name="on2" value="Source">
 												<select class="form-select form-control" aria-label="Default select example" name="os2">
-													  <option value="Please specify">Please specify</option>
+													  <option disabled selected value>Please specify</option>
 													  <option value="r/AusFinance">r/AusFinance</option>
 													  <option value="r/FIAustralia">r/FIAustralia</option>
 													  <option value="r/UKPersonalFinance">r/UKPersonalFinance</option>

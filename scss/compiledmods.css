@@ -1,0 +1,21 @@
+.pricing-rates li {
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+    padding-left: 27px;
+    text-indent: -14px;
+    margin-bottom: 15px !important;
+}
+
+div.pricing-rates {
+ box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 4px 0 rgb(0 0 0 / 19%);   
+}
+
+div.pricing-rates .text-muted {
+    color: #535c68 !important;
+}
+
+@media screen and (max-width: 460px) {
+    span.logospantext {
+        font-size: 3.3vw !important;
+    }
+}

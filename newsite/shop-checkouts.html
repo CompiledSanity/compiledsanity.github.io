@@ -139,45 +139,45 @@
                         <div class="rounded shadow-lg p-4">
                             <h5 class="mb-0">Billing Details :</h5>
 
-                            <form class="mt-4">
-                                <div class="row">
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="mt-4">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="K5DFNU8Z799ML">
+								<div class="row">
                                     <div class="col-12">
                                         <div class="mb-3">
                                             <label class="form-label">Your Email <span class="text-danger">*</span></label>
-                                            <input name="email" id="email" type="email" class="form-control" placeholder="Your email :">
+                                            <input type="hidden" name="on1" value="Email Address to Invite" required>
+											<input name="email" name="os1" id="email" type="email" class="form-control" placeholder="Your email :">
                                         </div> 
                                     </div><!--end col-->
 									<div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Region <span class="text-danger">*</span></label>
-                                            <select class="form-select form-control" aria-label="Default select example">
-                                                <option selected>India</option>
-                                                <option value="AF">Afghanistan</option>
-                                                <option value="AX">&Aring;land Islands</option>
-                                                <option value="AL">Albania</option>
-                                                <option value="DZ">Algeria</option>
-                                                <option value="AS">American Samoa</option>
-                                                <option value="AD">Andorra</option>
-                                                <option value="AO">Angola</option>
-                                                <option value="AI">Anguilla</option>
-                                                <option value="AQ">Antarctica</option>
+											<input type="hidden" name="on0" value="Region" required>
+                                            <select class="form-select form-control" aria-label="Default select example"  name="os0">
+												  <option value="Australia">Australia </option>
+												  <option value="UK">UK </option>
+												  <option value="US">US </option>
+												  <option value="EU">EU </option>
                                             </select>
                                         </div>
                                     </div><!--end col-->
 									<div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">How did you hear about the Sheet? <span class="text-danger">*</span></label>
-                                            <select class="form-select form-control" aria-label="Default select example">
-                                                <option selected>India</option>
-                                                <option value="AF">Afghanistan</option>
-                                                <option value="AX">&Aring;land Islands</option>
-                                                <option value="AL">Albania</option>
-                                                <option value="DZ">Algeria</option>
-                                                <option value="AS">American Samoa</option>
-                                                <option value="AD">Andorra</option>
-                                                <option value="AO">Angola</option>
-                                                <option value="AI">Anguilla</option>
-                                                <option value="AQ">Antarctica</option>
+											<input type="hidden" name="on2" value="Source" required>
+                                            <select class="form-select form-control" aria-label="Default select example" name="os2">
+												  <option value="Please specify">Please specify</option>
+												  <option value="r/AusFinance">r/AusFinance</option>
+												  <option value="r/FIAustralia">r/FIAustralia</option>
+												  <option value="r/UKPersonalFinance">r/UKPersonalFinance</option>
+												  <option value="Reddit">Reddit</option>
+												  <option value="Reddit Ad">Reddit Ad</option>
+												  <option value="Word of Mouth">Word of Mouth</option>
+												  <option value="Whirlpool">Whirlpool</option>
+												  <option value="Facebook">Facebook</option>
+												  <option value="Google">Google</option>
+												  <option value="Other">Other</option>
                                             </select>
                                         </div>
                                     </div><!--end col-->
@@ -223,7 +223,9 @@
 
                                 <div class="mt-4 pt-2">
                                     <div class="d-grid">
-                                        <a href="shop-checkouts.html" class="btn btn-primary">Place Order</a>
+                                        <a href="shop-checkouts.html" name="submit" class="btn btn-primary">Place Order</a>
+										<input type="image" src="https://cspersonalfinance.io/img/PayPal-Buy.jpg" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+										<img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
                                     </div>
                                 </div>
                             </div>

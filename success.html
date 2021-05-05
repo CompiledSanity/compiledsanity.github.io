@@ -28,6 +28,13 @@
         <!-- Main Css -->
         <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
         <link href="css/colors/green.css" rel="stylesheet" id="color-opt">
+	    
+    	<!-- Reddit Pixel -->
+	<script>
+	!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_8vi78');rdt('track', 'PageVisit');
+	</script>
+	<!-- DO NOT MODIFY -->
+	<!-- End Reddit Pixel -->
 
     </head>
 
@@ -68,7 +75,9 @@
         </section><!--end section-->
         <!-- Hero End -->
 
-        
+        <script>
+	rdt(‘track’, ‘Purchase’);
+	</script>
 
         <!-- javascript -->
         <script src="js/bootstrap.bundle.min.js"></script>

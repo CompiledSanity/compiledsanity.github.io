@@ -642,44 +642,57 @@
                     </div><!--end col-->
                 </div><!--end row-->
                 
-                <div class="row justify-content-center">
+				<div class="row justify-content-center">
 					<div class="col-lg-8 col-md-7 col-12">
 						<div class="section-title" id="tech">
-							<h4 style="text-align: center;">Using the Sheet</h4> </div>
+							<h4 style="text-align: center;">Using the Sheet</h4>
+						</div>
 						<div class="accordion mt-4 pt-2" id="buyingquestion">
 							<div class="accordion-item rounded">
 								<h2 class="accordion-header" id="headingOne">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-															aria-expanded="false" aria-controls="collapseOne">
-															How do I enter my own Historical data into a new Sheet?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+										How do I enter my own Historical data into a new Sheet?
+									</button>
+								</h2>
 								<div id="collapseOne" class="accordion-collapse border-0 collapse" aria-labelledby="headingOne" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> To enter your own historical Data into the Sheet, follow the instructions below: </br> 1. Head to the History tab </br> 2. Starting in Cell A3 and working down, enter in the dates (ie. 1/6/2020, 1/7/2020 etc.) for the previous data you want in the sheet. Don't worry about the months already in the sheet, they will automatically move down. </br> 3. For the new months that you've entered, from left-right fill out the values in the blue columns. </div>
+									<div class="accordion-body text-muted bg-white">
+										To enter your own historical Data into the Sheet, follow the instructions below:
+										<br>
+										<ol>
+											<li>Head to the History tab</li>
+											<li>Starting in Cell A3 and working down, enter in the dates (ie. 1/6/2020, 1/7/2020 etc.) for the previous data you want in the sheet. Don't worry about the months already in the sheet, they will automatically move
+											down.</li>
+											<li>For the new months that you've entered, from left-right fill out the values in the blue columns.</li>
+										</ol>
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingThree">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-															How do I know my Data is kept private?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										How do I know my Data is kept private?
+									</button>
+								</h2>
 								<div id="collapseThree" class="accordion-collapse border-0 collapse" aria-labelledby="headingThree" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg. </br>
-										</br> You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your Net Worth & associated performance. </div>
+									<div class="accordion-body text-muted bg-white">
+										A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services
+										permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg. <br>
+										<br>
+										You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out.
+										Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information
+										needed to determine your Net Worth & associated performance.
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingTwo">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-															aria-expanded="false" aria-controls="collapseTwo">
-															I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?
+									</button>
+								</h2>
 								<div id="collapseTwo" class="accordion-collapse border-0 collapse" aria-labelledby="headingTwo" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps:
-										<br>
+									<div class="accordion-body text-muted bg-white">
+										If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps:
 										<br>
 										<ol>
 											<li>Click File -> Version History -> See Version History</li>
@@ -692,88 +705,105 @@
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingFour">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-															A new Sheet update is released, how do I upgrade to a new Sheet?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+										A new Sheet update is released, how do I upgrade to a new Sheet?
+									</button>
+								</h2>
 								<div id="collapseFour" class="accordion-collapse border-0 collapse" aria-labelledby="headingFour" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> <a href="https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version">Please see the instructions on how to upgrade your Sheet.</a> </div>
+									<div class="accordion-body text-muted bg-white"><a href="https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version">Please see the instructions on how to upgrade your Sheet.</a></div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingfive">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive"
-															aria-expanded="false" aria-controls="collapsefive">
-															How do I migrate data between sheets?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+										How do I migrate data between sheets?
+									</button>
+								</h2>
 								<div id="collapsefive" class="accordion-collapse border-0 collapse" aria-labelledby="headingfive" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you. </div>
+									<div class="accordion-body text-muted bg-white">As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you.</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingsix">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix"
-															aria-expanded="false" aria-controls="collapsesix">
-															How do I enter in a missed month?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+										How do I enter in a missed month?
+									</button>
+								</h2>
 								<div id="collapsesix" class="accordion-collapse border-0 collapse" aria-labelledby="headingsix" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> To backfill data for missed months, follow the below: </br> 1. In the History tab in Column A, enter in the date you want to backfill in the correct ordering compared to your existing months. If this is your first time running the Sheet, simply write in the date missed into Cell A3. </br> <b>NOTE:</b><i> Do not Insert a new row. Simply make use of the rows already in the Sheet.</i> </br> 2. Proceed filling out the Asset values for the new month, updating the <b>blue</b> columns only. </br> 3. Done! The Date Column should automatically adapt and the current month should automatically shift down. </div>
+									<div class="accordion-body text-muted bg-white">
+										To backfill data for missed months, follow the below:<br>
+										<ol>
+											<li>In the History tab in Column A, enter in the date you want to backfill in the correct ordering compared to your existing months. If this is your first time running the Sheet, simply write in the date missed into
+											Cell A3.</li>
+											<b>NOTE:</b><i> Do not Insert a new row. Simply make use of the rows already in the Sheet.</i>
+											<li>2. Proceed filling out the Asset values for the new month, updating the <b>blue</b> columns only.</li>
+											<li>3. Done! The Date Column should automatically adapt and the current month should automatically shift down.</li>
+										</ol>
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingseven">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
-															Can I use the Sheet with Excel, Offline or Libre Office?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+										Can I use the Sheet with Excel, Offline or Libre Office?
+									</button>
+								</h2>
 								<div id="collapseseven" class="accordion-collapse border-0 collapse" aria-labelledby="headingseven" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> Unfortunately no, as the Sheet is heavily reliant on Google Sheet functions for live pricing, custom Google formulas and most importantly the behind the scenes scripts written in Google Apps Scripts. You may download the Sheet and try importing into Excel, but you will find that significant elements of the Sheet will not work and it is therefore heavily not recommended.
-										<br> If your concern is privacy, please see the FAQ entry <a href="https://guide.cspersonalfinance.io/faqs#how-do-i-know-my-data-is-kept-private">How do I know my Data is kept private?</a> </div>
+									<div class="accordion-body text-muted bg-white">
+										Unfortunately no, as the Sheet is heavily reliant on Google Sheet functions for live pricing, custom Google formulas and most importantly the behind the scenes scripts written in Google Apps Scripts. You may download
+										the Sheet and try importing into Excel, but you will find that significant elements of the Sheet will not work and it is therefore heavily not recommended. <br>
+										If your concern is privacy, please see the FAQ entry <a href="https://guide.cspersonalfinance.io/faqs#how-do-i-know-my-data-is-kept-private">How do I know my Data is kept private?</a>
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingeight">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
-															A new version is released but I haven't received an email, what do I do?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
+										A new version is released but I haven't received an email, what do I do?
+									</button>
+								</h2>
 								<div id="collapseeight" class="accordion-collapse border-0 collapse" aria-labelledby="headingeight" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> Often due to the keywords in release emails they can be marked as spam or placed in your Promotions Gmail sub-inbox. To stop this happening in the future, please add to your contacts my email address (the same email that you received on the original invite) to stop future emails being filtered. If you have not received an invite please email me or contact me via Reddit. </div>
+									<div class="accordion-body text-muted bg-white">
+										Often due to the keywords in release emails they can be marked as spam or placed in your Promotions Gmail sub-inbox. To stop this happening in the future, please add to your contacts my email address (the same email
+										that you received on the original invite) to stop future emails being filtered. If you have not received an invite please email me or contact me via Reddit.
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingnine">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenine"
-															aria-expanded="false" aria-controls="collapsenine">
-															How do I use the tool if I'm paid fortnightly?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
+										How do I use the tool if I'm paid fortnightly?
+									</button>
+								</h2>
 								<div id="collapsenine" class="accordion-collapse border-0 collapse" aria-labelledby="headingnine" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> First off, in the SheetOptions tab set your pay Cycle to fornightly and update your fornightly pay value. This will help the Template understand your monthly pay.
+									<div class="accordion-body text-muted bg-white">
+										First off, in the SheetOptions tab set your pay Cycle to fornightly and update your fornightly pay value. This will help the Template understand your monthly pay.
 										<br>
-										<br> When it comes to the Sheet however, all calculations are strictly performed in the month timescale. This is to enable a lot of date functions to work on a standardized timescale. So tracking and statistics will be performed at the monthly time scale. </div>
+										<br>
+										When it comes to the Sheet however, all calculations are strictly performed in the month timescale. This is to enable a lot of date functions to work on a standardized timescale. So tracking and statistics will be
+										performed at the monthly time scale.
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingten">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseten"
-															aria-expanded="false" aria-controls="collapseten">
-															The dates in my Sheets keep ticking over and my history isn't being recorded, why is this?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
+										The dates in my Sheets keep ticking over and my history isn't being recorded, why is this?
+									</button>
+								</h2>
 								<div id="collapseten" class="accordion-collapse border-0 collapse" aria-labelledby="headingten" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> To record the month of progress that you're in, it is critically important that you press the Red Update Button in the Net Worth Tab at least once a month (pictured below).
+									<div class="accordion-body text-muted bg-white">
+										To record the month of progress that you're in, it is critically important that you press the Red Update Button in the Net Worth Tab at least once a month (pictured below).
 										<br>
-										<br> <img src="https://i.imgur.com/NyrJggG.png" alt="Red Net Worth Update button">
 										<br>
-										<br> This is so that you can enter in all your up to date values before pressing the button to record the month. If you do not press this button, the Sheet will keep ticking over to the next month until you update your Net Worth for the first time.
+										<img style="max-width: 90%" src="https://i.imgur.com/NyrJggG.png" alt="Red Net Worth Update button" />
 										<br>
-										<br> Please note:
+										<br>
+										This is so that you can enter in all your up to date values before pressing the button to record the month. If you do not press this button, the Sheet will keep ticking over to the next month until you update your
+										Net Worth for the first time.
+										<br>
+										<br>
+										Please note:
 										<ul>
 											<li>It is recommended that you update your Net Worth on the 1st of every month.</li>
 											<li>You must always record a month while <i>in</i> that month. ie. You can only record November while inside November.</li>
@@ -783,77 +813,101 @@
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingeleven">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapseeleven" aria-expanded="false" aria-controls="collapseeleven">
-															I'm having issues with weird dates in the History tab, what do I do?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeleven" aria-expanded="false" aria-controls="collapseeleven">
+										I'm having issues with weird dates in the History tab, what do I do?
+									</button>
+								</h2>
 								<div id="collapseeleven" class="accordion-collapse border-0 collapse" aria-labelledby="headingeleven" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"> If you are seeing strange duplicates/gaps in your History Sheet, please contact me via the email you originally received your invite from. This is a carry over bug from v1.3 that has since been fixed but will require some slight fixes to your Sheet.
+									<div class="accordion-body text-muted bg-white">
+										If you are seeing strange duplicates/gaps in your History Sheet, please contact me via the email you originally received your invite from. This is a carry over bug from v1.3 that has since been fixed but will require
+										some slight fixes to your Sheet.
 										<br>
-										<br> Subject Line - <b>History Tab - Date Error Issue</b> </div>
+										<br>
+										Subject Line - <b>History Tab - Date Error Issue</b>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="section-title mt-5" id="payment">
-							<h4 style="text-align: center;">Personal Circumstances</h4> </div>
+							<h4 style="text-align: center;">Personal Circumstances</h4>
+						</div>
 						<div class="accordion mt-4 pt-2" id="paymentquestion">
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingtwelve">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapsetwelve" aria-expanded="false" aria-controls="collapsetwelve">
-															I'm paid irreguarly or with irregular amounts, how do I account for that?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwelve" aria-expanded="false" aria-controls="collapsetwelve">
+										I'm paid irreguarly or with irregular amounts, how do I account for that?
+									</button>
+								</h2>
 								<div id="collapsetwelve" class="accordion-collapse border-0 collapse" aria-labelledby="headingtwelve" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white"> 2 ways. Either: </br> a) Enter in an average figure that you are comfortable with </br> b) Set your Salary to $0 and enter all your income into the Side Income tab. This was designed for irregular amounts and will automatically feed an averaged value into the rest of the Template. </div>
+									<div class="accordion-body text-muted bg-white">
+										2 ways. Either:
+										<br>
+										<ul>
+											<li>Enter in an average figure that you are comfortable with</li>
+											<li>b) Set your Salary to $0 and enter all your income into the Side Income tab. This was designed for irregular amounts and will automatically feed an averaged value into the rest of the Template.</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingthirteen">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethirteen"
-															aria-expanded="false" aria-controls="collapsethirteen">
-															How do I enter and account for my Mortgage Offset Account?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethirteen" aria-expanded="false" aria-controls="collapsethirteen">
+										How do I enter and account for my Mortgage Offset Account?
+									</button>
+								</h2>
 								<div id="collapsethirteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingthirteen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white"> Mortgage Offset accounts can be dealt with in many different ways. Uniquely, Offset accounts can count as both a Cash account as well as downpayments on your loan. Since this money can flex in between it can be a grey area, but for the purposes of the Sheet it needs to be more definite.
+									<div class="accordion-body text-muted bg-white">
+										Mortgage Offset accounts can be dealt with in many different ways. Uniquely, Offset accounts can count as both a Cash account as well as downpayments on your loan. Since this money can flex in between it can be a
+										grey area, but for the purposes of the Sheet it needs to be more definite.
 										<br>
-										<br> It is recommended that you come up with a theoretical minimum floor/emergency Cash amount that you have earmarked for emergencies, investments or general purchases ($30,000 for example). This $30,000 balance would go in the Cash tab as "Offset Account".
 										<br>
-										<br> In the Property tab for "Mortgage amount paid" you would put the remainder of this balance (ie. Total Offset Balance - $30,000). That way as your Offset Cash balance grows, in the Sheet more of your mortgage will be reflected as paid off over time. </div>
+										It is recommended that you come up with a theoretical minimum floor/emergency Cash amount that you have earmarked for emergencies, investments or general purchases ($30,000 for example). This $30,000 balance would go
+										in the Cash tab as "Offset Account".
+										<br>
+										<br>
+										In the Property tab for "Mortgage amount paid" you would put the remainder of this balance (ie. Total Offset Balance - $30,000). That way as your Offset Cash balance grows, in the Sheet more of your mortgage will be
+										reflected as paid off over time.
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingfourteen">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefourteen"
-															aria-expanded="false" aria-controls="collapsefourteen">
-															How do I track with my partner?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefourteen" aria-expanded="false" aria-controls="collapsefourteen">
+										How do I track with my partner?
+									</button>
+								</h2>
 								<div id="collapsefourteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingfourteen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white"> For couples it is recommended that you combine finances and incomes as expenses will likely be incurred as a household and not for individuals and therefore Net Worth changes need to be considered as a whole.
+									<div class="accordion-body text-muted bg-white">
+										For couples it is recommended that you combine finances and incomes as expenses will likely be incurred as a household and not for individuals and therefore Net Worth changes need to be considered as a whole.
 										<br>
-										<br> A key point when combining finances is the Tax rate input in the Sheet Options tab. For a couple in different tax brackets a weighted averaged will needs to be used. Please follow this formula and use the linked calculator for working this out:
 										<br>
-										<br> <b>(Income1 x Tax1% + Income2 x Tax%2) / (Income1 + Income 2) = Average Tax Rate %</b>
+										A key point when combining finances is the Tax rate input in the Sheet Options tab. For a couple in different tax brackets a weighted averaged will needs to be used. Please follow this formula and use the linked
+										calculator for working this out:
 										<br>
-										<br> ie. For a couple earning $120,000 (55% Tax rate) and $55,000 respectively (37% Tax Rate):
-										<br> (Please note shown Tax rates are just examples)
-										<br> <a href="https://www.wolframalpha.com/input/?i=%28120000*0.55%2B55000*0.37%29%2F%28120000%2B55000%29">(120000 x 0.55 + 55000 x 0.37) / (120000 + 55000)</a> = 0.493, or <b>49.3% Average Tax rate</b>. </div>
+										<br>
+										<b>(Income1 x Tax1% + Income2 x Tax%2) / (Income1 + Income 2) = Average Tax Rate %</b>
+										<br>
+										<br>
+										ie. For a couple earning $120,000 (55% Tax rate) and $55,000 respectively (37% Tax Rate): <br>
+										(Please note shown Tax rates are just examples) <br>
+										<a href="https://www.wolframalpha.com/input/?i=%28120000*0.55%2B55000*0.37%29%2F%28120000%2B55000%29">(120000 x 0.55 + 55000 x 0.37) / (120000 + 55000)</a> = 0.493, or <b>49.3% Average Tax rate</b>.
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingfifteen">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapsefifteen" aria-expanded="false" aria-controls="collapsefifteen">
-															How do I enter my Credit Card into the Sheet?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefifteen" aria-expanded="false" aria-controls="collapsefifteen">
+										How do I enter my Credit Card into the Sheet?
+									</button>
+								</h2>
 								<div id="collapsefifteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingfifteen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white"> There are 2 ways to handle inputting Credit Cards:
+									<div class="accordion-body text-muted bg-white">
+										There are 2 ways to handle inputting Credit Cards:
 										<ul>
-											<li><b>If you pay off your Credit cards each month</b> - Enter your credit card balance on the cash tab as a negative number. As this isn't long term debt it is more appropriate having it as an equalising negative Cash Balance for accuracy.</li>
+											<li>
+												<b>If you pay off your Credit cards each month</b> - Enter your credit card balance on the cash tab as a negative number. As this isn't long term debt it is more appropriate having it as an equalising
+												negative Cash Balance for accuracy.
+											</li>
 											<li><b>For more long term credit card debt</b> that you're trying to tackle and pay down - Enter this into the liabilities sheet.</li>
 										</ul>
 									</div>
@@ -861,42 +915,48 @@
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingsixteen">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapsesixteen" aria-expanded="false" aria-controls="collapsesixteen">
-															How do I account for Salary Sacrificing?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesixteen" aria-expanded="false" aria-controls="collapsesixteen">
+										How do I account for Salary Sacrificing?
+									</button>
+								</h2>
 								<div id="collapsesixteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingsixteen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white"> You should enter as your income the amount of money available to you when you're paid after the salary sacrifice has been taken out. For all intents the Sheet is concerned with what money is usable to you after tax/fees has been taken out.
+									<div class="accordion-body text-muted bg-white">
+										You should enter as your income the amount of money available to you when you're paid after the salary sacrifice has been taken out. For all intents the Sheet is concerned with what money is usable to you after
+										tax/fees has been taken out.
 										<br>
-										<br> This will ensure the savings rates are calculated correctly against the post-sacrificed income. </div>
+										<br>
+										This will ensure the savings rates are calculated correctly against the post-sacrificed income.
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingseventeen">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapseseventeen" aria-expanded="false" aria-controls="collapseseventeen">
-															How do I account for income from a rental Property?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseventeen" aria-expanded="false" aria-controls="collapseseventeen">
+										How do I account for income from a rental Property?
+									</button>
+								</h2>
 								<div id="collapseseventeen" class="accordion-collapse border-0 collapse" aria-labelledby="headingseventeen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white"> Income from Rental properties is entered into the Side Income tab. Rename one of the example columns as needed and enter the after-tax rent each month. Rental income can also be accounted for in the Property tab in the "Net Rent Profit To Date ($)" row, which will feed into your overall return values. </div>
+									<div class="accordion-body text-muted bg-white">
+										Income from Rental properties is entered into the Side Income tab. Rename one of the example columns as needed and enter the after-tax rent each month. Rental income can also be accounted for in the Property tab in
+										the "Net Rent Profit To Date ($)" row, which will feed into your overall return values.
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="section-title mt-5" id="investments">
-							<h4 style="text-align: center;">Investments</h4> </div>
+							<h4 style="text-align: center;">Investments</h4>
+						</div>
 						<div class="accordion mt-4 pt-2" id="investmentsquestion">
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingeighteen">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapseeighteen" aria-expanded="false" aria-controls="collapseeighteen">
-															How do I enter my Spaceship/Raiz/Microinvestment Platform Investments?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeighteen" aria-expanded="false" aria-controls="collapseeighteen">
+										How do I enter my Spaceship/Raiz/Microinvestment Platform Investments?
+									</button>
+								</h2>
 								<div id="collapseeighteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingeighteen" data-bs-parent="#investmentsquestion">
-									<div class="accordion-body text-muted bg-white"> <b>For Spaceship Voyager:</b>
-										<br> Spaceship Voyager as of v2.10 now has live price support for all 3 fund types (Universe, Origin, Earth). In the Managed Funds tab please enter the following details:
+									<div class="accordion-body text-muted bg-white">
+										<b>For Spaceship Voyager:</b> <br>
+										Spaceship Voyager as of v2.10 now has live price support for all 3 fund types (Universe, Origin, Earth). In the Managed Funds tab please enter the following details:
 										<ul>
 											<li>Fund ID - <b>SPACEVOYUNIV</b></li>
 											<li>Fund Name (Important) - <b>Spaceship Voyager Universe</b></li>
@@ -908,12 +968,16 @@
 										<ul>
 											<li>Fund ID - <b>SPACEVOYEARTH</b></li>
 											<li>Fund Name (Important) - <b>Spaceship Voyager Earth</b></li>
-										</ul> Purchase History - Enter in your itemised Purchase History, or if you have a large amount of purchases you can enter in a single purchase that you reguarly update the quantity. Please note if you batch into a single purchase this will make any performance/gain figures inaccurate.</li>
+										</ul>
+										Purchase History - Enter in your itemised Purchase History, or if you have a large amount of purchases you can enter in a single purchase that you reguarly update the quantity. Please note if you batch into a single
+										purchase this will make any performance/gain figures inaccurate.
 										<br>
-										<br> Please note prices are only updated every 24hrs.
 										<br>
-										<br> <b>For Raiz & Other Investment Platforms:</b>
-										<br> For other Microinvestment Platforms you have 2 options:
+										Please note prices are only updated every 24hrs.
+										<br>
+										<br>
+										<b>For Raiz & Other Investment Platforms:</b> <br>
+										For other Microinvestment Platforms you have 2 options:
 										<ol>
 											<li><b>Other Assets Tab (Easiest)</b> - This will mean your investments will be recorded in your Net Worth, you will just have to update the balance before recording your month.</li>
 											<li><b>Managed Funds Tab</b> - Enter your platform as a Managed Fund and manually update the Live Price as needed (ignore any warnings). Enter in the Purchase History as provided by your platform.</li>
@@ -923,21 +987,22 @@
 							</div>
 							<div class="accordion-item rounded mt-2">
 								<h2 class="accordion-header" id="headingnineteen">
-														<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
-															data-bs-target="#collapsenineteen" aria-expanded="false" aria-controls="collapsenineteen">
-															Why do my brokerage amounts always change between 1x and 2x brokerage amounts?
-														</button>
-													</h2>
+									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenineteen" aria-expanded="false" aria-controls="collapsenineteen">
+										Why do my brokerage amounts always change between 1x and 2x brokerage amounts?
+									</button>
+								</h2>
 								<div id="collapsenineteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingnineteen" data-bs-parent="#investmentsquestion">
-									<div class="accordion-body text-muted bg-white"> You can enter these in as you would any normal stock purchase. You will need to enter in your own "Live Price" and update this as needed (ignore any warnings when doing so).
+									<div class="accordion-body text-muted bg-white">
+										You can enter these in as you would any normal stock purchase. You will need to enter in your own "Live Price" and update this as needed (ignore any warnings when doing so).
 										<br>
-										<br> Please note when upgrading Sheet versions you will need to manually enter in the Live Price into your new Sheet. </div>
+										<br>
+										Please note when upgrading Sheet versions you will need to manually enter in the Live Price into your new Sheet.
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!--end row-->
-				</div><!--end col-->
+				</div> <!--end row-->
             </div><!--end container-->
         </section><!--end section-->
         <!-- FAQ End -->

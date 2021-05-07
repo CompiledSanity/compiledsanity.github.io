@@ -19,3 +19,13 @@ div.pricing-rates .text-muted {
         font-size: 3.6vw !important;
     }
 }
+
+.pricing-rates h3, .h3 {
+    font-size: 28px !important;
+}
+
+@media (min-width: 1200px) {
+    .pricing-rates h3, .h3 {
+        font-size: 1.75rem;
+    }
+}

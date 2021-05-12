@@ -1,1053 +1,1142 @@
-
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>CompiledSanity Personal Finance & Net Worth Spreadsheets</title>
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Personal Finance, Net Worth & FIRE Tracking made Automated & Easy. Through the wonders of Google Sheets & a bit of techno magic, CS Templates reveal and track your financial position.">
-        <meta name="keywords" content="Personal Finance, Net Worth, FIRE, Tracking, Google Sheet, Excel, Financial position.">
-        <meta name="author" content="CompiledSanity">
-        
-        <!-- favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="https://cspersonalfinance.io/img/fav/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://cspersonalfinance.io/img/fav/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https://cspersonalfinance.io/img/fav/favicon-16x16.png">
-        <link rel="manifest" href="https://cspersonalfinance.io/img/fav/site.webmanifest">
-        <link rel="mask-icon" href="https://cspersonalfinance.io/img/fav/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-        
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	    
-    	<!-- tobii css -->
-        <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
-        
-        <!-- Icons -->
-        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-        
-        <!-- Slider -->               
-        <link rel="stylesheet" href="css/tiny-slider.css"/> 
-        
-        <!-- Main Css -->
-        <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
-        <link href="css/colors/green.css" rel="stylesheet" id="color-opt">
-    	<link href="scss/compiledmods.css" rel="stylesheet" type="text/css"/>
-        
-        <!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i|Quicksand:500,500i|Ubuntu:400,400i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap" rel="stylesheet">  
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-		@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
-	</style>
-        
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-196003461-1">
-	</script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CompiledSanity Personal Finance & Net Worth Spreadsheets</title>
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="Personal Finance, Net Worth & FIRE Tracking made Automated & Easy. Through the wonders of Google Sheets & a bit of techno magic, CS Templates reveal and track your financial position.">
+  <meta name="author" content="CompiledSanity">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+  <link rel="manifest" href="img/fav/site.webmanifest">
+  <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i|Quicksand:500,500i|Ubuntu:400,400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap" rel="stylesheet">  
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
+  </style>
 
-		gtag('config', 'UA-196003461-1');
-	</script>
-	    
-	<!-- Reddit Pixel -->
-	<script>
-	!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_8vi78');rdt('track', 'PageVisit');
-	</script>
-	<!-- DO NOT MODIFY -->
-	<!-- End Reddit Pixel -->
-	    
-    </head>
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <body>	    
-        <!-- Loader -->
-        <!-- <div id="preloader">
-            <div id="status">
-                <div class="spinner">
-                    <div class="double-bounce1"></div>
-                    <div class="double-bounce2"></div>
+  <!-- Libraries CSS Files -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/cssbox.css" rel="stylesheet">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196003461-1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-196003461-1');
+  </script>
+
+</head>
+
+<body>
+
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body"><img src="img/CS2021_SquareLogov2.png" alt="" style="height:35px;" title="" /></a><a class="businessnametext" href="#body" class="scrollto"><span style="letter-spacing: inherit !important;">CompiledSanity</span> Automated Finance</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Download</a></li>
+          <li><a href="https://guide.cspersonalfinance.io/">Guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#changelog">Changelog</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero" class="wow fadeIn">
+    <div class="hero-container">
+      <h1 style="font-family: 'Ubuntu', sans-serif;">Welcome to CompiledSanity Personal Finance Templates</h1>
+      <h2>Personal Finance, Net Worth & FIRE Tracking made Automated & Easy <img src="https://cspersonalfinance.io/img/greencheck.png" style="line-height: inherit; height: 40px;margin-bottom: 0px;"></h2>
+      <img src="img/NetWorthPureChromev3-2107.png" alt="Hero Imgs">
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- #hero -->
+
+  <!--==========================
+    Get Started Section
+  ============================-->
+  <section id="about" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Want to see your entire financial position, live?</h2>
+        <p class="separator">Through the wonders of Google Sheets & a bit of techno magic, you can do exactly that.</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/svg/cloud.svg" alt="img" class="img-fluid">
+            <h4>Complete Portfolio Tracking</h4>
+            <p>Live tracking of your <i>entire</i> portfolio - Helping you know where you stand financially at <i>anytime</i>.</p>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/svg/planet.svg" alt="img" class="img-fluid">
+            <h4>User friendly interface & Budgeting</h4>
+            <p>A friendly UI helps simplify and manage your Monthly Budget & Financial Position.</p>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
+            <h4>Feedback leads to results</h4>
+            <p>Detailed historical tracking gives you feedback on how you're progressing, helping you save more!</p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!--==========================
+    Features Section
+  ============================-->
+
+  <section id="features" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Intelligent & Comprehensive Features</h2>
+        <p class="separator">Inuitive & simple to use features make managing your financial life smarter.</p>
+        <div class="cssbox" style="max-width: 80%; margin-top: 15px;">
+        <a id="image0" href="#image0"><img width="100%" class="cssbox_thumb" src="img/ChromeMockup_NoBorder.jpg" />
+            <span class="cssbox_full"><img src="img/ChromeMockup_NoBorder.jpg" /></span>
+        </a>
+        <a class="cssbox_close" href="#void"></a>
+      </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="cssbox" style="max-width: 11%;">
+        <a id="image1" href="#image1"><img width="100%" class="cssbox_thumb" src="img/CashTabv2107.png" />
+            <span class="cssbox_full"><img src="img/CashTabv2107.png" /></span>
+        </a>
+        <a class="cssbox_close" href="#void"></a>
+        <a class="cssbox_prev" href="#image6">&lt;</a>
+        <a class="cssbox_next" href="#image2">&gt;</a>
+      </div>
+      <div class="cssbox" style="max-width: 11%;">
+        <a id="image2" href="#image2"><img width="100%" class="cssbox_thumb" src="img/SummaryEmail.png" />
+            <span class="cssbox_full"><img src="img/SummaryEmail.png" /></span>
+        </a>
+        <a class="cssbox_close" href="#void"></a>
+        <a class="cssbox_prev" href="#image1">&lt;</a>
+        <a class="cssbox_next" href="#image3">&gt;</a>
+      </div>
+      <div class="cssbox" style="max-width: 11%;">
+        <a id="image3" href="#image3"><img width="100%" class="cssbox_thumb" src="img/ETFv2107.png" />
+            <span class="cssbox_full"><img src="img/ETFv2107.png" /></span>
+        </a>
+        <a class="cssbox_close" href="#void"></a>
+        <a class="cssbox_prev" href="#image2">&lt;</a>
+        <a class="cssbox_next" href="#image4">&gt;</a>
+      </div>
+      <div class="cssbox" style="max-width: 11%;">
+        <a id="image4" href="#image4"><img width="100%" class="cssbox_thumb" src="img/BudgetTabv2107.png" />
+            <span class="cssbox_full"><img src="img/BudgetTabv2107.png" /></span>
+        </a>
+        <a class="cssbox_close" href="#void"></a>
+        <a class="cssbox_prev" href="#image3">&lt;</a>
+        <a class="cssbox_next" href="#image5">&gt;</a>
+      </div>
+      <div class="cssbox" style="max-width: 11%;">
+        <a id="image5" href="#image5"><img width="100%" class="cssbox_thumb" src="img/PropertyTabv2107.png" />
+            <span class="cssbox_full"><img src="img/PropertyTabv2107.png" /></span>
+        </a>
+        <a class="cssbox_close" href="#void"></a>
+        <a class="cssbox_prev" href="#image4">&lt;</a>
+        <a class="cssbox_next" href="#image6">&gt;</a>
+      </div>
+      <div class="cssbox" style="max-width: 11%;">
+        <a id="image6" href="#image6"><img width="100%" class="cssbox_thumb" src="img/Debtsv2107.png" />
+            <span class="cssbox_full"><img src="img/Debtsv2107.png" /></span>
+        </a>
+        <a class="cssbox_close" href="#void"></a>
+        <a class="cssbox_prev" href="#image5">&lt;</a>
+        <a class="cssbox_next" href="#image7">&gt;</a>
+      </div>
+      <div class="cssbox" style="max-width: 11%;">
+        <a id="image7" href="#image7"><img width="100%" class="cssbox_thumb" src="img/FIREDashv2107.png" />
+            <span class="cssbox_full"><img src="img/FIREDashv2107.png" /></span>
+        </a>
+        <a class="cssbox_close" href="#void"></a>
+        <a class="cssbox_prev" href="#image6">&lt;</a>
+        <a class="cssbox_next" href="#image1">&gt;</a>
+      </div>
+    </div>
+    
+    <div class="container"><br><br></div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="img/svg/briefcase.svg" alt="img" class="img-fluid">
+            <h4>Holistic Tracking & Budgeting</h4>
+            <p>Capturing all parts of your financial position (Stocks, ETF’s, Managed Funds, Dividends, Property, Retirement/Pension, Side Income etc) together with your Budget for full financial context.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="img/svg/stock.svg" alt="img" class="img-fluid">
+            <h4>Live Prices</h4>
+            <p>Live prices for ETFs, Stocks, Crypto & Managed Fund assets with built-in Dividend Tracking.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="img/svg/automatic.svg" alt="img" class="img-fluid">
+            <h4>Algorithmic Investing</h4>
+            <p>Automatically optimizing when & what investments to rebalance into, calculating a proposed amount based on your guidance before finally sending you reminders when it's time to invest.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="img/svg/growths.svg" alt="img" class="img-fluid">
+            <h4>Monthly Reporting</h4>
+            <p>Tracks your monthly Net Worth and expenses, and emails you a monthly progress report.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="img/svg/deposit.svg" alt="img" class="img-fluid">
+            <h4>Automatic Allocations</h4>
+            <p>The Budgeting Tab guides your investment & savings amounts, helping you automate your savings and monthly transfers.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="img/privacy.svg" alt="img" class="img-fluid">
+            <h4>Completely Private</h4>
+            <p>Unlike 3rd party solutions, you control and host your own financial data. No personal or financial information is held or shared with unknown parties. You're in control.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="img/svg/loan.svg" alt="img" class="img-fluid">
+            <h4>Loan & Debt Support</h4>
+            <p>Tracks and captures progress made on Loan & Debts, including Credit-Card and Mortgage repayments.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img style="width: 50px; height: auto;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/flag-for-australia_1f1e6-1f1fa.png" alt="img" class="img-fluid">
+            <img style="width: 50px; height: auto;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/flag-for-united-kingdom_1f1ec-1f1e7.png" alt="img" class="img-fluid">
+            <img style="width: 50px; height: auto;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/flag-for-united-states_1f1fa-1f1f8.png" alt="img" class="img-fluid">
+            <img style="width: 50px; height: auto;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/flag-for-european-union_1f1ea-1f1fa.png" alt="img" class="img-fluid">
+            <h4>Aus, UK, US & EU SUPPORT</h4>
+            <p>Choose between Australian, UK, US & EU regions with region specific features & currency customisations (ie. Super/Pension/IRA).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Testimonials Section
+  ============================-->
+
+  <section id="testimonials" class="padd-section text-center wow fadeInUp">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-md-8">
+
+          <div class="testimonials-content">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-inner" role="listbox">
+
+                <div class="carousel-item  active">
+                  <div class="top-top">
+                    <h2>Comments from Users</h2>
+                    <p>Thanks again for an amazing spreadsheet, you're a legend, everyone should know about this, it's benefits are not only incredibly helpful but motivational.</p>
+                    <h4>Reddit User<span>r/AusFinance</span></h4>
+                  </div>
                 </div>
+
+                <div class="carousel-item ">
+                  <div class="top-top">
+                    <h2>Comments from Users</h2>
+                    <p>This is awesome and will be my go-to spreadsheet moving forward. Thanks a lot for an amazing spreadsheet.</p>
+                    <h4>Reddit User<span>r/AusFinance</span></h4>
+                  </div>
+                </div>
+                
+                <div class="carousel-item ">
+                  <div class="top-top">
+                    <h2>Comments from Users</h2>
+                    <p>Is it wrong how excited I am about getting time to try this out?</p>
+                    <h4>Reddit User<span>r/UKPersonalFinance</span></h4>
+                    <br>
+                  </div>
+                </div>
+                
+                <div class="carousel-item ">
+                  <div class="top-top">
+                    <h2>Comments from Users</h2>
+                    <p>This spreadsheet is the best money I ever spent - thank you :)</p>
+                    <h4>Reddit User<span>r/UKPersonalFinance</span></h4>
+                    <br>
+                  </div>
+                </div>
+                
+                <div class="carousel-item ">
+                  <div class="top-top">
+                    <h2>Comments from Users</h2>
+                    <p>Bloody impressive!</p>
+                    <h4>Reddit User<span>r/FIAustralia</span></h4>
+                    <br>
+                  </div>
+                </div>
+
+                <div class="carousel-item ">
+                  <div class="top-top">
+                    <h2>Comments from Users</h2>
+                    <p>This is great, nice work Mate! Have been wanting to get something like this together for so long but never able to find the spare time.</p>
+                    <h4>Reddit User<span>r/AusFinance</span></h4>
+                  </div>
+                </div>
+                
+                <div class="carousel-item ">
+                  <div class="top-top">
+                    <h2>Comments from Users</h2>
+                    <p>This is awesome, thanks! Financial & Google Sheet goals 👏</p>
+                    <h4>Reddit User<span>r/PersonalFinanceCanada</span></h4>
+                    <br>
+                  </div>
+                </div>
+                
+                <div class="carousel-item ">
+                  <div class="top-top">
+                    <h2>Comments from Users</h2>
+                    <p>I just wanted to say a big thank you for creating something that's so flexible and easy to use yet offers such rewarding insights and inspiration to strive for financial goals.</p>
+                    <h4>Reddit User<span>r/CSPersonalFinance</span></h4>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="btm-btm">
+
+                <ul class="list-unstyled carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+                </ul>
+
+              </div>
+
             </div>
-        </div> -->
-        <!-- Loader -->
-        
-        <!-- Navbar STart -->
-        <header id="topnav" class="defaultscroll sticky">
-            <div class="container">
-                <!-- Logo container-->
-                <a class="logo" href="index.html">
-                    <img src="https://cspersonalfinance.io/img/CS2021_SquareLogov2.png" height="24" class="logo-light-mode" alt="">
-                    <img src="https://cspersonalfinance.io/img/CS2021_SquareLogov2.png" height="24" class="logo-dark-mode" alt="">
-                    <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext" ><span class="logospantext" style="color: #71c55d;">CompiledSanity</span> Automated Finance</span>
-                </a>
-                <!-- End Logo container-->
-                <div class="menu-extras">
-                    <div class="menu-item">
-                        <!-- Mobile menu toggle-->
-                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
-                            <div class="lines">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </a>
-                        <!-- End mobile menu toggle-->
-                    </div>
-                </div>
-        
-                <div id="navigation">
-                    <!-- Navigation Menu-->   
-                    <ul class="navigation-menu">
-                        <li style="margin: 0 0px;"><a href="index.html" class="sub-menu-item">Home</a></li>
-                        <li style="margin: 0 0px;"><a href="#about" class="sub-menu-item">About</a></li>
-                        <li style="margin: 0 0px;"><a href="#features" class="sub-menu-item">Features</a></li>
-                        <li style="margin: 0 0px;"><a href="#download" class="sub-menu-item">Download</a></li>
-                        <li style="margin: 0 0px;"><a href="https://guide.cspersonalfinance.io/" class="sub-menu-item">Guide</a></li>
-                        <li style="margin: 0 0px;"><a href="#faq" class="sub-menu-item">FAQ</a></li>
-                    </ul><!--end navigation menu-->
-                </div><!--end navigation-->
-            </div><!--end container-->
-        </header><!--end header-->
-        <!-- Navbar End -->
-        
-        <!-- Hero Start -->
-        <section class="bg-home d-flex align-items-center" style="background: url('images/saas/home-shape.png') center center; height: auto;" id="home">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 text-center mt-0 mt-md-5 pt-0 pt-md-5">
-                        <div class="title-heading margin-top-100">
-                            <h1 class="heading mb-3" style="font-weight: 900!important; color: #71c55d;"><!--<img src="images/CS2021_SquareLogov2.png" style="max-height: 1.2em; margin-bottom: 1rem!important;">-->CompiledSanity Personal Finance Templates</h1>
-                            <p class="para-desc mx-auto text-muted">Personal Finance, Net Worth & FIRE Tracking made Automated & Easy <img src="https://cspersonalfinance.io/img/greencheck.png" style="line-height: inherit; max-height: 24px; margin-bottom: 0px;"></p>
-                            <div class="mt-4 pt-2">
-                                <a href="#about" class="btn btn-primary">Get Started <i class="uil uil-angle-right-b"></i></a>
-                            </div>
-                        </div>
+          </div>
+        </div>
 
-                        <div class="home-dashboard">
-                            <img src="images/MacMockup5.png" alt="" class="img-fluid">
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container--> 
-        </section><!--end section-->
-        <!-- Hero End -->
+      </div>
+    </div>
+  </section>
 
-        <!-- Partners start -->
-        <section class="section bg-light mt-0 mt-md-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title mb-4 pb-2">
-                            <h3 class="mb-4">Want to see your entire financial position, <span class="text-primary" style="font-weight: bolder;"> live?</span></h3>
-                            <p class="text-muted mx-auto mb-0">Through the wonders of Google Sheets & a bit of techno magic, you can do exactly that.</p>
-                        </div>
-                    </div><!--end col-->
-                </div>
-            </div><!--end container-->
-        </section><!--end section-->
-        <!-- Partners End -->
+  <!--==========================
+    Pricing Table Section
+  ============================-->
+  <section id="pricing" class="padd-section text-center wow fadeInUp" style="text-align: center;">
 
-        <!-- Feature Start -->
-        <section class="section" id="about">
-            <div class="container mt-60">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6">
-                        <img src="https://cspersonalfinance.io/img/ChromeMockup_NoBorder.jpg" class="img-fluid shadow rounded" alt="">
-                    </div><!--end col-->
+    <div class="container">
+      <div class="section-title text-center" style="margin-bottom: 40px !important;">
 
-                    <div class="col-lg-6 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                        <div class="section-title ms-lg-5">
-                            <h4 class="title mb-4">Intelligent & Comprehensive</h4>
-                            <p class="text-muted">Inuitive features to help make managing your finances smarter.</p>
-                            <ul class="list-unstyled text-muted">
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Complete Portfolio Tracking</li>
-			    	<li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>User Friendly Interface</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Minimal Input Needed</li>
-                            </ul>
-                            <!-- <a href="#download" class="mt-3 h6 text-primary">Find Out More <i class="uil uil-angle-right-b"></i></a>-->
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-            
-            <div class="container mt-100" id="features">
-                <div class="row mb-5">
-                    <div class="col-md-4 col-12">
-                        <div class="features">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-bolt-alt h1 text-primary"></i>
-                            </div>
+        <h2>Version Comparisons</h2>
+        <p class="separator">2 different versions of this Sheet are offered.</p>
 
-                            <div class="content mt-4">
-                                <h5>Live Prices</h5>
-                                <p class="text-muted mb-0">Live prices for ETFs, Stocks, Crypto & Managed Fund assets with built-in Dividend Tracking.</p>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                    
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-chart-line h1 text-primary"></i>
-                            </div>
+      </div>
+    </div>
 
-                            <div class="content mt-4">
-                                <h5>Monthly Reports</h5>
-                                <p class="text-muted mb-0">Tracks your monthly Net Worth and expenses, and emails you a monthly progress report.</p>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                    
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-chart-pie h1 text-primary"></i>
-                            </div>
+    <div class="container">
+      <div class="row" style="text-align: center; justify-content: center;">
 
-                            <div class="content mt-4">
-                                <h5>Holistic Tracking & Budgeting</h5>
-                                <p class="text-muted mb-0">Capturing all parts of your financial position (Stocks, ETF’s, Managed Funds, Dividends, Property, Retirement/Pension, Side Income etc) together with your Budget for full financial context.</p>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-                
-                <div class="row mb-5">
-                    <div class="col-md-4 col-12">
-                        <div class="features">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-setting h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Algorithmic Investing</h5>
-                                <p class="text-muted mb-0">Automatically optimizing when & what investments to rebalance into, calculating a proposed amount based on your guidance before finally sending you reminders when it's time to invest.</p>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                    
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-lock-alt h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Completely Private</h5>
-                                <p class="text-muted mb-0">Unlike 3rd party solutions, you control and host your own financial data. No personal or financial information is held or shared with unknown parties. You're in control.</p>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                    
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-robot h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Automatic Allocations</h5>
-                                <p class="text-muted mb-0">The Budgeting Tab guides your investment & savings amounts, helping you automate your savings and monthly transfers.</p>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-                
-                <div class="row mb-5">
-                    <div class="col-md-4 col-12">
-                        <div class="features">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-grin h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Easy To Use</h5>
-                                <p class="text-muted mb-0">Designed from the ground up to be easy to use with minimal input.</p>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                    
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-rocket h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Loan & Debt Support</h5>
-                                <p class="text-muted mb-0">Tracks and captures progress made on Loan & Debts, including Credit-Card and Mortgage repayments.</p>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                    
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-globe h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>AUS, UK, US & EU Support</h5>
-                                <p class="text-muted mb-0">Choose between Australian, UK, US & EU regions with region specific features & currency customisations (ie. Super/Pension/IRA).</p>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-            
-            <div class="container mt-100 mt-60">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 col-md-6 order-2 order-md-1 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                        <div class="section-title me-lg-5">
-                            <h4 class="title mb-4">Inclusive of all your Assets</h4>
-                            <p class="text-muted">Built to include every kind of financial asset in your life.</p>
-                            <ul class="list-unstyled text-muted">
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Cash Accounts</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Stocks</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>ETFs</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Managed Funds</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Crypto</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Property</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Physical Commodities</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Retirement Accounts</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Miscellaneous Assets</li>
-                            </ul>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-lg-5 col-md-6 order-1 order-md-2">
-                        <img src="images/app_development_SVG2.svg" alt="">
-                    </div><!--end col-->
-                </div><!--end row-->
-		
-				<div class="row align-items-center mt-60" style="margin-top: 60px;">
-					<div class="container-fluid">
-						<div id="grid" class="row shuffle" style="position: relative; overflow: hidden; height: 617.673px; transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;">
-							<div class="col-lg-3 col-md-6 col-12 mt-4 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;branding&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-								<div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-									<div class="card-body p-0">
-										<a href="https://cspersonalfinance.io/img/CashTabv2107.png" class="lightbox d-inline-block tobii-zoom" title="">
-											<img src="https://cspersonalfinance.io/img/CashTabv2107.png" class="img-fluid" alt="Cash Tab">
-										<div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="16 4 20 4 20 8"></polyline><line x1="14" y1="10" x2="20" y2="4"></line><polyline points="8 20 4 20 4 16"></polyline><line x1="4" y1="20" x2="10" y2="14"></line><polyline points="16 20 20 20 20 16"></polyline><line x1="14" y1="14" x2="20" y2="20"></line><polyline points="8 4 4 4 4 8"></polyline><line x1="4" y1="4" x2="10" y2="10"></line></svg></div></a>
-										<div class="content bg-white p-3">
-											<h5 class="mb-0"><a href="portfolio-detail-one.html" class="text-dark title">Cash Tab</a></h5>
-										</div>
-									</div>
-								</div>
-							</div><!--end col-->
-							
-							<div class="col-lg-3 col-md-6 col-12 mt-4 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;designing&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(285px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-								<div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-									<div class="card-body p-0">
-										<a href="https://cspersonalfinance.io/img/SummaryEmail.png" class="lightbox d-inline-block tobii-zoom" title="">
-											<img src="https://cspersonalfinance.io/img/SummaryEmail.png" class="img-fluid" alt="Monthly Report">
-										<div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="16 4 20 4 20 8"></polyline><line x1="14" y1="10" x2="20" y2="4"></line><polyline points="8 20 4 20 4 16"></polyline><line x1="4" y1="20" x2="10" y2="14"></line><polyline points="16 20 20 20 20 16"></polyline><line x1="14" y1="14" x2="20" y2="20"></line><polyline points="8 4 4 4 4 8"></polyline><line x1="4" y1="4" x2="10" y2="10"></line></svg></div></a>
-										<div class="content bg-white p-3">
-											<h5 class="mb-0"><a href="portfolio-detail-one.html" class="text-dark title">Monthly Report</a></h5>
-										</div>
-									</div>
-								</div>
-							</div><!--end col-->
-							
-							<div class="col-lg-3 col-md-6 col-12 mt-4 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;photography&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(570px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-								<div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-									<div class="card-body p-0">
-										<a href="https://cspersonalfinance.io/img/ETFv2107.png" class="lightbox d-inline-block tobii-zoom" title="">
-											<img src="https://cspersonalfinance.io/img/ETFv2107.png" class="img-fluid" alt="ETFs Tab">
-										<div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="16 4 20 4 20 8"></polyline><line x1="14" y1="10" x2="20" y2="4"></line><polyline points="8 20 4 20 4 16"></polyline><line x1="4" y1="20" x2="10" y2="14"></line><polyline points="16 20 20 20 20 16"></polyline><line x1="14" y1="14" x2="20" y2="20"></line><polyline points="8 4 4 4 4 8"></polyline><line x1="4" y1="4" x2="10" y2="10"></line></svg></div></a>
-										<div class="content bg-white p-3">
-											<h5 class="mb-0"><a href="portfolio-detail-one.html" class="text-dark title">ETFs Tab</a></h5>
-										</div>
-									</div>
-								</div>
-							</div><!--end col-->
-							
-							<div class="col-lg-3 col-md-6 col-12 mt-4 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;development&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(855px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-								<div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-									<div class="card-body p-0">
-										<a href="https://cspersonalfinance.io/img/BudgetTabv2107.png" class="lightbox d-inline-block tobii-zoom" title="">
-											<img src="https://cspersonalfinance.io/img/BudgetTabv2107.png" class="img-fluid" alt="Budget Tab">
-										<div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="16 4 20 4 20 8"></polyline><line x1="14" y1="10" x2="20" y2="4"></line><polyline points="8 20 4 20 4 16"></polyline><line x1="4" y1="20" x2="10" y2="14"></line><polyline points="16 20 20 20 20 16"></polyline><line x1="14" y1="14" x2="20" y2="20"></line><polyline points="8 4 4 4 4 8"></polyline><line x1="4" y1="4" x2="10" y2="10"></line></svg></div></a>
-										<div class="content bg-white p-3">
-											<h5 class="mb-0"><a href="portfolio-detail-one.html" class="text-dark title">Budget Tab</a></h5>
-										</div>
-									</div>
-								</div>
-							</div><!--end col-->
-							
-							<div class="col-lg-3 col-md-6 col-12 mt-4 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;branding&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(0px, 206px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-								<div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-									<div class="card-body p-0">
-										<a href="https://cspersonalfinance.io/img/PropertyTabv2107.png" class="lightbox d-inline-block tobii-zoom" title="">
-											<img src="https://cspersonalfinance.io/img/PropertyTabv2107.png" class="img-fluid" alt="Property Tab">
-										<div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="16 4 20 4 20 8"></polyline><line x1="14" y1="10" x2="20" y2="4"></line><polyline points="8 20 4 20 4 16"></polyline><line x1="4" y1="20" x2="10" y2="14"></line><polyline points="16 20 20 20 20 16"></polyline><line x1="14" y1="14" x2="20" y2="20"></line><polyline points="8 4 4 4 4 8"></polyline><line x1="4" y1="4" x2="10" y2="10"></line></svg></div></a>
-										<div class="content bg-white p-3">
-											<h5 class="mb-0"><a href="portfolio-detail-one.html" class="text-dark title">Property Tab</a></h5>
-										</div>
-									</div>
-								</div>
-							</div><!--end col-->
-							
-							<div class="col-lg-3 col-md-6 col-12 mt-4 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;branding&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(285px, 206px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-								<div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-									<div class="card-body p-0">
-										<a href="https://cspersonalfinance.io/img/Debtsv2107.png" class="lightbox d-inline-block tobii-zoom" title="">
-											<img src="https://cspersonalfinance.io/img/Debtsv2107.png" class="img-fluid" alt="Loans Tab">
-										<div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="16 4 20 4 20 8"></polyline><line x1="14" y1="10" x2="20" y2="4"></line><polyline points="8 20 4 20 4 16"></polyline><line x1="4" y1="20" x2="10" y2="14"></line><polyline points="16 20 20 20 20 16"></polyline><line x1="14" y1="14" x2="20" y2="20"></line><polyline points="8 4 4 4 4 8"></polyline><line x1="4" y1="4" x2="10" y2="10"></line></svg></div></a>
-										<div class="content bg-white p-3">
-											<h5 class="mb-0"><a href="portfolio-detail-one.html" class="text-dark title">Loans Tab</a></h5>
-										</div>
-									</div>
-								</div>
-							</div><!--end col-->
-							
-							<div class="col-lg-3 col-md-6 col-12 mt-4 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;designing&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(570px, 206px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-								<div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-									<div class="card-body p-0">
-										<a href="https://cspersonalfinance.io/img/FIREDashv2107.png" class="lightbox d-inline-block tobii-zoom" title="">
-											<img src="https://cspersonalfinance.io/img/FIREDashv2107.png" class="img-fluid" alt="FIRE Dashboard">
-										<div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="16 4 20 4 20 8"></polyline><line x1="14" y1="10" x2="20" y2="4"></line><polyline points="8 20 4 20 4 16"></polyline><line x1="4" y1="20" x2="10" y2="14"></line><polyline points="16 20 20 20 20 16"></polyline><line x1="14" y1="14" x2="20" y2="20"></line><polyline points="8 4 4 4 4 8"></polyline><line x1="4" y1="4" x2="10" y2="10"></line></svg></div></a>
-										<div class="content bg-white p-3">
-											<h5 class="mb-0"><a href="portfolio-detail-one.html" class="text-dark title">FIRE Dashboard</a></h5>
-										</div>
-									</div>
-								</div>
-							</div><!--end col-->
-						</div>
-					</div>
-				</div><!--end row-->
-            </div><!--end container-->
-            
-            <div class="container mt-100 mt-60">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title mb-4 pb-2">
-                            <h4 class="title mb-4">Whats users say about <span class="text-primary">CS Sheet Templates</span></h4>
-                            <p class="text-muted para-desc mx-auto mb-0">Loved by over <span class="text-primary fw-bold">3200+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 mt-4">
-                        <div class="tiny-three-item">
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="images/reddituser.png" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">" Thanks again for an amazing spreadsheet, you're a legend, everyone should know about this, it's benefits are not only incredibly helpful but motivational. "</p>
-                                        <h6 class="text-primary">- Reddit User <small class="text-muted">r/AusFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="images/reddituser.png" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star-half text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">" This is awesome and will be my go-to spreadsheet moving forward. Thanks a lot for an amazing spreadsheet. "</p>
-                                        <h6 class="text-primary">- Reddit User <small class="text-muted">r/AusFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="images/reddituser.png" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">" Is it wrong how excited I am about getting time to try this out? "</p>
-                                        <h6 class="text-primary">- Reddit User <small class="text-muted">r/UKPersonalFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="images/reddituser.png" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">" This spreadsheet is the best money I ever spent - thank you :) "</p>
-                                        <h6 class="text-primary">- Reddit User <small class="text-muted">r/UKPersonalFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="images/reddituser.png" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">" This is great, nice work Mate! Have been wanting to get something like this together for so long but never able to find the spare time. "</p>
-                                        <h6 class="text-primary">- Reddit User <small class="text-muted">r/AusFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="images/reddituser.png" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">" I just wanted to say a big thank you for creating something that's so flexible and easy to use yet offers such rewarding insights and inspiration to strive for financial goals. "</p>
-                                        <h6 class="text-primary">- Reddit User <small class="text-muted">r/CSPersonalFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-        </section><!--end sectipn-->
-        <!-- Client End -->
-        
-        <!-- Price Start -->
-        <section class="section" id="download" style="padding: 50px 0 !important;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title mb-4 pb-2">
-                            <h4 class="title mb-4">Version Comparisons</h4>
-                            <p class="text-muted para-desc mb-0 mx-auto">2 different versions of this Sheet are offered.</p>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-
-                <div class="row align-items-start" style="text-align: center; justify-content: center;">
-                    <div class="col-md-6 col-lg-4 mb-3">
-                        <div class="card pricing-rates bg-light py-4 border-0 rounded text-center"  style="background-color: #f9f9fb !important;">
-                            <div class="card-body">
-                                <h4 class="title text-uppercase text-primary mt-2 mb-2">INITIAL V1 VERSION</h4>
-                                <div class="d-flex justify-content-center mb-4" style="margin-bottom: 2.7rem !important;">
-                                    <span class="price h2 mb-0">FREE</span>
-                                </div>
-
-                                <ul class="list-unstyled mb-0 ps-0" style="text-align: left;">
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Net Worth</b> Overview & Tracking</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Live ETF & Stock</b> Tracking</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Dividend</b> Support</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Super/Retirement</b> Fund Tracking</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Budgeting</b> System Included</li>
-                                </ul>
-                                <a href="https://docs.google.com/spreadsheets/d/1tRJzUsKBNE_JoSTiMLT0-V5zk3cwGW3lpnpboot0IGI/" style="box-shadow: 0 3px 5px 0 #d3d3d3; background: #D3D3D3 !important; color: #000000 !important; border-color: #c8c8c8 !important;" class="btn btn-primary mt-4">Visit Now - AU <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_au.png" alt="img" class="img-fluid"></a>
-                                <a href="https://docs.google.com/spreadsheets/d/1v9ENzdoSIVlfAA2SFVFz6KKVAAu5Knv8klde7bN2Qqo/" style="box-shadow: 0 3px 5px 0 #d3d3d3; background: #D3D3D3 !important; color: #000000 !important; border-color: #c8c8c8 !important;" class="btn btn-primary mt-4">Visit Now - UK <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_uk.png" alt="img" class="img-fluid"></a>
-                                <a href="https://docs.google.com/spreadsheets/d/1pPK8t8Oe6F53OMw1EG8Hq1tX4F5SnULdf3Cr8TlUCs4/" style="box-shadow: 0 3px 5px 0 #d3d3d3; background: #D3D3D3 !important; color: #000000 !important; border-color: #c8c8c8 !important;" class="btn btn-primary mt-4">Visit Now - US <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_us.png" alt="img" class="img-fluid"></a>
-                                <a href="https://docs.google.com/spreadsheets/d/15v1a96culFW0r5HfyRaAu2gmdK9s-9kOe9ARSUWBuAY/" style="box-shadow: 0 3px 5px 0 #d3d3d3; background: #D3D3D3 !important; color: #000000 !important; border-color: #c8c8c8 !important;" class="btn btn-primary mt-4">Visit Now - EU <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_eu.png" alt="img" class="img-fluid"></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-md-6 col-lg-4 mb-3">
-                        <div class="card pricing-rates bg-light py-4 border-0 rounded text-center" style="background-color: #eefdf9 !important; border-color: #9dd994 !important; border-width: thick !important;">
-                            <!-- <div class="ribbon ribbon-right ribbon-warning overflow-hidden"><span class="text-center d-block shadow small h7">Popular</span></div> -->
-                            <div class="card-body paidsheet">
-                                <h3 class="title fw-bold text-uppercase text-primary mb-2">COMPLETE V2+</h3>
-                                <div class="d-flex justify-content-center mb-1">
-                                    <span class="price h1 mb-0">$8 AUD</span>
-                                </div>
-                                <div class="d-flex justify-content-center mb-0">
-                                    <h6 class="title fw-light text-uppercase mb-3">~$6USD / ~£4.50GBP</h6>
-                                </div>
-                                <ul class="list-unstyled mb-0 ps-0" style="text-align: left;">
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Net Worth</b> Overview & Tracking</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Live ETF, Stock, Crypto & Managed Fund</b> Pricing & Tracking</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Live & Automatic FIRE🔥 Dashboard</b></li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Property</b> Value & Performance Tracking Dashboard</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Loan, Debt, Mortgage & Credit-Card</b> Tracking Dashboard</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Monthly Net Worth and Savings</b> email updates</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Spaceship Voyager (Universe, Origin & Earth)</b> Live Pricing Support</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Live & Automatic International Currency Pricing Support</b> on all Assets</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Crypto Staking</b> Support & Performance Metrics</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Managed Funds, ETFs & Stocks</b> can be used as Retirement balances</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Google Calendar/Email</b> Sheet & Investment Reminders</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Aglorithmic</b> Investment Rebalancing Optimisations</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Improved Budgeting</b> System</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Dividend Tracking </b> and Reinvestment Support</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Expanded ETF/Stocks/Managed Fund</b> Ticker Support</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Super/Retirement</b> Fund Tracking</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Generic & Physical</b> Asset Tracking<br>(Including live Gold/Silver Prices)</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Automatically calculated Sold Units</b></li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Automatic Migration System</b> for future updates</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Sheet Update</b> Notification System</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Ongoing Bugfixes</b> - including numerous to original version</li>
-                                    <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><b>Ongoing Sheet Updates & Releases</b></li>
-                                </ul>
-                                <a href="https://cspersonalfinance.io/donate.html" class="btn btn-primary mt-4"><i class="uil uil-shopping-cart-alt"></i>  Buy Now - AU <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_au.png" alt="img" class="img-fluid"></a>
-                                <a href="https://cspersonalfinance.io/donate.html" class="btn btn-primary mt-4"><i class="uil uil-shopping-cart-alt"></i>  Buy Now - UK <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_uk.png" alt="img" class="img-fluid"></a>
-                                <a href="https://cspersonalfinance.io/donate.html" class="btn btn-primary mt-4"><i class="uil uil-shopping-cart-alt"></i>  Buy Now - US <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_us.png" alt="img" class="img-fluid"></a>
-                                <a href="https://cspersonalfinance.io/donate.html" class="btn btn-primary mt-4"><i class="uil uil-shopping-cart-alt"></i>  Buy Now - EU <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_eu.png" alt="img" class="img-fluid"></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                </div><!--end row-->
-            </div><!--end container-->
-        </section><!--end section-->
-        <!-- Price End -->
-        
-        <!-- FAQ Start -->
-        <section class="section" id="faq">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title mb-4 pb-2">
-                            <h4 class="title mb-4">Have some questions?</h4>
-                            <p class="text-muted para-desc mb-0 mx-auto">Check out a filtered list of FAQs below. For the full list <a href="https://guide.cspersonalfinance.io/faqs">click here.</a></p>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-                
-				<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-7 col-12">
-						<div class="section-title" id="tech">
-							<h4 style="text-align: center;">Using the Sheet</h4>
-						</div>
-						<div class="accordion mt-4 pt-2" id="buyingquestion">
-							<div class="accordion-item rounded">
-								<h2 class="accordion-header" id="headingOne">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-										How do I enter my own Historical data into a new Sheet?
-									</button>
-								</h2>
-								<div id="collapseOne" class="accordion-collapse border-0 collapse" aria-labelledby="headingOne" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">
-										To enter your own historical Data into the Sheet, follow the instructions below:
-										<br>
-										<ol>
-											<li>Head to the History tab</li>
-											<li>Starting in Cell A3 and working down, enter in the dates (ie. 1/6/2020, 1/7/2020 etc.) for the previous data you want in the sheet. Don't worry about the months already in the sheet, they will automatically move
-											down.</li>
-											<li>For the new months that you've entered, from left-right fill out the values in the blue columns.</li>
-										</ol>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingThree">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-										How do I know my Data is kept private?
-									</button>
-								</h2>
-								<div id="collapseThree" class="accordion-collapse border-0 collapse" aria-labelledby="headingThree" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">
-										A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services
-										permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg. <br>
-										<br>
-										You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out.
-										Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information
-										needed to determine your Net Worth & associated performance.
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingTwo">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?
-									</button>
-								</h2>
-								<div id="collapseTwo" class="accordion-collapse border-0 collapse" aria-labelledby="headingTwo" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">
-										If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps:
-										<br>
-										<ol>
-											<li>Click File -> Version History -> See Version History</li>
-											<li>In the right Sidebar, click on the dated version of the Sheet <i>before</i> you clicked to end the month</li>
-											<li>At the top of the screen, click the green "Restore this version" button</li>
-											<li>Finish off entering your data and run the Sheet again</li>
-										</ol>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingFour">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-										A new Sheet update is released, how do I upgrade to a new Sheet?
-									</button>
-								</h2>
-								<div id="collapseFour" class="accordion-collapse border-0 collapse" aria-labelledby="headingFour" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white"><a href="https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version">Please see the instructions on how to upgrade your Sheet.</a></div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingfive">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-										How do I migrate data between sheets?
-									</button>
-								</h2>
-								<div id="collapsefive" class="accordion-collapse border-0 collapse" aria-labelledby="headingfive" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you.</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingsix">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
-										How do I enter in a missed month?
-									</button>
-								</h2>
-								<div id="collapsesix" class="accordion-collapse border-0 collapse" aria-labelledby="headingsix" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">
-										To backfill data for missed months, follow the below:<br>
-										<ol>
-											<li>In the History tab in Column A, enter in the date you want to backfill in the correct ordering compared to your existing months. If this is your first time running the Sheet, simply write in the date missed into
-											Cell A3.</li>
-											<b>NOTE:</b><i> Do not Insert a new row. Simply make use of the rows already in the Sheet.</i>
-											<li>Proceed filling out the Asset values for the new month, updating the <b>blue</b> columns only.</li>
-											<li>Done! The Date Column should automatically adapt and the current month should automatically shift down.</li>
-										</ol>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingseven">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
-										Can I use the Sheet with Excel, Offline or Libre Office?
-									</button>
-								</h2>
-								<div id="collapseseven" class="accordion-collapse border-0 collapse" aria-labelledby="headingseven" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">
-										Unfortunately no, as the Sheet is heavily reliant on Google Sheet functions for live pricing, custom Google formulas and most importantly the behind the scenes scripts written in Google Apps Scripts. You may download
-										the Sheet and try importing into Excel, but you will find that significant elements of the Sheet will not work and it is therefore heavily not recommended. <br>
-										If your concern is privacy, please see the FAQ entry <a href="https://guide.cspersonalfinance.io/faqs#how-do-i-know-my-data-is-kept-private">How do I know my Data is kept private?</a>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingeight">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
-										A new version is released but I haven't received an email, what do I do?
-									</button>
-								</h2>
-								<div id="collapseeight" class="accordion-collapse border-0 collapse" aria-labelledby="headingeight" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">
-										Often due to the keywords in release emails they can be marked as spam or placed in your Promotions Gmail sub-inbox. To stop this happening in the future, please add to your contacts my email address (the same email
-										that you received on the original invite) to stop future emails being filtered. If you have not received an invite please email me or contact me via Reddit.
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingnine">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
-										How do I use the tool if I'm paid fortnightly?
-									</button>
-								</h2>
-								<div id="collapsenine" class="accordion-collapse border-0 collapse" aria-labelledby="headingnine" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">
-										First off, in the SheetOptions tab set your pay Cycle to fornightly and update your fornightly pay value. This will help the Template understand your monthly pay.
-										<br>
-										<br>
-										When it comes to the Sheet however, all calculations are strictly performed in the month timescale. This is to enable a lot of date functions to work on a standardized timescale. So tracking and statistics will be
-										performed at the monthly time scale.
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingten">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
-										The dates in my Sheets keep ticking over and my history isn't being recorded, why is this?
-									</button>
-								</h2>
-								<div id="collapseten" class="accordion-collapse border-0 collapse" aria-labelledby="headingten" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">
-										To record the month of progress that you're in, it is critically important that you press the Red Update Button in the Net Worth Tab at least once a month (pictured below).
-										<br>
-										<br>
-										<p style="text-align: center;"><img style="max-width: 100%" src="https://i.imgur.com/NyrJggG.png" alt="Red Net Worth Update button"/></p>
-										This is so that you can enter in all your up to date values before pressing the button to record the month. If you do not press this button, the Sheet will keep ticking over to the next month until you update your
-										Net Worth for the first time.
-										<br>
-										<br>
-										Please note:
-										<ul>
-											<li>It is recommended that you update your Net Worth on the 1st of every month.</li>
-											<li>You must always record a month while <i>in</i> that month. ie. You can only record November while inside November.</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingeleven">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeleven" aria-expanded="false" aria-controls="collapseeleven">
-										I'm having issues with weird dates in the History tab, what do I do?
-									</button>
-								</h2>
-								<div id="collapseeleven" class="accordion-collapse border-0 collapse" aria-labelledby="headingeleven" data-bs-parent="#buyingquestion">
-									<div class="accordion-body text-muted bg-white">
-										If you are seeing strange duplicates/gaps in your History Sheet, please contact me via the email you originally received your invite from. This is a carry over bug from v1.3 that has since been fixed but will require
-										some slight fixes to your Sheet.
-										<br>
-										<br>
-										Subject Line - <b>History Tab - Date Error Issue</b>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="section-title mt-5" id="payment">
-							<h4 style="text-align: center;">Personal Circumstances</h4>
-						</div>
-						<div class="accordion mt-4 pt-2" id="paymentquestion">
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingtwelve">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwelve" aria-expanded="false" aria-controls="collapsetwelve">
-										I'm paid irreguarly or with irregular amounts, how do I account for that?
-									</button>
-								</h2>
-								<div id="collapsetwelve" class="accordion-collapse border-0 collapse" aria-labelledby="headingtwelve" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white">
-										2 ways. Either:
-										<br>
-										<ul>
-											<li>Enter in an average figure that you are comfortable with</li>
-											<li>b) Set your Salary to $0 and enter all your income into the Side Income tab. This was designed for irregular amounts and will automatically feed an averaged value into the rest of the Template.</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingthirteen">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethirteen" aria-expanded="false" aria-controls="collapsethirteen">
-										How do I enter and account for my Mortgage Offset Account?
-									</button>
-								</h2>
-								<div id="collapsethirteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingthirteen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white">
-										Mortgage Offset accounts can be dealt with in many different ways. Uniquely, Offset accounts can count as both a Cash account as well as downpayments on your loan. Since this money can flex in between it can be a
-										grey area, but for the purposes of the Sheet it needs to be more definite.
-										<br>
-										<br>
-										It is recommended that you come up with a theoretical minimum floor/emergency Cash amount that you have earmarked for emergencies, investments or general purchases ($30,000 for example). This $30,000 balance would go
-										in the Cash tab as "Offset Account".
-										<br>
-										<br>
-										In the Property tab for "Mortgage amount paid" you would put the remainder of this balance (ie. Total Offset Balance - $30,000). That way as your Offset Cash balance grows, in the Sheet more of your mortgage will be
-										reflected as paid off over time.
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingfourteen">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefourteen" aria-expanded="false" aria-controls="collapsefourteen">
-										How do I track with my partner?
-									</button>
-								</h2>
-								<div id="collapsefourteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingfourteen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white">
-										For couples it is recommended that you combine finances and incomes as expenses will likely be incurred as a household and not for individuals and therefore Net Worth changes need to be considered as a whole.
-										<br>
-										<br>
-										A key point when combining finances is the Tax rate input in the Sheet Options tab. For a couple in different tax brackets a weighted averaged will needs to be used. Please follow this formula and use the linked
-										calculator for working this out:
-										<br>
-										<br>
-										<b>(Income1 x Tax1% + Income2 x Tax%2) / (Income1 + Income 2) = Average Tax Rate %</b>
-										<br>
-										<br>
-										ie. For a couple earning $120,000 (55% Tax rate) and $55,000 respectively (37% Tax Rate): <br>
-										(Please note shown Tax rates are just examples) <br>
-										<a href="https://www.wolframalpha.com/input/?i=%28120000*0.55%2B55000*0.37%29%2F%28120000%2B55000%29">(120000 x 0.55 + 55000 x 0.37) / (120000 + 55000)</a> = 0.493, or <b>49.3% Average Tax rate</b>.
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingfifteen">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefifteen" aria-expanded="false" aria-controls="collapsefifteen">
-										How do I enter my Credit Card into the Sheet?
-									</button>
-								</h2>
-								<div id="collapsefifteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingfifteen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white">
-										There are 2 ways to handle inputting Credit Cards:
-										<ul>
-											<li>
-												<b>If you pay off your Credit cards each month</b> - Enter your credit card balance on the cash tab as a negative number. As this isn't long term debt it is more appropriate having it as an equalising
-												negative Cash Balance for accuracy.
-											</li>
-											<li><b>For more long term credit card debt</b> that you're trying to tackle and pay down - Enter this into the liabilities sheet.</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingsixteen">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesixteen" aria-expanded="false" aria-controls="collapsesixteen">
-										How do I account for Salary Sacrificing?
-									</button>
-								</h2>
-								<div id="collapsesixteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingsixteen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white">
-										You should enter as your income the amount of money available to you when you're paid after the salary sacrifice has been taken out. For all intents the Sheet is concerned with what money is usable to you after
-										tax/fees has been taken out.
-										<br>
-										<br>
-										This will ensure the savings rates are calculated correctly against the post-sacrificed income.
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingseventeen">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseventeen" aria-expanded="false" aria-controls="collapseseventeen">
-										How do I account for income from a rental Property?
-									</button>
-								</h2>
-								<div id="collapseseventeen" class="accordion-collapse border-0 collapse" aria-labelledby="headingseventeen" data-bs-parent="#paymentquestion">
-									<div class="accordion-body text-muted bg-white">
-										Income from Rental properties is entered into the Side Income tab. Rename one of the example columns as needed and enter the after-tax rent each month. Rental income can also be accounted for in the Property tab in
-										the "Net Rent Profit To Date ($)" row, which will feed into your overall return values.
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="section-title mt-5" id="investments">
-							<h4 style="text-align: center;">Investments</h4>
-						</div>
-						<div class="accordion mt-4 pt-2" id="investmentsquestion">
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingeighteen">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeighteen" aria-expanded="false" aria-controls="collapseeighteen">
-										How do I enter my Spaceship/Raiz/Microinvestment Platform Investments?
-									</button>
-								</h2>
-								<div id="collapseeighteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingeighteen" data-bs-parent="#investmentsquestion">
-									<div class="accordion-body text-muted bg-white">
-										<b>For Spaceship Voyager:</b> <br>
-										Spaceship Voyager as of v2.10 now has live price support for all 3 fund types (Universe, Origin, Earth). In the Managed Funds tab please enter the following details:
-										<ul>
-											<li>Fund ID - <b>SPACEVOYUNIV</b></li>
-											<li>Fund Name (Important) - <b>Spaceship Voyager Universe</b></li>
-										</ul>
-										<ul>
-											<li>Fund ID - <b>SPACEVOYORIGIN</b></li>
-											<li>Fund Name (Important) - <b>Spaceship Voyager Origin</b></li>
-										</ul>
-										<ul>
-											<li>Fund ID - <b>SPACEVOYEARTH</b></li>
-											<li>Fund Name (Important) - <b>Spaceship Voyager Earth</b></li>
-										</ul>
-										Purchase History - Enter in your itemised Purchase History, or if you have a large amount of purchases you can enter in a single purchase that you reguarly update the quantity. Please note if you batch into a single
-										purchase this will make any performance/gain figures inaccurate.
-										<br>
-										<br>
-										Please note prices are only updated every 24hrs.
-										<br>
-										<br>
-										<b>For Raiz & Other Investment Platforms:</b> <br>
-										For other Microinvestment Platforms you have 2 options:
-										<ol>
-											<li><b>Other Assets Tab (Easiest)</b> - This will mean your investments will be recorded in your Net Worth, you will just have to update the balance before recording your month.</li>
-											<li><b>Managed Funds Tab</b> - Enter your platform as a Managed Fund and manually update the Live Price as needed (ignore any warnings). Enter in the Purchase History as provided by your platform.</li>
-										</ol>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item rounded mt-2">
-								<h2 class="accordion-header" id="headingnineteen">
-									<button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenineteen" aria-expanded="false" aria-controls="collapsenineteen">
-										Why do my brokerage amounts always change between 1x and 2x brokerage amounts?
-									</button>
-								</h2>
-								<div id="collapsenineteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingnineteen" data-bs-parent="#investmentsquestion">
-									<div class="accordion-body text-muted bg-white">
-										You can enter these in as you would any normal stock purchase. You will need to enter in your own "Live Price" and update this as needed (ignore any warnings when doing so).
-										<br>
-										<br>
-										Please note when upgrading Sheet versions you will need to manually enter in the Live Price into your new Sheet.
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> <!--end row-->
-            </div><!--end container-->
-        </section><!--end section-->
-        <!-- FAQ End -->
-
-        <!-- Footer Start -->
-        <div class="position-relative" style="margin-top: 100PX;">
-            <div class="shape overflow-hidden text-footer">
-                <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
-                </svg>
+        <div class="col-md-6 col-lg-4"">
+          <div class="block-pricing">
+            <div class="table">
+              <h4 style="padding-top: 8px;">INITIAL V1 VERSION</h4>
+              <h2>FREE</h2>
+              <ul class="list-unstyled">
+                <li style="letter-spacing: 1px !important;"><b>Net Worth</b> Overview & Tracking</li>
+                <li style="letter-spacing: 1px !important;"><b>Live ETF & Stock</b> Tracking</li>
+                <li style="letter-spacing: 1px !important;"><b>Dividend</b> Support</li>
+                <li style="letter-spacing: 1px !important;"><b>Super/Retirement</b> Fund Tracking</li>
+                <li style="letter-spacing: 1px !important;"><b>Budgeting</b> System Included</li>
+              </ul>
+              <div class="table_btn">
+                <a style="background: #D3D3D3 !important;color: #000000 !important;" href="https://docs.google.com/spreadsheets/d/1tRJzUsKBNE_JoSTiMLT0-V5zk3cwGW3lpnpboot0IGI/edit#gid=943188887" class="btn">Visit Now - AU <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_au.png" alt="img" class="img-fluid"></a>
+              </div>
+              </br>
+              <div class="table_btn">
+                <a style="background: #D3D3D3 !important;color: #000000 !important;" href="https://docs.google.com/spreadsheets/d/1v9ENzdoSIVlfAA2SFVFz6KKVAAu5Knv8klde7bN2Qqo/edit?usp=sharing" class="btn">Visit Now - UK <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_uk.png" alt="img" class="img-fluid"></a>
+              </div>
+              </br>
+              <div class="table_btn">
+                <a style="background: #D3D3D3 !important;color: #000000 !important;" href="https://docs.google.com/spreadsheets/d/1pPK8t8Oe6F53OMw1EG8Hq1tX4F5SnULdf3Cr8TlUCs4/edit?usp=sharing" class="btn">Visit Now - US <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_us.png" alt="img" class="img-fluid"></a>
+              </div>
+              </br>
+              <div class="table_btn">
+                <a style="background: #D3D3D3 !important;color: #000000 !important;" href="https://docs.google.com/spreadsheets/d/15v1a96culFW0r5HfyRaAu2gmdK9s-9kOe9ARSUWBuAY/edit?usp=sharing" class="btn">Visit Now - EU <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_eu.png" alt="img" class="img-fluid"></a>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4"">
+          <div style="background-color: #eefdf9;" class="block-pricing">
+            <div class="table">
+              <h4 style="font-size: 17px; padding-bottom: 20px;">FULLY-FEATURED v2.11+</h4>
+              <h2>$8 AUD</h2>
+              <p style="margin-bottom: 0px;">~$6USD / ~£4.50GBP</p>
+              <ul class="list-unstyled" style="letter-spacing: 1px !important;">
+                <li style="letter-spacing: 1px !important;"><b>Net Worth</b> Overview & Tracking</li>
+                <li style="letter-spacing: 1px !important;"><b>Live ETF, Stock, Crypto & Managed Fund</b> Pricing & Tracking</li>
+                <li style="letter-spacing: 1px !important;"><b>Live & Automatic FIRE🔥 Dashboard</b></li>
+                <li style="letter-spacing: 1px !important;"><b>Property</b> Value & Performance Tracking Dashboard</li>
+                <li style="letter-spacing: 1px !important;"><b>Loan, Debt, Mortgage & Credit-Card</b> Tracking Dashboard</li>
+                <li style="letter-spacing: 1px !important;"><b>Monthly Net Worth and Savings</b> email updates</li>
+                <li style="letter-spacing: 1px !important;"><b>Spaceship Voyager (Universe, Origin & Earth)</b> Live Pricing Support</li>
+                <li style="letter-spacing: 1px !important;"><b>Live & Automatic International Currency Pricing Support</b> on all Assets</li>
+                <li style="letter-spacing: 1px !important;"><b>Crypto Staking</b> Support & Performance Metrics</li>
+                <li style="letter-spacing: 1px !important;"><b>Managed Funds, ETFs & Stocks</b> can be used as Retirement balances</li>
+                <li style="letter-spacing: 1px !important;"><b>Google Calendar/Email</b> Sheet & Investment Reminders</li>
+                <li style="letter-spacing: 1px !important;"><b>Aglorithmic</b> Investment Rebalancing Optimisations</li>
+                <li style="letter-spacing: 1px !important;"><b>Improved Budgeting</b> System</li>
+                <li style="letter-spacing: 1px !important;"><b>Dividend Tracking </b> and Reinvestment Support</li>
+                <li style="letter-spacing: 1px !important;"><b>Expanded ETF/Stocks/Managed Fund</b> Ticker Support</li>
+                <li style="letter-spacing: 1px !important;"><b>Super/Retirement</b> Fund Tracking</li>
+                <li style="letter-spacing: 1px !important;"><b>Generic & Physical</b> Asset Tracking<br>(Including live Gold/Silver Prices)</li>
+                <li style="letter-spacing: 1px !important;"><b>Automatically calculated Sold Units</li>
+                <li style="letter-spacing: 1px !important;"><b>Automatic Migration System</b> for future updates</li>
+                <li style="letter-spacing: 1px !important;"><b>Sheet Update</b> Notification System</li>
+                <li style="letter-spacing: 1px !important;"><b>Ongoing Bugfixes</b> - including numerous to original version</li>
+                <li style="letter-spacing: 1px !important;"><b>Ongoing Sheet Updates & Releases</b></li>
+              </ul>
+              <div class="table_btn">
+                <a href="donate.html" class="btn"><i class="fa fa-shopping-cart"></i>Buy Now - AU <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_au.png" alt="img" class="img-fluid"></a>
+              </div>
+              </br>
+              <div class="table_btn">
+                <a href="donate.html" class="btn"><i class="fa fa-shopping-cart"></i>Buy Now - UK <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_uk.png" alt="img" class="img-fluid"></a>
+              </div>
+              </br>
+              <div class="table_btn">
+                <a href="donate.html" class="btn"><i class="fa fa-shopping-cart"></i>Buy Now - US <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_us.png" alt="img" class="img-fluid"></a>
+              </div>
+              </br>
+              <div class="table_btn">
+                <a href="donate.html" class="btn"><i class="fa fa-shopping-cart"></i>Buy Now - EU <img style="margin-bottom: 3px;height:22px;width:auto;" src="https://cspersonalfinance.io/img/flag_eu.png" alt="img" class="img-fluid"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--==========================
+    FAQ Section
+  ============================-->
+  <section id="faq" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center" style="margin-bottom: 30px !important;">
+
+        <h2>FAQ</h2>
+        <p class="separator">A filtered selection of FAQs frequently asked about the Sheet. <b><a href="https://guide.cspersonalfinance.io/faqs">For a full list of FAQs click here.</a></b></p>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="accordion" id="accordionExample">
+        
+        <h4>Using the Sheet</h4>
+        
+        <div class="card">
+          <div class="card-header" id="headingEight">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                How do I enter my own Historical data into a new Sheet?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+            <div class="card-body">
+              To enter your own historical Data into the Sheet, follow the instructions below:
+              </br>
+                1.  Head to the History tab
+                </br>
+                2.  Starting in Cell A3 and working down, enter in the dates (ie. 1/6/2020, 1/7/2020 etc.) for the previous data you want in the sheet. Don't worry about the months already in the sheet, they will automatically move down.
+                </br>
+                3.  For the new months that you've entered, from left-right fill out the values in the blue columns.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingThirteen">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordionExample">
+            <div class="card-body">
+              If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps:
+              <br>
+              <br>
+              <ol>
+                <li>Click File -> Version History -> See Version History</li>
+                <li>In the right Sidebar, click on the dated version of the Sheet <i>before</i> you clicked to end the month</li>
+                <li>At the top of the screen, click the green "Restore this version" button</li>
+                <li>Finish off entering your data and run the Sheet again</li>
+              </ol>
+            </div>
+          </div>
+        </div>   
+
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                How do I know my Data is kept private?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg. 
+              </br>
+              </br>
+              You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your Net Worth & associated performance.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwentyOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwentyOne" aria-expanded="false" aria-controls="collapseTwentyOne">
+                A new Sheet update is released, how do I upgrade to a new Sheet?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwentyOne" class="collapse" aria-labelledby="headingTwentyOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <a href="https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version">Please see the instructions on how to upgrade your Sheet.</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingSeven">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                How do I migrate data between sheets?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+            <div class="card-body">
+              As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingNine">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                How do I enter in a missed month?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+            <div class="card-body">
+              To backfill data for missed months, follow the below:
+                </br>
+                1.  In the History tab in Column A, enter in the date you want to backfill in the correct ordering compared to your existing months. If this is your first time running the Sheet, simply write in the date missed into Cell A3.
+                </br>    
+                <b>NOTE:</b><i> Do not Insert a new row. Simply make use of the rows already in the Sheet.</i>
+                </br>
+                2.  Proceed filling out the Asset values for the new month, updating the <b>blue</b> columns only.
+                </br>
+                3.  Done! The Date Column should automatically adapt and the current month should automatically shift down.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwentyTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwentyTwo" aria-expanded="false" aria-controls="collapseTwentyTwo">
+                Can I use the Sheet with Excel, Offline or Libre Office?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwentyTwo" class="collapse" aria-labelledby="headingTwentyTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              Unfortunately no, as the Sheet is heavily reliant on Google Sheet functions for live pricing, custom Google formulas and most importantly the behind the scenes scripts written in Google Apps Scripts. You may download the Sheet and try importing into Excel, but you will find that significant elements of the Sheet will not work and it is therefore heavily not recommended.
+              <br>
+              If your concern is privacy, please see the FAQ entry <a href="https://guide.cspersonalfinance.io/faqs#how-do-i-know-my-data-is-kept-private">How do I know my Data is kept private?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingNineteen">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+                A new version is released but I haven't received an email, what do I do?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen" data-parent="#accordionExample">
+            <div class="card-body">
+              Often due to the keywords in release emails they can be marked as spam or placed in your Promotions Gmail sub-inbox. To stop this happening in the future, please add to your contacts my email address (the same email that you received on the original invite) to stop future emails being filtered. If you have not received an invite please email me or contact me via Reddit.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                How do I use the tool if I'm paid fortnightly?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              First off, in the SheetOptions tab set your pay Cycle to fornightly and update your fornightly pay value. This will help the Template understand your monthly pay. 
+              <br>
+              <br>
+              When it comes to the Sheet however, all calculations are strictly performed in the month timescale. This is to enable a lot of date functions to work on a standardized timescale. So tracking and statistics will be performed at the monthly time scale.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingEighteen">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                The dates in my Sheets keep ticking over and my history isn't being recorded, why is this?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#accordionExample">
+            <div class="card-body">
+              To record the month of progress that you're in, it is critically important that you press the Red Update Button in the Net Worth Tab at least once a month (pictured below).
+              <br>
+              <br>
+              <img src="https://i.imgur.com/NyrJggG.png" alt="Red Net Worth Update button">
+              <br>
+              <br>
+              This is so that you can enter in all your up to date values before pressing the button to record the month. If you do not press this button, the Sheet will keep ticking over to the next month until you update your Net Worth for the first time.
+              <br>
+              <br>
+              Please note:
+              <ul>
+                <li>It is recommended that you update your Net Worth on the 1st of every month.</li>
+                <li>You must always record a month while <i>in</i> that month. ie. You can only record November while inside November.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingFifteen">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                I'm having issues with weird dates in the History tab, what do I do?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordionExample">
+            <div class="card-body">
+              If you are seeing strange duplicates/gaps in your History Sheet, please contact me via the email you originally received your invite from. This is a carry over bug from v1.3 that has since been fixed but will require some slight fixes to your Sheet.
+              <br>
+              <br>
+              Subject Line - <b>History Tab - Date Error Issue</b>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <h4>Personal Circumstances</h4>
+
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                I'm paid irreguarly or with irregular amounts, how do I account for that?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+              2 ways. Either:
+              </br>  
+              a) Enter in an average figure that you are comfortable with
+              </br>
+              b) Set your Salary to $0 and enter all your income into the Side Income tab. This was designed for irregular amounts and will automatically feed an averaged value into the rest of the Template.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTen">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                How do I enter and account for my Mortgage Offset Account?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+            <div class="card-body">
+              Mortgage Offset accounts can be dealt with in many different ways. Uniquely, Offset accounts can count as both a Cash account as well as downpayments on your loan. Since this money can flex in between it can be a grey area, but for the purposes of the Sheet it needs to be more definite.
+              <br>
+              <br>
+              It is recommended that you come up with a theoretical minimum floor/emergency Cash amount that you have earmarked for emergencies, investments or general purchases ($30,000 for example). This $30,000 balance would go in the Cash tab as "Offset Account".
+              <br>
+              <br>
+              In the Property tab for "Mortgage amount paid" you would put the remainder of this balance (ie. Total Offset Balance - $30,000). That way as your Offset Cash balance grows, in the Sheet more of your mortgage will be reflected as paid off over time.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                How do I track with my partner?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+            <div class="card-body">
+              For couples it is recommended that you combine finances and incomes as expenses will likely be incurred as a household and not for individuals and therefore Net Worth changes need to be considered as a whole. 
+              <br>
+              <br>
+              A key point when combining finances is the Tax rate input in the Sheet Options tab. For a couple in different tax brackets a weighted averaged will needs to be used. Please follow this formula and use the linked calculator for working this out:
+              <br>
+              <br>
+              <b>(Income1 x Tax1% + Income2 x Tax%2) / (Income1 + Income 2) = Average Tax Rate %</b>
+              <br>
+              <br>
+              ie. For a couple earning $120,000 (55% Tax rate) and $55,000 respectively (37% Tax Rate):
+              <br>
+              (Please note shown Tax rates are just examples)
+              <br>
+              <a href="https://www.wolframalpha.com/input/?i=%28120000*0.55%2B55000*0.37%29%2F%28120000%2B55000%29">(120000 x 0.55 + 55000 x 0.37) / (120000 + 55000)</a> = 0.493, or <b>49.3% Average Tax rate</b>.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingSixteen">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                How do I enter my Credit Card into the Sheet?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordionExample">
+            <div class="card-body">
+              There are 2 ways to handle inputting Credit Cards:
+              <ul>
+                <li><b>If you pay off your Credit cards each month</b> - Enter your credit card balance on the cash tab as a negative number. As this isn't long term debt it is more appropriate having it as an equalising negative Cash Balance for accuracy.</li>
+                <li><b>For more long term credit card debt</b> that you're trying to tackle and pay down - Enter this into the liabilities sheet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingEleven">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                How do I account for Salary Sacrificing?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample">
+            <div class="card-body">
+              You should enter as your income the amount of money available to you when you're paid after the salary sacrifice has been taken out. For all intents the Sheet is concerned with what money is usable to you after tax/fees has been taken out.
+              <br>
+              <br>
+              This will ensure the savings rates are calculated correctly against the post-sacrificed income. 
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwenty">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                How do I account for income from a rental Property?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent="#accordionExample">
+            <div class="card-body">
+              Income from Rental properties is entered into the Side Income tab. Rename one of the example columns as needed and enter the after-tax rent each month. Rental income can also be accounted for in the Property tab in the "Net Rent Profit To Date ($)" row, which will feed into your overall return values.
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <h4>Investments</h4>
+
+        <div class="card">
+          <div class="card-header" id="headingTwelve">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                How do I enter my Spaceship/Raiz/Microinvestment Platform Investments?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordionExample">
+            <div class="card-body">
+              <b>For Spaceship Voyager:</b>
+              <br>
+              Spaceship Voyager as of v2.10 now has live price support for all 3 fund types (Universe, Origin, Earth). In the Managed Funds tab please enter the following details:
+              <ul>
+                <li>Fund ID - <b>SPACEVOYUNIV</b></li>
+                <li>Fund Name (Important) - <b>Spaceship Voyager Universe</b></li>
+              </ul>
+              <ul>
+                <li>Fund ID - <b>SPACEVOYORIGIN</b></li>
+                <li>Fund Name (Important) - <b>Spaceship Voyager Origin</b></li>
+              </ul>
+              <ul>
+                <li>Fund ID - <b>SPACEVOYEARTH</b></li>
+                <li>Fund Name (Important) - <b>Spaceship Voyager Earth</b></li>
+              </ul>
+              Purchase History - Enter in your itemised Purchase History, or if you have a large amount of purchases you can enter in a single purchase that you reguarly update the quantity. Please note if you batch into a single purchase this will make any performance/gain figures inaccurate.</li>
+              <br>
+              <br>
+              Please note prices are only updated every 24hrs.
+              <br>
+              <br>
+              <b>For Raiz & Other Investment Platforms:</b>
+              <br>
+              For other Microinvestment Platforms you have 2 options:
+              <ol>
+                <li><b>Other Assets Tab (Easiest)</b> - This will mean your investments will be recorded in your Net Worth, you will just have to update the balance before recording your month.</li>
+                <li><b>Managed Funds Tab</b> - Enter your platform as a Managed Fund and manually update the Live Price as needed (ignore any warnings). Enter in the Purchase History as provided by your platform.</li>
+              </ol>
+            </div>
+          </div>
+        </div>        
+
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                How do I manage DRP and Assets purchased through DRP?
+                </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              Distributions that are reinvested need to be entered as new units in the ETF/Stocks tab manually just as you would a normal ETF/Stock purchase. The key difference being that the brokerage is now $0, so overwrite what's in the brokerage Column and set this to $0. 
+              <br>
+              <br>
+              To determine the price and number of units purchased, you will need to confirm this with Sharesight or your Broker statement to be confirm these amounts.
+              </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Why do my brokerage amounts always change between 1x and 2x brokerage amounts?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              The Brokerage in the Template is based upon the logic that there is always 2x brokerage for your first purchase of a holding (buy/later sell) and then 1x brokerage for all purchases of that holding thereafter (only buy, as you'll likely eventually sell in 1 big batch under one parcel).
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingFourteen">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                I have Private Equity Stock options, how do I use these?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordionExample">
+            <div class="card-body">
+              You can enter these in as you would any normal stock purchase. You will need to enter in your own "Live Price" and update this as needed (ignore any warnings when doing so).
+              <br>
+              <br>
+              Please note when upgrading Sheet versions you will need to manually enter in the Live Price into your new Sheet.
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <h5>Have a question that isn't answered here? Ask it in the <a href="https://www.reddit.com/r/CSPersonalFinance/">r/CSPersonalFinance Subreddit</a><h5>
+
+      </div>    
+    </div>
+
+  </section>
+  
+  <!--==========================
+    Changelog Section
+  ============================-->
+  <section id="changelog" class="padd-section text-center wow fadeInUp" style="padding-bottom: 50px !important;">
+
+    <div class="container">
+      <div class="section-title text-center" style="margin-bottom: 40px !important;">
+
+        <h2>Live Changelog</h2>
+        <p class="separator">More features are being added all the time. Here are some of the recent changes:</p>
+        <p class="separator"><a href="changelog.html">For a more in-depth changelog including minor release details click here.</a></p>
+
+      </div>
+    </div>
+
+    <div class="container" style="max-width: 1400px;">
+      <div class="row_thirds">
+        <div class="column_thirds">
+          <h3><b>v2.9</b></h3>
+          <h4>19th September 2020</h4>
+            <b>New Features</b><br>
+              <li>Added Automatic Migration Tool! This will automatically copy all data from old Sheets to the new one, making upgrades take just 30 seconds now.</li>
+              <li>New Calender reminders to run monthly data recording.</li>
+              <li>Readded support for CoinMarketCap crypto prices. All cryptos now supported!</li>
+              <li>Added new end of month progression prompt</li>
+              <li>"Sold Units" are now automatically calculated FIFO for every asset class.</li>
+              <li>Added MorningStar support to Managed Fund pricing</li>
+              <li>Added international currency support for Bank accounts. If you would like to see the balance of international accounts in your local/base currency, please unhide column D.</li>
+              <li>Improvements to ETF/Stock price fetching performance</li>
+              <li>Dividends for international assets will try and return a converted automatic "Price @ Dividend" price</li>
+              <li>Added new sector classification system</li>
+              <li>Emergency fund duration is now configurable in the SheetOptions tab</li>
+            <b>Bug fixes:</b><br>
+              <li>Fix for Managed Fund, Stock and ETF prices when sourced from Bloomberg.</li>
+              <li>Fix for dividends not being included in total return values.</li>
+              <li>Patch for crypto prices returning "ERROR".</li>
+              <li>Patch for investment autobalance referencing incorrect cell.</li>
+              <li>Fixes to Managed Fund allocation formulas & filtering.</li>
+              <li>Fix for Managed Funds not appearing on Net Worth tracker graph in Net Worth tab.</li>
+              <li>Fix for migration script copying over the current unwritten month.</li>
+              <li>Fix for automatic stock brokerage missing.</li>
+              <li>Fix for GBX currency erroring.</li>
+              <li>Cleaned up all Asset type graphs to be consistent.</li>
+              <li>Readjusted layout of dividends tab to allow for dividends from more than 15 companies at once.</li>
+              <li>Fixes to Gain (%) and values if original purchase price was $0.</li>
+              <li>Fixed bug where reinvested dividends were double counted as contributions.</li>
+              <li>Fixed issue with History sheet not migrating all data.</li>
         </div>
         
-        <footer class="footer footer-bar" style="border-top: none !important;">
-            <div class="container text-center">
-                <div class="row justify-content-between">
-                    <div class="col-sm-3">
-                        <a href="#" class="logo-footer">
-                            <img src="images/CS_2021LogoFullv2_white.png" height="45" alt="">
-                        </a>
-                    </div><!--end col-->
-                    <div class="col-sm-6" style="margin: auto 0px;">
-                        <div class="text-sm-start">
-                            <p class="mb-0" style="text-align: center;">© <script>document.write(new Date().getFullYear())</script> Made with love by <a href="https://www.reddit.com/user/CompiledSanity/" target="_blank" class="text-reset">u/CompiledSanity</a> <i class="mdi mdi-heart text-danger"></i></p>
-                        </div>
-                    </div><!--end col-->
-                    <div class="col-sm-3">
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-        </footer><!--end footer-->
-        <!-- Footer End -->
+        <div class="column_thirds">
+          <h3><b>v2.10</b></h3>
+          <h4>9th January 2021</h4>
+            <b>New Features</b><br>
+              <li>New FIRE 🔥 Dashboard: Automatically ties in with the rest of the Sheet to show your progress to FIRE and forecasting until retirement. Minimal input is needed!</li>
+              <li>Spaceship Voyager Universe support in Managed Funds tab (Universe only, updates ~8-12hrs, see MF example)</li>
+              <li>Automatic Budget Tab Migration</li>
+              <li>Improved Consolidation of Property & Mortgages into one tab</li>
+              <li>Other Property tracking & Dashboard improvements</li>
+              <li>Retirement/Super Voluntary contribution support (inc. FHSS)</li>
+              <li>Added end of month Summary prompt alongisde Email</li>
+              <li>Budget & Loan Tabs now support weekly/fortnightly pay cycles</li>
+              <li>Graphical representation of mortgage repayments over time</li>
+              <li>New personalization system to simplify Sheet setup</li>
+              <li>New Property/Loan Figures: Total Interest paid predictions</li>
+              <li>US Sheet can now support other base-sheet currencies in Crypto tab</li>
+              <li>Added live spot prices for Silver and Gold in Other Assets tab.</li>
+              <li>International currency support in Other Assets tab.</li>
+              <li>Couple tax calculator to help with determining average Tax rate (see cell note)</li>
+              <li>EU Sheet Version</li>
+            <b>Bug fixes:</b><br>
+              <li>Fixed end of month email and prompt having savings rate and added savings swapped.</li>
+              <li>Fix for issue where historical months may show strange values (ie. December 3799)</li>
+              <li>Fix for issue with Gaps inbetween Months in the History tab</li>
+              <li>Fix for issues when upgrading from a v1.3 which resulted in gaps between months or date duplicates</li>
+              <li>Fixed issue with "Other Assets" not being included in "Liquid Assets" in the Net Worth tab.</li>
+              <li>Fix for Cash Tab savings dates showing December</li>
+              <li>Fixed issue with Savings Rate/Income not being correctly reported if Budget tab not used.</li>
+              <li>Fix for Month not saving correctly with .getMonth or .getYear error</li>
+              <li>Fixed issue with graphs not always showing correct months in labels</li>
+              <li>Fixes to Sheet names without spaces (ie. "ManagedFunds")</li>
+              <li>Hidden tabs now migrate</li>
+              <li>Fixed issue with past history property values not remaining static.</li>
+              <li>Fixed issue with Liabilities tab graphs showing currency instead of dates.</li>
+              <li>Fixed Managed Fund tab contributions still showing funds for sold off funds.</li>
+              <li>Removed and cleaned up redundant permissions</li>
+              <li>Fixed version number being incorrectly reported in Sheet</li>
+              <li>Lots and lots of back end code clean up leading to future features</li>
+              <li>Fix for MorningStar Funds showing as $0.</li>
+              <li>Fix for some ETF & Stocks showing incorrect prices.</li>
+              <li>Improvements to Sheet number crunching scripts to give clearer feedback about errors and what their causes are (hopefully this makes life easier debugging!)</li>
+              <li>Fix for Migration script not migration "Last Run" and "Last Refreshed" dates.</li>
+              <li>Improved feedback in Sheet if CoinMarketCap does not recognize a Crypto ticker.</li>
+              <li>Fix for Cash showing a huge gain if prior month wasn't recorded.</li>
+        </div>
+        
+        <div class="column_thirds">
+          <h3><b>v2.11</b></h3>
+          <h4>26th April 2021</h4>
+            <b>New Features</b><br>
+              <li>Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!</li>
+              <li>Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts.</li>
+              <li>Added Crypto Staking support </li>
+              <li>Yahoo Finance pricing support for ETFs/Stocks/Managed Funds</li>
+              <li>Added support for Spaceship Origin & Earth Funds. See here for info.</li>
+              <li>Added support for using Stocks/ETFs/Managed Funds as Retirement balances (UK/EU)</li>
+              <li>Names now automatically prefill for Stocks/ETFs</li>
+              <li>Added Average Price of Unit to all Investment classes</li>
+              <li>Added 2 more Cash accounts</li>
+              <li>Added visual UI for end of month report</li>
+              <li>Added Retirement annual performance statistic</li>
+              <li>Added support for fixed investment amounts in the Budget Tab</li>
+              <li>Old Sheets will now have Crypto function disabled to save on API calls</li>
+              <li>Cleaned up Investment Columns for a more refined look</li>
+              <li>Added Net Worth breakdown graph in Net Worth tab</li>
+              <li>Many UI enhancements</li>
+              <li>Added Other Assets Purchases to Added Investments & Savings Rate calculations</li>
+              <li>Added Help links to all Tabs</li>
+              <li>Performance & efficiency increases when running end of month script.</li>
+              <li>Removed need for Email permission</li>
+              <li>Many many improvements to the Migration Script for future versions</li>
+            <b>Bug fixes:</b><br>
+              <li>Fixes to Timezones in Sheet that may lead to the End of Month script writing the wrong month or duplicating a month (with a blank gap above)</li>
+              <li>Fixed Dividends still showing in total returns when unit balance is 0</li>
+              <li>Fixed issue with Crypto purchases not migrating correctly</li>
+              <li>Fixed issue where "Added Savings" value only reported added investments in Email and End of Month Prompt</li>
+              <li>Fixed up handling of "Timed out waiting for user response" error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message.</li>
+              <li>"Price @ Dividend" column in the Dividend tab now included in the migration.</li>
+              <li>Fixed issue with ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live.</li>
+              <li>Fixed issue with certain tabs not resizing rows correctly and adjusting formulas during migration.</li>
+              <li>Fixed up numerous Graphs & figures in the Sheet.</li>
+              <li>Fixes to "Years to House" target date showing an error if no house target price</li>
+              <li>Fixes to Conditional Formatting and Highlighting</li>
+              <li>Fixed FIRE tab migrating values and not formulas</li>
+              <li>Spreadsheet Locale now migrates from prior Sheet</li>
+              <li>Fixed Crypto tab Live Price formatting in EU Sheet showing pounds symbol</li>
+              <li>Fixed Managed Funds Dividend amount in UK Sheet showing dollar symbol</li>
+              <li>Fix to Dividends tab not summing prior FY correctly according to FY dates</li>
+              <li>Fix to Crypto "Units purchased" column incorrectly formatting units as currency</li>
+              <li>Fix for incorrect spelling of Portfolio</li>
+              <li>Fix for Stocks Live Price column showing the currency instead of the live price.</li>
+              <li>Fixed Crypto Tab allocation graphs</li>
+        </div>
+        
+      </div>
+    </div>
 
-        <!-- Back to top -->
-        <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
-        <!-- Back to top -->
+  </section>
 
-        <!-- javascript -->
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <!-- SLIDER -->
-        <script src="js/tiny-slider.js "></script>
-	<!-- shuffle and tobii js -->
-        <script src="js/shuffle.min.js"></script>
-        <script src="js/tobii.min.js"></script>
-        <!-- Icons -->
-        <script src="js/feather.min.js"></script>
-        <!-- Main Js -->
-        <script src="js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
-        <script src="js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
-    </body>
+  <p style="text-align: center; margin-bottom: 20px !important;"><i>Hope you enjoy!</i></p>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer class="footer" style="padding-top: 0px !important;">
+    <div class="container" style="padding-top: 25px !important; padding-bottom: 5px !important;">
+      <p style="color:white; text-align: center;"><b>&copy; <script>document.write(new Date().getFullYear())</script> • Made with love by <a href="https://www.reddit.com/user/CompiledSanity/">u/CompiledSanity ❤️</a></b></p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/modal-video/js/modal-video.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
 </html>

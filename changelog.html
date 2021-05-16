@@ -1,425 +1,515 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Sheet Changelog | CompiledSanity Personal Finance & Net Worth Spreadsheets</title>
-  <meta name="description" content="Free Web tutorials">
-  <meta name="keywords" content="Personal Finance, Net Worth & FIRE Tracking made Automated & Easy. Through the wonders of Google Sheets & a bit of techno magic, CS Templates reveal and track your financial position.">
-  <meta name="author" content="CompiledSanity">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-  <link rel="manifest" href="img/fav/site.webmanifest">
-  <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+    <html lang="en">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sheet Changelog | CompiledSanity Personal Finance & Net Worth Spreadsheets</title>
+        <meta name="keywords" content="Personal Finance, Net Worth & FIRE Tracking made Automated & Easy. Through the wonders of Google Sheets & a bit of techno magic, CS Templates reveal and track your financial position.">
+        <meta name="author" content="CompiledSanity">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://cspersonalfinance.io/img/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cspersonalfinance.io/img/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://cspersonalfinance.io/img/fav/favicon-16x16.png">
+        <link rel="manifest" href="https://cspersonalfinance.io/img/fav/site.webmanifest">
+        <link rel="mask-icon" href="https://cspersonalfinance.io/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Icons -->
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <!-- Slider -->               
+        <link rel="stylesheet" href="css/tiny-slider.css"/> 
+        <!-- Main Css -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <link href="css/colors/green.css" rel="stylesheet" id="color-opt">
+		<link href="scss/compiledmods.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- Google Fonts -->
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i|Quicksand:500,500i|Ubuntu:400,400i" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap" rel="stylesheet">  
+           <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
+          </style>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196003461-1">
+          </script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  <!-- Bootstrap css -->
-  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            gtag('config', 'UA-196003461-1');
+          </script>
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
- 
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/cssbox.css" rel="stylesheet">
-  
-  <style>
-      li {
-        text-align: left !important;
-        letter-spacing: 0px !important;
-      }
-      .changelog {
-          box-shadow: 0 0 35px rgb(0 0 0 / 10%);
-          padding: 30px 80px;
-      }
-    
-      @media screen and (max-width: 550px) {
-        .changelog {
-          padding: 30px 20px;
-         }
-      }
-      h5 {
-          font-weight: 300 !important;
-      }
-  </style>
-  
-  text-align: left;
-  
-</head>
+    </head>
 
-<body>
-
-  <header id="header" class="header header-hide">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
-        <h1><a href="https://cspersonalfinance.io#body"><img src="img/CS2021_SquareLogov2.png" alt="" style="height:35px;" title="" /></a><a class="businessnametext" href="#body" class="scrollto"><span style="letter-spacing: inherit !important;">CompiledSanity</span> Automated Finance</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
+    <body>
+        <!-- Loader -->
+        <!-- <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Loader -->
         
-      </div>
+        <!-- Navbar STart -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <!-- Logo container-->
+                <a class="logo" href="index.html">
+                    <img src="https://cspersonalfinance.io/img/CS2021_SquareLogov2.png" height="24" class="logo-light-mode" alt="">
+                    <img src="https://cspersonalfinance.io/img/CS2021_SquareLogov2.png" height="24" class="logo-dark-mode" alt="">
+                    <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext" ><span class="logospantext" style="color: #71c55d;">CompiledSanity</span> Automated Finance</span>
+                </a>
+                <!-- End Logo container-->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                </div>
+        
+                <div id="navigation">
+                    <!-- Navigation Menu-->   
+                    <ul class="navigation-menu">
+                        <li style="margin: 0 0px;"><a href="index.html" class="sub-menu-item">Home</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#about" class="sub-menu-item">About</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#features" class="sub-menu-item">Features</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#download" class="sub-menu-item">Download</a></li>
+                        <li style="margin: 0 0px;"><a href="https://guide.cspersonalfinance.io/" class="sub-menu-item">Guide</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#faq" class="sub-menu-item">FAQ</a></li>
+                        <li style="margin: 0 0px;"><a href="changelog.html" class="sub-menu-item">Changelog</a></li>
+                        
+                    </ul><!--end navigation menu-->
+                </div><!--end navigation-->
+            </div><!--end container-->
+        </header><!--end header-->
+        <!-- Navbar End -->
+        
+        <!-- Hero Start -->
+        <section class="bg-half bg-light d-table w-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <div class="page-next-level">
+                            <h2 class="fw-bold title text-primary"> Sheet Changelog </h2>
+                            <div class="page-next">
+                                <nav aria-label="breadcrumb" class="d-inline-block">
+                                    <ul class="breadcrumb bg-white rounded shadow mb-0">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Sheet Changelog</li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div> <!--end container-->
+        </section><!--end section-->
+        <!-- Hero End -->
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="https://cspersonalfinance.io/#hero">Home</a></li>
-          <li><a href="https://cspersonalfinance.io/#about">About</a></li>
-          <li><a href="https://cspersonalfinance.io/#features">Features</a></li>
-          <li><a href="https://cspersonalfinance.io/#pricing">Download</a></li>
-          <li><a href="https://guide.cspersonalfinance.io/">Guide</a></li>
-          <li><a href="https://cspersonalfinance.io/#faq">FAQ</a></li>
-          <li><a href="https://cspersonalfinance.io/#changelog">Changelog</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
+        <!-- Shape Start -->
+        <div class="position-relative">
+            <div class="shape overflow-hidden text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!--Shape End-->
+        
+        <!-- Changelog Start -->
+        <section class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="p-4 shadow rounded border">
+                            <!-- v2.11.1 -->
+                            <h5>Version <span class="text-success">2.11.1</span> - 1st May 2021<span class="badge rounded-pill bg-danger ms-2">Latest Update</span></h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Restored end of Month emails. If reinitialising, you may be asked to add the Email permission which was removed in v2.11.0.</li>
+				<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Performance improvements to Month Recording Process.</li>
+				<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Additional fixes for Timezone issues causing incorrect months to be written.</li>
+			    	<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Cannot find function getMonth() in Object error.</li>
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>"Error:"truez" is not defined" error.</li>
+                            </ul>
+                            <!-- v2.11. -->
 
-  <!--==========================
-    Hero Section
-  ============================-->
-  <section id="features" class="padd-section text-center wow fadeInUp">
-    <div class="container">
-      
-      <h2>Live Version Changelog</h2>
-      <br>
-      <h5>
-        <b>ℹ️ Please Note:</b>
-        <br>
-        New versions of the v2 Sheet are emailed to you as major version are released (ie. v2.9, v2.10). 
-        <br>
-        Minor version releases (ie. v2.10.1, v2.10.2) are distributed using the original invite links for the major version and are unannounced.
-        <br>
-        <a style="letter-spacing: 1px;" href="https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version">📒 View the instructions on how to upgrade your Sheet here.</a>
-      </h5>
-      <br>
-      <div class="changelog">
-          <h3><b>v2.11</b></h3>
-          <h4>27th April 2021</h4>
-            <hr>  
-            <p>Please note there have been <i>many</i> significant changes in the minor releases of v2.10 that aren't shown in this list. If you upgrading from v2.10.0, please review all the way down to the v2.10.0 release for other major features and fixes.</p>
-              <hr>         
-              <b>v2.11.1 - 1st May 2021</b><br>    
-              <li>Fix for Cannot find function getMonth() in Object error.</li>
-              <li>Performance improvements to Month Recording Process.</li>
-              <li>Fix for "Error:"truez" is not defined" error.</li>
-              <li>Restored end of Month emails. If reinitialising, you may be asked to add the Email permission which was removed in v2.11.0.</li>
-              <hr>      
-              <b>🌟 New Features:</b><br>
-              <li>Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!</li>
-              <li>Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts.</li>
-              <li>Added Crypto Staking support </li>
-              <li>Yahoo Finance pricing support for ETFs/Stocks/Managed Funds</li>
-              <li>Added support for Spaceship Origin & Earth Funds. See here for info.</li>
-              <li>Added support for using Stocks/ETFs/Managed Funds as Retirement balances</li>
-              <li>Names now automatically prefill for Stocks/ETFs</li>
-              <li>Added Average Price of Unit to all Investment classes</li>
-              <li>Added 2 more Cash accounts</li>
-              <li>Added visual UI for end of month report</li>
-              <li>Added Retirement annual performance statistic</li>
-              <li>Added support for fixed investment amounts in the Budget Tab</li>
-              <li>Old Sheets will now have Crypto function disabled to save on API calls</li>
-              <li>Cleaned up Investment Columns for a more refined look</li>
-              <li>Added Net Worth breakdown graph in Net Worth tab</li>
-              <li>Many UI enhancements</li>
-              <li>Added Other Assets Purchases to Added Investments & Savings Rate calculations</li>
-              <li>Added Help links to all Tabs</li>
-              <li>Performance & efficiency increases when running end of month script.</li>
-              <li>Removed need for Email permission</li>
-              <li>Many many improvements to the Migration Script for future versions</li>
-            <b>🛠️ Bug fixes:</b><br>
-              <li>Fixes to Timezones in Sheet that may lead to the End of Month script writing the wrong month or duplicating a month (with a blank gap above)</li>
-              <li>Fixed Dividends still showing in total returns when unit balance is 0</li>
-              <li>Fixed issue with Crypto purchases not migrating correctly</li>
-              <li>Fixed issue where "Added Savings" value only reported added investments in Email and End of Month Prompt</li>
-              <li>Fixed up handling of "Timed out waiting for user response" error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message.</li>
-              <li>"Price @ Dividend" column in the Dividend tab now included in the migration.</li>
-              <li>Fixed issue with ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live.</li>
-              <li>Fixed issue with certain tabs not resizing rows correctly and adjusting formulas during migration.</li>
-              <li>Fixed up numerous Graphs & figures in the Sheet.</li>
-              <li>Fixes to "Years to House" target date showing an error if no house target price</li>
-              <li>Fixes to Conditional Formatting and Highlighting</li>
-              <li>Fixed FIRE tab migrating values and not formulas</li>
-              <li>Spreadsheet Locale now migrates from prior Sheet</li>
-              <li>Fixed Crypto tab Live Price formatting in EU Sheet showing pounds symbol</li>
-              <li>Fixed Managed Funds Dividend amount in UK Sheet showing dollar symbol</li>
-              <li>Fix to Dividends tab not summing prior FY correctly according to FY dates</li>
-              <li>Fix to Crypto "Units purchased" column incorrectly formatting units as currency</li>
-              <li>Fix for incorrect spelling of Portfolio</li>
-              <li>Fix for Stocks Live Price column showing the currency instead of the live price.</li>
-              <li>Fixed Crypto Tab allocation graphs</li>
-            <p style="font-size: 0.8rem; line-height: 1.5; margin-bottom: 0.1rem; margin-top: 1rem;"><b>❤️ Special Thanks to Beta Testers:</b><br></p>
-              <p style="font-size: 0.7rem; line-height: 1.5;">u/fredwu, u/Thom1983, u/TheJointMirth, u/duke778, u/StalingradIsNoFun, u/JOHNNYAB1, u/iquito, u/Dapper_Ad_1414, u/ottyacat, u/investortron1, u/silentSpyDk and u/bruchpilot1989</p>
-      </div>
-      <br>
-      <br>
-      <div class="changelog">
-          <h3><b>v2.10</b></h3>
-          <h4>8th January 2021</h4>
-            <hr>  
-            <b>v2.10.9 - 30th March 2021</b><br>              
-            <li>Added Other Assets Purchases to Added Investments & Savings Rate calculations</li>  
-            <li>Fixes to Timezones in Sheet that may lead to the End of Month script writing the wrong month or duplicating a month (with a blank gap above)</li>  
-            <li>Fixed "Could not get Function" due to new version error</li>  
-            <li>Added Help links to all Tabs</li>  
-            <li>Version & Region numbers are now appended to all error messages for debugging</li>  
-            <li>Fixed Dividends still showing in total returns when unit balance is 0</li>  
-            <li>Fixed duplicate Sector Charts in Stock tabs</li>
-            <li>Fixed issue with Crypto purchases not migrating correctly</li>
-            <li>Fixed issue with Other Asset history not displaying correctly</li>
-            <li>All graphs are now currency rounded for aesthetic cleanness</li>
-            <li>Fixed issue where "Added Savings" value only reported added investments in Email and End of Month Prompt</li>
-            <hr>      
-            <b>v2.10.8 - 21st February 2021</b><br>              
-            <li>Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts.</li>  
-            <li>Added support for Spaceship Origin & Earth Funds. <a href="https://compiledsanity.gitbook.io/personalfinance/investments/managed-funds#spaceship-raiz-and-microinvesting-platform-support">See here for info.</a></li>  
-            <li>Date cells in the Sheet now feature a dropdown box to select dates (thanks to u/avendr for the suggestion!)</li>  
-            <li>ETFs now auto-populate fund names. This is coming to the Stocks tab in v2.11 (thanks to u/avendr for the suggestion!)</li>  
-            <li>Fixed up handling of "Timed out waiting for user response" error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message.</li>  
-            <li>Fixed "Net Dividends after Tax" reporting an incorrect number on the Stocks tab.</li>  
-            <hr>      
-            <b>v2.10.7 - 12th February 2021</b><br>              
-            <li>Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!</li>  
-            <li>Added Sheet upgrade system where the Sheet will notify you if a new major/minor version has been released. <a href="https://i.imgur.com/2kuC2pw.png">Also added latest version area to Net Worth tab.</a></li>  
-            <li>"Price @ Dividend" column in the Dividend tab now included in the migration.</li>  
-            <li>Cash notes in the Cash tab are now included in the migration.</li>  
-            <li>Updated references to new Getting Started Guide: <a href="https://compiledsanity.gitbook.io">compiledsanity.gitbook.io</a></li>  
-            <hr>  
-            <b>v2.10.6</b><br>      
-            <li>Fixes to migration process to filter out errors from prior Sheets with errors in the History tab. This includes duplicate dates, out of order dates and incorrect dates (ie. Year 2670).</li>  
-            <li>Improved code of End of Month script to resolve an issue causing incorrect dates (as above) to appear in the History tab.</li>  
-            <li>Improved handling of months shown in History Tab if there are issues with dates. This will stop any dates cascading incorrectly.</li>  
-            <li>Improvements to end of month process to stop any errors appearing if Summary prompt is not clicked within 180s Google Script timeout window.</li>  
-            <li>Performance & efficiency increases when running end of month script.</li>  
-            <hr>  
-            <b>v2.10.5</b><br>      
-            <li>Fixed issue with ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live.</li>  
-            <li>Fixed issue with certain tabs not resizing rows correctly and adjusting formulas during migration.</li>  
-            <li>Fixed issue with .getMonth() error during End of Month update.</li>  
-            <li>Fixed issue with the end of month update displaying "Timed out waiting for user response".</li>  
-            <li>Fixed issue with End of Month summary displaying "NaN" for values.</li>  
-            <li>Fixed UK Sheet not showing Managed Funds summary correctly in Summary table and graphs.</li>  
-            <li>Fix going forward for weird duplicate and out of order dates in the History tab and after running the end of month script.</li>  
-            <hr>  
-            <b>v2.10.4</b><br>    
-            <li>Added support for Property & Liabilities migration from v2.9 and below. This may be glitchy, please report bugs if you have any! Note that if you have Mortgages mixed in with other debts in the Liabilities tab, migration is not supported (this is asked during the process).</li>    
-            <li>Side Income notes now included in migration.</li>    
-            <li>Fixed small bug in SheetOptions migration where not all options are copied.</li>    
-            <hr>  
-            <b>v2.10.3</b><br>    
-            <li>Fixed Stocks Tab giving NaN error upon migration.</li>
-            <li>Migration Process now automatically corrects Liabilities/Mortgage data to correct positive/negative direction for v2.10.2 changes.</li>    
-            <li>Fixed "Cannot call method "abs" of undefined" error that may interfere with the end of month update.</li>
-            <li>Fixed .getName() error in Retirement step when migrating from v2.10 to v2.10.3</li>
-            <hr>
-            <b>v2.10.2</b><br>    
-            <li>Fixes to liabilities values being incorrect and including property values.</li>
-            <li>Fixes to show liability/mortgage debts as negative</li>    
-            <li>Added data validation to Property/Liabilities cells in the History tabs to enforce correct positive/negative numbering when migrating.</li>    
-            <li>Added Mortgage progression to end of month emails/readouts.</li>
-            <hr>    
-            <b>v2.10.1</b><br>    
-            <li>Fixed Net Worth tab showing incorrect Liabilities value (missing mortgage) and therefore incorrect rolling Net Worth value.</li>
-            <li>Fixed Mortgage & Liabilities tab calculations for total interest.</li>
-            <hr>    
-            <b>🌟 New Features:</b><br>
-              <li>New FIRE 🔥 Dashboard: Automatically ties in with the rest of the Sheet to show your progress to FIRE and forecasting until retirement. Minimal input is needed!</li>
-              <li>Spaceship Voyager Universe support in Managed Funds tab (Universe only, updates ~8-12hrs, see MF example)</li>
-              <li>Automatic Budget Tab Migration</li>
-              <li>Improved Consolidation of Property & Mortgages into one tab</li>
-              <li>Other Property tracking & Dashboard improvements</li>
-              <li>Retirement/Super Voluntary contribution support (inc. FHSS)</li>
-              <li>Added end of month Summary prompt alongisde Email</li>
-              <li>Budget & Loan Tabs now support weekly/fortnightly pay cycles</li>
-              <li>Graphical representation of mortgage repayments over time</li>
-              <li>New personalization system to simplify Sheet setup</li>
-              <li>New Property/Loan Figures: Total Interest paid predictions</li>
-              <li>US Sheet can now support other base-sheet currencies in Crypto tab</li>
-              <li>Added live spot prices for Silver and Gold in Other Assets tab.</li>
-              <li>International currency support in Other Assets tab.</li>
-              <li>Couple tax calculator to help with determining average Tax rate (see cell note)</li>
-              <li>EU Sheet Version</li>
-            <b>🛠️ Bug fixes:</b><br>
-              <li>Fixed end of month email and prompt having savings rate and added savings swapped.</li>
-              <li>Fix for issue where historical months may show strange values (ie. December 3799)</li>
-              <li>Fix for issue with Gaps inbetween Months in the History tab</li>
-              <li>Fix for issues when upgrading from a v1.3 which resulted in gaps between months or date duplicates</li>
-              <li>Fixed issue with "Other Assets" not being included in "Liquid Assets" in the Net Worth tab.</li>
-              <li>Fix for Cash Tab savings dates showing December</li>
-              <li>Fixed issue with Savings Rate/Income not being correctly reported if Budget tab not used.</li>
-              <li>Fix for Month not saving correctly with .getMonth or .getYear error</li>
-              <li>Fixed issue with graphs not always showing correct months in labels</li>
-              <li>Fixes to Sheet names without spaces (ie. "ManagedFunds")</li>
-              <li>Hidden tabs now migrate</li>
-              <li>Fixed issue with past history property values not remaining static.</li>
-              <li>Fixed issue with Liabilities tab graphs showing currency instead of dates.</li>
-              <li>Fixed Managed Fund tab contributions still showing funds for sold off funds.</li>
-              <li>Removed and cleaned up redundant permissions</li>
-              <li>Fixed version number being incorrectly reported in Sheet</li>
-              <li>Lots and lots of back end code clean up leading to future features</li>
-              <li>Fix for MorningStar Funds showing as $0.</li>
-              <li>Fix for some ETF & Stocks showing incorrect prices.</li>
-              <li>Improvements to Sheet number crunching scripts to give clearer feedback about errors and what their causes are (hopefully this makes life easier debugging!)</li>
-              <li>Fix for Migration script not migration "Last Run" and "Last Refreshed" dates.</li>
-              <li>Improved feedback in Sheet if CoinMarketCap does not recognize a Crypto ticker.</li>
-              <li>Fix for Cash showing a huge gain if prior month wasn't recorded.</li>
-      </div>
-      <br>
-      <br>
-    <div class="changelog">
-          <h3><b>v2.9</b></h3>
-          <h4>19th September 2020</h4>
-            <b>New Features</b><br>
-              <li>Added Automatic Migration Tool! This will automatically copy all data from old Sheets to the new one, making upgrades take just 30 seconds now.</li>
-              <li>New Calender reminders to run monthly data recording.</li>
-              <li>Readded support for CoinMarketCap crypto prices. All cryptos now supported!</li>
-              <li>Added new end of month progression prompt</li>
-              <li>"Sold Units" are now automatically calculated FIFO for every asset class.</li>
-              <li>Added MorningStar support to Managed Fund pricing</li>
-              <li>Added international currency support for Bank accounts. If you would like to see the balance of international accounts in your local/base currency, please unhide column D.</li>
-              <li>Improvements to ETF/Stock price fetching performance</li>
-              <li>Dividends for international assets will try and return a converted automatic "Price @ Dividend" price</li>
-              <li>Added new sector classification system</li>
-              <li>Emergency fund duration is now configurable in the SheetOptions tab</li>
-            <b>Bug fixes:</b><br>
-              <li>Fix for Managed Fund, Stock and ETF prices when sourced from Bloomberg.</li>
-              <li>Fix for dividends not being included in total return values.</li>
-              <li>Patch for crypto prices returning "ERROR".</li>
-              <li>Patch for investment autobalance referencing incorrect cell.</li>
-              <li>Fixes to Managed Fund allocation formulas & filtering.</li>
-              <li>Fix for Managed Funds not appearing on Net Worth tracker graph in Net Worth tab.</li>
-              <li>Fix for migration script copying over the current unwritten month.</li>
-              <li>Fix for automatic stock brokerage missing.</li>
-              <li>Fix for GBX currency erroring.</li>
-              <li>Cleaned up all Asset type graphs to be consistent.</li>
-              <li>Readjusted layout of dividends tab to allow for dividends from more than 15 companies at once.</li>
-              <li>Fixes to Gain (%) and values if original purchase price was $0.</li>
-              <li>Fixed bug where reinvested dividends were double counted as contributions.</li>
-              <li>Fixed issue with History sheet not migrating all data.</li>
-      </div>
-      <br>
-      <br>
-      <div class="changelog"> 
-           <h3><b>v2.8</b></h3>
-          <h4>12th July 2020</h4>
-            <b>New Features</b><br>
-              <li>New Tracker for all your Generic Assets, see the new "Other Assets" tab</li>
-              <li>Massively improved Stock/ETF support for wider range of tickers and more robust Live Price fetching</li>
-              <li>Overhauled Crypto sheet to include full buy/sell support and performance tracking. NOTE: This is only supported in FIAT pairs, not Crypto-Crypto transactions. Please convert your Crypto-Crypto transactions to your Sheet base currency if needed.</li>
-              <li>Crypto purchases now included in Added investments</li>
-              <li>Added settings around House Deposit % targets and investment contribution allocation</li>
-              <li>Managed Funds & Liability progress now added to Monthly Email update</li>
-              <li>Hardening against errors from external sources interfering with Calculations in the Sheet</li>
-              <li>Converted Auto-brokerage columns into user-input columns</li>
-            <b>Bug fixes:</b><br>
-              <li>Fixes to Debt table in Net Worth tab not showing current past debt</li>
-              <li>Fixes to History Sheet if a month is missed in recording result in no data being written into the sheet</li>
-              <li>Fixed second issue where data was not being written into the Sheet</li>
-              <li>Removed need for day of month paid requirement</li>
-              <li>Performance improvements through optimisation of formulas</li>
-              <li>Fixes to House Deposit Savings calculations</li>
-              <li>Fixes to Managed Funds Graphs and History values</li>
-              <li>Fixes to Market return calculations in Investment Calculator</li>
-              <li>Fixes to lots of protected ranges not being applied correctly</li>
-              <li>Fixes to certain Funds (ie. ASX:BBOZ & ASX:BBUS) not showing correctly</li>
-              <li>Fixed issue with Dividends not filtering to current Financial Year</li>
-              <li>Fixes to Net Worth calculations not showing</li>
-              <li>Fixes to incorrect Values being reported in Progress emails</li>
-              <li>Fixes to Crypto Ticker errors</li>
-      </div>
-      <br>
-      <br>
-      <div class="changelog">
-          <h3><b>v2.7</b></h3>
-          <h4>13th April 2020</h4>
-            <li>Full Debt/Loan Support - let me know what you think!</li>
-            <li>Better Property Tracking</li>
-            <li>Simplified monthly update process & removed Cash/Super date requirement rejoice!</li>
-            <li>Added graphs to see investment performance against contributions</li>
-            <li>Managed Fund Fees tracking</li>
-            <li>Full international support for Stocks/Managed Funds/ETFs in local currency</li>
-            <li>Fixed bug with International stocks not having a base currency of AUD</li>
-            <li>Added FAQ page on website</li>
-            <li>Bug fixes to Investment optimisation</li>
-            <li>Improved History Sheet migration instructions</li>
-            <li>Improved Stock failover support</li>
-            <li>General Code & Sheet optimisations & cleanup</li>
-            <li>Bug fixes for monthly write process</li>
-            <li>Fixes to Networth update script to increase ease of use</li>
-      </div>
-      <br>
-      <br>
-      <div class="changelog">
-          <h3><b>v2.6</b></h3>
-          <h4>3rd March 2020</h4>
-            <li>Managed Fund Support! Check out the fancy new tab.</li>
-            <li>Improved Investment contribution balance system (see disclaimer)</li>
-            <li>Sheet reorganisation to make future migrations quicker</li>
-            <li>Added Aus Tax Rate estimations (see disclaimer)</li>
-            <li>Lots of formula fixes/optimisations throughout sheet</li>
-            <li>UI Improvements</li>
-            <li>Budget Sheet improvements</li>
-            <li>Fixes to Net Worth Update Script (fixes Date errors, Stock values, general improvements)</li>
-            <li>Fixes to Stock gains figures</li>
-            <li>Performance fixes</li>
-            <li>Improved currency support for Dividends</li>
-      </div>
-      <br>
-      <br>
-      <div class="changelog">
-          <h3><b>v2.5</b></h3>
-          <h4>18th February 2020</h4>
-            <li>Weekly/2-week pay support</li>
-            <li>Improvements to Stocks</li>
-            <li>Fixes to Monthly Update Scripts</li>
-            <li>Better Migration Support</li>
-            <li>Side Income (including Rental income) in your Budget</li>
-            <li>Numerous of fixes to Dividend sheet </li>
-            <li>Fixes to ETF/Stock prices to be more reliable</li>
-            <li>Fixes to Net Worth Calculations</li>
-            <li>Cleaned up and reduced permissions</li>
-            <li>Fixes to Net Worth recording for more miscelaneous situations</li>
-            <li>Fixes to Pension/Cash Date error</li>
-            <li>Efficiency fixes</li>
-    </div>
-  </section><!-- #hero -->
+                            <!-- v2.11.0 -->
+                            <h5 class="mt-5">Version <span class="text-success">2.11.0</span> - 27th April 2021</h5>
+							<p>Please note there have been <i>many</i> significant changes in the minor releases of v2.10 that aren't shown in this list. If you upgrading from v2.10.0, please review all the way down to the v2.10.0 release for other major features and fixes.</p>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Crypto Staking support.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Yahoo Finance pricing support for ETFs/Stocks/Managed Funds.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Support for Spaceship Origin & Earth Funds. See here for info.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Support for using Stocks/ETFs/Managed Funds as Retirement balances</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Names now automatically prefill for Stocks/ETFs</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Average Price of Unit to all Investment classes</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>2 additional Cash accounts</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Visual UI for end of month report</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Retirement annual performance statistic</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Support for fixed investment amounts in the Budget Tab</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Old Sheets will now have Crypto function disabled to save on API calls</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Net Worth breakdown graph in Net Worth tab</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Other Assets Purchases to Added Investments & Savings Rate calculations</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Help links to all Tabs</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Cleaned up Investment Columns for a more refined look</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Many UI enhancements</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Performance & efficiency increases when running end of month script.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>many improvements to the Migration Script for future versions</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Timezones in Sheet lead to the End of Month script writing the wrong month or duplicating a month (with a blank gap above)</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Dividends still showing in total returns when unit balance is 0</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Issue with Crypto purchases not migrating correctly</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Issue where "Added Savings" value only reported added investments in Email and End of Month Prompt</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Handling of "Timed out waiting for user response" error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>"Price @ Dividend" column in the Dividend tab now included in the migration.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Issue with ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Issue with certain tabs not resizing rows correctly and adjusting formulas during migration.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Minor issues with Graphs & figures in the Sheet.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>"Years to House" target date showing an error if no house target price</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Conditional Formatting and Highlighting</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>FIRE tab migrating values and not formulas</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Spreadsheet Locale now migrates from prior Sheet</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Crypto tab Live Price formatting in EU Sheet showing pounds symbol</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Managed Funds Dividend amount in UK Sheet showing dollar symbol</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Dividends tab not summing prior FY correctly according to FY dates</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Crypto "Units purchased" column incorrectly formatting units as currency</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Incorrect spelling of Portfolio</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Stocks Live Price column showing the currency instead of the live price.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Crypto Tab allocation graphs</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-warning"></i><span class="fw-bold text-warning">Removed: </span>Removed need for Email permission</li>
+                            </ul>
+                            <!-- v2.11.0 -->
 
-  <!--==========================
-    Footer
-  ============================-->
-  <footer class="footer" style="padding-top: 0px !important;">
-    <div class="container" style="padding-top: 25px !important; padding-bottom: 5px !important;">
-      <p style="color:white; text-align: center;"><b>&copy; <script>document.write(new Date().getFullYear())</script> • Made with love by <a href="https://www.reddit.com/user/CompiledSanity/">u/CompiledSanity ❤️</a></b></p>
-    </div>
-  </footer>
+                            <!-- v2.10.9 -->
+                            <h5 class="mt-5">Version <span class="text-success">2.10.9</span> - 30th March 2021</h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Other Assets Purchases to Added Investments & Savings Rate calculations</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Version & Region numbers are now appended to all error messages for debugging</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Update: </span>All graphs are now currency rounded for aesthetic cleanness</li>
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>"Could not get Function" due to new version error</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Duplicate Sector Charts in Stock tabs</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Issue with Crypto purchases not migrating correctly</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Other Asset history not displaying correctly</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>"Added Savings" value only reported added investments in Email and End of Month Prompt</li>
+                            </ul>
+                            <!-- v2.10.9 -->
 
+                            <!-- v2.10.8 -->
+                            <h5 class="mt-5">Version <span class="text-success">2.10.8</span> - 21st February 2021</h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Support for Spaceship Origin & Earth Funds. <a href="https://compiledsanity.gitbook.io/personalfinance/investments/managed-funds#spaceship-raiz-and-microinvesting-platform-support">See here for info.</a></li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Date cells in the Sheet now feature a dropdown box to select dates (thanks to u/avendr for the suggestion!)</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>ETFs now auto-populate fund names. This is coming to the Stocks tab in v2.11 (thanks to u/avendr for the suggestion!)</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Handling of "Timed out waiting for user response" error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>"Net Dividends after Tax" reporting an incorrect number on the Stocks tab.</li>  
+                            </ul>
+                            <!-- v2.10.8 -->
 
+                            <!-- v2.10.7 -->
+                            <h5 class="mt-5">Version <span class="text-success">2.10.7</span> - 12th February 2021</h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Sheet upgrade system where the Sheet will notify you if a new major/minor version has been released. <a href="https://i.imgur.com/2kuC2pw.png">Also added latest version area to Net Worth tab.</a></li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>"Price @ Dividend" column in the Dividend tab now included in the migration.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Cash notes in the Cash tab are now included in the migration.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>References to new Getting Started Guide: <a href="https://compiledsanity.gitbook.io">compiledsanity.gitbook.io</a></li>  
+                            </ul>
+                            <!-- v2.10.7 -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+                            <!-- v2.10.6 -->
+                            <h5 class="mt-5">Version <span class="text-success">2.10.6</span></h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Performance & efficiency increases when running end of month script.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Migration process now filters out errors from prior Sheets with errors in the History tab. This includes duplicate dates, out of order dates and incorrect dates (ie. Year 2670).</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>End of Month script causing incorrect dates (as above) to appear in the History tab.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Handling of months shown in History Tab if there are issues with dates. This will stop any dates cascading incorrectly.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>End of month script errors appearing if Summary prompt is not clicked within 180s Google Script timeout window.</li>  
+                            </ul>
+                            <!-- v2.10.6 -->
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/modal-video/js/modal-video.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+                            <!-- v2.10.5 -->
+                            <h5 class="mt-5">Version <span class="text-success">2.10.5</span></h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Certain tabs not resizing rows correctly and adjusting formulas during migration.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>.getMonth() error during End of Month update.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>End of month update displaying "Timed out waiting for user response".</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>End of Month summary displaying "NaN" for values.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>UK Sheet not showing Managed Funds summary correctly in Summary table and graphs.</li>  
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Weird duplicate and out of order dates in the History tab and after running the end of month script.</li>  
+                            </ul>
+                            <!-- v2.10.5 -->
+                            
+                            <!-- v2.10.4 -->
+                            <h5>Version <span class="text-success">2.10.4</span></h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Support for Property & Liabilities migration from v2.9 and below. This may be glitchy, please report bugs if you have any! Note that if you have Mortgages mixed in with other debts in the Liabilities tab, migration is not supported (this is asked during the process).</li>    
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Side Income notes now included in migration.</li>    
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Small bug in SheetOptions migration where not all options are copied.</li>    
+                            </ul>
+                            <!-- v2.10.4 -->
+							
+							<!-- v2.10.3 -->
+                            <h5>Version <span class="text-success">2.10.3</span></h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Migration Process now automatically corrects Liabilities/Mortgage data to correct positive/negative direction for v2.10.2 changes.</li>    
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Stocks Tab giving NaN error upon migration.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>"Cannot call method "abs" of undefined" error that may interfere with the end of month update.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>.getName() error in Retirement step when migrating from v2.10 to v2.10.3</li>
+                            </ul>
+                            <!-- v2.10.3 -->
+							
+							<!-- v2.10.2 -->
+                            <h5>Version <span class="text-success">2.10.2</span></h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Data validation to Property/Liabilities cells in the History tabs to enforce correct positive/negative numbering when migrating.</li>    
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Mortgage progression to end of month emails/readouts.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Liabilities values being incorrect and including property values.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Liability/mortgage showing debts as negative</li>    
+                            </ul>
+                            <!-- v2.10.2 -->
+							
+							<!-- v2.10.1 -->
+                            <h5>Version <span class="text-success">2.10.1</span></h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Net Worth tab showing incorrect Liabilities value (missing mortgage) and therefore incorrect rolling Net Worth value.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Mortgage & Liabilities tab calculations showing incorrect total interest.</li>
+                            </ul>
+                            <!-- v2.10.1 -->
+							
+							<!-- v2.10.0 -->
+                            <h5>Version <span class="text-success">2.10.0</span></h5>
+                            <ul class="list-unstyled">
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>FIRE 🔥 Dashboard: Automatically ties in with the rest of the Sheet to show your progress to FIRE and forecasting until retirement. Minimal input is needed!</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Spaceship Voyager Universe support in Managed Funds tab (Universe only, updates ~8-12hrs, see MF example)</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Automatic Budget Tab Migration</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Improved Consolidation of Property & Mortgages into one tab</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Other Property tracking & Dashboard improvements</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Retirement/Super Voluntary contribution support (inc. FHSS)</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>End of month Summary prompt alongisde Email</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Budget & Loan Tabs now support weekly/fortnightly pay cycles</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Graphical representation of mortgage repayments over time</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Personalization system to simplify Sheet setup</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Property/Loan Figures: Total Interest paid predictions</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>US Sheet can now support other base-sheet currencies in Crypto tab</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Live spot prices for Silver and Gold in Other Assets tab.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>International currency support in Other Assets tab.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Couple tax calculator to help with determining average Tax rate (see cell note)</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>EU Sheet Version</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Improvements to Sheet number crunching scripts to give clearer feedback about errors and what their causes are (hopefully this makes life easier debugging!)</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>End of month email and prompt having savings rate and added savings swapped.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Historical months may show strange values (ie. December 3799)</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Gaps inbetween Months in the History tab</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Upgrading from a v1.3 which resulted in gaps between months or date duplicates</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Issue with "Other Assets" not being included in "Liquid Assets" in the Net Worth tab.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Cash Tab savings dates showing December</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Savings Rate/Income not being correctly reported if Budget tab not used.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Month not saving correctly with .getMonth or .getYear error</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Graphs not always showing correct months in labels</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Sheet names without spaces (ie. "ManagedFunds")</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Hidden tabs now migrate</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Past history property values not remaining static.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Liabilities tab graphs showing currency instead of dates.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Managed Fund tab contributions still showing funds for sold off funds.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Version number being incorrectly reported in Sheet</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Lots and lots of back end code clean up leading to future features</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>MorningStar Funds showing as $0.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Some ETF & Stocks showing incorrect prices.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Migration script not migration "Last Run" and "Last Refreshed" dates.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Feedback in Sheet if CoinMarketCap does not recognize a Crypto ticker.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Cash showing a huge gain if prior month wasn't recorded.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-warning"></i><span class="fw-bold text-warning">Removed: </span>Removed and cleaned up redundant permissions</li>
+                            </ul>
+                            <!-- v2.10.0 -->
+							
+							<!-- v2.9 -->
+                            <h5>Version <span class="text-success">2.9</span> - 19th September 2020</h5>
+                            <ul class="list-unstyled">
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Automatic Migration Tool! This will automatically copy all data from old Sheets to the new one, making upgrades take just 30 seconds now.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Calender reminders to run monthly data recording.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Support for CoinMarketCap crypto prices. All cryptos now supported!</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>New end of month progression prompt</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>"Sold Units" are now automatically calculated FIFO for every asset class.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>MorningStar support to Managed Fund pricing</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>International currency support for Bank accounts. If you would like to see the balance of international accounts in your local/base currency, please unhide column D.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Improvements to ETF/Stock price fetching performance</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Dividends for international assets will try and return a converted automatic "Price @ Dividend" price</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Investment Sector classification system</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Emergency fund duration is now configurable in the SheetOptions tab</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Cleaned up all Asset type graphs to be consistent.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Readjusted layout of dividends tab to allow for dividends from more than 15 companies at once.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Managed Fund, Stock and ETF prices when sourced from Bloomberg.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Dividends not being included in total return values.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Crypto prices returning "ERROR".</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Investment autobalance referencing incorrect cell.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Managed Fund allocation formulas & filtering.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Managed Funds not appearing on Net Worth tracker graph in Net Worth tab.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Migration script copying over the current unwritten month.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Automatic stock brokerage missing.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>GBX currency erroring.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Investment Gain (%) and values if original purchase price was $0.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Bug where reinvested dividends were double counted as contributions.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>History sheet not migrating all data.</li>
+                            </ul>
+                            <!-- v2.9 -->
+							
+							<!-- v2.8 -->
+                            <h5>Version <span class="text-success">2.8</span> - 12th July 2020</h5>
+                            <ul class="list-unstyled">
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Tracker for all your Generic Assets, see the new "Other Assets" tab</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Massively improved Stock/ETF support for wider range of tickers and more robust Live Price fetching</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Overhauled Crypto sheet to include full buy/sell support and performance tracking. NOTE: This is only supported in FIAT pairs, not Crypto-Crypto transactions. Please convert your Crypto-Crypto transactions to your Sheet base currency if needed.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Crypto purchases now included in Added investments</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Settings around House Deposit % targets and investment contribution allocation</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Managed Funds & Liability progress now added to Monthly Email update</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Converted Auto-brokerage columns into user-input columns</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Errors from external sources interfering with Calculations in the Sheet</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Debt table in Net Worth tab not showing current past debt</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>History Sheet if a month is missed in recording result in no data being written into the sheet</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Issue where data was not being written into the Sheet</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Performance improvements through optimisation of formulas</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>House Deposit Savings calculations</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Managed Funds Graphs and History values</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Market return calculations in Investment Calculator</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Lots of protected ranges not being applied correctly</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Certain Funds (ie. ASX:BBOZ & ASX:BBUS) not showing correctly</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Dividends not filtering to current Financial Year</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Net Worth calculations not showing</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Incorrect Values being reported in Progress emails</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Crypto Ticker errors</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-warning"></i><span class="fw-bold text-warning">Removed: </span>Need for day of month paid requirement</li>
+                            </ul>
+                            <!-- v2.8 -->
+							
+							<!-- v2.7 -->
+                            <h5>Version <span class="text-success">2.7</span> - 13th April 2020</h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Full Debt/Loan Support - let me know what you think!</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Graphs to see investment performance against contributions</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Managed Fund Fees tracking</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Full international support for Stocks/Managed Funds/ETFs in local currency</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Added FAQ page on website</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Improved Property Tab & Tracking</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Simplified monthly update process & removed Cash/Super date requirement rejoice!</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>History Sheet migration instructions</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Improved Stock failover support</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>General Code & Sheet optimisations & cleanup</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Networth update script to increase ease of use</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Fixed bug with International stocks not having a base currency of AUD</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Bugs in investment optimisation</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Bugs in monthly write process</li>
+                            </ul>
+                            <!-- v2.7 -->
+							
+							<!-- v2.6 -->
+                            <h5>Version <span class="text-success">2.6</span> - 3rd March 2020</h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Managed Fund Support! Check out the fancy new tab.</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Improved Investment contribution balance system (see disclaimer)</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Sheet reorganisation to make future migrations quicker</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>UI Improvements</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Budget Sheet improvements</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Improved currency support for Dividends</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Net Worth Update Script (fixes Date errors, Stock values, general improvements)</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Stock gains figures</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Performance fixes</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Lots of formula fixes/optimisations throughout sheet</li>
+                            </ul>
+                            <!-- v2.6 -->
+							
+							<!-- v2.5 -->
+                            <h5>Version <span class="text-success">2.5</span> - 18th February 2020</h5>
+                            <ul class="list-unstyled">
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Weekly/2-week pay support</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Better Migration Support</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>Side Income (including Rental income) in your Budget</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Improvements to Stocks</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>Cleaned up and reduced permissions</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Fixes to Monthly Update Scripts</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Numerous of fixes to Dividend sheet </li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>ETF/Stock prices to be more reliable</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Net Worth Calculations</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Net Worth recording for more miscelaneous situations</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Pension/Cash Date error</li>
+								<li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2"></i><span class="fw-bold">Fixed: </span>Efficiency fixes</li>
+                            </ul>
+                            <!-- v2.5 -->
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+                            <div class="mt-4">
+                                <a href="/donate.html" target="_blank" class="btn btn-primary">Purchase Now</a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Changelog End -->
 
-</body>
+        <!-- Footer Start -->
+        <div class="position-relative" style="margin-top: 100PX;">
+            <div class="shape overflow-hidden text-footer">
+                <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        
+        <footer class="footer footer-bar" style="border-top: none !important;">
+            <div class="container text-center">
+                <div class="row justify-content-between">
+                    <div class="col-sm-3">
+                        <a href="#" class="logo-footer">
+                            <img src="images/CS_2021LogoFullv2_white.png" height="45" alt="">
+                        </a>
+                    </div><!--end col-->
+                    <div class="col-sm-6" style="margin: auto 0px;">
+                        <div class="text-sm-start">
+                            <p class="mb-0" style="text-align: center;">© <script>document.write(new Date().getFullYear())</script> Made with love by <a href="https://www.reddit.com/user/CompiledSanity/" target="_blank" class="text-reset">CompiledSanity</a> <i class="mdi mdi-heart text-danger"></i></p>
+                        </div>
+                    </div><!--end col-->
+                    <div class="col-sm-3">
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer><!--end footer-->
+        <!-- Footer End -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
+        <!-- Back to top -->
+
+        
+
+        <!-- javascript -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- SLIDER -->
+        <script src="js/tiny-slider.js "></script>
+        <!-- Icons -->
+        <script src="js/feather.min.js"></script>
+        <!-- Main Js -->
+        <script src="js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    </body>
 </html>

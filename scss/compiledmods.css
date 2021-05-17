@@ -35,6 +35,6 @@ div.pricing-rates .text-muted {
 }
 
 @media (min-width: 992px)
-#download .col-lg-4 {
+.col-lg-4 {
     width: 38% !important; 
 }

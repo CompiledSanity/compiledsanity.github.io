@@ -21,7 +21,13 @@ div.pricing-rates .text-muted {
 }
 
 .pricing-rates h3, .h3 {
-    font-size: 28px !important;
+    font-size: 35px !important;
+    font-family: 'Ubuntu', 'Nunito', sans-serif;
+}
+
+.pricing-rates h4, .h4 {
+    font-size: 30px !important;
+    font-family: 'Ubuntu', 'Nunito', sans-serif;
 }
 
 .paidsheet a {

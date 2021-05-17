@@ -11,7 +11,7 @@ div.pricing-rates {
 }
 
 div.pricing-rates .text-muted {
-    color: #535c68 !important;
+    color: #363c44 !important;
 }
 
 @media screen and (max-width: 450px) {
@@ -32,4 +32,9 @@ div.pricing-rates .text-muted {
     .pricing-rates h3, .h3 {
         font-size: 1.75rem;
     }
+}
+
+@media (min-width: 992px)
+#download .col-lg-4 {
+    width: 38% !important; 
 }

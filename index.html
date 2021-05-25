@@ -430,16 +430,17 @@
                             <h4 class="title mb-4">What our Users Say</h4>
                             <p class="text-muted para-desc mx-auto mb-0">Loved by over <span class="text-primary fw-bold">
 				    <?php
-					    $url = 'https://cspersonalfinance.io/liveinfo/totals.json';		
+				    	$url = 'https://cspersonalfinance.io/liveinfo/totals.json';		
    
-					    $ch = curl_init($url);
-					    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-					    $result = curl_exec($ch);
-					    curl_close($ch);
+					$ch = curl_init();
+					curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+					curl_setopt($ch, CURLOPT_URL,$url);
+					$result=curl_exec($ch);
+					curl_close($ch);
 
-					    echo $result;
+				    	echo $result["total"];
 				    ?>
-				    TEST4+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
+				    TEST5+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
                         </div>
                     </div><!--end col-->
                 </div><!--end row--> 

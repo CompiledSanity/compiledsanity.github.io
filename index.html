@@ -428,7 +428,13 @@
                     <div class="col-12 text-center">
                         <div class="section-title mb-4 pb-2">
                             <h4 class="title mb-4">What our Users Say</h4>
-                            <p class="text-muted para-desc mx-auto mb-0">Loved by over <span class="text-primary fw-bold">3500+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
+                            <p class="text-muted para-desc mx-auto mb-0">Loved by over <span class="text-primary fw-bold">
+				    <?php
+					$url = 'https://cspersonalfinance.io/liveinfo/totals.json';
+					$obj = json_decode(file_get_contents($url), true);
+					echo $obj['Total'];
+				    ?>
+				    TEST+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
                         </div>
                     </div><!--end col-->
                 </div><!--end row--> 

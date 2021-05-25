@@ -430,8 +430,9 @@
                             <h4 class="title mb-4">What our Users Say</h4>
                             <p class="text-muted para-desc mx-auto mb-0">Loved by over <span class="text-primary fw-bold">
 				    <?php
-					$data = json_decode(file_get_contents('https://cspersonalfinance.io/liveinfo/totals.json'), true);
-					echo $data->total;
+					$url = 'https://cspersonalfinance.io/liveinfo/totals.json';					
+					$data = json_decode(file_get_contents($url), true);
+					echo $data;
 				    ?>
 				    TEST2+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
                         </div>

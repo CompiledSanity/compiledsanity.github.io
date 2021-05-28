@@ -431,7 +431,6 @@
                             <p class="text-muted para-desc mx-auto mb-0">Loved by over <span class="text-primary fw-bold">3800+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
                             <p class="text-muted para-desc mx-auto mb-0">Loved by over <span class="text-primary fw-bold num-clients">3800+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
 				<script>
-					function fetchHtml() {
 					  fetch('/liveinfo/totals.json')
 					  .then((response) => {
 					    return response.json();
@@ -439,7 +438,6 @@
 					  .then((html) => {
 					    document.getElementById("num-clients").textContent = html["Total"] + "+ users";
 					  });
-					}
 				</script>
                         </div>
                     </div><!--end col-->

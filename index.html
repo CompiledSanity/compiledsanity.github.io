@@ -428,13 +428,7 @@
                     <div class="col-12 text-center">
                         <div class="section-title mb-4 pb-2">
                             <h4 class="title mb-4">What our Users Say</h4>
-                            <p class="text-muted para-desc mx-auto mb-0">Loved by over <span class="text-primary fw-bold">3800+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
                             <p class="text-muted para-desc mx-auto mb-0">Loved by over <span class="text-primary fw-bold" id="num-clients">3800+ users</span>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
-				<script>
-					  fetch('/liveinfo/totals.json')
-					  .then(response => response.json())
-					  .then(html => {document.getElementById("num-clients").textContent = html.Total + "+ users";});
-				</script>
                         </div>
                     </div><!--end col-->
                 </div><!--end row--> 
@@ -1054,6 +1048,11 @@
 
         <!-- javascript -->
         <script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		fetch('/liveinfo/totals.json')
+		.then(response => response.json())
+		.then(html => {document.getElementById("num-clients").textContent = html.Total + "+ users";});
+	</script>        
         <!-- SLIDER -->
         <script src="js/tiny-slider.js "></script>
 	<!-- shuffle and tobii js -->

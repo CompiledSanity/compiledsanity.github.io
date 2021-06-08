@@ -1,3 +1,8 @@
 {
-   "Total": 4000
+   "Total": 4000,
+   "exchange_rates": {
+      "EUR": 0.6358,
+      "GBP": 0.5467,
+      "USD": 0.7756
+   }
 }

@@ -1079,10 +1079,12 @@
 	<script>
 		fetch('/liveinfo/totals.json')
 		.then(response => response.json())
-		.then(html => {document.getElementById("num-clients").textContent = html.Total + "+ users";})
-		.then(html => {document.getElementById("usd-price").textContent = html['sheet_rate']['USD'];})
-		.then(html => {document.getElementById("eur-price").textContent = html['sheet_rate']['EUR'];})
-		.then(html => {document.getElementById("gbp-price").textContent = html['sheet_rate']['GBP'];});
+		.then(html => {
+			document.getElementById("num-clients").textContent = html.Total + "+ users";
+			document.getElementById("usd-price").textContent = html['sheet_rate']['USD'];
+			document.getElementById("eur-price").textContent = html['sheet_rate']['EUR'];
+			document.getElementById("gbp-price").textContent = html['sheet_rate']['GBP'];
+		});
 	</script>        
         <!-- SLIDER -->
         <script src="js/tiny-slider.js "></script>

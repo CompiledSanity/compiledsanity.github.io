@@ -1,9 +1,9 @@
 {
    "Total": 6000,
    "exchange_rates": {
-      "EUR": 0.6338,
-      "GBP": 0.5429,
-      "USD": 0.7498
+      "EUR": 0.6342,
+      "GBP": 0.542,
+      "USD": 0.7485
    },
    "sheet_rate": {
       "EUR": "5",

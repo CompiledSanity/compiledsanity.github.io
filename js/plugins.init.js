@@ -2,8 +2,8 @@
    Author: Shreethemes
    E-mail: support@shreethemes.in
    Created: August 2019
-   Version: 3.2.0
-   Updated: April 2021
+   Version: 3.5.0
+   Updated: July 2021
    File Description: Common JS file of the template(plugins.init.js)
 */
 
@@ -22,6 +22,8 @@
  *     09.  CK Editor            * (For Compose mail)
  *     10.  Fade Animation       * 
  *     11.  Typed Text animation (animation) * 
+ *     12.  Validation Form      * 
+ *     13.  Switcher Pricing Plan * 
  ================================*/
          
 //=========================================//
@@ -132,6 +134,37 @@ if(document.getElementsByClassName('tiny-four-item').length > 0) {
     });
 };
 
+
+
+if(document.getElementsByClassName('roadmaps').length > 0) {
+    var slider = tns({
+        container: '.roadmaps',
+        controls: false,
+        mouseDrag: true,
+        loop: true,
+        rewind: true,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        autoplayTimeout: 3000,
+        nav: false,
+        speed: 400,
+        gutter: 12,
+        responsive: {
+            992: {
+                items: 4
+            },
+
+            767: {
+                items: 2
+            },
+
+            320: {
+                items: 1
+            },
+        },
+    });
+};
+
 if(document.getElementsByClassName('tiny-six-item').length > 0) {
     var slider = tns({
         container: '.tiny-six-item',
@@ -156,6 +189,43 @@ if(document.getElementsByClassName('tiny-six-item').length > 0) {
 
             320: {
                 items: 1
+            },
+        },
+    });
+};
+
+
+
+if(document.getElementsByClassName('tiny-twelve-item').length > 0) {
+    var slider = tns({
+        container: '.tiny-twelve-item',
+        controls: true,
+        mouseDrag: true,
+        loop: true,
+        rewind: true,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        autoplayTimeout: 3000,
+        navPosition: "bottom",
+        controlsText: ['<i class="mdi mdi-chevron-left "></i>', '<i class="mdi mdi-chevron-right"></i>'],
+        nav: false,
+        speed: 400,
+        gutter: 0,
+        responsive: {
+            1025: {
+                items: 10
+            },
+
+            992: {
+                items: 8
+            },
+
+            767: {
+                items: 6
+            },
+
+            320: {
+                items: 2
             },
         },
     });
@@ -231,7 +301,6 @@ try {
 } catch (err) {
 
 }
-
 
 //=========================================//
 /*/*            03) Countdown js           */
@@ -537,6 +606,70 @@ try {
         document.body.appendChild(css);
     };
     window.onload(typewrite());
+} catch(err) {
+
+}
+
+
+//=========================================//
+/*/*    12) Validation Shop Checkouts      */
+//=========================================//
+
+(function () {
+    'use strict'
+
+    if(document.getElementsByClassName('needs-validation').length > 0) {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+    }
+})()
+
+
+//=========================================//
+/*/*      13) Switcher Pricing Plans       */
+//=========================================//
+try {
+    var e = document.getElementById("filt-monthly"),
+        d = document.getElementById("filt-yearly"),
+        t = document.getElementById("switcher"),
+        m = document.getElementById("monthly"),
+        y = document.getElementById("yearly");
+
+    e.addEventListener("click", function(){
+        t.checked = false;
+        e.classList.add("toggler--is-active");
+        d.classList.remove("toggler--is-active");
+        m.classList.remove("hide");
+        y.classList.add("hide");
+    });
+
+    d.addEventListener("click", function(){
+        t.checked = true;
+        d.classList.add("toggler--is-active");
+        e.classList.remove("toggler--is-active");
+        m.classList.add("hide");
+        y.classList.remove("hide");
+    });
+
+    t.addEventListener("click", function(){
+        d.classList.toggle("toggler--is-active");
+        e.classList.toggle("toggler--is-active");
+        m.classList.toggle("hide");
+        y.classList.toggle("hide");
+    })
 } catch(err) {
 
 }

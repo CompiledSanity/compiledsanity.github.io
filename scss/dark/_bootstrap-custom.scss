@@ -29,22 +29,37 @@ $value in $colors {
     background-color: $white;
 }
 
+//Offcanvas
+.offcanvas {
+    .offcanvas-header {
+        .dark-version {
+            display: inline-block;
+        }
+        .light-version {
+            display: none;
+        }
+        .btn-close {
+            color: $dark;
+        }
+    }
+}
+
 //Border
 .border {
-    border: 1px solid $gray-100 !important;
+    border: 1px solid $gray-800 !important;
     &.border-light {
         border-color: $dark !important;
     }
 }
 .border-top {
-    border-top: 1px solid $gray-100 !important;    
+    border-top: 1px solid $gray-800 !important;    
 }
 .border-bottom {
-    border-bottom: 1px solid $gray-100 !important;    
+    border-bottom: 1px solid $gray-800 !important;    
 }
 .border-left {
-    border-left: 1px solid $gray-100 !important;    
+    border-left: 1px solid $gray-800 !important;    
 }
 .border-right {
-    border-right: 1px solid $gray-100 !important;    
+    border-right: 1px solid $gray-800 !important;    
 }

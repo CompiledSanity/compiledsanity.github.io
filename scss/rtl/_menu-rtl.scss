@@ -20,6 +20,23 @@
         }
     }
 
+    .navbar-toggle {
+        .lines {
+            margin: 30px 10px 26px 0 !important;
+        }
+        span {
+            height: 2px;
+            width: 100%;
+            background-color: $dark;
+            display: block;
+            margin-bottom: 5px;
+            transition: transform .5s ease;   
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     //Buy button
     .buy-button {
         float: left;
@@ -156,7 +173,7 @@
         .navigation-menu {
             .has-submenu {
                 .menu-arrow {
-                    left: 16px;
+                    left: 8px;
                     right: auto;
                 }
                 .submenu {
@@ -171,12 +188,6 @@
 
 @media (max-width: 375px){
     #topnav {
-        .navbar-toggle {
-            .lines {
-                margin-left: 0 !important;
-                margin-right: auto;
-            }
-        }
         .buy-menu-btn {
             .dropdown {
                 .dropdown-menu {

@@ -32,7 +32,11 @@
     @include home-common();
 }
 .bg-half {
-    padding: 184px 0 90px;
+    padding: 200px 0 100px;
+
+    @media (max-width: 768px) {
+        padding: 160px 0 60px;
+    }
     @include home-common();
 }
 
@@ -197,6 +201,30 @@
     .carousel-control-next-icon,
     .carousel-control-prev-icon {
         width: 30%;
+    }
+
+    .carousel-control-next {
+        right: 8px;
+    }
+
+    .carousel-control-prev {
+        left: 8px;
+    }
+}
+
+.carousel-indicators {
+    [data-bs-target] {
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+        transition: all 0.5s ease;
+        border: 0;
+        background: $primary !important;
+        margin: auto 4px;
+    }
+    .active {
+        background-color: $primary !important;
+        transform: rotate(45deg);
     }
 }
 
@@ -366,12 +394,6 @@
             background: $white none repeat scroll 0 0;
             z-index: 2;
         }
-    }
-}
-
-@media (max-width: 768px) {
-    .bg-half {
-        padding: 169px 0 50px;
     }
 }
 

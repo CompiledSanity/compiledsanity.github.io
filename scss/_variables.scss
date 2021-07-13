@@ -6,15 +6,7 @@
 /*         Variables             */
 /*===============================*/
 
-// Base font
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap');
-
-$font-size-base:            16px;
-
-$font-family-base:          'Nunito', sans-serif;
-$font-family-secondary:     'Nunito', sans-serif;
-
 // Color
 $white:                     #ffffff;
 
@@ -38,15 +30,17 @@ $gray-500:                  #adb5bd;
 $gray-600:                  #6c757d; 
 $gray-700:                  #495057;
 
-// Overlay
-$overlay:                   rgba($dark, 0.7);
-$bg-overlay-white:          rgba($white, 0.5);
-
 //Body Background
 $shadow:                    0 0 3px rgba($dark,.15);
 $shadow-md:                 0 5px 13px rgba($dark, .2);
 $shadow-lg:                 0 10px 25px rgba($dark, 0.15);
 $footer:                    lighten($black, 6%);
+
+// Base font
+$font-size-base:            16px;
+
+$font-family-base:          'Nunito', sans-serif;
+$font-family-secondary:     'Nunito', sans-serif;
 
 //Color Picker/Switcher
 $default:                   #2f55d4;
@@ -58,6 +52,11 @@ $skobleoff:                 #0f7173;
 $cyan:                      #00c9a7;
 $slateblue:                 #766df4;
 $yellow:                    #f7961c;
+
+// Overlay
+$overlay:                   rgba($dark, 0.7);
+$bg-overlay-white:          rgba($white, 0.5);
+$bg-gradient-primary:       linear-gradient(to left, darken($purple, 10%) 0%, darken($primary, 10%) 100%);
 
 $colors: (
     "primary": $primary,
@@ -87,4 +86,6 @@ $display-font-sizes: (
     "display-2": 72px,
     "display-3": 64px,
     "display-4": 56px,
+    "display-5": 48px,
+    "display-6": 40px,
 )

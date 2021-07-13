@@ -58,6 +58,12 @@
     }
 }
 
+.form-signin {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
 
 //account-profile.html(Pages > Account)
 .bg-profile {
@@ -68,3 +74,72 @@
     }
 }
 
+//Chat
+.chat {
+    .chat-list {
+        &:hover,
+        &.active,
+        &:focus {
+            background: $light !important;
+            box-shadow: $shadow;
+        }
+    }
+    
+    .chat-list,
+    .chat-type {
+        .on-off {
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            font-size: 12px !important;
+        }
+    }
+    
+    &.chat-person {
+        .on-off {
+            font-size: 10px;
+        }
+        .chat-msg {
+            margin-left: 8px;
+            .msg {
+                border: 1px solid $gray-200;
+            }
+            .msg-time {
+                font-size: 12px !important;
+            }
+        }
+        .chat-right {
+            justify-content: flex-end;
+            text-align: right;
+            .chat-user-image {
+                order: 2;
+                .on-off {
+                    right: -1px;
+                }
+            }
+            .chat-msg {
+                margin-right: 8px;
+                margin-left: 0;
+                .msg {
+                    display: inline-block;
+                }
+                .msg-time {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// _smiple-bar.scss
+.simplebar-track {
+    &.simplebar-vertical {
+        width: 8px !important;
+        .simplebar-scrollbar {
+            &:before {
+                width: 4px !important;
+                background: $gray-500 !important;
+            }
+        }
+    }
+}

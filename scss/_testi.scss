@@ -45,8 +45,77 @@
     }
 }
 
+//Tns control
+.tns-controls {
+    button[data-controls="prev"],
+    button[data-controls="next"] {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $white;
+        color: $dark;
+        border: none;
+        transition: all 0.5s ease;
+        z-index: 1;
+        box-shadow: $shadow-lg;
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+    button[data-controls="prev"] {
+        left: 0;
+    }
+    button[data-controls="next"] {
+        right: 0;
+    }
+}
+
 //Slick slider
 .slick-slider {
     overflow-x: hidden !important;
     cursor: pointer;
+}
+
+//Roadmap
+.tiny-timeline {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 17px;
+        left: 0;
+        height: 2px;
+        background: $primary;
+    }
+    .item-box {
+        margin: 70px 15px 20px;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            background: $primary;
+        }
+        &:before {
+            width: 2px;
+            height: 46px;
+            top: -46px;
+            transform: translateX(-50%);
+        }
+        &:after {
+            width: 13px;
+            height: 13px;
+            top: -59px;
+            border-radius: 3px;
+            transform: translateX(-50%) rotate(45deg);
+        }
+    }
 }

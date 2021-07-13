@@ -6,20 +6,13 @@
 /*     Variables-DARK            */
 /*===============================*/
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap');
 // Color
-$white:                     #1f2d3d; //ffffff
+$white:                     #1c2836; //ffffff
 
-$primary:                   #2f55d4; //6dc77a
-$secondary:                 #5a6d90;
-$success:                   #2eca8b;
-$warning:                   #f17425;
-$info:                      #17a2b8;
-$danger:                    #e43f52;
 $dark:                      #ffffff; //3c4858
 $black:                     #161c2d;
 $muted:                     #9bacc4; //8492a6
-$light:                     #253649;
+$light:                     #1f2d3d;
 
 // Gray
 $gray-100:                  #495057;
@@ -29,6 +22,7 @@ $gray-400:                  #ced4da;
 $gray-500:                  #dee2e6;
 $gray-600:                  #e9ecef;
 $gray-700:                  #f8f9fa;
+$gray-800:                  #2a3c51;
 
 // Overlay
 $overlay:                   rgba($white, 0.7);
@@ -89,4 +83,6 @@ $display-font-sizes: (
     "display-2": 72px,
     "display-3": 64px,
     "display-4": 56px,
+    "display-5": 48px,
+    "display-6": 40px,
 )

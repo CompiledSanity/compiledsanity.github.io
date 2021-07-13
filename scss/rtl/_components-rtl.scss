@@ -83,6 +83,7 @@
     .accordion-item {
         .accordion-button {
             text-align: right;
+            padding: 1rem 1.25rem 1rem 2.5rem;
             &:before {
                 left: 20px;
                 right: auto;
@@ -117,6 +118,28 @@
     border-left: 0;
 }
 
+.blockquote-wrapper {
+    .blockquote {
+        &:after {
+            transform: rotate(-90deg);
+            right: 50px !important;
+            left: auto;
+        }
+        &:before {
+            left: auto;
+            right: 50px !important;
+        }
+    }
+    
+    .author {
+        margin-left: auto;
+        margin-right: 150px !important;
+        &:first-letter {
+            margin-right: -12px !important;
+            margin-left: auto;
+        }
+    }
+}
 //Subscribe form
 .subcribe-form {
     input {
@@ -124,8 +147,7 @@
         padding-left: 160px;
     }
     button {
-        top: 0.5px;
-        left: 2px !important;
+        left: 3px !important;
         right: auto;
     }
 }
@@ -218,6 +240,11 @@
     margin-left: 15px;
 }
 
+.form-select {
+    padding: .375rem .75rem .375rem 2.25rem;
+    background-position: left .75rem center;
+}
+
 //Modal
 .modal-header .close {
     margin: -1rem auto -1rem -1rem !important;
@@ -249,7 +276,7 @@
     }
 }
 
-//Work proces
+//Work process
 .work-process {
     &.process-arrow {
         &:after {    
@@ -409,6 +436,17 @@
     }
 }
 
+
+//Switcher-pricing
+.switcher-pricing {
+    .form-switch {
+        padding-left: 0;
+        .form-check-input {
+            margin-left: 0;
+        }
+    }
+}
+
 //Ribbon
 .ribbon {
     &.ribbon-right {
@@ -495,8 +533,8 @@
 }
 
 //shop-slider Slider
-.main-slider {
-    .slides {
+.home-slider {
+    .slide {
         .bg-home {
             &.slider-rtl-1 {
                 background-image: url("../images/shop/rtl-bg1.jpg") !important;
@@ -515,13 +553,18 @@
 .shop-list {
     .shop-image {
         .shop-icons {
+            left: 15px !important;
             right: auto;
-            left: 15px;
         }
     }
     .label {
-        right: -15px !important;
+        right: 15px !important;
         left: auto;
+    }
+
+    .qty-btn {
+        padding-right: 15px !important;
+        padding-left: 0;
     }
 }
 
@@ -612,6 +655,38 @@
         @media (max-width: 575px) {
             right: 60px;
             left: auto;
+        }
+    }
+}
+
+//Chat
+.chat {
+    .chat-list,
+    .chat-type {
+        .on-off {
+            right: -1px !important;
+            left: auto;
+        }
+    }
+    
+    &.chat-person {
+        .chat-msg {
+            margin-right: 8px !important;
+            margin-left: auto;
+        }
+        .chat-right {
+            justify-content: flex-start;
+            text-align: left;
+            .chat-user-image {
+                .on-off {
+                    left: -1px !important;
+                    right: auto;
+                }
+            }
+            .chat-msg {
+                margin-right: 0 !important;
+                margin-left: 8px !important;
+            }
         }
     }
 }

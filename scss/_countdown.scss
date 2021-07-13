@@ -15,7 +15,7 @@
         font-size: 32px;
     }
 }
-#countdown, #eventdown {
+#countdown, #eventdown, #token-sale {
     .count-down {
         display: inline-block;
         margin: 30px 10px 10px;
@@ -45,6 +45,27 @@
             height: 130px;
             width: 130px;
             border-radius: 50%;
+        }
+    }
+}
+
+//token-sale
+#token-sale {
+    .count-down {
+        border: 0;
+        color: $dark !important;
+        .count-number {
+            line-height: 80px;
+            @media (max-width: 767px){
+                font-size: 30px;
+            }
+        }
+        .count-head {
+            margin-bottom: 0 !important;
+            transform: translateY(-15px);
+            @media (max-width: 767px){
+                font-size: 10px;
+            }
         }
     }
 }

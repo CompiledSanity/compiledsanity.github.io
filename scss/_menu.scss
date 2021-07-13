@@ -50,6 +50,7 @@
     .has-submenu {
         position: relative;
         .submenu {
+            position: relative;
             .submenu-arrow {
                 border: solid $dark;
                 border-radius: 0.5px;
@@ -59,11 +60,20 @@
                 transform: rotate(-45deg);
                 position: absolute;
                 right: 20px;
-                top: 14px;
+                top: 13px;
             }
             .has-submenu {
+                .submenu {
+                    .has-submenu {
+                        &:hover {
+                            .submenu-arrow {
+                                border-color: $primary;
+                            }
+                        }
+                    }
+                }
                 &:hover {
-                    .submenu-arrow {
+                    >.submenu-arrow {
                         border-color: $primary;
                     }
                 }
@@ -73,7 +83,6 @@
     .navbar-toggle {
         border: 0;
         position: relative;
-        width: 60px;
         padding: 0;
         margin: 0;
         cursor: pointer;
@@ -81,7 +90,7 @@
             width: 25px;
             display: block;
             position: relative;
-            margin: 28px 20px;
+            margin: 30px 0 26px 10px;
             height: 18px;
         }
         span {
@@ -100,7 +109,7 @@
     //Buy button
     .buy-button {
         float: right;
-        line-height: 68px;
+        line-height: 74px;
         > li {
             line-height: initial;
         }
@@ -174,7 +183,6 @@
                 letter-spacing: 1px;
                 line-height: 24px;
                 text-transform: uppercase;
-                transition: all 0.5s;    
                 font-family: $font-family-base;
                 padding-left: 15px;
                 padding-right: 15px;
@@ -419,9 +427,9 @@
                         transform: translateX(-50%);
                         position: fixed;
                         top: auto;
+                        display: flex;
                         > li {
                             overflow: hidden;
-                            display: inline-block;
                             vertical-align: top;
                             width: 20%;
                             .submenu {
@@ -719,14 +727,14 @@
         .navigation-menu {
             .has-submenu {
                 .menu-arrow {
-                    right: 16px;
+                    right: 8px;
                     top: 16px;
                 }
             }
         }
-        .buy-button {
-            padding: 3px 0;
-        }
+        // .buy-button {
+        //     padding: 3px 0;
+        // }
     }
 }
 
@@ -748,16 +756,16 @@
                                             opacity: 1;
                                             margin-left: 0;
                                             margin-right: 0;
-                                            // > li{
-                                            //     &:hover {
-                                            //         > .submenu {
-                                            //             visibility: visible;
-                                            //             opacity: 1;
-                                            //             margin-left: 0;
-                                            //             margin-right: 0;
-                                            //         }
-                                            //     }
-                                            // }
+                                            > li{
+                                                &:hover {
+                                                    > .submenu {
+                                                        visibility: visible;
+                                                        opacity: 1;
+                                                        margin-left: 0;
+                                                        margin-right: 0;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -773,11 +781,13 @@
     }
 }
 
-@media (max-width: 375px){
+@media (max-width: 425px){
     #topnav {
-        .buy-button {
-            display: none;
-        }
+        // .buy-button {
+        //     .button {
+        //         display: none;
+        //     }
+        // }
         .buy-menu-btn {
             display: block !important;
             margin: 0 10px;
@@ -788,11 +798,6 @@
                         transform: translate3d(0px, -54px, 0px) !important;
                     }
                 }
-            }
-        }
-        .navbar-toggle {
-            .lines {
-                margin-right: 0 !important;
             }
         }
     }

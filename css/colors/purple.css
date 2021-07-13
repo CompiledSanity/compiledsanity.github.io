@@ -33,7 +33,12 @@
 #navmenu-nav li.account-menu:hover .navbar-link,
 .form-check-input.form-check-input:checked,
 .qs-datepicker-container .qs-squares .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover, 
-.qs-datepicker-container .qs-squares .qs-square.qs-current {
+.qs-datepicker-container .qs-squares .qs-square.qs-current,
+.carousel-indicators [data-bs-target],
+.carousel-indicators .active,
+.tns-controls button[data-controls="prev"]:hover, 
+.tns-controls button[data-controls="next"]:hover,
+.back-to-top {
     background-color: #7952B3 !important;
 }
 
@@ -74,6 +79,7 @@
 .explore-feature:hover .icon,
 .explore-feature:hover .title,
 .pricing-rates.business-rate:hover .title,
+.switcher-pricing .toggler--is-active,
 .blog .content .title:hover,
 .blog .content .post-meta .readmore:hover,
 .sidebar .widget .blog-categories li a:hover,
@@ -118,7 +124,8 @@
 .form-check-input:focus,
 .social-icon li a:hover,
 #topnav .has-submenu.active.active .menu-arrow,
-#topnav .has-submenu .submenu .has-submenu:hover .submenu-arrow,
+#topnav .has-submenu .submenu .has-submenu .submenu .has-submenu:hover .submenu-arrow,
+#topnav .has-submenu .submenu .has-submenu:hover >.submenu-arrow,
 #topnav.scroll .navigation-menu > li:hover > .menu-arrow, 
 #topnav.scroll .navigation-menu > li.active > .menu-arrow,
 #topnav.nav-sticky .navigation-menu.nav-light > li:hover > .menu-arrow, 
@@ -126,8 +133,11 @@
 #topnav .navigation-menu > li:hover > .menu-arrow,
 .swiper-slider-hero .swiper-container .swiper-button-next:hover,
 .pricing-rates.starter-plan,
+.pricing-rates.business-rate:hover,
 .event-schedule:hover,
-.container-filter li.active, .container-filter li:hover{
+.container-filter li.active, .container-filter li:hover,
+.blockquote-wrapper .blockquote,
+.blockquote-wrapper .blockquote:after {
     border-color: #7952B3 !important;
 }
 
@@ -188,6 +198,10 @@
 
 .bg-circle-gradiant {
     background: radial-gradient(circle at 50% 50%, rgba(121, 82, 179, 0.1) 0%, rgba(121, 82, 179, 0.1) 33.333%, rgba(121, 82, 179, 0.3) 33.333%, rgba(121, 82, 179, 0.3) 66.666%, rgba(121, 82, 179, 0.5) 66.666%, rgba(121, 82, 179, 0.5) 99.999%);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(to left, #2443ac 0%, #614092 100%);
 }
 
 .tns-nav button {

@@ -232,21 +232,24 @@
                             }
 
                             var indiv_faq_html = `
-                            <div class="accordion-item rounded shadow bg-white mt-2">
+                                <div class="accordion-item rounded mt-2">
                                     <h2 class="accordion-header" id="heading${faq_iter}">
                                         <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq_iter}" aria-expanded="false" aria-controls="collapse${faq_iter}">
                                             ${indiv_faq_question}
                                         </button>
                                     </h2>
                                     <div id="collapse${faq_iter}" class="accordion-collapse border-0 collapse" aria-labelledby="heading${faq_iter}" data-bs-parent="#${category_slimmed}">
-                                        <div class="accordion-body text-muted">
+                                        <div class="accordion-body text-muted bg-white">
                                             ${indiv_faq_answer}
                                         </div>
                                     </div>
                                 </div>
 
                             `;
-                            overall_return_html = overall_return_html + indiv_faq_html;
+
+                            if (response_json["FAQs"][category][faq_entry]["Summary"] == true) {
+                                overall_return_html = overall_return_html + indiv_faq_html;
+                            }
                         }
 
                         var faq_category_footer = `

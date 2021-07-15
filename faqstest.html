@@ -240,8 +240,8 @@
                     for (var category in response_json["FAQs"]) {
                         console.log(category);
                         for (var faq_entry in response_json["FAQs"][category]) {
-                            console.log(faq_entry.toString());
-                            console.log(response_json["FAQs"][category][faq_entry]["Question"]);
+                            var line = response_json["FAQs"][category][faq_entry]["Question"];
+                            console.log("line: " + line);
                         }
                     }
                 });

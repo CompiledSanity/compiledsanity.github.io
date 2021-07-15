@@ -234,8 +234,7 @@
         <!-- Back to top -->
 
         <script>
-            var html_faq = "";
-
+            html_faq = "";
             fetch('/faqs.json')
                 .then(response => response.json())
                 .then(response_json => {
@@ -250,6 +249,8 @@
                             </div>
                             <div class="accordion mt-4 pt-2" id="buyingquestion">
                         `;
+
+                        overall_return_json = overall_return_json + faq_category_header
 
                         for (var faq_entry in response_json["FAQs"][category]) {
                             var indiv_faq_question = response_json["FAQs"][category][faq_entry]["Question"];
@@ -272,15 +273,16 @@
                                         </div>
                                     </div>
                                 </div>
-                            `;
 
+                            `;
+                            overall_return_json = overall_return_json + indiv_faq_html
                         }
 
                         var faq_category_footer = `
                             </div>
                         `;
 
-                        overall_return_json = faq_category_header + indiv_faq_html + faq_category_footer
+                        overall_return_json = overall_return_json + faq_category_footer
                     }
                     console.log(overall_return_json);
                 });

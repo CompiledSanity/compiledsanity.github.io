@@ -1,6 +1,6 @@
 {
 	"FAQs": {
-		"Personal Circumstances": [{
+		"Using the Sheet": [{
 				"Question": "How do I enter my own Historical data into a new Sheet?",
 				"Answer": [
 					"To enter your own historical Data into the Sheet, follow the instructions below:<br>",
@@ -121,7 +121,7 @@
 			{
 				"Question": "What does CompiledSanity stand for?",
 				"Answer": [
-					"CompiledSanity is the Reddit username of the creator of this Sheet, and the name by which the Sheet became known by when I first <a href='https: //www.reddit.com/r/fiaustralia/comments/f2fy01/after_a_year_of_work_im_releasing_my_net_worth/'>started sharing the Sheet on the internet.</a> While in hindsight I wish I could have named it something more approachable and easier on the eyes, by this time it was too late and the Sheet had become synonymous with 'CompiledSanity'.",
+					"CompiledSanity is the Reddit username of the creator of this Sheet, and the name by which the Sheet became known by when I first <a href='https://www.reddit.com/r/fiaustralia/comments/f2fy01/after_a_year_of_work_im_releasing_my_net_worth/'>started sharing the Sheet on the internet.</a> While in hindsight I wish I could have named it something more approachable and easier on the eyes, by this time it was too late and the Sheet had become synonymous with 'CompiledSanity'.",
 					"</br></br>",
 					"The words themselves draw from programming workflows and some frustration I had with a particular task at the time.",
 					"</br></br>",
@@ -129,6 +129,80 @@
 				],
 				"Summary": true
 			}
-		]
+		],
+		"Personal Circumstances": [{
+				"Question": "I'm paid irreguarly or with irregular amounts, how do I account for that?",
+				"Answer": [
+					"2 ways. Either:<br>",
+					"<ul>",
+					"    <li>Enter in an average figure that you are comfortable with</li>",
+					"    <li>b) Set your Salary to $0 and enter all your income into the Side Income tab. This was designed for irregular amounts and will automatically feed an averaged value into the rest of the Template.</li>",
+					"</ul>"
+				],
+				"Summary": true
+			},
+			{
+				"Question": "How do I enter and account for my Mortgage Offset Account?",
+				"Answer": [
+					"Mortgage Offset accounts can be dealt with in many different ways. Uniquely, Offset accounts can count as both a Cash account as well as downpayments on your loan. Since this money can flex in between it can be a grey area, but for the purposes of the Sheet it needs to be more definite.",
+					"<br><br>",
+					"It is recommended that you come up with a theoretical minimum floor/emergency Cash amount that you have earmarked for emergencies, investments or general purchases ($30,000 for example). This $30,000 balance would go in the Cash tab as 'Offset Account'.",
+					"<br><br>",
+					"In the Property tab for 'Mortgage amount paid' you would put the remainder of this balance (ie. Total Offset Balance - $30,000). That way as your Offset Cash balance grows, in the Sheet more of your mortgage will be reflected as paid off over time."
+				],
+				"Summary": true
+			},
+			{
+				"Question": "How do I track with my partner?",
+				"Answer": [
+					"For couples it is recommended that you combine finances and incomes as expenses will likely be incurred as a household and not for individuals and therefore Net Worth changes need to be considered as a whole.",
+					"<br><br>",
+					"A key point when combining finances is the Tax rate input in the Sheet Options tab. For a couple in different tax brackets a weighted averaged will needs to be used. Please follow this formula and use the linked calculator for working this out:",
+					"<br><br>",
+					"<b>(Income1 x Tax1% + Income2 x Tax%2) / (Income1 + Income 2) = Average Tax Rate %</b>",
+					"<br><br>",
+					"ie. For a couple earning $120,000 (55% Tax rate) and $55,000 respectively (37% Tax Rate):<br>",
+					"(Please note shown Tax rates are just examples)<br>",
+					"<a href='https://www.wolframalpha.com/input/?i=%28120000*0.55%2B55000*0.37%29%2F%28120000%2B55000%29'>(120000 x 0.55 + 55000 x 0.37) / (120000 + 55000)</a> = 0.493, or <b>49.3% Average Tax rate</b>."
+				],
+				"Summary": true
+			},
+			{
+				"Question": "How do I enter my Credit Card into the Sheet?",
+				"Answer": [
+					"There are 2 ways to handle inputting Credit Cards:",
+					"<ul>",
+					"    <li>",
+					"        <b>If you pay off your Credit cards each month</b> - Enter your credit card balance on the cash tab as a negative number. As this isn't long term debt it is more appropriate having it as an equalising negative Cash Balance for accuracy.",
+					"    </li>",
+					"    <li><b>For more long term credit card debt</b> that you're trying to tackle and pay down - Enter this into the liabilities sheet.</li>",
+					"</ul>"
+				],
+				"Summary": true
+			},
+			{
+				"Question": "How do I account for Salary Sacrificing?",
+				"Answer": [
+					"You should enter as your income the amount of money available to you when you're paid after the salary sacrifice has been taken out. For all intents the Sheet is concerned with what money is usable to you after tax/fees has been taken out.",
+					"<br><br>",
+					"This will ensure the savings rates are calculated correctly against the post-sacrificed income."
+				],
+				"Summary": true
+			},
+			{
+				"Question": "How do I account for income from a rental Property?",
+				"Answer": [
+					"Income from Rental properties is entered into the Side Income tab. Rename one of the example columns as needed and enter the after-tax rent each month. Rental income can also be accounted for in the Property tab in the Net Rent Profit To Date($) row, which will feed into your overall return values."
+				],
+				"Summary": true
+			}
+		],
+		"Investments": [{
+			"Question": "Where can I see the latest changes in the Sheet/a Change log?",
+			"Answer": [
+				"You can view the <a href='https://cspersonalfinance.io/changelog.html'>Sheet changelog here</a>."
+			],
+			"Summary": true
+		}]
 	}
 }

@@ -236,7 +236,7 @@
         <script>
             fetch('/faqs.json')
                 .then(response => response.json())
-                .then(html => {
+                .then(response_json => {
                     for (var category in response_json["FAQs"]) {
                         for (var faq_entry in response_json["FAQs"][category]) {
                             console.log(faq_entry["Question"]);

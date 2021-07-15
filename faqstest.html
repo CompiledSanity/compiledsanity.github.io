@@ -234,21 +234,17 @@
         <!-- Back to top -->
 
         <script>
-            let response = fetch('/faqs.json');
-
-            //if (!(response.ok)) {
-            //  return;
-            //}
-
             var Categories = ["PersonalCircumstances"];
+            fetch('/faqs.json')
+                .then(response => response.json())
+                .then(html => {
+                    for (var category in Categories) {
+                        for (var faq_entry in response_json.FAQs[category]) {
+                            console.log(faq_entry.Question);
+                        }
+                    }
 
-            let response_json = response.json();
-
-            for (var category in Categories) {
-                for (var faq_entry in response_json.FAQs[category]) {
-                    console.log(faq_entry.Question);
-                }
-            }
+                });
         </script>
 
         <!-- javascript -->

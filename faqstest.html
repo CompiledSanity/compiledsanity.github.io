@@ -206,7 +206,7 @@
 
         <script>
             var html_faq = "";
-            var faq_entry = 0;
+            var faq_iter = 0;
             fetch('/faqs.json')
                 .then(response => response.json())
                 .then(response_json => {
@@ -225,7 +225,7 @@
                         overall_return_html = overall_return_html + faq_category_header;
 
                         for (var faq_entry in response_json["FAQs"][category]) {
-                            faq_entry++;
+                            faq_iter++;
                             var indiv_faq_question = response_json["FAQs"][category][faq_entry]["Question"];
                             var indiv_faq_answer = "";
 
@@ -235,12 +235,12 @@
 
                             var indiv_faq_html = `
                                 <div class="accordion-item rounded">
-                                    <h2 class="accordion-header" id="heading${faq_entry}">
-                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq_entry}" aria-expanded="false" aria-controls="collapse${faq_entry}">
+                                    <h2 class="accordion-header" id="heading${faq_iter}">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq_iter}" aria-expanded="false" aria-controls="collapse${faq_iter}">
                                             ${indiv_faq_question}
                                         </button>
                                     </h2>
-                                    <div id="collapse${faq_entry}" class="accordion-collapse border-0 collapse" aria-labelledby="heading${faq_entry}" data-bs-parent="#${category}">
+                                    <div id="collapse${faq_iter}" class="accordion-collapse border-0 collapse" aria-labelledby="heading${faq_iter}" data-bs-parent="#${category}">
                                         <div class="accordion-body text-muted bg-white">
                                             ${indiv_faq_answer}
                                         </div>

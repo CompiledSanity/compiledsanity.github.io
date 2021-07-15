@@ -1,64 +1,63 @@
 {
-    "FAQs": {
-        "Personal Circumstances": [
-            {
-                "Question": "Test",
-                "Answer": [
-                    "Test",
-                    "Test",
-                ],
-                "Summary": false
-            },
-            {
-                "Question": "How do I enter my own Historical data into a new Sheet?",
-                "Answer": [
-                    "To enter your own historical Data into the Sheet, follow the instructions below:<br>",
-                    "<ol>",
-                    "    <li>Head to the History tab</li>",
-                    "    <li>Starting in Cell A3 and working down, enter in the dates (ie. 1/6/2020, 1/7/2020 etc.) for the previous data you want in the sheet. Don't worry about the months already in the sheet, they will automatically move down.</li>",
-                    "    <li>For the new months that you've entered, from left-right fill out the values in the blue columns.</li>",
-                    "</ol>"
-                ],
-                "Summary": false
-            },
-            {
-                "Question": "How do I know my Data is kept private?",
-                "Answer": [
-                    "A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg.<br><br>",
-                    "You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your Net Worth & associated performance."
-                ],
-                "Summary": false
-            },
-            {
-                "Question": "I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?",
-                "Answer": [
-                    "If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps<br>:",
-                    "<ol>",
-                    "    <li>Click File -> Version History -> See Version History</li>",
-                    "    <li>In the right Sidebar, click on the dated version of the Sheet <i>before</i> you clicked to end the month</li>",
-                    "    <li>At the top of the screen, click the green 'Restore this version' button</li>",
-                    "    <li>Finish off entering your data and run the Sheet again</li>",
-                    "</ol>"
-                ],
-                "Summary": false
-            },
-            {
-                "Question": "A new Sheet update is released, how do I upgrade to a new Sheet?",
-                "Answer": [
-                    "<ul>",
-                    "    <li><a href='https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version'>Click to see instructions on how to upgrade your Sheet.</a></li>",
-                    "    <li><a href='https://cspersonalfinance.io/resendinvite/'>If needed, click here to send you the latest invite.</a></li>",
-                    "</ul>",
-                ],
-                "Summary": false
-            },
-            {
-                "Question": "How do I migrate data between sheets?",
-                "Answer": [
-                    "As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you."
-                ],
-                "Summary": false
-            }
-        ]
-    }
+	"FAQs": {
+		"Personal Circumstances": [{
+				"Question": "Test",
+				"Answer": [
+					"Test",
+					"Test"
+				],
+				"Summary": false
+			},
+			{
+				"Question": "How do I enter my own Historical data into a new Sheet?",
+				"Answer": [
+					"To enter your own historical Data into the Sheet, follow the instructions below:<br>",
+					"<ol>",
+					"    <li>Head to the History tab</li>",
+					"    <li>Starting in Cell A3 and working down, enter in the dates (ie. 1/6/2020, 1/7/2020 etc.) for the previous data you want in the sheet. Don't worry about the months already in the sheet, they will automatically move down.</li>",
+					"    <li>For the new months that you've entered, from left-right fill out the values in the blue columns.</li>",
+					"</ol>"
+				],
+				"Summary": false
+			},
+			{
+				"Question": "How do I know my Data is kept private?",
+				"Answer": [
+					"A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg.<br><br>",
+					"You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your Net Worth & associated performance."
+				],
+				"Summary": false
+			},
+			{
+				"Question": "I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?",
+				"Answer": [
+					"If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps<br>:",
+					"<ol>",
+					"    <li>Click File -> Version History -> See Version History</li>",
+					"    <li>In the right Sidebar, click on the dated version of the Sheet <i>before</i> you clicked to end the month</li>",
+					"    <li>At the top of the screen, click the green 'Restore this version' button</li>",
+					"    <li>Finish off entering your data and run the Sheet again</li>",
+					"</ol>"
+				],
+				"Summary": false
+			},
+			{
+				"Question": "A new Sheet update is released, how do I upgrade to a new Sheet?",
+				"Answer": [
+					"<ul>",
+					"    <li><a href='https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version'>Click to see instructions on how to upgrade your Sheet.</a></li>",
+					"    <li><a href='https://cspersonalfinance.io/resendinvite/'>If needed, click here to send you the latest invite.</a></li>",
+					"</ul>"
+				],
+				"Summary": false
+			},
+			{
+				"Question": "How do I migrate data between sheets?",
+				"Answer": [
+					"As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you."
+				],
+				"Summary": false
+			}
+		]
+	}
 }

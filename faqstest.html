@@ -156,36 +156,7 @@
                 <!--end row-->
 
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-7 col-12">
-
-                        <div class="section-title" id="tech">
-                            <h4 style="text-align: center;">Using the Sheet</h4>
-                        </div>
-
-                        <div class="accordion mt-4 pt-2" id="buyingquestion">
-
-                            <div class="accordion-item rounded">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        How do I enter my own Historical data into a new Sheet?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse border-0 collapse" aria-labelledby="headingOne" data-bs-parent="#buyingquestion">
-                                    <div class="accordion-body text-muted bg-white">
-                                        To enter your own historical Data into the Sheet, follow the instructions below:
-                                        <br>
-                                        <ol>
-                                            <li>Head to the History tab</li>
-                                            <li>Starting in Cell A3 and working down, enter in the dates (ie. 1/6/2020, 1/7/2020 etc.) for the previous data you want in the sheet. Don't worry about the months already in the sheet, they will automatically move
-                                                down.</li>
-                                            <li>For the new months that you've entered, from left-right fill out the values in the blue columns.</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
+                    <div class="col-lg-8 col-md-7 col-12" id="faq-contents">
                     </div>
                 </div>
                 <!--end row-->
@@ -234,11 +205,12 @@
         <!-- Back to top -->
 
         <script>
-            html_faq = "";
+            var html_faq = "";
+            var faq_entry = 0;
             fetch('/faqs.json')
                 .then(response => response.json())
                 .then(response_json => {
-                    var overall_return_json = "";
+                    var overall_return_html = "";
 
                     for (var category in response_json["FAQs"]) {
                         console.log(category);
@@ -247,12 +219,13 @@
                             <div class="section-title" id="tech">
                                 <h4 style="text-align: center;">${category}</h4>
                             </div>
-                            <div class="accordion mt-4 pt-2" id="buyingquestion">
+                            <div class="accordion mt-4 pt-2" id="${category}">
                         `;
 
-                        overall_return_json = overall_return_json + faq_category_header
+                        overall_return_html = overall_return_html + faq_category_header;
 
                         for (var faq_entry in response_json["FAQs"][category]) {
+                            faq_entry++;
                             var indiv_faq_question = response_json["FAQs"][category][faq_entry]["Question"];
                             var indiv_faq_answer = "";
 
@@ -262,12 +235,12 @@
 
                             var indiv_faq_html = `
                                 <div class="accordion-item rounded">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <h2 class="accordion-header" id="heading${faq_entry}">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq_entry}" aria-expanded="false" aria-controls="collapse${faq_entry}">
                                             ${indiv_faq_question}
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse border-0 collapse" aria-labelledby="headingOne" data-bs-parent="#buyingquestion">
+                                    <div id="collapse${faq_entry}" class="accordion-collapse border-0 collapse" aria-labelledby="heading${faq_entry}" data-bs-parent="#${category}">
                                         <div class="accordion-body text-muted bg-white">
                                             ${indiv_faq_answer}
                                         </div>
@@ -275,16 +248,17 @@
                                 </div>
 
                             `;
-                            overall_return_json = overall_return_json + indiv_faq_html
+                            overall_return_html = overall_return_html + indiv_faq_html;
                         }
 
                         var faq_category_footer = `
                             </div>
                         `;
 
-                        overall_return_json = overall_return_json + faq_category_footer
+                        overall_return_html = overall_return_html + faq_category_footer;
                     }
-                    console.log(overall_return_json);
+                    console.log(overall_return_html);
+                    document.getElementById("faq-contents").innerHTML = overall_return_json;
                 });
         </script>
 

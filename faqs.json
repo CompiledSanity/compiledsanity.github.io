@@ -198,11 +198,45 @@
 			}
 		],
 		"Investments": [{
-			"Question": "Where can I see the latest changes in the Sheet/a Change log?",
-			"Answer": [
-				"You can view the <a href='https://cspersonalfinance.io/changelog.html'>Sheet changelog here</a>."
-			],
-			"Summary": true
-		}]
+				"Question": "How do I enter my Spaceship/Raiz/Microinvestment Platform Investments?",
+				"Answer": [
+					"<b>For Spaceship Voyager:</b> <br>",
+					"Spaceship Voyager as of v2.10 now has live price support for all 3 fund types (Universe, Origin, Earth). In the Managed Funds tab please enter the following details:",
+					"<ul>",
+					"    <li>Fund ID - <b>SPACEVOYUNIV</b></li>",
+					"    <li>Fund Name (Important) - <b>Spaceship Voyager Universe</b></li>",
+					"</ul>",
+					"<ul>",
+					"    <li>Fund ID - <b>SPACEVOYORIGIN</b></li>",
+					"    <li>Fund Name (Important) - <b>Spaceship Voyager Origin</b></li>",
+					"</ul>",
+					"<ul>",
+					"    <li>Fund ID - <b>SPACEVOYEARTH</b></li>",
+					"    <li>Fund Name (Important) - <b>Spaceship Voyager Earth</b></li>",
+					"</ul>",
+					"Purchase History - Enter in your itemised Purchase History, or if you have a large amount of purchases you can enter in a single purchase that you reguarly update the quantity. Please note if you batch into a single",
+					"purchase this will make any performance/gain figures inaccurate.",
+					"<br><br>",
+					"Please note prices are only updated every 24hrs.",
+					"<br><br>",
+					"<b>For Raiz & Other Investment Platforms:</b> <br>",
+					"For other Microinvestment Platforms you have 2 options:",
+					"<ol>",
+					"    <li><b>Other Assets Tab (Easiest)</b> - This will mean your investments will be recorded in your Net Worth, you will just have to update the balance before recording your month.</li>",
+					"    <li><b>Managed Funds Tab</b> - Enter your platform as a Managed Fund and manually update the Live Price as needed (ignore any warnings). Enter in the Purchase History as provided by your platform.</li>",
+					"</ol>"
+				],
+				"Summary": true
+			},
+			{
+				"Question": "Why do my brokerage amounts always change between 1x and 2x brokerage amounts?",
+				"Answer": [
+					"You can enter these in as you would any normal stock purchase. You will need to enter in your own 'Live Price' and update this as needed (ignore any warnings when doing so).",
+					"<br><br>",
+					"Please note when upgrading Sheet versions you will need to manually enter in the Live Price into your new Sheet."
+				],
+				"Summary": true
+			}
+		]
 	}
 }

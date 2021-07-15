@@ -238,6 +238,7 @@
                 .then(response => response.json())
                 .then(response_json => {
                     for (var category in response_json["FAQs"]) {
+                        console.log(category);
                         for (var faq_entry in response_json["FAQs"][category]) {
                             console.log(faq_entry["Question"]);
                         }

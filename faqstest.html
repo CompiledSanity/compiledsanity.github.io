@@ -214,12 +214,13 @@
 
                     for (var category in response_json["FAQs"]) {
                         console.log(category);
+                        var category_slimmed = category.replace(" ","");
 
                         var faq_category_header = `
                             <div class="section-title" id="tech">
-                                <h4 style="text-align: center;">${category}</h4>
+                                <h4 style="text-align: center;">${category_slimmed}</h4>
                             </div>
-                            <div class="accordion mt-4 pt-2" id="${category}">
+                            <div class="accordion mt-4 pt-2" id="${category_slimmed}">
                         `;
 
                         overall_return_html = overall_return_html + faq_category_header;
@@ -234,13 +235,13 @@
                             }
 
                             var indiv_faq_html = `
-                                <div class="accordion-item rounded">
+                                <div class="accordion-item rounded mt-2">
                                     <h2 class="accordion-header" id="heading${faq_iter}">
                                         <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq_iter}" aria-expanded="false" aria-controls="collapse${faq_iter}">
                                             ${indiv_faq_question}
                                         </button>
                                     </h2>
-                                    <div id="collapse${faq_iter}" class="accordion-collapse border-0 collapse" aria-labelledby="heading${faq_iter}" data-bs-parent="#${category}">
+                                    <div id="collapse${faq_iter}" class="accordion-collapse border-0 collapse" aria-labelledby="heading${faq_iter}" data-bs-parent="#${category_slimmed}">
                                         <div class="accordion-body text-muted bg-white">
                                             ${indiv_faq_answer}
                                         </div>

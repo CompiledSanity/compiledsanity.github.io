@@ -1,14 +1,6 @@
 {
 	"FAQs": {
 		"Personal Circumstances": [{
-				"Question": "Test",
-				"Answer": [
-					"Test",
-					"Test"
-				],
-				"Summary": false
-			},
-			{
 				"Question": "How do I enter my own Historical data into a new Sheet?",
 				"Answer": [
 					"To enter your own historical Data into the Sheet, follow the instructions below:<br>",
@@ -18,7 +10,7 @@
 					"    <li>For the new months that you've entered, from left-right fill out the values in the blue columns.</li>",
 					"</ol>"
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
 				"Question": "How do I know my Data is kept private?",
@@ -26,7 +18,7 @@
 					"A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg.<br><br>",
 					"You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your Net Worth & associated performance."
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
 				"Question": "I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?",
@@ -39,7 +31,7 @@
 					"    <li>Finish off entering your data and run the Sheet again</li>",
 					"</ol>"
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
 				"Question": "A new Sheet update is released, how do I upgrade to a new Sheet?",
@@ -49,73 +41,93 @@
 					"    <li><a href='https://cspersonalfinance.io/resendinvite/'>If needed, click here to send you the latest invite.</a></li>",
 					"</ul>"
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
 				"Question": "How do I migrate data between sheets?",
 				"Answer": [
 					"As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you."
 				],
-				"Summary": false
-			}
-		],
-		"Personal Circumstances 123": [{
-				"Question": "Test",
-				"Answer": [
-					"Test",
-					"Test"
-				],
-				"Summary": false
+				"Summary": true
 			},
 			{
-				"Question": "How do I enter my own Historical data into a new Sheet?",
+				"Question": "How do I enter in a missed month?",
 				"Answer": [
-					"To enter your own historical Data into the Sheet, follow the instructions below:<br>",
+					"To backfill data for missed months, follow the below:<br>",
 					"<ol>",
-					"    <li>Head to the History tab</li>",
-					"    <li>Starting in Cell A3 and working down, enter in the dates (ie. 1/6/2020, 1/7/2020 etc.) for the previous data you want in the sheet. Don't worry about the months already in the sheet, they will automatically move down.</li>",
-					"    <li>For the new months that you've entered, from left-right fill out the values in the blue columns.</li>",
+					"    <li>In the History tab in Column A, enter in the date you want to backfill in the correct ordering compared to your existing months. If this is your first time running the Sheet, simply write in the date missed into",
+					"        Cell A3.</li>",
+					"    <b>NOTE:</b><i> Do not Insert a new row. Simply make use of the rows already in the Sheet.</i>",
+					"    <li>Proceed filling out the Asset values for the new month, updating the <b>blue</b> columns only.</li>",
+					"    <li>Done! The Date Column should automatically adapt and the current month should automatically shift down.</li>",
 					"</ol>"
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
-				"Question": "How do I know my Data is kept private?",
+				"Question": "Can I use the Sheet with Excel, Offline or Libre Office?",
 				"Answer": [
-					"A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg.<br><br>",
-					"You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your Net Worth & associated performance."
+					"Unfortunately no, as the Sheet is heavily reliant on Google Sheet functions for live pricing, custom Google formulas and most importantly the behind the scenes scripts written in Google Apps Scripts. You may download the Sheet and try importing into Excel, but you will find that significant elements of the Sheet will not work and it is therefore heavily not recommended. <br>",
+					"If your concern is privacy, please see the FAQ entry <a href='https://guide.cspersonalfinance.io/faqs#how-do-i-know-my-data-is-kept-private'>How do I know my Data is kept private?</a>"
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
-				"Question": "I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?",
+				"Question": "A new version is released but I haven't received an invite email, what do I do?",
 				"Answer": [
-					"If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps<br>:",
-					"<ol>",
-					"    <li>Click File -> Version History -> See Version History</li>",
-					"    <li>In the right Sidebar, click on the dated version of the Sheet <i>before</i> you clicked to end the month</li>",
-					"    <li>At the top of the screen, click the green 'Restore this version' button</li>",
-					"    <li>Finish off entering your data and run the Sheet again</li>",
-					"</ol>"
+					"<p class='fw-bold'><a href='https://cspersonalfinance.io/resendinvite/'>Please click here to send you the latest invite.</a></p>",
+					"Often due to the keywords in release emails they can be marked as spam or placed in your Promotions Gmail sub-inbox. To stop this happening in the future, please add to your contacts my email address (the same email that you received on the original invite) to stop future emails being filtered.<br><br>",
+					"If you have not received an invite please fill out the above link, email me or <a href='https://www.reddit.com/message/compose?to=CompiledSanity'>contact me via Reddit.</a>"
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
-				"Question": "A new Sheet update is released, how do I upgrade to a new Sheet?",
+				"Question": "How do I use the tool if I'm paid fortnightly?",
 				"Answer": [
+					"First off, in the SheetOptions tab set your pay Cycle to fornightly and update your fornightly pay value. This will help the Template understand your monthly pay.<br><br>",
+					"When it comes to the Sheet however, all calculations are strictly performed in the month timescale. This is to enable a lot of date functions to work on a standardized timescale. So tracking and statistics will be performed at the monthly time scale."
+				],
+				"Summary": true
+			},
+			{
+				"Question": "The dates in my Sheets keep ticking over and my history isn't being recorded, why is this?",
+				"Answer": [
+					"To record the month of progress that you're in, it is critically important that you press the Red Update Button in the Net Worth Tab at least once a month (pictured below).<br><br>",
+					"<p style='text-align: center;'><img style='max-width: 100%' src='img/RedNetWorthButton.png' alt='Red Net Worth Update button'/></p>",
+					"This is so that you can enter in all your up to date values before pressing the button to record the month. If you do not press this button, the Sheet will keep ticking over to the next month until you update your Net Worth for the first time.<br><br>",
+					"Please note:",
 					"<ul>",
-					"    <li><a href='https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version'>Click to see instructions on how to upgrade your Sheet.</a></li>",
-					"    <li><a href='https://cspersonalfinance.io/resendinvite/'>If needed, click here to send you the latest invite.</a></li>",
+					"    <li>It is recommended that you update your Net Worth on the 1st of every month.</li>",
+					"    <li>You must always record a month while <i>in</i> that month. ie. You can only record November while inside November.</li>",
 					"</ul>"
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
-				"Question": "How do I migrate data between sheets?",
+				"Question": "I'm having issues with weird dates in the History tab, what do I do?",
 				"Answer": [
-					"As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you."
+					"If you are seeing strange duplicates/gaps in your History Sheet, please contact me via the email you originally received your invite from. This is a carry over bug from v1.3 that has since been fixed but will require some slight fixes to your Sheet.<br><br>",
+					"Subject Line - <b>History Tab - Date Error Issue</b>"
 				],
-				"Summary": false
+				"Summary": true
+			},
+			{
+				"Question": "Where can I see the latest changes in the Sheet/a Change log?",
+				"Answer": [
+					"You can view the <a href='https://cspersonalfinance.io/changelog.html'>Sheet changelog here</a>."
+				],
+				"Summary": true
+			},
+			{
+				"Question": "What does CompiledSanity stand for?",
+				"Answer": [
+					"CompiledSanity is the Reddit username of the creator of this Sheet, and the name by which the Sheet became known by when I first <a href='https: //www.reddit.com/r/fiaustralia/comments/f2fy01/after_a_year_of_work_im_releasing_my_net_worth/'>started sharing the Sheet on the internet.</a> While in hindsight I wish I could have named it something more approachable and easier on the eyes, by this time it was too late and the Sheet had become synonymous with 'CompiledSanity'.",
+					"</br></br>",
+					"The words themselves draw from programming workflows and some frustration I had with a particular task at the time.",
+					"</br></br>",
+					"I may still change the name in the future, but for now it is best found on the internet by the name the Sheet is known by."
+				],
+				"Summary": true
 			}
 		]
 	}

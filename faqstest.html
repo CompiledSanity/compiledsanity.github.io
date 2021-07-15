@@ -241,7 +241,7 @@
                         console.log(category);
                         for (var faq_entry in response_json["FAQs"][category]) {
                             console.log(faq_entry.toString());
-                            console.log(faq_entry["Question"]);
+                            console.log(response_json["FAQs"][category][faq_entry]["Question"]);
                         }
                     }
                 });

@@ -238,12 +238,11 @@
             fetch('/faqs.json')
                 .then(response => response.json())
                 .then(html => {
-                    for (var category in Categories) {
+                    for (var category in response_json.FAQs) {
                         for (var faq_entry in response_json.FAQs[category]) {
                             console.log(faq_entry.Question);
                         }
                     }
-
                 });
         </script>
 

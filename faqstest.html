@@ -214,11 +214,11 @@
 
                     for (var category in response_json["FAQs"]) {
                         console.log(category);
-                        var category_slimmed = category.replace(" ","");
+                        var category_slimmed = category.replace(/ /g,"");
 
                         var faq_category_header = `
-                            <div class="section-title" id="tech">
-                                <h4 style="text-align: center;">${category_slimmed}</h4>
+                            <div class="section-title mt-5" id="tech">
+                                <h4 style="text-align: center;">${category}</h4>
                             </div>
                             <div class="accordion mt-4 pt-2" id="${category_slimmed}">
                         `;

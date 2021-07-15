@@ -141,30 +141,27 @@
         </div>
         <!--Shape End-->
 
-        <!-- FAQ Start -->
-        <section class="section" id="faq">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title mb-4 pb-2">
-                            <h4 class="title mb-4">Have some questions?</h4>
-                            <p class="text-muted para-desc mb-0 mx-auto">Check out a filtered list of FAQs below. For the full list <a href="https://guide.cspersonalfinance.io/faqs">click here.</a></p>
+        <!-- FAQs Start -->
+        <section class="section features-absolute"></section>
+            <div class="container mt-100 mt-60">
+                <div class="row mb-md-4 pb-md-2 justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title text-center">
+                            <h4 class="title mb-3">Frequently asked questions</h4>
+                            <p class="text-muted para-desc mx-auto mb-0">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
                         </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
+                    </div><!--end col-->
+                </div><!--end row-->
 
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-7 col-12" id="faq-contents">
+                    <div class="col-lg-10 mt-4 pt-2" id="faq-contents">
+                        
                     </div>
                 </div>
-                <!--end row-->
-            </div>
-            <!--end container-->
-        </section>
-        <!--end section-->
-        <!-- FAQ End -->
+            </div><!--end container-->
+            <!-- FAQs End -->
+        </section><!--end section-->
+        <!-- End -->
 
         <!-- Footer Start -->
         <footer class="footer mt-60" style="border-top: none !important;">
@@ -235,14 +232,14 @@
                             }
 
                             var indiv_faq_html = `
-                                <div class="accordion-item rounded mt-2">
+                            <div class="accordion-item rounded shadow bg-white mt-2">
                                     <h2 class="accordion-header" id="heading${faq_iter}">
                                         <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq_iter}" aria-expanded="false" aria-controls="collapse${faq_iter}">
                                             ${indiv_faq_question}
                                         </button>
                                     </h2>
                                     <div id="collapse${faq_iter}" class="accordion-collapse border-0 collapse" aria-labelledby="heading${faq_iter}" data-bs-parent="#${category_slimmed}">
-                                        <div class="accordion-body text-muted bg-white">
+                                        <div class="accordion-body text-muted">
                                             ${indiv_faq_answer}
                                         </div>
                                     </div>

@@ -254,16 +254,16 @@
                         }
 
                         var faq_category_sidebar = `
-                            <li class="navbar-item mt-${initial_headerspacing_sidebar} p-0"><a href="#${category_slimmed}" class="h6 text-dark navbar-link">${category}</a></li>
+                            <li class="navbar-item mt-${initial_headerspacing_sidebar} p-0"><a href="#${category_slimmed}head" class="h6 text-dark navbar-link">${category}</a></li>
                         `;
 
                         html_faq_sidebar = html_faq_sidebar + faq_category_sidebar;
 
                         var faq_category_header = `
-                            <div class="section-title mt-${initial_headerspacing}" id="tech">
+                            <div class="section-title mt-${initial_headerspacing}" id="${category_slimmed}head">
                                 <h4 style="text-align: center;">${category}</h4>
                             </div>
-                            <div class="accordion mt-4 pt-2" id="${category_slimmed}">
+                            <div class="accordion mt-4 pt-2" id="${category_slimmed}_header">
                         `;
 
                         overall_return_html = overall_return_html + faq_category_header;

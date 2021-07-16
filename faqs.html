@@ -247,17 +247,19 @@
                         category_iter++;
                         var category_slimmed = category.replace(/ /g,"");
 
+                        if (category_iter == 1) {
+                            var initial_headerspacing = 0;
+                            var initial_headerspacing_sidebar = 0;
+                        } else {
+                            var initial_headerspacing = 5;
+                            var initial_headerspacing_sidebar = 3;
+                        }
+
                         var faq_category_sidebar = `
-                            <li class="navbar-item mt-3 p-0"><a href="#${category_slimmed}" class="h6 text-dark navbar-link">${category}</a></li>
+                            <li class="navbar-item mt-${initial_headerspacing_sidebar} p-0"><a href="#${category_slimmed}" class="h6 text-dark navbar-link">${category}</a></li>
                         `;
 
                         html_faq_sidebar = html_faq_sidebar + faq_category_sidebar;
-
-                        if (category_iter == 1) {
-                            var initial_headerspacing = 0;
-                        } else {
-                            var initial_headerspacing = 5;
-                        }
 
                         var faq_category_header = `
                             <div class="section-title mt-${initial_headerspacing}" id="tech">

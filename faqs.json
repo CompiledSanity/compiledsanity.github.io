@@ -26,7 +26,7 @@
 				"Slug": "accidently-ended-month",
 				"Question": "I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?",
 				"Answer": [
-					"If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps<br>:",
+					"If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps:",
 					"<ol>",
 					"    <li>Click File -> Version History -> See Version History</li>",
 					"    <li>In the right Sidebar, click on the dated version of the Sheet <i>before</i> you clicked to end the month</li>",
@@ -51,7 +51,7 @@
 				"Slug": "migrating-between-sheets",
 				"Question": "How do I migrate data between sheets?",
 				"Answer": [
-					"As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you."
+					"As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates. <a href='https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version'>See instructions on how to upgrade/migrate your sheet here.</a>"
 				],
 				"Summary": true
 			},
@@ -73,7 +73,7 @@
 				"Slug": "using-with-excel",
 				"Question": "Can I use the Sheet with Excel, Offline or Libre Office?",
 				"Answer": [
-					"Unfortunately no, as the Sheet is heavily reliant on Google Sheet functions for live pricing, custom Google formulas and most importantly the behind the scenes scripts written in Google Apps Scripts. You may download the Sheet and try importing into Excel, but you will find that significant elements of the Sheet will not work and it is therefore heavily not recommended. <br>",
+					"Unfortunately no, as the Sheet is heavily reliant on Google Sheet functions for live pricing, custom Google formulas and most importantly the behind the scenes scripts written in Google Apps Scripts. You may download the Sheet and try importing into Excel, but you will find that significant elements of the Sheet will not work and it is therefore heavily not recommended.<br><br>",
 					"If your concern is privacy, please see the FAQ entry <a href='https://guide.cspersonalfinance.io/faqs#how-do-i-know-my-data-is-kept-private'>How do I know my Data is kept private?</a>"
 				],
 				"Summary": true
@@ -85,7 +85,7 @@
 					"<p class='fw-bold'><a href='/resendinvite'>Please click here to send you the latest invite.</a></p>",
 					"Often due to the keywords in release emails they can be marked as spam or placed in your Promotions Gmail sub-inbox. To stop this happening in the future, please add to your contacts my email address (the same email that you received on the original invite) to stop future emails being filtered.<br><br>",
 					"If you have not received an invite please fill out the above link, email me or <a href='https://www.reddit.com/message/compose?to=CompiledSanity'>contact me via Reddit.</a>",
-					"Please also note that only major releases are announced via email. Minor releases are published to the original link of the major release and are unannounced. ",
+					"Please also note that only major releases are announced via email. Minor releases are published to the original link of the major release and are unannounced.<br><br>",
 					"To keep tabs on minor releases, <a href='/changelog.html'>please see the live changelog here.</a>"
 				],
 				"Summary": true
@@ -143,7 +143,7 @@
 				"Slug": "sheet-into-app",
 				"Question": "Can I make the Sheet into more of an App?",
 				"Answer": [
-					"For those running a Chromium browser (ie. Google Chrome, Microsoft Edge, Brave etc) you have the ability to package and view your spreadsheet as a pseudo app.</br>",
+					"For those running a Chromium browser (ie. Google Chrome, Microsoft Edge, Brave etc) you have the ability to package and view your spreadsheet as a pseudo app.</br></br>",
 					"To do so follow the instructions below:</br>",
 					"<ol>",
 					"    <li>Open your Spreadsheet and open the tab that you want to land on (ie. Net Worth)</li>",
@@ -168,7 +168,7 @@
 				"Slug": "how-to-beta-signup",
 				"Question": "Where can I see the latest changes in the Sheet/Change log?",
 				"Answer": [
-					"Thanks for your offer to help and improve the Sheet! You can sign up for future Beta tests here."
+					"Thanks for your offer to help and improve the Sheet! <a href='https://cspersonalfinance.io/betasignup'>You can sign up for future Beta tests here.</a>"
 				],
 				"Summary": false
 			},
@@ -176,9 +176,7 @@
 				"Slug": "what-is-compiledsanity",
 				"Question": "What does CompiledSanity stand for?",
 				"Answer": [
-					"CompiledSanity is the Reddit username of the creator of this Sheet, and the name by which the Sheet became known by when I first <a href='https://www.reddit.com/r/fiaustralia/comments/f2fy01/after_a_year_of_work_im_releasing_my_net_worth/'>started sharing the Sheet on the internet.</a> While in hindsight I wish I could have named it something more approachable and easier on the eyes, by this time it was too late and the Sheet had become synonymous with 'CompiledSanity'.",
-					"</br></br>",
-					"The words themselves draw from programming workflows and some frustration I had with a particular task at the time.",
+					"CompiledSanity is the Reddit username of the creator of this Sheet, and the name by which the Sheet became known by when I first <a href='https://www.reddit.com/r/fiaustralia/comments/f2fy01/after_a_year_of_work_im_releasing_my_net_worth/'>started sharing the Sheet on the internet.</a> While in hindsight I wish I could have named it something more approachable and easier on the eyes, by this time it was too late and the Sheet had become synonymous with 'CompiledSanity'. The words themselves draw from programming workflows and some frustration I had with a particular task at the time.",
 					"</br></br>",
 					"I may still change the name in the future, but for now it is best found on the internet by the name the Sheet is known by."
 				],
@@ -229,7 +227,7 @@
 				"Slug": "multi-currency-support",
 				"Question": "How does the Sheet account for multiple currencies?",
 				"Answer": [
-					"A key feature of the Sheet is the automatic and live handling of multiple currencies on the fly. Assets can be priced in overseas currencies, and then converted back to the Sheet base currency for comparisons sake. To do so you need to do the below:</br>",
+					"A key feature of the Sheet is the automatic and live handling of multiple currencies on the fly. Assets can be priced in overseas currencies, and then converted back to the Sheet base currency for comparisons sake.</br></br>To do so you need to do the below:</br>",
 					"<ul>",
 					"    <li>Set the 'Base' currency of the Sheet, or what you want everything to be priced back to. It is recommended choosing a Sheet that is closest to your base currency, so AU version for AUD or EU version for Euro for example.</li>",
 					"    <li>In each of the tabs (excluding Property which doesn't have international support yet) enter in the currency of where your item is priced.</li>",
@@ -342,7 +340,7 @@
 				"Slug": "drp-reinvestment",
 				"Question": "How do I manage DRP or Dividend Reinvestment?",
 				"Answer": [
-					"Distributions that are reinvested need to be entered as new units in the ETF/Stocks tab manually just as you would a normal ETF/Stock purchase. The key difference being that the brokerage is now $0, so overwrite what's in the brokerage Column and set this to $0.</br>",
+					"Distributions that are reinvested need to be entered as new units in the ETF/Stocks tab manually just as you would a normal ETF/Stock purchase. The key difference being that the brokerage is now $0, so overwrite what's in the brokerage Column and set this to $0.</br></br>",
 					"To determine the price and number of units purchased, you will need to confirm this with Sharesight or your Broker statement to be confirm these amounts."
 				],
 				"Summary": false
@@ -351,7 +349,7 @@
 				"Slug": "entering-margin-loans",
 				"Question": "How do I account for Margin Loan Investments?",
 				"Answer": [
-					"Margin loans needs to be broken out into their investment and liability components in the Sheet. Place all your investments into the ETF/Stock tabs as applicable, and then add the loan component into the Liabilities tab.</br>",
+					"Margin loans needs to be broken out into their investment and liability components in the Sheet. Place all your investments into the ETF/Stock tabs as applicable, and then add the loan component into the Liabilities tab.</br></br>",
 					"All proceeds such as dividends would still be treated the same as a normal holding, so no need to track them under a separate sheet."
 				],
 				"Summary": false
@@ -368,7 +366,7 @@
 				"Slug": "maxing-crypto-calls",
 				"Question": "I keep running out of Crypto API calls, why is that?",
 				"Answer": [
-					"If you are running a Sheet before v2.10.8, it is heavily recommended that you upgrade to the latest version of the Sheet, as the new Crypto price fetching feature has been completely rewritten and reduced CoinMarketCap API calls by up to 95%.</br>",
+					"If you are running a Sheet before v2.10.8, it is heavily recommended that you upgrade to the latest version of the Sheet, as the new Crypto price fetching feature has been completely rewritten and reduced CoinMarketCap API calls by up to 95%.</br></br>",
 					"Additionally, old archived Sheets may still be checking Crypto prices in the background. It is recommended after updating to a new Sheet that you remove the Crypto API key in the SheetOptions Tab from your old sheets. As of v2.11 this is automated."
 				],
 				"Summary": false
@@ -377,7 +375,7 @@
 				"Slug": "entering-free-crypto",
 				"Question": "I received some Crypto for free, how do I enter that?",
 				"Answer": [
-					"Crypto that is received for free for the sake of accuracy in the Sheet needs to be entered as Crypto Staking Income. If you enter it as a purchase as $0, you will see incorrect CGT and performance values, as well as the gain being incorrect for tax purposes with free Crypto usually being treated as income and not CGT (depending on your region).",
+					"Crypto that is received for free for the sake of accuracy in the Sheet needs to be entered as Crypto Staking Income. If you enter it as a purchase as $0, you will see incorrect CGT and performance values, as well as the gain being incorrect for tax purposes with free Crypto usually being treated as income and not CGT (depending on your region).</br></br>",
 					"<a href='https://guide.cspersonalfinance.io/investments/crypto#staking-your-crypto'>Please follow these instructions on how to enter free Crypto correctly</a>."
 				],
 				"Summary": false
@@ -386,7 +384,7 @@
 				"Slug": "entering-private-equity",
 				"Question": "How do I manage private equity stocks?",
 				"Answer": [
-					"You can enter these in as you would any normal stock purchase. You will need to enter in your own 'Live Price' and update this as needed (ignore any warnings when doing so).</br>",
+					"You can enter these in as you would any normal stock purchase. You will need to enter in your own 'Live Price' and update this as needed (ignore any warnings when doing so).</br></br>",
 					"Please note when upgrading Sheet versions you will need to manually enter in the Live Price into your new Sheet."
 				],
 				"Summary": false

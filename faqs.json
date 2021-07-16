@@ -1,6 +1,7 @@
 {
 	"FAQs": {
 		"Using the Sheet": [{
+				"Slug": "entering-historical-data",
 				"Question": "How do I enter my own Historical data into a new Sheet?",
 				"Answer": [
 					"To enter your own historical Data into the Sheet, follow the instructions below:<br>",
@@ -13,6 +14,7 @@
 				"Summary": true
 			},
 			{
+				"Slug": "data-privacy",
 				"Question": "How do I know my Data is kept private?",
 				"Answer": [
 					"A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg.<br><br>",
@@ -21,6 +23,7 @@
 				"Summary": true
 			},
 			{
+				"Slug": "accidently-ended-month",
 				"Question": "I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?",
 				"Answer": [
 					"If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps<br>:",
@@ -34,16 +37,18 @@
 				"Summary": true
 			},
 			{
+				"Slug": "new-sheet-update",
 				"Question": "A new Sheet update is released, how do I upgrade to a new Sheet?",
 				"Answer": [
 					"<ul>",
 					"    <li><a href='https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version'>Click to see instructions on how to upgrade your Sheet.</a></li>",
-					"    <li><a href='https://cspersonalfinance.io/resendinvite/'>If needed, click here to send you the latest invite.</a></li>",
+					"    <li><a href='/resendinvite'>If needed, click here to send you the latest invite.</a></li>",
 					"</ul>"
 				],
 				"Summary": true
 			},
 			{
+				"Slug": "migrating-between-sheets",
 				"Question": "How do I migrate data between sheets?",
 				"Answer": [
 					"As of v2.9 the new Automated Migration Tool will now handle all Sheet migrations and updates for you."
@@ -51,12 +56,12 @@
 				"Summary": true
 			},
 			{
+				"Slug": "missed-month",
 				"Question": "How do I enter in a missed month?",
 				"Answer": [
 					"To backfill data for missed months, follow the below:<br>",
 					"<ol>",
-					"    <li>In the History tab in Column A, enter in the date you want to backfill in the correct ordering compared to your existing months. If this is your first time running the Sheet, simply write in the date missed into",
-					"        Cell A3.</li>",
+					"    <li>In the History tab in Column A, enter in the date you want to backfill in the correct ordering compared to your existing months. If this is your first time running the Sheet, simply write in the date missed into Cell A3.</li>",
 					"    <b>NOTE:</b><i> Do not Insert a new row. Simply make use of the rows already in the Sheet.</i>",
 					"    <li>Proceed filling out the Asset values for the new month, updating the <b>blue</b> columns only.</li>",
 					"    <li>Done! The Date Column should automatically adapt and the current month should automatically shift down.</li>",
@@ -65,6 +70,7 @@
 				"Summary": true
 			},
 			{
+				"Slug": "using-with-excel",
 				"Question": "Can I use the Sheet with Excel, Offline or Libre Office?",
 				"Answer": [
 					"Unfortunately no, as the Sheet is heavily reliant on Google Sheet functions for live pricing, custom Google formulas and most importantly the behind the scenes scripts written in Google Apps Scripts. You may download the Sheet and try importing into Excel, but you will find that significant elements of the Sheet will not work and it is therefore heavily not recommended. <br>",
@@ -73,15 +79,27 @@
 				"Summary": true
 			},
 			{
+				"Slug": "new-version",
 				"Question": "A new version is released but I haven't received an invite email, what do I do?",
 				"Answer": [
-					"<p class='fw-bold'><a href='https://cspersonalfinance.io/resendinvite/'>Please click here to send you the latest invite.</a></p>",
+					"<p class='fw-bold'><a href='/resendinvite'>Please click here to send you the latest invite.</a></p>",
 					"Often due to the keywords in release emails they can be marked as spam or placed in your Promotions Gmail sub-inbox. To stop this happening in the future, please add to your contacts my email address (the same email that you received on the original invite) to stop future emails being filtered.<br><br>",
-					"If you have not received an invite please fill out the above link, email me or <a href='https://www.reddit.com/message/compose?to=CompiledSanity'>contact me via Reddit.</a>"
+					"If you have not received an invite please fill out the above link, email me or <a href='https://www.reddit.com/message/compose?to=CompiledSanity'>contact me via Reddit.</a>",
+					"Please also note that only major releases are announced via email. Minor releases are published to the original link of the major release and are unannounced. ",
+					"To keep tabs on minor releases, <a href='/changelog.html'>please see the live changelog here.</a>"
 				],
 				"Summary": true
 			},
 			{
+				"Slug": "missing-invite",
+				"Question": "I haven't received my Sheet invite, what do I do?",
+				"Answer": [
+					"<a href='/resendinvite'>Please fill out the form here.</a>"
+				],
+				"Summary": true
+			},
+			{
+				"Slug": "TESTSLUG",
 				"Question": "How do I use the tool if I'm paid fortnightly?",
 				"Answer": [
 					"First off, in the SheetOptions tab set your pay Cycle to fornightly and update your fornightly pay value. This will help the Template understand your monthly pay.<br><br>",
@@ -90,6 +108,7 @@
 				"Summary": true
 			},
 			{
+				"Slug": "dates-not-recorded",
 				"Question": "The dates in my Sheets keep ticking over and my history isn't being recorded, why is this?",
 				"Answer": [
 					"To record the month of progress that you're in, it is critically important that you press the Red Update Button in the Net Worth Tab at least once a month (pictured below).<br><br>",
@@ -104,6 +123,7 @@
 				"Summary": true
 			},
 			{
+				"Slug": "history-tab-issues",
 				"Question": "I'm having issues with weird dates in the History tab, what do I do?",
 				"Answer": [
 					"If you are seeing strange duplicates/gaps in your History Sheet, please contact me via the email you originally received your invite from. This is a carry over bug from v1.3 that has since been fixed but will require some slight fixes to your Sheet.<br><br>",
@@ -112,13 +132,48 @@
 				"Summary": true
 			},
 			{
-				"Question": "Where can I see the latest changes in the Sheet/a Change log?",
+				"Slug": "sheet-changelog",
+				"Question": "Where can I see the latest changes in the Sheet/Change log?",
 				"Answer": [
-					"You can view the <a href='https://cspersonalfinance.io/changelog.html'>Sheet changelog here</a>."
+					"You can view the <a href='/changelog.html'>Sheet changelog here</a>."
 				],
 				"Summary": true
 			},
 			{
+				"Slug": "sheet-into-app",
+				"Question": "Can I make the Sheet into more of an App?",
+				"Answer": [
+					"For those running a Chromium browser (ie. Google Chrome, Microsoft Edge, Brave etc) you have the ability to package and view your spreadsheet as a pseudo app.</br>",
+					"To do so follow the instructions below:</br>",
+					"<ol>",
+					"    <li>Open your Spreadsheet and open the tab that you want to land on (ie. Net Worth)</li>",
+					"    <li>Click the Browser menu button in the top right hand corner (3 dots/lines)</li>",
+					"    <li>For Chrome: More Tools -> Create Shortcut, for Edge: Apps -> Install this site as an app</li>",
+					"    <li>Name your Shortcut</li>",
+					"    <li>Pin this to the taskbar or your Desktop.</li>",
+					"</ol>",
+					"Please note you will have to again setup this up for any new Sheet upgrades in the future as every new Sheet has a unique URL."
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "patreon-flair",
+				"Question": "I've become a Patron, how do I get my Subreddit flair?",
+				"Answer": [
+					"To get your unique r/CSPersonalFinance Patron Supporter flair, <a href='https://forms.gle/UBehBSVcafAexNpt5'>please click here</a>. If your flair does not show up within 2hrs please contact me via Patron and I'll manually add it for you. Thanks for your support!"
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "how-to-beta-signup",
+				"Question": "Where can I see the latest changes in the Sheet/Change log?",
+				"Answer": [
+					"Thanks for your offer to help and improve the Sheet! You can sign up for future Beta tests here."
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "what-is-compiledsanity",
 				"Question": "What does CompiledSanity stand for?",
 				"Answer": [
 					"CompiledSanity is the Reddit username of the creator of this Sheet, and the name by which the Sheet became known by when I first <a href='https://www.reddit.com/r/fiaustralia/comments/f2fy01/after_a_year_of_work_im_releasing_my_net_worth/'>started sharing the Sheet on the internet.</a> While in hindsight I wish I could have named it something more approachable and easier on the eyes, by this time it was too late and the Sheet had become synonymous with 'CompiledSanity'.",
@@ -131,6 +186,7 @@
 			}
 		],
 		"Personal Circumstances": [{
+				"Slug": "irregular-pay",
 				"Question": "I'm paid irreguarly or with irregular amounts, how do I account for that?",
 				"Answer": [
 					"2 ways. Either:<br>",
@@ -142,6 +198,7 @@
 				"Summary": true
 			},
 			{
+				"Slug": "mortgage-offsets",
 				"Question": "How do I enter and account for my Mortgage Offset Account?",
 				"Answer": [
 					"Mortgage Offset accounts can be dealt with in many different ways. Uniquely, Offset accounts can count as both a Cash account as well as downpayments on your loan. Since this money can flex in between it can be a grey area, but for the purposes of the Sheet it needs to be more definite.",
@@ -153,6 +210,43 @@
 				"Summary": true
 			},
 			{
+				"Slug": "mixed-mortgages",
+				"Question": "How do I account for a Mortgage with both a fixed and variable component?",
+				"Answer": [
+					"Mortgages with both a fixed and variable component need to be broken down into 2 separate mortgages in the Property tab. Set monthly amount paid of each loan to 50% of your total contribution each."
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "investiments-in-retirement-tab",
+				"Question": "How can I use my investments in my Retirement/Pension balance?",
+				"Answer": [
+					"<a href='https://guide.cspersonalfinance.io/summary-tabs/retirement#using-managed-funds-and-investments-in-your-retirement-balance'>Please follow the guide here</a>"
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "multi-currency-support",
+				"Question": "How does the Sheet account for multiple currencies?",
+				"Answer": [
+					"A key feature of the Sheet is the automatic and live handling of multiple currencies on the fly. Assets can be priced in overseas currencies, and then converted back to the Sheet base currency for comparisons sake. To do so you need to do the below:</br>",
+					"<ul>",
+					"    <li>Set the 'Base' currency of the Sheet, or what you want everything to be priced back to. It is recommended choosing a Sheet that is closest to your base currency, so AU version for AUD or EU version for Euro for example.</li>",
+					"    <li>In each of the tabs (excluding Property which doesn't have international support yet) enter in the currency of where your item is priced.</li>",
+					"</ul>",
+					"For example, as a person living in Australia holding some Shares of Apple in the US, with a $20,000 US Bank account and a $200k USD house.:",
+					"<ol>",
+					"    <li>Download the AU Sheet version</li>",
+					"    <li>Set Sheet Base Currency to AUD (SheetOptions Tab, cell L24).</li>",
+					"    <li>In the Stocks Tab, enter in 'NASDAQ:AAPL' in the Ticker Column and 'USD' in the currency column as this particular stock is always priced in USD. The Sheet can't always determine what the currency is.</li>",
+					"    <li>In the Cash tab, enter in the $20,000USD balance in Column C in the top left. Enter in the USD as the currency in Column B.</li>",
+					"    <li>As the Property tab doesn't yet handle international currencies, you'll have to preconvert all your values (ie. $200,000USD Purchase price into $260,461AUD Purchase Price) before entering them into the Sheet. You'll then have to keep up to date the Current Price based on current exchange rates.</li>",
+					"</ol>"
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "tracking-with-partner",
 				"Question": "How do I track with my partner?",
 				"Answer": [
 					"For couples it is recommended that you combine finances and incomes as expenses will likely be incurred as a household and not for individuals and therefore Net Worth changes need to be considered as a whole.",
@@ -168,6 +262,7 @@
 				"Summary": true
 			},
 			{
+				"Slug": "using-credit-cards",
 				"Question": "How do I enter my Credit Card into the Sheet?",
 				"Answer": [
 					"There are 2 ways to handle inputting Credit Cards:",
@@ -181,6 +276,7 @@
 				"Summary": true
 			},
 			{
+				"Slug": "salary-sacrificing",
 				"Question": "How do I account for Salary Sacrificing?",
 				"Answer": [
 					"You should enter as your income the amount of money available to you when you're paid after the salary sacrifice has been taken out. For all intents the Sheet is concerned with what money is usable to you after tax/fees has been taken out.",
@@ -190,6 +286,7 @@
 				"Summary": true
 			},
 			{
+				"Slug": "rental-income",
 				"Question": "How do I account for income from a rental Property?",
 				"Answer": [
 					"Income from Rental properties is entered into the Side Income tab. Rename one of the example columns as needed and enter the after-tax rent each month. Rental income can also be accounted for in the Property tab in the Net Rent Profit To Date($) row, which will feed into your overall return values."
@@ -198,6 +295,7 @@
 			}
 		],
 		"Investments": [{
+				"Slug": "spaceship-voyager",
 				"Question": "How do I enter my Spaceship/Raiz/Microinvestment Platform Investments?",
 				"Answer": [
 					"<b>For Spaceship Voyager:</b> <br>",
@@ -229,13 +327,69 @@
 				"Summary": true
 			},
 			{
-				"Question": "Why do my brokerage amounts always change between 1x and 2x brokerage amounts?",
+				"Slug": "yahoo-finance-tickers",
+				"Question": "How do I use Yahoo Finance for my Ticker IDs?",
 				"Answer": [
-					"You can enter these in as you would any normal stock purchase. You will need to enter in your own 'Live Price' and update this as needed (ignore any warnings when doing so).",
-					"<br><br>",
+					"<ol>",
+					"   <li>Google your Fund Name with the following search: 'Yahoo Finance FundNameHere'</li>",
+					"   <li>The ID is the string of text after quote/, in the below example it is <b>MGE0001AU.AX</b>. Copy this ID into the Ticker Column of your Sheet.</li>",
+					"   <a href='https://au.finance.yahoo.com/quote/MGE0001AU.AX'>https://au.finance.yahoo.com/quote/MGE0001AU.AX</a>",
+					"<ol>"
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "drp-reinvestment",
+				"Question": "How do I manage DRP or Dividend Reinvestment?",
+				"Answer": [
+					"Distributions that are reinvested need to be entered as new units in the ETF/Stocks tab manually just as you would a normal ETF/Stock purchase. The key difference being that the brokerage is now $0, so overwrite what's in the brokerage Column and set this to $0.</br>",
+					"To determine the price and number of units purchased, you will need to confirm this with Sharesight or your Broker statement to be confirm these amounts."
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "entering-margin-loans",
+				"Question": "How do I account for Margin Loan Investments?",
+				"Answer": [
+					"Margin loans needs to be broken out into their investment and liability components in the Sheet. Place all your investments into the ETF/Stock tabs as applicable, and then add the loan component into the Liabilities tab.</br>",
+					"All proceeds such as dividends would still be treated the same as a normal holding, so no need to track them under a separate sheet."
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "selling-all-shares",
+				"Question": "I've sold all my Shares of a particular holding, can I remove them from the Purchase History table?",
+				"Answer": [
+					"It is recommend that you do not remove these lines from the Purchase History table as these figures still play into your in/outflows for particular months. Removing these past purchases will influence your Savings rate across months and potentially make certain Sheet statistics incorrect."
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "maxing-crypto-calls",
+				"Question": "I keep running out of Crypto API calls, why is that?",
+				"Answer": [
+					"If you are running a Sheet before v2.10.8, it is heavily recommended that you upgrade to the latest version of the Sheet, as the new Crypto price fetching feature has been completely rewritten and reduced CoinMarketCap API calls by up to 95%.</br>",
+					"Additionally, old archived Sheets may still be checking Crypto prices in the background. It is recommended after updating to a new Sheet that you remove the Crypto API key in the SheetOptions Tab from your old sheets. As of v2.11 this is automated."
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "entering-free-crypto",
+				"Question": "I received some Crypto for free, how do I enter that?",
+				"Answer": [
+					"Crypto that is received for free for the sake of accuracy in the Sheet needs to be entered as Crypto Staking Income. If you enter it as a purchase as $0, you will see incorrect CGT and performance values, as well as the gain being incorrect for tax purposes with free Crypto usually being treated as income and not CGT (depending on your region).",
+					"<a href='https://guide.cspersonalfinance.io/investments/crypto#staking-your-crypto'>Please follow these instructions on how to enter free Crypto correctly</a>."
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "entering-private-equity",
+				"Question": "How do I manage private equity stocks?",
+				"Answer": [
+					"You can enter these in as you would any normal stock purchase. You will need to enter in your own 'Live Price' and update this as needed (ignore any warnings when doing so).</br>",
 					"Please note when upgrading Sheet versions you will need to manually enter in the Live Price into your new Sheet."
 				],
-				"Summary": true
+				"Summary": false
 			}
 		]
 	}

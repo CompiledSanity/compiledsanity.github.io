@@ -352,7 +352,7 @@
 					"Margin loans needs to be broken out into their investment and liability components in the Sheet. Place all your investments into the ETF/Stock tabs as applicable, and then add the loan component into the Liabilities tab.</br></br>",
 					"All proceeds such as dividends would still be treated the same as a normal holding, so no need to track them under a separate sheet."
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
 				"Slug": "selling-all-shares",

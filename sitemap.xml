@@ -18,6 +18,16 @@
       </url>
       <url>
         <loc>https://cspersonalfinance.io/changelog.html</loc>
+        <priority>0.60</priority>
+        <changefreq>weekly</changefreq>
+      </url>
+      <url>
+        <loc>https://cspersonalfinance.io/resendinvite/index.html</loc>
+        <priority>0.60</priority>
+        <changefreq>weekly</changefreq>
+      </url>
+      <url>
+        <loc>https://cspersonalfinance.io/faqs.html</loc>
         <priority>0.70</priority>
         <changefreq>weekly</changefreq>
       </url>

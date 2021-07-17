@@ -272,6 +272,7 @@
                         for (var faq_entry in response_json["FAQs"][category]) {
                             faq_iter++;
                             var indiv_faq_question = response_json["FAQs"][category][faq_entry]["Question"];
+                            var indiv_faq_slug = response_json["FAQs"][category][faq_entry]["Slug"];
                             var indiv_faq_answer = "";
 
                             for (var faq_answer_array in response_json["FAQs"][category][faq_entry]["Answer"]) {
@@ -279,7 +280,7 @@
                             }
 
                             var indiv_faq_html = `
-                                <div class="accordion-item rounded mt-2">
+                                <div class="accordion-item rounded mt-2" id="${indiv_faq_slug}">
                                     <h2 class="accordion-header" id="heading${faq_iter}">
                                         <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq_iter}" aria-expanded="false" aria-controls="collapse${faq_iter}">
                                             ${indiv_faq_question}

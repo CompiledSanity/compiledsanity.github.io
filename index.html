@@ -880,10 +880,15 @@
                         for (var faq_entry in response_json["FAQs"][category]) {
                             faq_iter++;
                             var indiv_faq_question = response_json["FAQs"][category][faq_entry]["Question"];
+                            var indiv_faq_slug = response_json["FAQs"][category][faq_entry]["Slug"];
                             var indiv_faq_answer = "";
 
                             for (var faq_answer_array in response_json["FAQs"][category][faq_entry]["Answer"]) {
-                                indiv_faq_answer = indiv_faq_answer + response_json["FAQs"][category][faq_entry]["Answer"][faq_answer_array] + "\n";
+                                if (faq_answer_array == "") {
+                                    indiv_faq_answer = indiv_faq_answer + "</br></br>" + "\n";
+                                } else {
+                                    indiv_faq_answer = indiv_faq_answer + response_json["FAQs"][category][faq_entry]["Answer"][faq_answer_array] + "\n";
+                                }
                             }
 
                             var indiv_faq_html = `

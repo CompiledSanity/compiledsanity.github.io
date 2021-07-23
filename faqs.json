@@ -30,9 +30,9 @@
 					"",
 					"In terms of when it's best to run inside the month, this is ultimately flexible to your needs but it is heavily recommended that you run the Sheet on the <b>1st day of the month</b>.",
 					"",
-					"This is so that if you forget and are a few days late with entering data and running the Sheet you can do so without issue as you are still in that month.",
+					"This is so that if you forget and are a few days late with entering data you can do so a few days later while still being inside the month.",
 					"",
-					"If you record on the last day of the month (ie. 31st January) and forget and run it the next day, the Sheet will think you're trying to update values for Feburary as the date is the 1st Feb."
+					"If you record on the last day of the month (ie. 31st January) and forget and run it the next day (1st Feburary, the Sheet will think you're now trying to update values for Feburary."
 				],
 				"Summary": true
 			},

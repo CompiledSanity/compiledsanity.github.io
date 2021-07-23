@@ -23,6 +23,20 @@
 				"Summary": true
 			},
 			{
+				"Slug": "ending-the-month",
+				"Question": "When do I press record for the month?",
+				"Answer": [
+					"When you record a month (ie. January) you can only record it while <i>inside</i> that month (ie. between Jan 1-31).",
+					"",
+					"In terms of when it's best to run inside the month, this is ultimately flexible to your needs but it is heavily recommended that you run the Sheet on the <b>1st day of the month</b>.",
+					"",
+					"This is so that if you forget and are a few days late with entering data and running the Sheet you can do so without issue as you are still in that month.",
+					"",
+					"If you record on the last day of the month (ie. 31st January) and forget and run it the next day, the Sheet will think you're trying to update values for Feburary as the date is the 1st Feb."
+				],
+				"Summary": true
+			},
+			{
 				"Slug": "accidently-ended-month",
 				"Question": "I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?",
 				"Answer": [
@@ -177,7 +191,7 @@
 				"Question": "What does CompiledSanity stand for?",
 				"Answer": [
 					"CompiledSanity is the Reddit username of the creator of this Sheet, and the name by which the Sheet became known by when I first <a href='https://www.reddit.com/r/fiaustralia/comments/f2fy01/after_a_year_of_work_im_releasing_my_net_worth/'>started sharing the Sheet on the internet.</a> While in hindsight I wish I could have named it something more approachable and easier on the eyes, by this time it was too late and the Sheet had become synonymous with 'CompiledSanity'. The words themselves draw from programming workflows and some frustration I had with a particular task at the time.",
-					"</br></br>",
+					"",
 					"I may still change the name in the future, but for now it is best found on the internet by the name the Sheet is known by."
 				],
 				"Summary": true
@@ -200,9 +214,9 @@
 				"Question": "How do I enter and account for my Mortgage Offset Account?",
 				"Answer": [
 					"Mortgage Offset accounts can be dealt with in many different ways. Uniquely, Offset accounts can count as both a Cash account as well as downpayments on your loan. Since this money can flex in between it can be a grey area, but for the purposes of the Sheet it needs to be more definite.",
-					"<br><br>",
+					"",
 					"It is recommended that you come up with a theoretical minimum floor/emergency Cash amount that you have earmarked for emergencies, investments or general purchases ($30,000 for example). This $30,000 balance would go in the Cash tab as 'Offset Account'.",
-					"<br><br>",
+					"",
 					"In the Property tab for 'Mortgage amount paid' you would put the remainder of this balance (ie. Total Offset Balance - $30,000). That way as your Offset Cash balance grows, in the Sheet more of your mortgage will be reflected as paid off over time."
 				],
 				"Summary": true
@@ -248,11 +262,11 @@
 				"Question": "How do I track with my partner?",
 				"Answer": [
 					"For couples it is recommended that you combine finances and incomes as expenses will likely be incurred as a household and not for individuals and therefore Net Worth changes need to be considered as a whole.",
-					"<br><br>",
+					"",
 					"A key point when combining finances is the Tax rate input in the Sheet Options tab. For a couple in different tax brackets a weighted averaged will needs to be used. Please follow this formula and use the linked calculator for working this out:",
-					"<br><br>",
+					"",
 					"<b>(Income1 x Tax1% + Income2 x Tax%2) / (Income1 + Income 2) = Average Tax Rate %</b>",
-					"<br><br>",
+					"",
 					"ie. For a couple earning $120,000 (55% Tax rate) and $55,000 respectively (37% Tax Rate):<br>",
 					"(Please note shown Tax rates are just examples)<br>",
 					"<a href='https://www.wolframalpha.com/input/?i=%28120000*0.55%2B55000*0.37%29%2F%28120000%2B55000%29'>(120000 x 0.55 + 55000 x 0.37) / (120000 + 55000)</a> = 0.493, or <b>49.3% Average Tax rate</b>."
@@ -278,7 +292,7 @@
 				"Question": "How do I account for Salary Sacrificing?",
 				"Answer": [
 					"You should enter as your income the amount of money available to you when you're paid after the salary sacrifice has been taken out. For all intents the Sheet is concerned with what money is usable to you after tax/fees has been taken out.",
-					"<br><br>",
+					"",
 					"This will ensure the savings rates are calculated correctly against the post-sacrificed income."
 				],
 				"Summary": true
@@ -312,9 +326,9 @@
 					"</ul>",
 					"Purchase History - Enter in your itemised Purchase History, or if you have a large amount of purchases you can enter in a single purchase that you reguarly update the quantity. Please note if you batch into a single",
 					"purchase this will make any performance/gain figures inaccurate.",
-					"<br><br>",
+					"",
 					"Please note prices are only updated every 24hrs.",
-					"<br><br>",
+					"",
 					"<b>For Raiz & Other Investment Platforms:</b> <br>",
 					"For other Microinvestment Platforms you have 2 options:",
 					"<ol>",

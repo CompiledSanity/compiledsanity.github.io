@@ -307,6 +307,25 @@
 			}
 		],
 		"Investments": [{
+				"Slug": "international-assets",
+				"Question": "Can I enter international assets into the Sheet and convert their currency automatically?",
+				"Answer": [
+					"Yes you can! The v2 version of this Sheet supports live and on the fly currency conversion across a variety of assets. This will price the assets in the foreign currency, and then convert it live to your local currency for performance metrics and inclusion in your networth.",
+					"",
+					"Supported Assets are:",
+					"<ul>",
+					"    <li>Cash - <a href='https://guide.cspersonalfinance.io/investments/cash#international-bank-accounts'>See here</a></li>",
+					"    <li>ETFs - <a href='https://guide.cspersonalfinance.io/investments/etfs-and-shares#international-etf-and-share-support'>See here</a></li>",
+					"    <li>Shares - <a href='https://guide.cspersonalfinance.io/investments/etfs-and-shares#international-etf-and-share-support'>See here</a></li>",
+					"    <li>Managed Funds - <a href='https://guide.cspersonalfinance.io/investments/managed-funds#international-managed-fund-support'>See here</a></li>",
+					"    <li>Crypto - Automatically converted</li>",
+					"    <li>Other Assets - <a href='https://guide.cspersonalfinance.io/summary-tabs/other-assets#international-asset-support'>See here</a></li>",
+					"    <li>Retirement Accounts ported from Managed Funds tab - <a href='https://guide.cspersonalfinance.io/investments/managed-funds#international-managed-fund-support'>See here</a></li>",
+					"</ul>"
+				],
+				"Summary": true
+			},
+			{
 				"Slug": "spaceship-voyager",
 				"Question": "How do I enter my Spaceship/Raiz/Microinvestment Platform Investments?",
 				"Answer": [

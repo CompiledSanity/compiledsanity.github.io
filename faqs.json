@@ -370,6 +370,14 @@
 				"Summary": false
 			},
 			{
+				"Slug": "managed-fund-tickers",
+				"Question": "How do I find the ID of my Managed Fund?",
+				"Answer": [
+					"You can find your ID from one of the supported providers using <a href='https://cspersonalfinance.io/managedfunds'>the instructions here.</a>"
+				],
+				"Summary": false
+			},
+			{
 				"Slug": "drp-reinvestment",
 				"Question": "How do I manage DRP or Dividend Reinvestment?",
 				"Answer": [

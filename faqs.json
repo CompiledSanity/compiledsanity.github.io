@@ -310,7 +310,7 @@
 				"Slug": "international-assets",
 				"Question": "Can I enter international assets into the Sheet and convert their currency automatically?",
 				"Answer": [
-					"Yes you can! The v2 version of this Sheet supports live and on the fly currency conversion across a variety of assets. This will price the assets in the foreign currency, and then convert it live to your local currency for performance metrics and inclusion in your networth.",
+					"Yes you can! The v2 version of this Sheet supports live and on the fly currency conversion across a variety of assets. This will price the assets in the foreign currency, and then convert it live to your local currency for performance metrics and inclusion in your net worth.",
 					"",
 					"Supported Assets are:",
 					"<ul>",

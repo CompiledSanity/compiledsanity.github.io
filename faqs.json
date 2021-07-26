@@ -121,7 +121,7 @@
 				"Summary": true
 			},
 			{
-				"Slug": "TESTSLUG",
+				"Slug": "paid-fortnightly",
 				"Question": "How do I use the tool if I'm paid fortnightly?",
 				"Answer": [
 					"First off, in the SheetOptions tab set your pay Cycle to fornightly and update your fornightly pay value. This will help the Template understand your monthly pay.<br><br>",
@@ -155,7 +155,7 @@
 			},
 			{
 				"Slug": "sheet-changelog",
-				"Question": "Where can I see the latest changes in the Sheet/Change log?",
+				"Question": "Where can I see a changelog of the Sheet?",
 				"Answer": [
 					"You can view the <a href='/changelog'>Sheet changelog here</a>."
 				],

@@ -22,6 +22,14 @@
 				],
 				"Summary": true
 			},
+		    	{
+				"Slug": "choosing-region",
+				"Question": "What region of the Sheet should I pick?",
+				"Answer": [
+					"It is recommended that you choose the Sheet region that matches your region due to Retirement/Tax differences, or alternatively if you are earning internationally the currency you are paid in."
+				],
+				"Summary": true
+			},
 			{
 				"Slug": "ending-the-month",
 				"Question": "When do I press record for the month?",

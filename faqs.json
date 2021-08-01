@@ -303,6 +303,14 @@
 				],
 				"Summary": true
 			},
+            {
+				"Slug": "syncing-with-bank",
+				"Question": "Does the Sheet automatically sync with my Bank account?",
+				"Answer": [
+					"Not currently, but this is planned for a future version."
+				],
+				"Summary": false
+			},
 			{
 				"Slug": "using-credit-cards",
 				"Question": "How do I enter my Credit Card into the Sheet?",

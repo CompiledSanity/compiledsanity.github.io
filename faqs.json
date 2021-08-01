@@ -199,7 +199,7 @@
 					"To fix this error, you can:",
 					"<ol>   ",
 					"<li><b>Create a seperate, dummy Google account and run the Sheet under that user</b> - This in most cases fixes the problem.</li>",
-					"<li><b>Turn off Advanced Account protection (<i>not recommended</i>)</b> - This is the security feature that can in some configurations trigger. It is recommended that you don’t turn this off as it is a very good feature, but you can if you want to run the sheet under your main account.</li>",
+					"<li><b>Turn off Advanced Account protection (<i>not recommended</i>)</b> - This is the security feature that can in some configurations trigger. It is recommended that you don’t turn this off as it is a necessary security feature, but you can if you want to run the sheet under your main account.</li>",
 					"</ol>"
 				],
 				"Summary": false
@@ -280,7 +280,7 @@
 					"    <li>In the Cash tab, enter in the $20,000USD balance in Column C in the top left. Enter in the USD as the currency in Column B.</li>",
 					"    <li>As the Property tab doesn't yet handle international currencies, you'll have to preconvert all your values (ie. $200,000USD Purchase price into $260,461AUD Purchase Price) before entering them into the Sheet. You'll then have to keep up to date the Current Price based on current exchange rates.</li>",
 					"</ol>",
-					"Supported Assets are:",
+                    "Supported Assets are:",
 					"<ul>",
 					"    <li>Cash - <a href='https://guide.cspersonalfinance.io/investments/cash#international-bank-accounts'>Guide here</a></li>",
 					"    <li>ETFs - <a href='https://guide.cspersonalfinance.io/investments/etfs-and-shares#international-etf-and-share-support'>Guide here</a></li>",

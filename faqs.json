@@ -279,7 +279,17 @@
 					"    <li>In the Stocks Tab, enter in 'NASDAQ:AAPL' in the Ticker Column and 'USD' in the currency column as this particular stock is always priced in USD. The Sheet can't always determine what the currency is.</li>",
 					"    <li>In the Cash tab, enter in the $20,000USD balance in Column C in the top left. Enter in the USD as the currency in Column B.</li>",
 					"    <li>As the Property tab doesn't yet handle international currencies, you'll have to preconvert all your values (ie. $200,000USD Purchase price into $260,461AUD Purchase Price) before entering them into the Sheet. You'll then have to keep up to date the Current Price based on current exchange rates.</li>",
-					"</ol>"
+					"</ol>",
+					"Supported Assets are:",
+					"<ul>",
+					"    <li>Cash - <a href='https://guide.cspersonalfinance.io/investments/cash#international-bank-accounts'>Guide here</a></li>",
+					"    <li>ETFs - <a href='https://guide.cspersonalfinance.io/investments/etfs-and-shares#international-etf-and-share-support'>Guide here</a></li>",
+					"    <li>Shares - <a href='https://guide.cspersonalfinance.io/investments/etfs-and-shares#international-etf-and-share-support'>Guide here</a></li>",
+					"    <li>Managed Funds - <a href='https://guide.cspersonalfinance.io/investments/managed-funds#international-managed-fund-support'>Guide here</a></li>",
+					"    <li>Crypto - Automatically converted</li>",
+					"    <li>Other Assets - <a href='https://guide.cspersonalfinance.io/summary-tabs/other-assets#international-asset-support'>Guide here</a></li>",
+					"    <li>Retirement Accounts ported from Managed Funds tab - <a href='https://guide.cspersonalfinance.io/investments/managed-funds#international-managed-fund-support'>Guide here</a></li>",
+					"</ul>"
 				],
 				"Summary": false
 			},

@@ -1,7 +1,7 @@
 {
 	"FAQs": {
 		"Using the Sheet": [{
-				"Slug": "entering-historical-data",
+				"Slug": "EnteringHistoricalData",
 				"Question": "How do I enter my own Historical data into a new Sheet?",
 				"Answer": [
 					"To enter your own historical Data into the Sheet, follow the instructions below:<br>",
@@ -14,7 +14,7 @@
 				"Summary": true
 			},
 			{
-				"Slug": "data-privacy",
+				"Slug": "DataPrivacy",
 				"Question": "How do I know my Data is kept private?",
 				"Answer": [
 					"A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg.<br><br>",
@@ -23,7 +23,7 @@
 				"Summary": true
 			},
 			{
-				"Slug": "choosing-region",
+				"Slug": "ChoosingRegion",
 				"Question": "What region of the Sheet should I pick?",
 				"Answer": [
 					"It is recommended that you choose the Sheet region that matches your region due to Retirement/Tax differences, or alternatively if you are earning internationally the currency you are paid in."
@@ -31,7 +31,7 @@
 				"Summary": true
 			},
 			{
-				"Slug": "ending-the-month",
+				"Slug": "EndingTheMonth",
 				"Question": "When do I press record for the month?",
 				"Answer": [
 					"When you record a month (ie. January) you can only record it while <i>inside</i> that month (ie. between Jan 1-31).",
@@ -45,7 +45,7 @@
 				"Summary": true
 			},
 			{
-				"Slug": "accidently-ended-month",
+				"Slug": "AccidentlyEndedMonth",
 				"Question": "I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?",
 				"Answer": [
 					"If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps:",
@@ -59,7 +59,7 @@
 				"Summary": true
 			},
 			{
-				"Slug": "new-sheet-update",
+				"Slug": "NewSheetUpdate",
 				"Question": "A new Sheet update is released, how do I upgrade to a new Sheet?",
 				"Answer": [
 					"<ul>",

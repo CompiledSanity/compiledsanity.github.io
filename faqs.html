@@ -61,7 +61,14 @@
         </script>
         <!-- DO NOT MODIFY -->
         <!-- End Reddit Pixel -->
-
+        
+        <!-- FAQ Anchor Fix -->
+        <script>
+            var shiftWindow = function() { scrollBy(0, -75) };
+            if (location.hash) shiftWindow();
+            window.addEventListener("hashchange", shiftWindow);
+        </script>
+        <!-- End FAQ Fix -->
     </head>
 
     <body">
@@ -311,11 +318,6 @@
                     document.getElementById("faq-contents").innerHTML = overall_return_html;
                     document.getElementById("navmenu-nav").innerHTML = html_faq_sidebar;
                 });
-        </script>
-        <script>
-            var shiftWindow = function() { scrollBy(0, -75) };
-            if (location.hash) shiftWindow();
-            window.addEventListener("hashchange", shiftWindow);
         </script>
         <!-- Icons -->
         <script src="js/feather.min.js"></script>

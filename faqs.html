@@ -64,7 +64,7 @@
 
     </head>
 
-    <body style="padding-top: 75px;">
+    <body">
         <!-- Loader -->
         <!-- <div id="preloader">
             <div id="status">
@@ -311,6 +311,11 @@
                     document.getElementById("faq-contents").innerHTML = overall_return_html;
                     document.getElementById("navmenu-nav").innerHTML = html_faq_sidebar;
                 });
+        </script>
+        <script>
+            var shiftWindow = function() { scrollBy(0, -75) };
+            if (location.hash) shiftWindow();
+            window.addEventListener("hashchange", shiftWindow);
         </script>
         <!-- Icons -->
         <script src="js/feather.min.js"></script>

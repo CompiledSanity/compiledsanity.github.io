@@ -144,19 +144,19 @@
 				],
 				"Summary": true
 			},
-            {
+			{
 				"Slug": "sheet-permissions",
 				"Question": "What are all the Sheet permissions for?",
 				"Answer": [
 					"Here is a breakdown of the permissions needed by the v2 Sheet and their uses:",
 					"<ol>",
 					"<li><b>See, edit, create, and delete all your Google Sheets spreadsheets</b> - This is used for the Sheet migration feature. When a new Sheet version is released, the migration feature will automatically move data from your old to your new Sheet.</li>",
-                    "<li><b>Connect to an external service</b> - This is used to fetch external live prices from MorningStar, Bloomberg, CoinMarketCap and FT.com when not provided by GoogleFinance.</li>",
-                    "<li><b>Send email as you</b> - This is to email you your end of month progress update for record purposes.</li>",
-                    "<li><b>Display and run third-party web content in prompts and sidebars inside Google applications</b> - This is to display the the end of month progress update in the Google Sheet as a popup when recording the month.</li>",
-                    "<li><b>See, edit, share, and permanently delete all the calendars you can access using Google Calendar</b> - This is used to create new investment reminders (if enabled in the SheetOptions tab)</li>",
-                    "</ol>",
-                    "Please see the FAQ entry on Data privacy if you have any further questions in this area. All code is fully accessible and auditable at any time by going Tools -> Script Editor in your Sheet."
+					"<li><b>Connect to an external service</b> - This is used to fetch external live prices from MorningStar, Bloomberg, CoinMarketCap and FT.com when not provided by GoogleFinance.</li>",
+					"<li><b>Send email as you</b> - This is to email you your end of month progress update for record purposes.</li>",
+					"<li><b>Display and run third-party web content in prompts and sidebars inside Google applications</b> - This is to display the the end of month progress update in the Google Sheet as a popup when recording the month.</li>",
+					"<li><b>See, edit, share, and permanently delete all the calendars you can access using Google Calendar</b> - This is used to create new investment reminders (if enabled in the SheetOptions tab)</li>",
+					"</ol>",
+					"Please see the FAQ entry on Data privacy if you have any further questions in this area. All code is fully accessible and auditable at any time by going Tools -> Script Editor in your Sheet."
 				],
 				"Summary": false
 			},
@@ -208,7 +208,7 @@
 					"<li><b>Create a seperate, dummy Google account and run the Sheet under that user</b> - This in most cases fixes the problem.</li>",
 					"<li><b>Turn off Advanced Account protection (<i>not recommended</i>)</b> - This is the security feature that can in some configurations trigger. It is recommended that you don’t turn this off as it is a necessary security feature, but you can if you want to run the sheet under your main account.</li>",
 					"</ol>",
-                    "Please see the FAQ entry on Data privacy if you have any further questions in this area."
+					"Please see the FAQ entry on Data privacy if you have any further questions in this area."
 				],
 				"Summary": false
 			},
@@ -288,7 +288,7 @@
 					"    <li>In the Cash tab, enter in the $20,000USD balance in Column C in the top left. Enter in the USD as the currency in Column B.</li>",
 					"    <li>As the Property tab doesn't yet handle international currencies, you'll have to preconvert all your values (ie. $200,000USD Purchase price into $260,461AUD Purchase Price) before entering them into the Sheet. You'll then have to keep up to date the Current Price based on current exchange rates.</li>",
 					"</ol>",
-                    "Supported Assets are:",
+					"Supported Assets are:",
 					"<ul>",
 					"    <li>Cash - <a href='https://guide.cspersonalfinance.io/investments/cash#international-bank-accounts'>Guide here</a></li>",
 					"    <li>ETFs - <a href='https://guide.cspersonalfinance.io/investments/etfs-and-shares#international-etf-and-share-support'>Guide here</a></li>",
@@ -311,7 +311,7 @@
 				],
 				"Summary": true
 			},
-            {
+			{
 				"Slug": "syncing-with-bank",
 				"Question": "Does the Sheet automatically sync with my Bank account?",
 				"Answer": [
@@ -429,6 +429,23 @@
 				"Answer": [
 					"Distributions that are reinvested need to be entered as new units in the ETF/Stocks tab manually just as you would a normal ETF/Stock purchase. The key difference being that the brokerage is now $0, so overwrite what's in the brokerage Column and set this to $0.</br></br>",
 					"To determine the price and number of units purchased, you will need to confirm this with Sharesight or your Broker statement to be confirm these amounts."
+				],
+				"Summary": false
+			},
+			{
+				"Slug": "price-decimal-places",
+				"Question": "How do I return my investments to 3-4 decimal places?",
+				"Answer": [
+					"By default the sheet will return live prices to 2 decimal places as this is the default returned value from Google Finance and other sheet providers.",
+					"",
+					"If you would like your prices returned to 3-4 decimal places, you can adjust the formula used in the Sheet to allow for this by following the below:",
+					"<ol>",
+					"<li>In the watch table, go to the 'Live Price' column of the particular asset you would like to make the change for</li>",
+					"<li>Search in the column for <b>GoogleFinance(<u>A2</u>,\"price\")</b></li>",
+					"<li>Replace this with the formula <b>GoogleFinance(<u>A2</u>,\"marketcap\")/GoogleFinance(<u>A2</u>,\"shares\")</b></li>",
+					"<li>Update the cell reference <b>A2</b> to align with the cell corresponding to the row you're editing. This will still be in column A, you just need to change the row number</li>",
+					"</ol>",
+					"And that's it! Please note that this is not an officially supported solution as the Market Cap and Share values returned by Google Finance are often delayed and may not reflect the live price. Furthermore, this will only work for assets that are looked up via the Google Finance API."
 				],
 				"Summary": false
 			},

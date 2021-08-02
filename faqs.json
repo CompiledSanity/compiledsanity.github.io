@@ -106,7 +106,7 @@
 				"Answer": [
 					"<p class='fw-bold'><a href='/resendinvite'>Please click here to send you the latest invite.</a></p>",
 					"Often due to the keywords in release emails they can be marked as spam or placed in your Promotions Gmail sub-inbox. To stop this happening in the future, please add to your contacts my email address (the same email that you received on the original invite) to stop future emails being filtered.<br><br>",
-					"If you have not received an invite please fill out the above link, email me or <a href='https://www.reddit.com/message/compose?to=CompiledSanity'>contact me via Reddit.</a>",
+					"If you have not received an invite please fill out the above link, <a href='https://www.reddit.com/r/CSPersonalFinance/'>post in the official Subreddit</a>, email me or <a href='https://www.reddit.com/message/compose?to=CompiledSanity'>contact me via Reddit.</a>",
 					"Please also note that only major releases are announced via email. Minor releases are published to the original link of the major release and are unannounced.<br><br>",
 					"To keep tabs on minor releases, <a href='/changelog'>please see the live changelog here.</a>"
 				],

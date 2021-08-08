@@ -4,7 +4,7 @@
 	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/mze01f/v212_feature_request_thread/",
 	"releases": [{
 			"version": "2.11.5",
-			"comment": "This is a minor bug-fix release as development is now in progress for the upcoming v2.12 which will contain new feature releases.",
+			"comment": "This is a minor bug-fix release as development is now in progress for v2.12.",
 			"release_date": "8th August 2021",
 			"major_version": false,
 			"major_version_redditcurrent": null,

@@ -230,8 +230,7 @@
                         var ch_majorversion = response_json["releases"][changelog_entry]["major_version"];
 
                         var overall_changes_str = "";
-
-
+                        
                         // Additions
                         for (var ch_addition in response_json["releases"][changelog_entry]["additions"]) {
                             var ch_addition_indiv = response_json["releases"][changelog_entry]["additions"][ch_addition];
@@ -264,24 +263,45 @@
                         }
                         
                         // Date
+                        if (ch_release_date != null) {
+                            ch_release_date = " - " + ch_release_date;
+                        } 
+                        else {
+                            ch_release_date = "";
+                        }
                         
                         // Comment
+                        if (ch_comment != null) {
+                            ch_comment = `
+                                <p class='text-muted'>${ch_comment}</p>"
+                            `;
+                        } 
+                        else {
+                            ch_comment = "";
+                        }
                         
+                                
                         // Major Version
+                        if (ch_majorversion == true) {
+                            var major_version_redditcurrent = response_json["releases"][changelog_entry]["major_version_redditcurrent"];
+                            var major_version_redditrequest = response_json["releases"][changelog_entry]["major_version_redditrequest"];
+                            var ch_majorversion_str = "<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span><a href='${major_version_redditcurrent}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'> v2.11 Reddit Thread</a><a href='${major_version_redditrequest}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'>v2.12 Feature Request Thread</a>"
+                        } else {
+                            
+                        }
+                        
 
                         var indiv_version_str = `
 
                             <!-- v${ch_version} -->
                             <div class="mb-5">
-                                <h5>Version <span class="text-success">${ch_version}</span> - 8th August 2021<span class="btn btn-sm btn-pills btn-primary ms-2" style="padding: 4px 8px;">Latest Update</span><a href="https://www.reddit.com/r/CSPersonalFinance/comments/mzdx3a/cs_personal_savings_template_v211_just_released/" class="btn btn-sm btn-pills btn-soft-primary ms-2" style="padding: 4px 8px;"> v2.11 Reddit Thread</a><a href="https://www.reddit.com/r/CSPersonalFinance/comments/mze01f/v212_feature_request_thread/" class="btn btn-sm btn-pills btn-soft-primary ms-2" style="padding: 4px 8px;">v2.12 Feature Request Thread</a></h5>
-                                <p class="text-muted">This is a minor bug-fix release as development is now in progress for the upcoming v2.12 which will contain new feature releases.</p>
+                                <h5>Version <span class="text-success">${ch_version}</span>${ch_release_date} ${ch_majorversion_str}</h5>
                                 <ul class="list-unstyled">
                                     ${overall_changes_str}
                                 </ul>
                             </div>
                             <!-- v{ch_version} -->
                         `;
-                        console.log(indiv_version_str);
                         overall_return_html = overall_return_html + indiv_version_str;
                     }
                     document.getElementById("changelogcontents").innerHTML = overall_return_html;

@@ -224,9 +224,7 @@
 
                     var overall_return_html = "";
                     for (var changelog_entry in response_json["releases"]) {
-                        console.log(changelog_entry);
                         var ch_version = response_json["releases"][changelog_entry]["version"];
-                        console.log(ch_version);
                         var ch_comment = response_json["releases"][changelog_entry]["comment"];
                         var ch_release_date = response_json["releases"][changelog_entry]["release_date"];
                         var ch_majorversion = response_json["releases"][changelog_entry]["major_version"];
@@ -237,25 +235,48 @@
                         // Additions
                         for (var ch_addition in response_json["releases"][changelog_entry]["additions"]) {
                             var ch_addition_indiv = response_json["releases"][changelog_entry]["additions"][ch_addition];
-                            console.log(ch_addition_indiv);
                             var overall_changes_str = overall_changes_str + `
                                 <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>${ch_addition_indiv}</li>
                             `;
                         }
                         // Updates
-
+                        for (var ch_update in response_json["releases"][changelog_entry]["updates"]) {
+                            var ch_update_indiv = response_json["releases"][changelog_entry]["updates"][ch_update];
+                            var overall_changes_str = overall_changes_str + `
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>${ch_update_indiv}</li>
+                            `;
+                        }
+                        
                         // Fixes
+                        for (var ch_fixes in response_json["releases"][changelog_entry]["fixes"]) {
+                            var ch_fixes_indiv = response_json["releases"][changelog_entry]["fixes"][ch_fixes];
+                            var overall_changes_str = overall_changes_str + `
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>${ch_fixes_indiv}</li>
+                            `;
+                        }
 
                         // Removals
+                        for (var ch_removal in response_json["releases"][changelog_entry]["removed"]) {
+                            var ch_removal_indiv = response_json["releases"][changelog_entry]["removed"][ch_removal];
+                            var overall_changes_str = overall_changes_str + `
+                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>${ch_removal_indiv}</li>
+                            `;
+                        }
+                        
+                        // Date
+                        
+                        // Comment
 
                         var indiv_version_str = `
 
                             <!-- v${ch_version} -->
-                            <h5>Version <span class="text-success">{ch_version}</span> - 8th August 2021<span class="btn btn-sm btn-pills btn-primary ms-2" style="padding: 4px 8px;">Latest Update</span><a href="https://www.reddit.com/r/CSPersonalFinance/comments/mzdx3a/cs_personal_savings_template_v211_just_released/" class="btn btn-sm btn-pills btn-soft-primary ms-2" style="padding: 4px 8px;"> v2.11 Reddit Thread</a><a href="https://www.reddit.com/r/CSPersonalFinance/comments/mze01f/v212_feature_request_thread/" class="btn btn-sm btn-pills btn-soft-primary ms-2" style="padding: 4px 8px;">v2.12 Feature Request Thread</a></h5>
-                            <p class="text-muted">This is a minor bug-fix release as development is now in progress for the upcoming v2.12 which will contain new feature releases.</p>
-                            <ul class="list-unstyled">
-                                ${overall_changes_str}
-                            </ul>
+                            <div>
+                                <h5>Version <span class="text-success">{$ch_version}</span> - 8th August 2021<span class="btn btn-sm btn-pills btn-primary ms-2" style="padding: 4px 8px;">Latest Update</span><a href="https://www.reddit.com/r/CSPersonalFinance/comments/mzdx3a/cs_personal_savings_template_v211_just_released/" class="btn btn-sm btn-pills btn-soft-primary ms-2" style="padding: 4px 8px;"> v2.11 Reddit Thread</a><a href="https://www.reddit.com/r/CSPersonalFinance/comments/mze01f/v212_feature_request_thread/" class="btn btn-sm btn-pills btn-soft-primary ms-2" style="padding: 4px 8px;">v2.12 Feature Request Thread</a></h5>
+                                <p class="text-muted">This is a minor bug-fix release as development is now in progress for the upcoming v2.12 which will contain new feature releases.</p>
+                                <ul class="list-unstyled">
+                                    ${overall_changes_str}
+                                </ul>
+                            </div>
                             <!-- v{ch_version} -->
                         `;
                         console.log(indiv_version_str);

@@ -2,18 +2,6 @@
 	"last_updated": 198765,
 	"releases": [{
 			"version": "2.11.5",
-			"comment": null,
-			"release_date": null,
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [],
-			"fixes": [],
-			"removed": []
-		},
-		{
-			"version": "2.11.5",
 			"comment": "This is a minor bug-fix release as development is now in progress for the upcoming v2.12 which will contain new feature releases.",
 			"release_date": "8th August 2021",
 			"major_version": false,

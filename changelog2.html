@@ -251,7 +251,7 @@
                         // Additions
                         for (var ch_addition in response_json["releases"][changelog_entry]) {
                             var ch_addition_indiv = response_json["releases"][changelog_entry][ch_addition_indiv];
-                            overall_changes_str = var overall_changes_str + `
+                            var overall_changes_str = overall_changes_str + `
                                 <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>${ch_addition_indiv}</li>
                             `;
                         }

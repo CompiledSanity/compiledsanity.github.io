@@ -283,9 +283,12 @@
                                 
                         // Major Version
                         if (ch_majorversion == true) {
+                            var current_major_v = ch_version.split('.')[0];
+                            var current_minor_v = ch_version.split('.')[1];
+                            var future_major_v = current_major_v + '.' + (current_minor_v + 1);
                             var major_version_redditcurrent = response_json["releases"][changelog_entry]["major_version_redditcurrent"];
                             var major_version_redditrequest = response_json["releases"][changelog_entry]["major_version_redditrequest"];
-                            var ch_majorversion_str = "<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span><a href='${major_version_redditcurrent}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'> v2.11 Reddit Thread</a><a href='${major_version_redditrequest}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'>v2.12 Feature Request Thread</a>"
+                            var ch_majorversion_str = "<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span><a href='${major_version_redditcurrent}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'> v${ch_version} Reddit Thread</a><a href='${major_version_redditrequest}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'>v${future_major_v} Feature Request Thread</a>"
                         } else {
                             
                         }

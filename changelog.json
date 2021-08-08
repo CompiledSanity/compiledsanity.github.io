@@ -1,5 +1,7 @@
 {
 	"last_updated": 198765,
+	"current_release_thread": "",
+	"future_requests_thread": "",
 	"releases": [{
 			"version": "2.11.5",
 			"comment": "This is a minor bug-fix release as development is now in progress for the upcoming v2.12 which will contain new feature releases.",

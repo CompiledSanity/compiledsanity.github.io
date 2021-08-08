@@ -223,6 +223,7 @@
                 .then(response_json => {
 
                     var overall_return_html = "";
+                    var release_counter = 0;
                     for (var changelog_entry in response_json["releases"]) {
                         var ch_version = response_json["releases"][changelog_entry]["version"];
                         var ch_comment = response_json["releases"][changelog_entry]["comment"];
@@ -285,15 +286,26 @@
                         if (ch_majorversion == true) {
                             var current_major_v = ch_version.split('.')[0];
                             var current_minor_v = ch_version.split('.')[1];
-                            var future_major_v = current_major_v + '.' + (current_minor_v + 1);
+                            var future_major_v = current_major_v + '.' + (parseInt(current_minor_v) + 1);
                             var major_version_redditcurrent = response_json["releases"][changelog_entry]["major_version_redditcurrent"];
                             var major_version_redditrequest = response_json["releases"][changelog_entry]["major_version_redditrequest"];
+                            var ch_majorversion_str = `<a href='${major_version_redditcurrent}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'> v${ch_version} Reddit Thread</a><a href='${major_version_redditrequest}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'>v${future_major_v} Feature Request Thread</a>`
+                        } else {
+                            var ch_majorversion_str = "";
+                        }
+                        
+                        // Latest Version
+                        if (release_counter == 0) {
+                            var current_major_v = ch_version.split('.')[0];
+                            var current_minor_v = ch_version.split('.')[1];
+                            var future_major_v = current_major_v + '.' + (parseInt(current_minor_v) + 1);
+                            var major_version_redditcurrent = response_json["current_release_thread"];
+                            var major_version_redditrequest = response_json["future_requests_thread"];
                             var ch_majorversion_str = `<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span><a href='${major_version_redditcurrent}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'> v${ch_version} Reddit Thread</a><a href='${major_version_redditrequest}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'>v${future_major_v} Feature Request Thread</a>`
                         } else {
                             var ch_majorversion_str = "";
                         }
                         
-
                         var indiv_version_str = `
 
                             <!-- v${ch_version} -->

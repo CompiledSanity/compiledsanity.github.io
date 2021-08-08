@@ -224,6 +224,7 @@
 
                     var overall_return_html = "";
                     for (var changelog_entry in response_json.releases) {
+                        console.log(changelog_entry);
                         var ch_version = response_json.releases[changelog_entry].version;
                         console.log(ch_version);
                         var ch_comment = response_json.releases[changelog_entry].comment;

@@ -223,20 +223,20 @@
                 .then(response_json => {
 
                     var overall_return_html = "";
-                    for (var changelog_entry in response_json.releases) {
+                    for (var changelog_entry in response_json["releases"]) {
                         console.log(changelog_entry);
-                        var ch_version = response_json.releases[changelog_entry].version;
+                        var ch_version = response_json["releases"][changelog_entry]["version"];
                         console.log(ch_version);
-                        var ch_comment = response_json.releases[changelog_entry].comment;
-                        var ch_release_date = response_json.releases[changelog_entry].release_date;
-                        var ch_majorversion = response_json.releases[changelog_entry].major_version;
+                        var ch_comment = response_json["releases"][changelog_entry]["comment"];
+                        var ch_release_date = response_json["releases"][changelog_entry]["release_date"];
+                        var ch_majorversion = response_json["releases"][changelog_entry]["major_version"];
 
                         var overall_changes_str = "";
 
 
                         // Additions
-                        for (var ch_addition in response_json.releases[changelog_entry].additions) {
-                            var ch_addition_indiv = response_json.releases[changelog_entry].additions[ch_addition];
+                        for (var ch_addition in response_json["releases"][changelog_entry]["additions"]) {
+                            var ch_addition_indiv = response_json["releases"][changelog_entry]["additions"][ch_addition];
                             console.log(ch_addition_indiv);
                             var overall_changes_str = overall_changes_str + `
                                 <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>${ch_addition_indiv}</li>

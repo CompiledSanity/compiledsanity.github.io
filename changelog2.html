@@ -303,8 +303,6 @@
                             var major_version_redditcurrent = response_json["releases"][changelog_entry]["major_version_redditcurrent"];
                             var major_version_redditrequest = response_json["releases"][changelog_entry]["major_version_redditrequest"];
                             var ch_majorversion_str = `<a href='${major_version_redditcurrent}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'> v${current_minor_str} Reddit Thread</a><a href='${major_version_redditrequest}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'>v${future_major_v} Feature Request Thread</a>`
-                        } else {
-                            var ch_majorversion_str = "";
                         }
                         
                         var indiv_version_str = `

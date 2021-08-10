@@ -234,6 +234,7 @@
                         var ch_comment = response_json["releases"][changelog_entry]["comment"];
                         var ch_release_date = response_json["releases"][changelog_entry]["release_date"];
                         var ch_majorversion = response_json["releases"][changelog_entry]["major_version"];
+                        var ch_custom_cssclass = "";
 
                         var overall_changes_str = "";
                         
@@ -295,6 +296,7 @@
                             var major_version_redditcurrent = response_json["current_release_thread"];
                             var major_version_redditrequest = response_json["future_requests_thread"];
                             var ch_majorversion_str = `<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span><a href='${major_version_redditcurrent}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'> v${current_minor_str} Reddit Thread</a><a href='${major_version_redditrequest}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'>v${future_major_v} Feature Request Thread</a>`
+                            var ch_custom_cssclass = " latestrelease";
                         } else {
                             var ch_majorversion_str = "";
                         }
@@ -308,12 +310,13 @@
                             var major_version_redditcurrent = response_json["releases"][changelog_entry]["major_version_redditcurrent"];
                             var major_version_redditrequest = response_json["releases"][changelog_entry]["major_version_redditrequest"];
                             var ch_majorversion_str = `<a href='${major_version_redditcurrent}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'> v${current_minor_str} Reddit Thread</a><a href='${major_version_redditrequest}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'>v${future_major_v} Feature Request Thread</a>`
+                            var ch_custom_cssclass = " majorrelease";
                         }
                         
                         var indiv_version_str = `
 
                             <!-- v${ch_version} -->
-                            <div class="mb-5">
+                            <div class="mb-5 ${ch_custom_cssclass}">
                                 <h5>Version <span class="text-success">${ch_version}</span>${ch_release_date} ${ch_majorversion_str}</h5>${ch_comment}
                                 <ul class="list-unstyled">
                                     ${overall_changes_str}

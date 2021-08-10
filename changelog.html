@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8" />
         <title>Sheet Changelog | CompiledSanity Personal Finance & Net Worth Spreadsheets</title>
@@ -48,13 +49,14 @@
 
             gtag('config', 'UA-196003461-1');
         </script>
-        
+
         <style>
             .release-section {
                 border-radius: 10px;
             }
+
             ul.list-unstyled {
-               margin-bottom: 0rem;
+                margin-bottom: 0rem;
             }
         </style>
     </head>
@@ -168,7 +170,6 @@
                             <i class="uil uil-info-circle text-light fw-bold"></i>
                             <b>Please Note:</b> Only major versions of the Sheet are announced via email (ie. v2.9, v2.10).
                             </br>Minor version releases (ie. v2.10.1, v2.10.2) are accessed via the original invite links for the major version.
-                            </br><a href="https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version">📒 View the instructions on how to upgrade your Sheet here.</a>
                         </div>
                     </div>
                 </div>
@@ -177,8 +178,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-3">
                         <div class="text-center mb-3">
-                            <a class="btn btn-pills btn-outline-success" href="/resendinvite/" style="font-size: 14px;">
-                                <i class="uil uil-info-circle text-info fw-bold"></i> Click to resend invite for latest version
+                            <a class="btn btn-pills btn-outline-success" href="https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version" style="font-size: 14px;">
+                                <i class="uil uil-book-alt text-info fw-bold"></i> Click for instructions to upgrade Sheet
                             </a>
                         </div>
                     </div>
@@ -186,20 +187,20 @@
                     <div class="col-lg-3">
                         <div class="text-center mb-3">
                             <a class="btn btn-pills btn-outline-success" href="/resendinvite/" style="font-size: 14px;">
-                                <i class="uil uil-info-circle text-info fw-bold"></i> Click to resend invite for latest version
+                                <i class="uil uil-fast-mail text-info fw-bold"></i> Click to resend invite for latest version
                             </a>
                         </div>
                     </div>
                 </div>
                 <!--end row-->
-                
+
                 <div class="row justify-content-center">
                     <div class="col-lg-9">
                         <div class="p-4 shadow rounded border">
                             <div id="changelogcontents">
 
                             </div>
-                            
+
                             <div class="mt-4 text-center">
                                 <p class="text-muted">Prior history back to v1.0 has not been recorded.</p>
                             </div>
@@ -263,7 +264,7 @@
                         var ch_custom_cssclass = "";
 
                         var overall_changes_str = "";
-                        
+
                         // Additions
                         for (var ch_addition in response_json["releases"][changelog_entry]["additions"]) {
                             var ch_addition_indiv = response_json["releases"][changelog_entry]["additions"][ch_addition];
@@ -278,7 +279,7 @@
                                 <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-info"></i><span class="fw-bold text-info">Updated: </span>${ch_update_indiv}</li>  
                             `;
                         }
-                        
+
                         // Fixes
                         for (var ch_fixes in response_json["releases"][changelog_entry]["fixes"]) {
                             var ch_fixes_indiv = response_json["releases"][changelog_entry]["fixes"][ch_fixes];
@@ -294,25 +295,25 @@
                                 <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-warning"></i><span class="fw-bold text-warning">Removed: </span>${ch_removal_indiv}</li>
                             `;
                         }
-                        
+
                         // Date
                         if (ch_release_date != null) {
                             ch_release_date = " - " + ch_release_date;
-                        } 
+                        }
                         else {
                             ch_release_date = "";
                         }
-                        
+
                         // Comment
                         if (ch_comment != null) {
                             ch_comment = `
                                 <p class='text-muted'>${ch_comment}</p>
                             `;
-                        } 
+                        }
                         else {
                             ch_comment = "";
                         }
-                        
+
                         // Latest Version
                         if (release_counter == 0) {
                             var current_major_v = ch_version.split('.')[0];
@@ -326,7 +327,7 @@
                         } else {
                             var ch_majorversion_str = "";
                         }
-                        
+
                         // Major Version
                         if (ch_majorversion == true && release_counter != 0) {
                             var current_major_v = ch_version.split('.')[0];
@@ -338,7 +339,7 @@
                             var ch_majorversion_str = `<a href='${major_version_redditcurrent}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'> v${current_minor_str} Reddit Thread</a><a href='${major_version_redditrequest}' class='btn btn-sm btn-pills btn-soft-primary ms-2' style='padding: 4px 8px;'>v${future_major_v} Feature Request Thread</a>`
                             var ch_custom_cssclass = "bg-light p-2";
                         }
-                        
+
                         var indiv_version_str = `
 
                             <!-- v${ch_version} -->

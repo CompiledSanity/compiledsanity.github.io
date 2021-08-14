@@ -53,22 +53,11 @@
           gtag('js', new Date());
 
           gtag('config', 'AW-378607729');
-          gtag('config', 'UA-196003461-1');
         </script>
-
+        
+        <!-- Event snippet for Begin Sheet checkout conversion page -->
         <script>
-            function gtag_report_conversion(url) {
-                var callback = function () {
-                    if (typeof (url) != 'undefined') {
-                        window.location = url;
-                    }
-                };
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-378607729/tnp7COr6zdgCEPGwxLQB',
-                    'event_callback': callback
-                });
-                return false;
-            }
+          gtag('event', 'conversion', {'send_to': 'AW-378607729/tnp7COr6zdgCEPGwxLQB'});
         </script>
 
         <!-- Reddit Pixel -->
@@ -269,7 +258,7 @@
 
                                     <div class="mb-4 pt-2">
                                         <div class="d-grid">
-                                            <input class="mx-auto" type="image" src="/img/PayPal-Buy.jpg" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!" onclick="gtag_report_conversion()">
+                                            <input class="mx-auto" type="image" src="/img/PayPal-Buy.jpg" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
                                             <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
                                         </div>
                                     </div>

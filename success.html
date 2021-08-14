@@ -39,20 +39,24 @@
 	  gtag('config', 'AW-378607729');
 	</script>
 
-    	<!-- Event snippet for Purchase -->
+    	<!-- Event snippet for Purchased a Sheet conversion page -->
 	<script>
 	  gtag('event', 'conversion', {
 	      'send_to': 'AW-378607729/V7fJCOrczdgCEPGwxLQB',
 	      'transaction_id': ''
 	  });
 	</script>
-  
+
     	<!-- Reddit Pixel -->
 	<script>
 	!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_8vi78');rdt('track', 'Purchase');
 	</script>
 	<!-- DO NOT MODIFY -->
 	<!-- End Reddit Pixel -->
+	    
+    	<script>
+	rdt(‘track’, ‘Purchase’);
+	</script>
 
     </head>
 
@@ -92,10 +96,6 @@
             </div> <!--end container-->
         </section><!--end section-->
         <!-- Hero End -->
-
-        <script>
-	rdt(‘track’, ‘Purchase’);
-	</script>
 
         <!-- javascript -->
         <script src="js/bootstrap.bundle.min.js"></script>

@@ -738,10 +738,7 @@
                             <div class="card-body paidsheet">
                                 <h3 class="title fw-bold text-uppercase text-primary mb-2">COMPLETE EDITION</h3>
                                 <div class="d-flex justify-content-center mb-0">
-                                    <span class="price h1 mb-0">$6 <span class="text-decoration-line-through" style="color: red;">$8</span> AUD</span>
-                                </div>
-                                <div class="d-flex justify-content-center mb-0">
-                                    <h6 class="title fw-BOLD text-primary text-uppercase mb-3">⚡ FLASH-SALE: Up until August 14th ⚡</h6>
+                                    <span class="price h1 mb-0">$<span id="aud-price">8</span> AUD</span>
                                 </div>
                                 <div class="d-flex justify-content-center mb-0">
                                     <h6 class="title fw-light text-secondary text-uppercase mb-3">£<span id="gbp-price">4</span> GBP / €<span id="eur-price">5</span> EUR / $<span id="usd-price">6</span> USD</h6>
@@ -859,6 +856,7 @@
                     document.getElementById("usd-price").textContent = html['sheet_rate']['USD'];
                     document.getElementById("eur-price").textContent = html['sheet_rate']['EUR'];
                     document.getElementById("gbp-price").textContent = html['sheet_rate']['GBP'];
+		    document.getElementById("aud-price").textContent = html['sheet_rate']['AUD'];
                 });
         </script>
         <script>

@@ -1,11 +1,13 @@
 {
    "Total": 8000,
    "exchange_rates": {
+      "AUD": 1,
       "EUR": 0.624189,
       "GBP": 0.53119,
       "USD": 0.7362
    },
    "sheet_rate": {
+      "AUD": 8,
       "EUR": "4.50",
       "GBP": "4",
       "USD": "5.50"

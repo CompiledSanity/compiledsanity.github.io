@@ -235,15 +235,15 @@
                                         <tbody>
                                             <tr>
                                                 <td class="h6 border-0 fw-light">1x CS Personal Finance Sheet</td>
-                                                <td class="h6 border-0 fw-light text-end" id=">$<span id="aud-item-price">7</span>.00</td>
+                                                <td class="h6 border-0 fw-light text-end" id=">$<span id="auditemprice">7</span>.00</td>
                                             </tr>
                                             <tr>
                                                 <td class="h6 border-0">Subtotal</td>
-                                                <td class="text-end fw-bold border-0">$<span id="aud-subcart-price">7</span>.00</td>
+                                                <td class="text-end fw-bold border-0">$<span id="audsubcartprice">7</span>.00</td>
                                             </tr>
                                             <tr class="bg-light">
                                                 <td class="h5 fw-bold">Total (AUD)</td>
-                                                <td class="text-end text-primary h4 fw-bold">$<span id="aud-total-price">7</span>.00</td>
+                                                <td class="text-end text-primary h4 fw-bold">$<span id="audtotalprice">7</span>.00</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -313,9 +313,9 @@
 		fetch('/liveinfo/totals.json')
 		.then(response => response.json())
 		.then(html => {
-		    document.getElementById("aud-item-price").textContent = html['sheet_rate']['AUD'];
-		    document.getElementById("aud-subcart-price").textContent = html['sheet_rate']['AUD'];
-		    document.getElementById("aud-total-price").textContent = html['sheet_rate']['AUD'];
+		    document.getElementById('auditemprice').textContent = html['sheet_rate']['AUD'];
+		    document.getElementById('audsubcartprice').textContent = html['sheet_rate']['AUD'];
+		    document.getElementById('audtotalprice').textContent = html['sheet_rate']['AUD'];
 		});
         </script>
         <!-- SLIDER -->

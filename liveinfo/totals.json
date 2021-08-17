@@ -1,4 +1,6 @@
 {
    "Total": 8000,
-   "sheet_rate": {}
+   "sheet_rate": {
+      "AUD": 8
+   }
 }

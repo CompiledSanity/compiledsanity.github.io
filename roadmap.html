@@ -264,20 +264,24 @@
                         var individ_time_criticality = response_json["latest_issues"][changelog_entry]["time_criticality"];
 
                         if (individ_issuetype == "Bug") {
-                            var pill_type = "<span class='btn btn-sm btn-pills btn-danger ms-2' style='padding: 4px 8px;'>Bug</span> ";
+                            var pill_type = "<td><span class='btn btn-sm btn-pills btn-danger ms-2' style='padding: 4px 8px;'>Bug</span></td> ";
                         } else {
-                            var pill_type = "<span class='btn btn-sm btn-pills btn-secondary ms-2' style='padding: 4px 8px;'>Task</span> ";
+                            var pill_type = "<td><span class='btn btn-sm btn-pills btn-secondary ms-2' style='padding: 4px 8px;'>Task</span></td> ";
                         }
 
                         var overall_changes_str = overall_changes_str + `
-                                <li class="text-muted my-2 ms-3">${pill_type} ${individ_summary}</li>
+                            <tr>
+                                <td><li class="text-muted my-2 ms-3">${pill_type}</td>
+                                <td>${individ_summary}</td>
+                                <td>${individ_time_criticality}</td></li>
+                            </tr>
                         `;
                     }
                     var indiv_version_str = `
                             <div class="mb-3 release-section">
-                                <ul class="list-unstyled">
+                                <table>
                                     ${overall_changes_str}
-                                </ul>
+                                </table>
                             </div>
                         `;
 

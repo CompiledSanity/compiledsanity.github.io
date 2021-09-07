@@ -252,19 +252,20 @@
 
                     var overall_return_html = "";
                     var roadmap_lastupdate = response_json["last_updated"];
+                    var overall_changes_str = "";
 
 
                     for (var changelog_entry in response_json["latest_issues"]) {
-                        var individ_id = response_json["releases"][changelog_entry]["id"];
-                        var individ_issuetype = response_json["releases"][changelog_entry]["issue_type"];
-                        var individ_priority = response_json["releases"][changelog_entry]["priority"];
-                        var individ_status = response_json["releases"][changelog_entry]["status"];
-                        var individ_summary = response_json["releases"][changelog_entry]["summary"];
-                        var individ_time_criticality = response_json["releases"][changelog_entry]["time_criticality"];
+                        var individ_id = response_json["latest_issues"][changelog_entry]["id"];
+                        var individ_issuetype = response_json["latest_issues"][changelog_entry]["issue_type"];
+                        var individ_priority = response_json["latest_issues"][changelog_entry]["priority"];
+                        var individ_status = response_json["latest_issues"][changelog_entry]["status"];
+                        var individ_summary = response_json["latest_issues"][changelog_entry]["summary"];
+                        var individ_time_criticality = response_json["latest_issues"][changelog_entry]["time_criticality"];
 
-                        if (individ_issuetype == "Bug")
+                        if (individ_issuetype == "Bug") {
                             var pill_type = "<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span> ";
-                        else {
+                        } else {
                             var pill_type = "<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span> ";
                         }
 
@@ -273,7 +274,7 @@
                         `;
                     }
                     var indiv_version_str = `
-                            <div class="mb-3 ${ch_custom_cssclass} release-section p-md-3">
+                            <div class="mb-3 release-section p-md-3">
                                 <ul class="list-unstyled">
                                     ${overall_changes_str}
                                 </ul>

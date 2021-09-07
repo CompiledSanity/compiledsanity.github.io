@@ -168,8 +168,7 @@
                     <div class="col-lg-8">
                         <div class="alert alert-light text-center fade show" role="alert" style="/*background-color: rgba(109, 199, 122, 0.1) !important; border: 1px solid rgba(46,202,139,0.3) !important;*/">
                             <i class="uil uil-info-circle text-primary fw-bold"></i>
-                            <b>Please Note:</b> Only major versions of the Sheet are announced via email (ie. v2.9, v2.10).
-                            </br>Minor version releases (ie. v2.10.1, v2.10.2) are accessed via the original invite links for the major version.
+                            <b>Last Update:</b> <span id="updatedtime">Today</span>
                         </div>
                     </div>
                 </div>
@@ -233,6 +232,8 @@
 
                     var overall_return_html = "";
                     var roadmap_lastupdate = response_json["last_updated"];
+                    var date = new Date(roadmap_lastupdate * 1000);
+                    var date_string = date.getDate().toString() + " " + (date.toLocaleString('default', { month: 'long' })).toString() + " " + date.getFullYear().toString();
                     var overall_changes_str = "";
 
 
@@ -268,6 +269,7 @@
 
                     overall_return_html = overall_return_html + indiv_version_str;
                     document.getElementById("changelogcontents").innerHTML = overall_return_html;
+                    document.getElementById("updatedtime").innerHTML = date_string;
                     feather.replace();
                 });
         </script>

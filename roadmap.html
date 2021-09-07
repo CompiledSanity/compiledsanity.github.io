@@ -264,9 +264,9 @@
                         var individ_time_criticality = response_json["latest_issues"][changelog_entry]["time_criticality"];
 
                         if (individ_issuetype == "Bug") {
-                            var pill_type = "<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span> ";
+                            var pill_type = "<span class='btn btn-sm btn-pills btn-danger ms-2' style='padding: 4px 8px;'>Bug</span> ";
                         } else {
-                            var pill_type = "<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span> ";
+                            var pill_type = "<span class='btn btn-sm btn-pills btn-secondary ms-2' style='padding: 4px 8px;'>Task</span> ";
                         }
 
                         var overall_changes_str = overall_changes_str + `
@@ -274,7 +274,7 @@
                         `;
                     }
                     var indiv_version_str = `
-                            <div class="mb-3 release-section p-md-3">
+                            <div class="mb-3 release-section">
                                 <ul class="list-unstyled">
                                     ${overall_changes_str}
                                 </ul>

@@ -1,8 +1,9 @@
 {
-   "last_updated": 1630990797,
+   "last_updated": 1630990867,
    "latest_issues": [
       {
          "id": "PFS-74",
+         "issue_type": "Task",
          "priority": 150,
          "release_version": null,
          "status": "To Do",
@@ -11,6 +12,7 @@
       },
       {
          "id": "PFS-71",
+         "issue_type": "Bug",
          "priority": 112,
          "release_version": null,
          "status": "On Hold",
@@ -19,6 +21,7 @@
       },
       {
          "id": "PFS-87",
+         "issue_type": "Bug",
          "priority": 112,
          "release_version": null,
          "status": "On Hold",
@@ -27,6 +30,7 @@
       },
       {
          "id": "PFS-94",
+         "issue_type": "Task",
          "priority": 112,
          "release_version": null,
          "status": "To Do",
@@ -35,6 +39,7 @@
       },
       {
          "id": "PFS-17",
+         "issue_type": "Task",
          "priority": 75,
          "release_version": null,
          "status": "To Do",
@@ -43,6 +48,7 @@
       },
       {
          "id": "PFS-20",
+         "issue_type": "Task",
          "priority": 75,
          "release_version": null,
          "status": "On Hold",
@@ -51,6 +57,7 @@
       },
       {
          "id": "PFS-46",
+         "issue_type": "Task",
          "priority": 75,
          "release_version": null,
          "status": "To Do",
@@ -59,6 +66,7 @@
       },
       {
          "id": "PFS-53",
+         "issue_type": "Task",
          "priority": 75,
          "release_version": null,
          "status": "On Hold",
@@ -67,6 +75,7 @@
       },
       {
          "id": "PFS-75",
+         "issue_type": "Task",
          "priority": 75,
          "release_version": null,
          "status": "To Do",
@@ -75,6 +84,7 @@
       },
       {
          "id": "PFS-78",
+         "issue_type": "Task",
          "priority": 75,
          "release_version": null,
          "status": "To Do",
@@ -83,6 +93,7 @@
       },
       {
          "id": "PFS-95",
+         "issue_type": "Bug",
          "priority": 75,
          "release_version": null,
          "status": "To Do",
@@ -91,6 +102,7 @@
       },
       {
          "id": "PFS-98",
+         "issue_type": "Bug",
          "priority": 75,
          "release_version": null,
          "status": "To Do",
@@ -99,6 +111,7 @@
       },
       {
          "id": "PFS-8",
+         "issue_type": "Task",
          "priority": 60,
          "release_version": null,
          "status": "To Do",
@@ -107,6 +120,7 @@
       },
       {
          "id": "PFS-73",
+         "issue_type": "Task",
          "priority": 60,
          "release_version": null,
          "status": "To Do",
@@ -115,6 +129,7 @@
       },
       {
          "id": "PFS-13",
+         "issue_type": "Task",
          "priority": 50,
          "release_version": null,
          "status": "To Do",
@@ -123,6 +138,7 @@
       },
       {
          "id": "PFS-66",
+         "issue_type": "Bug",
          "priority": 50,
          "release_version": null,
          "status": "On Hold",
@@ -131,6 +147,7 @@
       },
       {
          "id": "PFS-96",
+         "issue_type": "Task",
          "priority": 50,
          "release_version": null,
          "status": "To Do",
@@ -139,6 +156,7 @@
       },
       {
          "id": "PFS-11",
+         "issue_type": "Task",
          "priority": 45,
          "release_version": null,
          "status": "To Do",
@@ -147,6 +165,7 @@
       },
       {
          "id": "PFS-26",
+         "issue_type": "Task",
          "priority": 45,
          "release_version": null,
          "status": "To Do",
@@ -155,6 +174,7 @@
       },
       {
          "id": "PFS-37",
+         "issue_type": "Bug",
          "priority": 45,
          "release_version": null,
          "status": "To Do",
@@ -163,6 +183,7 @@
       },
       {
          "id": "PFS-45",
+         "issue_type": "Task",
          "priority": 45,
          "release_version": null,
          "status": "To Do",
@@ -171,6 +192,7 @@
       },
       {
          "id": "PFS-81",
+         "issue_type": "Task",
          "priority": 37,
          "release_version": null,
          "status": "To Do",
@@ -179,6 +201,7 @@
       },
       {
          "id": "PFS-82",
+         "issue_type": "Task",
          "priority": 37,
          "release_version": null,
          "status": "To Do",
@@ -187,6 +210,7 @@
       },
       {
          "id": "PFS-24",
+         "issue_type": "Task",
          "priority": 30,
          "release_version": null,
          "status": "To Do",
@@ -195,6 +219,7 @@
       },
       {
          "id": "PFS-27",
+         "issue_type": "Task",
          "priority": 30,
          "release_version": null,
          "status": "To Do",
@@ -203,6 +228,7 @@
       },
       {
          "id": "PFS-30",
+         "issue_type": "Task",
          "priority": 30,
          "release_version": null,
          "status": "To Do",
@@ -211,6 +237,7 @@
       },
       {
          "id": "PFS-36",
+         "issue_type": "Bug",
          "priority": 30,
          "release_version": null,
          "status": "To Do",
@@ -219,6 +246,7 @@
       },
       {
          "id": "PFS-48",
+         "issue_type": "Bonus",
          "priority": 30,
          "release_version": null,
          "status": "To Do",
@@ -227,6 +255,7 @@
       },
       {
          "id": "PFS-28",
+         "issue_type": "Task",
          "priority": 25,
          "release_version": null,
          "status": "To Do",
@@ -235,6 +264,7 @@
       },
       {
          "id": "PFS-32",
+         "issue_type": "Task",
          "priority": 25,
          "release_version": null,
          "status": "To Do",
@@ -243,6 +273,7 @@
       },
       {
          "id": "PFS-39",
+         "issue_type": "Task",
          "priority": 25,
          "release_version": null,
          "status": "To Do",
@@ -251,6 +282,7 @@
       },
       {
          "id": "PFS-44",
+         "issue_type": "Task",
          "priority": 25,
          "release_version": null,
          "status": "To Do",
@@ -259,6 +291,7 @@
       },
       {
          "id": "PFS-55",
+         "issue_type": "Task",
          "priority": 25,
          "release_version": null,
          "status": "To Do",
@@ -267,6 +300,7 @@
       },
       {
          "id": "PFS-56",
+         "issue_type": "Task",
          "priority": 25,
          "release_version": null,
          "status": "To Do",
@@ -275,6 +309,7 @@
       },
       {
          "id": "PFS-83",
+         "issue_type": "Task",
          "priority": 25,
          "release_version": null,
          "status": "To Do",
@@ -283,6 +318,7 @@
       },
       {
          "id": "PFS-97",
+         "issue_type": "Task",
          "priority": 25,
          "release_version": null,
          "status": "To Do",
@@ -291,6 +327,7 @@
       },
       {
          "id": "PFS-58",
+         "issue_type": "Task",
          "priority": 22,
          "release_version": null,
          "status": "To Do",
@@ -299,6 +336,7 @@
       },
       {
          "id": "PFS-15",
+         "issue_type": "Task",
          "priority": 20,
          "release_version": null,
          "status": "To Do",
@@ -307,6 +345,7 @@
       },
       {
          "id": "PFS-31",
+         "issue_type": "Task",
          "priority": 20,
          "release_version": null,
          "status": "To Do",
@@ -315,6 +354,7 @@
       },
       {
          "id": "PFS-34",
+         "issue_type": "Bonus",
          "priority": 20,
          "release_version": null,
          "status": "To Do",
@@ -323,6 +363,7 @@
       },
       {
          "id": "PFS-51",
+         "issue_type": "Task",
          "priority": 20,
          "release_version": null,
          "status": "To Do",
@@ -331,6 +372,7 @@
       },
       {
          "id": "PFS-19",
+         "issue_type": "Task",
          "priority": 15,
          "release_version": null,
          "status": "To Do",
@@ -339,6 +381,7 @@
       },
       {
          "id": "PFS-21",
+         "issue_type": "Bug",
          "priority": 15,
          "release_version": null,
          "status": "To Do",
@@ -347,6 +390,7 @@
       },
       {
          "id": "PFS-29",
+         "issue_type": "Task",
          "priority": 15,
          "release_version": null,
          "status": "To Do",
@@ -355,6 +399,7 @@
       },
       {
          "id": "PFS-43",
+         "issue_type": "Task",
          "priority": 15,
          "release_version": null,
          "status": "To Do",
@@ -363,6 +408,7 @@
       },
       {
          "id": "PFS-33",
+         "issue_type": "Task",
          "priority": 12,
          "release_version": null,
          "status": "To Do",
@@ -371,6 +417,7 @@
       },
       {
          "id": "PFS-23",
+         "issue_type": "Story",
          "priority": 8,
          "release_version": null,
          "status": "To Do",
@@ -379,6 +426,7 @@
       },
       {
          "id": "PFS-42",
+         "issue_type": "Task",
          "priority": 7,
          "release_version": null,
          "status": "To Do",
@@ -387,6 +435,7 @@
       },
       {
          "id": "PFS-49",
+         "issue_type": "Bonus",
          "priority": 6,
          "release_version": null,
          "status": "To Do",
@@ -395,6 +444,7 @@
       },
       {
          "id": "PFS-80",
+         "issue_type": "Task",
          "priority": 1,
          "release_version": null,
          "status": "To Do",
@@ -403,6 +453,7 @@
       },
       {
          "id": "PFS-1",
+         "issue_type": "Epic",
          "priority": 0,
          "release_version": null,
          "status": "To Do",
@@ -411,6 +462,7 @@
       },
       {
          "id": "PFS-3",
+         "issue_type": "Epic",
          "priority": 0,
          "release_version": null,
          "status": "To Do",
@@ -419,6 +471,7 @@
       },
       {
          "id": "PFS-4",
+         "issue_type": "Epic",
          "priority": 0,
          "release_version": null,
          "status": "To Do",
@@ -427,6 +480,7 @@
       },
       {
          "id": "PFS-5",
+         "issue_type": "Epic",
          "priority": 0,
          "release_version": null,
          "status": "To Do",
@@ -435,6 +489,7 @@
       },
       {
          "id": "PFS-6",
+         "issue_type": "Epic",
          "priority": 0,
          "release_version": null,
          "status": "To Do",
@@ -443,6 +498,7 @@
       },
       {
          "id": "PFS-60",
+         "issue_type": "Epic",
          "priority": 0,
          "release_version": null,
          "status": "To Do",

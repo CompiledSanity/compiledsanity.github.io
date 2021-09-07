@@ -252,40 +252,36 @@
 
                     var overall_return_html = "";
                     var roadmap_lastupdate = response_json["last_updated"];
-              
-              
-                    for (var changelog_entry in response_json["latest_issues"]) {
-                      var individ_id = response_json["releases"][changelog_entry]["id"];
-                      var individ_issuetype = response_json["releases"][changelog_entry]["issue_type"];
-                      var individ_priority = response_json["releases"][changelog_entry]["priority"];
-                      var individ_status = response_json["releases"][changelog_entry]["status"];
-                      var individ_summary = response_json["releases"][changelog_entry]["summary"];
-                      var individ_time_criticality = response_json["releases"][changelog_entry]["time_criticality"];
-                      
-                      
-                      // Additions
-                        for (var ch_addition in response_json["releases"][changelog_entry]["additions"]) {
-                            var ch_addition_indiv = response_json["releases"][changelog_entry]["additions"][ch_addition];
-                            var overall_changes_str = overall_changes_str + `
-                                <li class="text-muted my-2 ms-3"><i data-feather="arrow-right-circle" class="fea icon-sm me-2 text-success"></i><span class="fw-bold text-success">Added: </span>${ch_addition_indiv}</li>
-                            `;
-                        }
-                        
-                    }
-                   var indiv_version_str = `
 
-                            <!-- v${ch_version} -->
+
+                    for (var changelog_entry in response_json["latest_issues"]) {
+                        var individ_id = response_json["releases"][changelog_entry]["id"];
+                        var individ_issuetype = response_json["releases"][changelog_entry]["issue_type"];
+                        var individ_priority = response_json["releases"][changelog_entry]["priority"];
+                        var individ_status = response_json["releases"][changelog_entry]["status"];
+                        var individ_summary = response_json["releases"][changelog_entry]["summary"];
+                        var individ_time_criticality = response_json["releases"][changelog_entry]["time_criticality"];
+
+                        if (individ_issuetype == "Bug")
+                            var pill_type = "<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span> ";
+                        else {
+                            var pill_type = "<span class='btn btn-sm btn-pills btn-primary ms-2' style='padding: 4px 8px;'>Latest Update</span> ";
+                        }
+
+                        var overall_changes_str = overall_changes_str + `
+                                <li class="text-muted my-2 ms-3">${pill_type} ${individ_summary}</li>
+                        `;
+                    }
+                    var indiv_version_str = `
                             <div class="mb-3 ${ch_custom_cssclass} release-section p-md-3">
-                                <h5>Version <span class="text-success">${ch_version}</span>${ch_release_date} ${ch_majorversion_str}</h5>${ch_comment}
                                 <ul class="list-unstyled">
                                     ${overall_changes_str}
                                 </ul>
                             </div>
-                            <!-- v${ch_version} -->
                         `;
-                      
-                      overall_return_html = overall_return_html + indiv_version_str;
-                        release_counter++;
+
+                    overall_return_html = overall_return_html + indiv_version_str;
+                    release_counter++;
                     document.getElementById("changelogcontents").innerHTML = overall_return_html;
                     feather.replace();
                 });

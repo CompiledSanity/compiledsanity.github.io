@@ -1,1 +1,677 @@
-test
+{
+   "last_updated": 1630990594,
+   "latest_issues": [
+      {
+         "id": "PFS-54",
+         "priority": 180,
+         "release_version": null,
+         "summary": "Bimonthly pay option",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-62",
+         "priority": 180,
+         "release_version": null,
+         "summary": "Assign IDs against each SheetOptions entry",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-72",
+         "priority": 180,
+         "release_version": null,
+         "summary": "Simplify Managed Funds contribution formula to reference order total instead of multiplying",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-85",
+         "priority": 180,
+         "release_version": null,
+         "summary": "Fix dropdown to Capital Gains - Show in Liabilities Tab",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-86",
+         "priority": 180,
+         "release_version": null,
+         "summary": "Capital Gains showing negative tax owed values",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-88",
+         "priority": 180,
+         "release_version": null,
+         "summary": "Update Migration Script to support new brokerage placement",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-91",
+         "priority": 180,
+         "release_version": null,
+         "summary": "Fixed issue with Crypto tab not sorting correctly",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-92",
+         "priority": 180,
+         "release_version": null,
+         "summary": "Small fix so that the migration & personalisation tools can't run unless the Disclaimer has been accepted",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-38",
+         "priority": 150,
+         "release_version": null,
+         "summary": "Move Brokerage columns next to other purchase columns",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-52",
+         "priority": 150,
+         "release_version": null,
+         "summary": "Pretty up First Time setup tab",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-74",
+         "priority": 150,
+         "release_version": null,
+         "summary": "Cosmetic & ease of use overhaul of all tabs",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-102",
+         "priority": 150,
+         "release_version": null,
+         "summary": "Add close button to Changelog dialog (see comment)",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-93",
+         "priority": 120,
+         "release_version": null,
+         "summary": "Fixed Net Worth Graphs becoming unreadable with large amounts of dates",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-12",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Managed Fund Double Reporting",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-16",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Fix Dividend Yields",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-18",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Fix divdend fixed values not amtching with unique function",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-22",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Fix Side Income Dates",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-35",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Dividends - VLOOKUP information",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-40",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Net Worth tab only shows equity owned in property, not value before mortgage",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-61",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Double Reporting bug in Side Income tab",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-64",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Fix Capital Gains being out by a row if empty investments",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-68",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Overhaul Side Income Tab",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-71",
+         "priority": 112,
+         "release_version": null,
+         "summary": "FIFO Capital Gain #REF",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-84",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Fix total return growth value",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-87",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Bug in Mortgage Total Reported",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-94",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Fix Capital Gains for Crypto rounding error",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-100",
+         "priority": 112,
+         "release_version": null,
+         "summary": "Fix Retirement MF contributions showing in column AH of the history tab",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-59",
+         "priority": 90,
+         "release_version": null,
+         "summary": "UK Shared Pooling Capital Gains System",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-79",
+         "priority": 80,
+         "release_version": null,
+         "summary": "Make graphs rolling 1-year (see Reddit link)",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-10",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Change over Spaceship API Source",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-17",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Convert cell functions to array functions",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-20",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Add new sheet options tags to Wiki",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-46",
+         "priority": 75,
+         "release_version": null,
+         "summary": "XIR function for performance measuring",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-53",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Add CGT summary for unrealised/realised gains",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-63",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Add ETF level stats to Crypto Tab",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-65",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Net Worth table bug ",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-75",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Property Currency Conversion",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-76",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Salary Currency Conversion",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-78",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Loan/Liabilities Salary Conversion",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-95",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Fix next investment selection",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-98",
+         "priority": 75,
+         "release_version": null,
+         "summary": "1 Year investment rate sorting bug",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-99",
+         "priority": 75,
+         "release_version": null,
+         "summary": "Stocks counting towards Retirement balance",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-57",
+         "priority": 72,
+         "release_version": null,
+         "summary": "Edit to the Capital Gains Tax to allow for UK tax-free allowance",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-7",
+         "priority": 67,
+         "release_version": null,
+         "summary": "House Purchases now count in savings rate",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-9",
+         "priority": 67,
+         "release_version": null,
+         "summary": "Fix Managed Funds contributions error",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-25",
+         "priority": 67,
+         "release_version": null,
+         "summary": "Added CoinGecko support for pricing",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-8",
+         "priority": 60,
+         "release_version": null,
+         "summary": "Add Multiple Currency support to Purchase History table",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-73",
+         "priority": 60,
+         "release_version": null,
+         "summary": "Add choice where running end of month script allows you to choose month",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-13",
+         "priority": 50,
+         "release_version": null,
+         "summary": "Add Currency (ie. GBP) to end of all order price columns",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-41",
+         "priority": 50,
+         "release_version": null,
+         "summary": "Add USD live price column to Crypto Tab",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-47",
+         "priority": 50,
+         "release_version": null,
+         "summary": "Mortgage Net Worth Tab",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-66",
+         "priority": 50,
+         "release_version": null,
+         "summary": "FIRE Bugs bug",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-96",
+         "priority": 50,
+         "release_version": null,
+         "summary": "Add support for ISIN Tickers",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-11",
+         "priority": 45,
+         "release_version": null,
+         "summary": "House Deposit Purchase (Close loop)",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-26",
+         "priority": 45,
+         "release_version": null,
+         "summary": "Overhaul Retirement Contributions (Voluntary vs Compulsory)",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-37",
+         "priority": 45,
+         "release_version": null,
+         "summary": "Fix GBX -> Euro",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-45",
+         "priority": 45,
+         "release_version": null,
+         "summary": "Super - Record mandatory employer contributions to automatically calculate gain",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-69",
+         "priority": 37,
+         "release_version": null,
+         "summary": "Import Changelog into Sheet and display in prompt",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-81",
+         "priority": 37,
+         "release_version": null,
+         "summary": "FIRE Improvement - I currently have cash reserved for purchases, but the fire tab return rate assumes that my cash / investment ratio will be maintained as my net worth grows, which is not the cash.",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-82",
+         "priority": 37,
+         "release_version": null,
+         "summary": "Budget Tracker for monthly subscriptions",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-24",
+         "priority": 30,
+         "release_version": null,
+         "summary": "Tax Year as config entry",
+         "time_criticality": "Immediately"
+      },
+      {
+         "id": "PFS-27",
+         "priority": 30,
+         "release_version": null,
+         "summary": "Custom Dialog in Google Sheets",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-30",
+         "priority": 30,
+         "release_version": null,
+         "summary": "FIRE Tab Improvements",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-36",
+         "priority": 30,
+         "release_version": null,
+         "summary": "Round held units to 10 decimal places",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-48",
+         "priority": 30,
+         "release_version": null,
+         "summary": "FIRE Tab improvements",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-28",
+         "priority": 25,
+         "release_version": null,
+         "summary": "Update to v8 Engine",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-32",
+         "priority": 25,
+         "release_version": null,
+         "summary": "Update Last Purchase date formula to feed from History Movement columns",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-39",
+         "priority": 25,
+         "release_version": null,
+         "summary": "Extend dividend summary box down to row 120",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-44",
+         "priority": 25,
+         "release_version": null,
+         "summary": "Budget Tracker Trending",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-55",
+         "priority": 25,
+         "release_version": null,
+         "summary": "Configurable Savings Rate Highlighting ",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-56",
+         "priority": 25,
+         "release_version": null,
+         "summary": "limit the most of charts within the sheet to recent 'n' months",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-83",
+         "priority": 25,
+         "release_version": null,
+         "summary": "Column in the Dividends tab to enter the dividend per share owned and to auto populate the Net Amount column, saving the user having to work out the net amount themselves.",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-97",
+         "priority": 25,
+         "release_version": null,
+         "summary": "Change all graphs to not be labels",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-58",
+         "priority": 22,
+         "release_version": null,
+         "summary": "Various FIRE Improvements",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-15",
+         "priority": 20,
+         "release_version": null,
+         "summary": "Use SetNumberFormat to create generic sheet",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-31",
+         "priority": 20,
+         "release_version": null,
+         "summary": "Varying Features",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-34",
+         "priority": 20,
+         "release_version": null,
+         "summary": "Make Other Assetes into a buy/sell history",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-51",
+         "priority": 20,
+         "release_version": null,
+         "summary": "Long Term Performance Measuring",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-19",
+         "priority": 15,
+         "release_version": null,
+         "summary": "Insert new rows button",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-21",
+         "priority": 15,
+         "release_version": null,
+         "summary": "Stock selling not being captured in the new version",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-29",
+         "priority": 15,
+         "release_version": null,
+         "summary": "Dividend Payment Calender",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-43",
+         "priority": 15,
+         "release_version": null,
+         "summary": "Improved Retirement Fund Tracking/Split",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-33",
+         "priority": 12,
+         "release_version": null,
+         "summary": "Line Graph for Dividends",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-23",
+         "priority": 8,
+         "release_version": null,
+         "summary": "Add Canadian Version with US version",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-42",
+         "priority": 7,
+         "release_version": null,
+         "summary": "Use checkboxes for all yes/no",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-49",
+         "priority": 6,
+         "release_version": null,
+         "summary": "Lifetime LISA support",
+         "time_criticality": "Anytime"
+      },
+      {
+         "id": "PFS-67",
+         "priority": 1,
+         "release_version": null,
+         "summary": "Fix Capital Gains being misaligned in investment tabs",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-70",
+         "priority": 1,
+         "release_version": null,
+         "summary": "Make changelog website load from JSON",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-80",
+         "priority": 1,
+         "release_version": null,
+         "summary": "Added a few tables which calc how much of my money should go into each ETF or crypto if I want to top up $X and keep my desired proportions in check.",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-101",
+         "priority": 1,
+         "release_version": null,
+         "summary": "Fixed bug where retirement investments not in the retirement tab counted in the investment savings rate",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-1",
+         "priority": 0,
+         "release_version": null,
+         "summary": "Personal Finance Sheet v2.12",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-3",
+         "priority": 0,
+         "release_version": null,
+         "summary": "Personal Finance Sheet v2.13",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-4",
+         "priority": 0,
+         "release_version": null,
+         "summary": "Website Development",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-5",
+         "priority": 0,
+         "release_version": null,
+         "summary": "Business Development",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-6",
+         "priority": 0,
+         "release_version": null,
+         "summary": "Long Term Development",
+         "time_criticality": null
+      },
+      {
+         "id": "PFS-60",
+         "priority": 0,
+         "release_version": null,
+         "summary": "Transaction Tracker Sheet",
+         "time_criticality": null
+      }
+   ]
+}

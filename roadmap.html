@@ -246,9 +246,9 @@
                         var individ_time_criticality = response_json["latest_issues"][changelog_entry]["time_criticality"];
 
                         if (individ_issuetype == "Bug") {
-                            var pill_type = "<td><span class='btn btn-sm btn-pills btn-danger ms-2'>Bug</span></td> ";
+                            var pill_type = "<td><span class='btn btn-sm btn-pills btn-danger ms-2' style='padding: 4px 8px;''>Bug</span></td> ";
                         } else {
-                            var pill_type = "<td><span class='btn btn-sm btn-pills btn-secondary ms-2'>Task</span></td> ";
+                            var pill_type = "<td><span class='btn btn-sm btn-pills btn-secondary ms-2' style='padding: 4px 8px;'>Task</span></td> ";
                         }
 
                         var overall_changes_str = overall_changes_str + `

@@ -232,6 +232,10 @@
                     var date = new Date(roadmap_lastupdate * 1000);
                     var date_string = date.getDate().toString() + " " + (date.toLocaleString('default', { month: 'long' })).toString() + " " + date.getFullYear().toString();
                     var overall_changes_str = "";
+                
+                    var immediatechanges_str = "";
+                    var withinnextversion_str = "";
+                    var backlogchanges_str = "";
 
 
                     for (var changelog_entry in response_json["latest_issues"]) {
@@ -248,18 +252,37 @@
                             var pill_type = "<td><span class='btn btn-sm btn-pills btn-secondary ms-2' style='padding: 4px 8px;'>Task</span></td> ";
                         }
 
-                        var overall_changes_str = overall_changes_str + `
+                        var tabletext = `
                             <tr class="py-1">
                                 <td class="px-2">${pill_type}</td>
                                 <td><p class="text-muted my-1 ms-3">${individ_summary}</p></td>
                                 <td style="width: 30%;"><p class="text-muted my-1 ms-3">${individ_time_criticality}</p></td>
                             </tr>
                         `;
+                        
+                        if (individ_time_criticality == "Immediately") {
+                            immediatechanges_str = immediatechanges_str + tabletext;
+                        } else if (individ_time_criticality == "Within next Major Release") {
+                            withinnextversion_str = withinnextversion_str + tabletext;
+                        } else {
+                            backlogchanges_str = backlogchanges_str + tabletext;
+                        }
                     }
                     var indiv_version_str = `
                             <div class="mb-3 release-section">
+                                <h3>Immediate Release</h3>
                                 <table>
-                                    ${overall_changes_str}
+                                    ${immediatechanges_str}
+                                </table>
+                                
+                                <h3>Within next major version</h3>
+                                <table>
+                                    ${withinnextversion_str}
+                                </table>
+                                
+                                <h3>Long-term</h3>
+                                <table>
+                                    ${backlogchanges_str}
                                 </table>
                             </div>
                         `;

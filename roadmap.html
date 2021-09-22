@@ -292,6 +292,9 @@
                     document.getElementById("changelogcontents").innerHTML = overall_return_html;
                     if (current_timestamp - 86400*1000 > date_string) {    
                         document.getElementById("updatedtime").innerHTML = date_string;
+                    } else {
+                        var hoursago = Math.round((current_timestamp - date_string)/(1000*3600));
+                        document.getElementById("updatedtime").innerHTML = hoursago + "hrs ago";
                     }
                     feather.replace();
                 });

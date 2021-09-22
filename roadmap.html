@@ -293,8 +293,8 @@
                     if (current_timestamp - 86400*1000 > date_string) {    
                         document.getElementById("updatedtime").innerHTML = date_string;
                     } else {
-                        var hoursago = Math.ceil((current_timestamp - date)/(3600));
-                        document.getElementById("updatedtime").innerHTML = hoursago.toString() + "hrs ago";
+                        var hoursago = Math.ceil((current_timestamp - date)/(1000*3600));
+                        document.getElementById("updatedtime").innerHTML = "Today (" + hoursago.toString() + "hrs ago)";
                     }
                     feather.replace();
                 });

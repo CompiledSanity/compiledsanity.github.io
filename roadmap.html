@@ -229,6 +229,7 @@
 
                     var overall_return_html = "";
                     var roadmap_lastupdate = response_json["last_updated"];
+                    var current_timestamp = new Date().getTime();
                     var date = new Date(roadmap_lastupdate * 1000);
                     var date_string = date.getDate().toString() + " " + (date.toLocaleString('default', { month: 'long' })).toString() + " " + date.getFullYear().toString();
                     var overall_changes_str = "";
@@ -289,7 +290,9 @@
 
                     overall_return_html = overall_return_html + indiv_version_str;
                     document.getElementById("changelogcontents").innerHTML = overall_return_html;
-                    document.getElementById("updatedtime").innerHTML = date_string;
+                    if (current_timestamp - 86400*1000 > date_string) {    
+                        document.getElementById("updatedtime").innerHTML = date_string;
+                    }
                     feather.replace();
                 });
         </script>

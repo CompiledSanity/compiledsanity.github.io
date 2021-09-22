@@ -303,7 +303,19 @@
                     feather.replace();
                 });
         </script>
-
+        <script>
+            fetch('/changelog.json')
+                .then(response => response.json())
+                .then(response_json => {
+                    for (var changelog_entry in response_json["releases"]) {
+                        var ch_majorversion = response_json["releases"][changelog_entry]["major_version_redditrequest"];  
+                        if (ch_majorversion != null) {
+                            document.getElementById("newfeaturesuggestion").href = ch_majorversion;
+                            break;   
+                        }
+                    }
+            });
+        </script>
         <!-- javascript -->
         <script src="js/bootstrap.bundle.min.js"></script>
         <!-- SLIDER -->

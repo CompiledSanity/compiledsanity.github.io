@@ -212,6 +212,14 @@
 				],
 				"Summary": false
 			},
+		    	{
+				"Slug": "sheet-roadmap",
+				"Question": "Is there a roadmap for future features?",
+				"Answer": [
+					"Yes there is! Check it out <a href='https://cspersonalfinance.io/roadmap'>cspersonalfinance.io/roadmap</a>"
+				],
+				"Summary": true
+			},
 			{
 				"Slug": "how-to-beta-signup",
 				"Question": "Where can I see the latest changes in the Sheet/Change log?",

@@ -1,5 +1,5 @@
 {
-   "last_updated": 1632288205,
+   "last_updated": 1632374604,
    "latest_issues": [
       {
          "id": "PFS-105",
@@ -200,6 +200,15 @@
          "time_criticality": "Within next Major Release"
       },
       {
+         "id": "PFS-80",
+         "issue_type": "Task",
+         "priority": 37,
+         "release_version": null,
+         "status": "To Do",
+         "summary": "Improved Asset rebalancing figures and metrics",
+         "time_criticality": "Anytime"
+      },
+      {
          "id": "PFS-81",
          "issue_type": "Task",
          "priority": 37,
@@ -314,7 +323,7 @@
          "release_version": null,
          "status": "To Do",
          "summary": "Column in the Dividends tab to enter the dividend per share owned and to auto populate the Net Amount column, saving the user having to work out the net amount themselves.",
-         "time_criticality": null
+         "time_criticality": "Anytime"
       },
       {
          "id": "PFS-97",
@@ -468,15 +477,6 @@
          "status": "To Do",
          "summary": "Cash Tab - Adjustable conditional formatting",
          "time_criticality": "Anytime"
-      },
-      {
-         "id": "PFS-80",
-         "issue_type": "Task",
-         "priority": 1,
-         "release_version": null,
-         "status": "To Do",
-         "summary": "Improved Asset rebalancing figures and metrics",
-         "time_criticality": null
       }
    ]
 }

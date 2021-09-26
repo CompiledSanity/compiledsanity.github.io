@@ -17,6 +17,11 @@
         <changefreq>monthly</changefreq>
       </url>
       <url>
+        <loc>https://guide.cspersonalfinance.io</loc>
+        <priority>0.80</priority>
+        <changefreq>monthly</changefreq>
+      </url>
+      <url>
         <loc>https://cspersonalfinance.io/changelog.html</loc>
         <priority>0.60</priority>
         <changefreq>weekly</changefreq>

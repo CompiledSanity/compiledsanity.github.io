@@ -1,24 +1,6 @@
 {
-   "last_updated": 1632633805,
+   "last_updated": 1632720205,
    "latest_issues": [
-      {
-         "id": "PFS-105",
-         "issue_type": "Bug",
-         "priority": 180,
-         "release_version": null,
-         "status": "To Do",
-         "summary": "Bug with Initial Debt reporting",
-         "time_criticality": "Immediately"
-      },
-      {
-         "id": "PFS-74",
-         "issue_type": "Task",
-         "priority": 150,
-         "release_version": null,
-         "status": "To Do",
-         "summary": "Cosmetic & ease of use overhaul of all tabs",
-         "time_criticality": "Immediately"
-      },
       {
          "id": "PFS-71",
          "issue_type": "Bug",
@@ -47,13 +29,13 @@
          "time_criticality": "Immediately"
       },
       {
-         "id": "PFS-17",
+         "id": "PFS-74",
          "issue_type": "Task",
-         "priority": 75,
+         "priority": 100,
          "release_version": null,
          "status": "To Do",
-         "summary": "Convert cell functions to array functions",
-         "time_criticality": "Immediately"
+         "summary": "Cosmetic & ease of use overhaul of all tabs",
+         "time_criticality": "Within next Major Release"
       },
       {
          "id": "PFS-20",
@@ -146,6 +128,15 @@
          "time_criticality": "Within next Major Release"
       },
       {
+         "id": "PFS-17",
+         "issue_type": "Task",
+         "priority": 50,
+         "release_version": null,
+         "status": "To Do",
+         "summary": "Convert cell functions to array functions",
+         "time_criticality": "Within next Major Release"
+      },
+      {
          "id": "PFS-66",
          "issue_type": "Bug",
          "priority": 50,
@@ -182,21 +173,21 @@
          "time_criticality": "Within next Major Release"
       },
       {
-         "id": "PFS-37",
-         "issue_type": "Bug",
-         "priority": 45,
-         "release_version": null,
-         "status": "To Do",
-         "summary": "Fix GBX -> Euro",
-         "time_criticality": "Immediately"
-      },
-      {
          "id": "PFS-45",
          "issue_type": "Task",
          "priority": 45,
          "release_version": null,
          "status": "To Do",
          "summary": "Super - Record mandatory employer contributions to automatically calculate gain",
+         "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-37",
+         "issue_type": "Bug",
+         "priority": 40,
+         "release_version": null,
+         "status": "To Do",
+         "summary": "Fix GBX -> Euro",
          "time_criticality": "Within next Major Release"
       },
       {

@@ -212,8 +212,9 @@
                     for (var changelog_entry in response_json["releases"]) {
                         var ch_majorversion = response_json["releases"][changelog_entry]["major_version_redditrequest"];  
                         if (ch_majorversion != null) {
-                            window.location.href = ch_majorversion;
+                            break;
                         }
+                        window.location.href = ch_majorversion;
                     }
             });
         </script>

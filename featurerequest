@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Request a Feature | CompiledSanity Personal Finance & Net Worth Spreadsheets</title>
+        <meta name="keywords" content="Personal Finance, Net Worth & FIRE Tracking made Automated & Easy. Through the wonders of Google Sheets & a bit of techno magic, CS Templates reveal and track your financial position.">
+        <meta name="author" content="CompiledSanity">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/fav/favicon-16x16.png">
+        <link rel="manifest" href="/img/fav/site.webmanifest">
+        <link rel="mask-icon" href="/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap-extras-margins-padding.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Icons -->
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <!-- Slider -->
+        <link rel="stylesheet" href="css/tiny-slider.css" />
+        <!-- Main Css -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <link href="css/colors/green.css" rel="stylesheet" id="color-opt">
+        <link href="scss/compiledmods.css" rel="stylesheet" type="text/css" />
+        <!-- Icons -->
+        <script src="js/feather.min.js"></script>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i|Quicksand:500,500i|Ubuntu:400,400i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
+        </style>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196003461-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-196003461-1');
+        </script>
+
+        <style>
+            .release-section {
+                border-radius: 10px;
+            }
+
+            ul.list-unstyled {
+                margin-bottom: 0rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Loader -->
+        <!-- <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Loader -->
+
+        <!-- Navbar STart -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <!-- Logo container-->
+                <a class="logo" href="index.html">
+                    <img src="/img/CS2021_SquareLogov2.png" height="24" class="logo-light-mode" alt="">
+                    <img src="/img/CS2021_SquareLogov2.png" height="24" class="logo-dark-mode" alt="">
+                    <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext"><span class="logospantext" style="color: #71c55d;">CompiledSanity</span> Automated Finance</span>
+                </a>
+                <!-- End Logo container-->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                </div>
+
+                <div id="navigation">
+                    <!-- Navigation Menu-->
+                    <ul class="navigation-menu nav-right">
+                        <li style="margin: 0 0px;"><a href="index.html" class="sub-menu-item">Home</a></li>
+                        <li style="margin: 0 0px;"><a href="/#about" class="sub-menu-item">About</a></li>
+                        <li style="margin: 0 0px;"><a href="/#features" class="sub-menu-item">Features</a></li>
+                        <li style="margin: 0 0px;"><a href="/#download" class="sub-menu-item">Download</a></li>
+                        <li style="margin: 0 0px;"><a href="https://guide.cspersonalfinance.io/" class="sub-menu-item">Guide</a></li>
+                        <li style="margin: 0 0px;"><a href="/#faq" class="sub-menu-item">FAQ</a></li>
+                    </ul>
+                    <!--end navigation menu-->
+                </div>
+                <!--end navigation-->
+            </div>
+            <!--end container-->
+        </header>
+        <!--end header-->
+        <!-- Navbar End -->
+
+        <!-- Hero Start -->
+        <section class="bg-half-170 bg-light d-table w-100" style="padding: 90px 0 60px;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <div class="pages-heading">
+                            <h2 class="fw-bold title text-primary"> Request a Sheet Feature </h2>
+                        </div>
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+
+                <div class="position-breadcrumb">
+                    <nav aria-label="breadcrumb" class="d-inline-block">
+                        <ul class="breadcrumb bg-white rounded shadow mb-0 px-4 py-2">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Request a Sheet Feature</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!--end container-->
+        </section>
+        <!--end section-->
+        <div class="position-relative">
+            <div class="shape overflow-hidden text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Shape Start -->
+        <div class="position-relative">
+            <div class="shape overflow-hidden text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!--Shape End-->
+
+        <!-- Roadmap Start -->
+        <section class="section" style="padding: 70px 0;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="alert alert-light text-center fade show" role="alert" style="/*background-color: rgba(109, 199, 122, 0.1) !important; border: 1px solid rgba(46,202,139,0.3) !important;*/">
+                            <i class="uil uil-info-circle text-primary fw-bold"></i>
+                            Please wait to be redirected to the correct Reddit thread..
+                        </div>
+                    </div>
+                </div>
+                <!--end row-->
+            </div>
+            <!--end container-->
+        </section>
+        <!--end section-->
+        <!-- Changelog End -->
+
+        <!-- Footer Start -->
+        <footer class="footer mt-30" style="border-top: none !important;">
+            <div class="footer-bar container text-center" style="padding: 25px;">
+                <div class="row justify-content-between">
+                    <div class="col-sm-12" style="margin: auto 0px;">
+                        <a href="#" class="logo-footer">
+                            <img src="images/CS2021_SquareLogov2.png" height="35" alt="">
+                        </a>
+                        <div class="text-sm-start">
+                            <p class="mb-0" style="text-align: center;font-size: 15px;">Made with love by <a href="https://www.reddit.com/user/CompiledSanity/" target="_blank" class="text-reset">u/CompiledSanity</a> <i class="mdi mdi-heart text-danger"></i> ©
+                                <script>document.write(new Date().getFullYear())</script>
+                            </p>
+                        </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-sm-3">
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+            </div>
+            <!--end container-->
+        </footer>
+        <!-- Footer End -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
+        <!-- Back to top -->
+        <script>
+            fetch('/changelog.json')
+                .then(response => response.json())
+                .then(response_json => {
+                    for (var changelog_entry in response_json["releases"]) {
+                        var ch_majorversion = response_json["releases"][changelog_entry]["major_version_redditrequest"];  
+                        if (ch_majorversion != null) {
+                            window.location.href = ch_majorversion;
+                        }
+                    }
+            });
+        </script>
+        <!-- javascript -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- SLIDER -->
+        <script src="js/tiny-slider.js "></script>
+        <!-- Main Js -->
+        <script src="js/plugins.init.js"></script>
+        <!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="js/app.js"></script>
+        <!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    </body>
+
+</html>

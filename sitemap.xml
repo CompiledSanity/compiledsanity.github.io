@@ -32,13 +32,23 @@
         <changefreq>weekly</changefreq>
       </url>
       <url>
+        <loc>https://cspersonalfinance.io/requestfeature</loc>
+        <priority>0.50</priority>
+        <changefreq>weekly</changefreq>
+      </url>
+      <url>
+        <loc>https://cspersonalfinance.io/reportbug</loc>
+        <priority>0.50</priority>
+        <changefreq>weekly</changefreq>
+      </url>
+      <url>
         <loc>https://cspersonalfinance.io/faqs.html</loc>
         <priority>0.70</priority>
         <changefreq>weekly</changefreq>
       </url>
       <url>
         <loc>https://cspersonalfinance.io/managedfunds.html</loc>
-        <priority>0.50</priority>
+        <priority>0.40</priority>
         <changefreq>monthly</changefreq>
       </url>
 </urlset>

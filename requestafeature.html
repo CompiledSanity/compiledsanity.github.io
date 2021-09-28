@@ -209,6 +209,7 @@
             fetch('/changelog.json')
                 .then(response => response.json())
                 .then(response_json => {
+                    var ch_majorversion = "https://www.reddit.com/r/CSPersonalFinance/";
                     for (var changelog_entry in response_json["releases"]) {
                         var ch_majorversion = response_json["releases"][changelog_entry]["major_version_redditrequest"];  
                         if (ch_majorversion != null) {

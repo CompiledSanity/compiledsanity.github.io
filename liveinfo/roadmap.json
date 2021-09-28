@@ -1,15 +1,6 @@
 {
-   "last_updated": 1632720205,
+   "last_updated": 1632806604,
    "latest_issues": [
-      {
-         "id": "PFS-71",
-         "issue_type": "Bug",
-         "priority": 112,
-         "release_version": null,
-         "status": "On Hold",
-         "summary": "FIFO Capital Gain #REF",
-         "time_criticality": "Immediately"
-      },
       {
          "id": "PFS-87",
          "issue_type": "Bug",
@@ -152,15 +143,6 @@
          "release_version": null,
          "status": "To Do",
          "summary": "Add support for ISIN Tickers",
-         "time_criticality": "Within next Major Release"
-      },
-      {
-         "id": "PFS-11",
-         "issue_type": "Task",
-         "priority": 45,
-         "release_version": null,
-         "status": "To Do",
-         "summary": "House Deposit Purchase (Close loop)",
          "time_criticality": "Within next Major Release"
       },
       {

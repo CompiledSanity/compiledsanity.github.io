@@ -1,22 +1,13 @@
 {
-   "last_updated": 1632806604,
+   "last_updated": 1632893005,
    "latest_issues": [
-      {
-         "id": "PFS-87",
-         "issue_type": "Bug",
-         "priority": 112,
-         "release_version": null,
-         "status": "On Hold",
-         "summary": "Bug in Mortgage Total Reported",
-         "time_criticality": "Immediately"
-      },
       {
          "id": "PFS-94",
          "issue_type": "Task",
          "priority": 112,
          "release_version": null,
          "status": "To Do",
-         "summary": "Fix Capital Gains for Crypto rounding error",
+         "summary": "Fix Capital Gains floating point issue for large decimal place assets",
          "time_criticality": "Immediately"
       },
       {

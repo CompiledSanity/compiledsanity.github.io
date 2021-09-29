@@ -212,7 +212,7 @@
 				],
 				"Summary": false
 			},
-		    	{
+			{
 				"Slug": "sheet-roadmap",
 				"Question": "Is there a roadmap for future features?",
 				"Answer": [
@@ -360,22 +360,21 @@
 				"Summary": true
 			}
 		],
-		"Investments": [
-            {
+		"Investments": [{
 				"Slug": "entering-many-investments",
 				"Question": "I have years of transactions for my investments, what should I do?",
 				"Answer": [
 					"In setting up the Sheet, you have the choice to enter as much data as you'd like depending on the level of detail you would like to see. Here are a couple of pointers:",
-                    "<ul>",
-                    "    <li>Only enter in transactions for holdings that you <i>currently</i> own. Old sold assets do not have to be entered.</li>",
-                    "    <li>If you have years of data, including DRP purchases, you do not have to enter these all into the Sheet if you don't want to. Instead to save time you can combine all your prior purchases for a holding into a single transaction. This will ensure these investments are correctly incorporated into your net worth, although keep in mind that this will make performance and CGT calculations innacurate.</li>",
-                    "    <li>If you would like like a middle ground option, if you enter in a correct average value price for this single combined transaction this will ensure your Total Gain ($) figures will still be correct</li>",
-                    "    <li>Entering your data for the first time can be tedious depending on the number of transactions you have, but comes with it's benefits. It will give you full profit/loss breakdown on each parcel, accurate performance benchmarking over time and provide accurate data for the Capital Gains components of the Sheet. In most cases this will involve some longer initial setup, but after this time on a month to month level entry into the Sheet is minimal.</li>",
-                    "</ul>"
+					"<ul>",
+					"    <li>Only enter in transactions for holdings that you <i>currently</i> own. Old sold assets do not have to be entered.</li>",
+					"    <li>Entering your data for the first time can be tedious depending on the number of transactions you have, but comes with it's benefits. It will give you full profit/loss breakdown on each parcel, accurate performance benchmarking over time and provide accurate data for the Capital Gains components of the Sheet. In most cases this will involve some longer initial setup, but after this time on a month to month level entry into the Sheet is minimal.</li>",
+					"    <li>If you have years of data, including DRP purchases, you do not have to enter these all into the Sheet if you don't want to. Instead to save time you can combine all your prior purchases for a holding into a single transaction. This will ensure these investments are correctly incorporated into your net worth, although keep in mind that this will make performance and CGT calculations innacurate.</li>",
+					"    <li>If you would like like a middle ground option, if you enter in a correct average value price for this single combined transaction this will ensure your Total Gain ($) figures will still be correct</li>",
+					"</ul>"
 				],
 				"Summary": true
 			},
-            {
+			{
 				"Slug": "international-assets",
 				"Question": "Can I enter international assets into the Sheet and convert their currency automatically?",
 				"Answer": [

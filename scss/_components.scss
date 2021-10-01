@@ -35,7 +35,7 @@ $value in $colors {
         background-color: #{$value} !important;
         border: 1px solid #{$value} !important;
         color: $white !important;
-        box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        box-shadow: 0 3px 5px 0 rgba($value, 0.1);
         &:hover, &:focus, &:active, &.active, &.focus{
             background-color: darken($value, 10%) !important;
             border-color: darken($value, 10%) !important;
@@ -44,10 +44,10 @@ $value in $colors {
     }
 
     .btn-soft-#{$name} {
-        background-color: rgba($value, 0.1) !important;
-        border: 1px solid rgba($value, 0.1) !important;
+        background-color: rgba($value, 0.05) !important;
+        border: 1px solid rgba($value, 0.05) !important;
         color: #{$value} !important;
-        box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        box-shadow: 0 3px 5px 0 rgba($value, 0.1);
         &:hover, &:focus, &:active, &.active, &.focus{
             background-color: #{$value} !important;
             border-color: #{$value} !important;
@@ -63,7 +63,7 @@ $value in $colors {
             background-color: #{$value};
             border-color: #{$value};
             color: $white !important;
-            box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+            box-shadow: 0 3px 5px 0 rgba($value, 0.1);
         }
     }
 }
@@ -382,6 +382,10 @@ $value in $colors {
     &.avatar-ex-sm {
         max-height: 25px;
     }
+    &.avatar-ex-small {
+        height: 36px;
+        width: 36px;
+    }
     &.avatar-md-sm {
         height: 45px;
         width: 45px;
@@ -601,6 +605,7 @@ $value in $colors {
         padding-right: 160px;
         padding-left: 30px;
         background-color: rgba($white, 0.8);
+        height: 50px;
     }
     button {
         position: absolute;
@@ -651,6 +656,14 @@ $value in $colors {
             }
         }
     }
+}
+
+.position-middle-bottom {
+    position: absolute;
+    bottom: 15px;
+    left: 12px;
+    right: 12px;
+    text-align: center;
 }
 
 // Loader

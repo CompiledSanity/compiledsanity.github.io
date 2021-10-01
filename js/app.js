@@ -2,7 +2,7 @@
    Author: Shreethemes
    E-mail: support@shreethemes.in
    Created: August 2019
-   Version: 3.5.0
+   Version: 3.8.0
    Updated: July 2021
    File Description: Main JS file of the template
 */

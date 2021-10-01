@@ -387,6 +387,17 @@ $value in $colors {
 }
 
 //Blog
+.blog {
+    .overlay {
+        background: $white !important;
+    }
+    .author {
+        .user,
+        .date {
+            color: $dark !important;
+        }
+    }
+}
 .media-list {
     .sub-comment {
         border-left: 2px dashed $gray-100;

@@ -37,3 +37,14 @@ dd {
         transform: translateX(45%);  
     }
 }
+
+
+//Cookies
+.cookie-popup {
+    .cookie-popup-actions {
+        button {
+            left: 5px !important;
+            right: auto;
+        }
+    }
+}

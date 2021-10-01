@@ -39,6 +39,9 @@
                 }
             }
         }
+        .link {
+            color: $primary !important;
+        }
     }
     .author,
     .teacher,
@@ -69,6 +72,9 @@
         &:hover {
             transform: translateY(0px) !important;
         }
+    }
+    .overlay {
+        background: $dark;
     }
     &:hover {
         transform: translateY(-10px);

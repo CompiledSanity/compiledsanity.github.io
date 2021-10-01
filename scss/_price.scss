@@ -80,13 +80,13 @@
     &.ribbon-left {
         left: -5px;
         span {
-            left: -23px;
+            left: -21px;
             transform: rotate(-45deg);
         }
     }
     span {
         position: absolute;
-        top: 15px;
+        top: 18px;
         width: 100px;
         color: $white;
         &:before,

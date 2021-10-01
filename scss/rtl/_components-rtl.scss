@@ -151,6 +151,16 @@
         right: auto;
     }
 }
+
+.form-floating>label {
+    left: auto;
+    right: 0 !important;
+}
+.form-floating>.form-control:focus~label, 
+.form-floating>.form-control:not(:placeholder-shown)~label, 
+.form-floating>.form-select~label {
+    transform: scale(0.85) translateY(-0.5rem) translateX(1.15rem);
+}
 //back to top
 .back-to-top {
     left: 30px;
@@ -462,7 +472,7 @@
         right: -5px;
         left: auto;
         span {
-            right: -23px;
+            right: -21px;
             left: auto;
             transform: rotate(45deg);
         }

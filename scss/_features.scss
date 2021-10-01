@@ -3,9 +3,8 @@
 //
 
 /*********************************/
-/*         Features & Services   */
+/*     Features & Services       */
 /*===============================*/
-
 .features {
     .icon {
         background: rgba($primary, 0.1);
@@ -54,14 +53,6 @@
     }
     &.fea-primary {
         transition: all 0.5s ease;
-        .content {
-            .title {
-                transition: all 0.5s ease;
-                &:hover {
-                    color: $primary !important;
-                }
-            }
-        }
         .big-icon {
             position: absolute;
             top: 50%;
@@ -85,6 +76,9 @@
             }
             .big-icon {
                 opacity: 0.05;
+            }
+            .readmore {
+                color: $white !important;
             }
         }
     }

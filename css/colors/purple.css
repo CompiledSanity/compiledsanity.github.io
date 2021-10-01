@@ -82,6 +82,7 @@
 .switcher-pricing .toggler--is-active,
 .blog .content .title:hover,
 .blog .content .post-meta .readmore:hover,
+.blog .content .link,
 .sidebar .widget .blog-categories li a:hover,
 .sidebar .widget .post-recent .post-recent-content a:hover,
 .media-list .media .media-heading:hover,
@@ -143,9 +144,6 @@
 
 .bg-soft-primary,
 .btn-soft-primary,
-.features .icon,
-.features.feature-clean .icons i,
-.features:hover .image:before,
 .app-feature-shape-right:after,
 .app-feature-shape-left:after,
 .saas-feature-shape-left:after,
@@ -153,12 +151,12 @@
 .social-feature-left:after,
 .social-feature-right:after,
 .event-schedule .date .day {
-    background-color: rgba(121, 82, 179, 0.1) !important;
+    background-color: rgba(121, 82, 179, 0.05) !important;
 }
 
 .bg-soft-primary,
 .btn-soft-primary {
-    border: 1px solid rgba(121, 82, 179, 0.1) !important;
+    border: 1px solid rgba(121, 82, 179, 0.05) !important;
 }
 
 .app-feature-shape-right:after,
@@ -167,11 +165,17 @@
 .saas-feature-shape-right:after,
 .social-feature-left:after,
 .social-feature-right:after {
-    box-shadow: 0 0 40px rgba(121, 82, 179, 0.1);
+    box-shadow: 0 0 40px rgba(121, 82, 179, 0.05);
 }
 
 .event-schedule .date .day {
     box-shadow: 0px 0px 2px 0.25px rgba(121, 82, 179, 0.5);
+}
+
+.features .icon,
+.features.feature-clean .icons i,
+.features:hover .image:before {
+    background-color: rgba(121, 82, 179, 0.1) !important;
 }
 
 .btn-primary,
@@ -182,7 +186,7 @@
 .btn-outline-primary.active, 
 .btn-outline-primary.focus, 
 .btn-outline-primary:not(:disabled):not(.disabled):active {
-    box-shadow: 0 3px 5px 0 rgba(121, 82, 179, 0.3);
+    box-shadow: 0 3px 5px 0 rgba(121, 82, 179, 0.1);
 }
 
 .alert-primary,
@@ -197,7 +201,7 @@
 }
 
 .bg-circle-gradiant {
-    background: radial-gradient(circle at 50% 50%, rgba(121, 82, 179, 0.1) 0%, rgba(121, 82, 179, 0.1) 33.333%, rgba(121, 82, 179, 0.3) 33.333%, rgba(121, 82, 179, 0.3) 66.666%, rgba(121, 82, 179, 0.5) 66.666%, rgba(121, 82, 179, 0.5) 99.999%);
+    background: radial-gradient(circle at 50% 50%, rgba(121, 82, 179, 0.1) 0%, rgba(121, 82, 179, 0.1) 33.333%, rgba(121, 82, 179, 0.2) 33.333%, rgba(121, 82, 179, 0.2) 66.666%, rgba(121, 82, 179, 0.3) 66.666%, rgba(121, 82, 179, 0.3) 99.999%);
 }
 
 .bg-gradient-primary {

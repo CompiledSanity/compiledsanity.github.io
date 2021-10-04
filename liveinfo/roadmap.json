@@ -1,5 +1,5 @@
 {
-   "last_updated": 1633238605,
+   "last_updated": 1633325003,
    "latest_issues": [
       {
          "id": "PFS-94",
@@ -18,6 +18,15 @@
          "status": "To Do",
          "summary": "Cosmetic & ease of use overhaul of all tabs",
          "time_criticality": "Within next Major Release"
+      },
+      {
+         "id": "PFS-8",
+         "issue_type": "Task",
+         "priority": 90,
+         "release_version": null,
+         "status": "To Do",
+         "summary": "Add historical currency conversion & automatic price lookups to purchase history table",
+         "time_criticality": "Immediately"
       },
       {
          "id": "PFS-20",
@@ -80,15 +89,6 @@
          "release_version": null,
          "status": "To Do",
          "summary": "1 Year investment rate sorting bug",
-         "time_criticality": "Within next Major Release"
-      },
-      {
-         "id": "PFS-8",
-         "issue_type": "Task",
-         "priority": 60,
-         "release_version": null,
-         "status": "To Do",
-         "summary": "Add Multiple Currency support to Purchase History table",
          "time_criticality": "Within next Major Release"
       },
       {

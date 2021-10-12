@@ -210,9 +210,9 @@
                 .then(response => response.json())
                 .then(response_json => {
                     const urlSearchParams = new URLSearchParams(window.location.search);
-                    const params = Object.fromEntries(urlSearchParams.entries());
+                    const searched_version = urlSearchParams.get("version");
                 
-                    window.alert("Params" + params.toString());
+                    window.alert("Params" + searched_version.toString());
                     
                     var ch_majorversion = "https://www.reddit.com/r/CSPersonalFinance/";
                     for (var changelog_entry in response_json["releases"]) {

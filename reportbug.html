@@ -218,7 +218,9 @@
                     var ch_majorversion = "https://www.reddit.com/r/CSPersonalFinance/";
                     for (var changelog_entry in response_json["releases"]) {
                         var ch_majorversion = response_json["releases"][changelog_entry]["major_version_redditcurrent"];  
-                        if ((ch_majorversion != null && searched_version == null) || searched_version == ch_majorversion) {
+                        var ch_version_number = response_json["releases"][changelog_entry]["version"];  
+                        
+                        if ((ch_majorversion != null && searched_version == null) || (searched_version + ".0") == ch_version_number) {
                             break;
                         }
                     }

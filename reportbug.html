@@ -210,7 +210,7 @@
                 .then(response => response.json())
                 .then(response_json => {
                     const urlSearchParams = new URLSearchParams(window.location.search);
-                    const searched_version = urlSearchParams.get("version");
+                    const searched_version = urlSearchParams.get("version").replace('"', '');;
                 
                     console.log(searched_version.toString());
                     window.alert(searched_version.toString());

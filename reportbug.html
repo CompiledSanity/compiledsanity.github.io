@@ -209,18 +209,16 @@
             fetch('/changelog.json')
                 .then(response => response.json())
                 .then(response_json => {
-                    const urlSearchParams = new URLSearchParams(window.location.search);
-                    const searched_version = urlSearchParams.get("version").replace(/"/g, '');;
+                    var ch_majorversion = "https://www.reddit.com/r/CSPersonalFinance/";    
                 
-                    console.log(searched_version.toString());
-                    window.alert(searched_version.toString());
+                    const urlSearchParams = new URLSearchParams(window.location.search);
+                    const searched_version = urlSearchParams.get("version").toString().replace(/"/g, '');;
                     
-                    var ch_majorversion = "https://www.reddit.com/r/CSPersonalFinance/";
                     for (var changelog_entry in response_json["releases"]) {
                         var ch_majorversion = response_json["releases"][changelog_entry]["major_version_redditcurrent"];  
                         var ch_version_number = response_json["releases"][changelog_entry]["version"];  
                         
-                        if ((ch_majorversion != null && searched_version == null) || (searched_version + ".0") == ch_version_number) {
+                        if ((ch_majorversion != null && searched_version == "null") || (searched_version + ".0") == ch_version_number) {
                             break;
                         }
                     }

@@ -380,7 +380,7 @@
 			]
 		},
 		{
-			"version": "2.9",
+			"version": "2.9.0",
 			"comment": null,
 			"release_date": "19th September 2020",
 			"major_version": true,
@@ -420,7 +420,7 @@
 			"removed": []
 		},
 		{
-			"version": "2.8",
+			"version": "2.8.0",
 			"comment": null,
 			"release_date": "11th July 2020",
 			"major_version": true,
@@ -457,7 +457,7 @@
 			]
 		},
 		{
-			"version": "2.7",
+			"version": "2.7.0",
 			"comment": null,
 			"release_date": "13th April 2020",
 			"major_version": true,
@@ -486,7 +486,7 @@
 			"removed": []
 		},
 		{
-			"version": "2.6",
+			"version": "2.6.0",
 			"comment": null,
 			"release_date": "6th March 2020",
 			"major_version": true,
@@ -511,7 +511,7 @@
 			"removed": []
 		},
 		{
-			"version": "2.5",
+			"version": "2.5.0",
 			"comment": null,
 			"release_date": "19th February 2020",
 			"major_version": true,

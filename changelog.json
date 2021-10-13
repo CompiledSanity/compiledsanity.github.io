@@ -1,8 +1,52 @@
 {
 	"last_updated": 0,
-	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/mzdx3a/cs_personal_savings_template_v211_just_released/",
-	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/mze01f/v212_feature_request_thread/",
+	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
+	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
 	"releases": [{
+			"version": "2.12.0",
+			"comment": "The Capital Gains Update",
+			"release_date": "14th October 2021",
+			"major_version": true,
+			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
+			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
+			"additions": [
+				"FIFO Capital Gains System",
+				"UK Shared Pooling Capital Gains system",
+				"Support for up to 12 House purchases",
+				"Loan/Value performance tracking to Property Tab",
+				"Upgraded Sheet Scripts to Google V8 Runtime for faster performance",
+				"House purchases now count in savings rate",
+				"CoinGecko support for Crypto pricing",
+				"Bimonthly pay option",
+				"Extra statistics to Stocks, Managed Funds and Crypto tabs",
+				"Salaries now support currency conversion",
+				"Stocks can now be included in retirement balance",
+				"Major version update notification & changelog mechanism"
+			],
+			"updates": [
+				"Changed Spaceship pricing to more robust price source",
+				"Improved Side Income date column layout",
+				"Moved Brokerage columns next to other purchase columns",
+				"Net Worth Tab Graphs now only show equity owned in profit after the mortgage deduction",
+				"UK Capital Gains sheet now accounts for tax-free allowance",
+				"Net Worth tab graphs to better display more than 12 months of data at a time",
+				"Many graphs for usability"
+			],
+			"fixes": [
+				"Graphs in Net Worth tab not dynamically resizing and becoming crowded over time",
+				"Total growth ($) and total growth (%) calculations showing incorrect values in some cases",
+				"Capital Gains tab showing negative tax values",
+				"Issue with Crypto tab not sorting correctly",
+				"Double reporting of income in Side Income tab",
+				"Disclaimer accept message now showing, leading to 'Maximum time exceeded' errors",
+				"Stock/Managed Fund/ETF retirement funds showing incorrectly in the investment contribution instead of retirement contribution",
+				"ETFs not being included in the Asset distribution graph",
+				"'Recalculate' Capital Gains buttons not working"
+
+			],
+			"removed": []
+		},
+		{
 			"version": "2.11.5",
 			"comment": "This is a minor bug-fix release as development is now in progress for v2.12.",
 			"release_date": "8th August 2021",

@@ -53,3 +53,8 @@ div.pricing-rates .text-muted {
     clip-path: circle(65% at 40% 25%);
     background-color: #2f55d4 !important;
 }
+
+#download .ribbon.ribbon-right {
+   right: 10px !important;
+   top: 0px !important;
+}

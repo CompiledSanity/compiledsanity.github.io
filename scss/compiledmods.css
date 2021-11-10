@@ -46,3 +46,10 @@ div.pricing-rates .text-muted {
         width: 38% !important; 
     }
 }
+
+.bg-animation-left.task-management-home:after {
+    background: url(/img/bg.png) #2f55d4;
+    width: 100%;
+    clip-path: circle(65% at 40% 25%);
+    background-color: #2f55d4 !important;
+}

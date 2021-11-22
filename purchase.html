@@ -48,24 +48,24 @@
         <!-- Global site tag (gtag.js) - Google Ads: 378607729 -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-378607729"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-          gtag('config', 'AW-378607729');
+            gtag('config', 'AW-378607729');
         </script>
-        
+
         <!-- Event snippet for Begin Sheet checkout conversion page -->
         <script>
-          gtag('event', 'conversion', {'send_to': 'AW-378607729/tnp7COr6zdgCEPGwxLQB'});
+            gtag('event', 'conversion', { 'send_to': 'AW-378607729/tnp7COr6zdgCEPGwxLQB' });
         </script>
 
         <!-- Reddit Pixel -->
-	<script>
-	!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_8vi78');rdt('track', 'PageVisit');rdt('track', 'AddToCart');
-	</script>
-	<!-- DO NOT MODIFY -->
-	<!-- End Reddit Pixel -->
+        <script>
+            !function (w, d) { if (!w.rdt) { var p = w.rdt = function () { p.sendEvent ? p.sendEvent.apply(p, arguments) : p.callQueue.push(arguments) }; p.callQueue = []; var t = d.createElement("script"); t.src = "https://www.redditstatic.com/ads/pixel.js", t.async = !0; var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s) } }(window, document); rdt('init', 't2_8vi78'); rdt('track', 'PageVisit'); rdt('track', 'AddToCart');
+        </script>
+        <!-- DO NOT MODIFY -->
+        <!-- End Reddit Pixel -->
 
     </head>
 
@@ -232,7 +232,7 @@
                                         <tbody>
                                             <tr>
                                                 <td class="h6 border-0 fw-light">1x CS Personal Finance Sheet</td>
-                                                <td class="h6 border-0 fw-light text-end" id=">$<span id="auditemprice">8</span>.00</td>
+                                                <td class="h6 border-0 fw-light text-end">$<span id="auditemprice">8</span>.00</td>
                                             </tr>
                                             <tr>
                                                 <td class="h6 border-0">Subtotal</td>
@@ -288,7 +288,7 @@
                                 <script>document.write(new Date().getFullYear())</script>
                             </p>
                         </div>
-			<div class="text-center text-mute pt-1" style="font-size: 60%;">
+                        <div class="text-center text-mute pt-1" style="font-size: 60%;">
                             <p>Disclaimer: The information & guidance in this webpage and associated resources are for general information only. You should consider seeking independent legal, financial, taxation or other advice to check how information & outputs from this website & sheet relates to your unique circumstances. The creator is not a financial adviser or financial practitioner. The creator does not provide any warranties for and is not liable for any loss caused, whether due to negligence or otherwise arising from the use of, or reliance on, the information provided directly or indirectly, by use of this website, Sheet, or other mentioned resources.</p>
                         </div>
                     </div>
@@ -309,14 +309,14 @@
 
         <!-- javascript -->
         <script src="js/bootstrap.bundle.min.js"></script>
-	<script>
-		fetch('/liveinfo/totals.json')
-		.then(response => response.json())
-		.then(html => {
-		    document.getElementById('auditemprice').innerHTML = html['sheet_rate']['AUD'];
-		    document.getElementById('audsubcartprice').innerHTML = html['sheet_rate']['AUD'];
-		    document.getElementById('audtotalprice').innerHTML = html['sheet_rate']['AUD'];
-		});
+        <script>
+            fetch('/liveinfo/totals.json')
+                .then(response => response.json())
+                .then(html => {
+                    document.getElementById('auditemprice').innerHTML = html['sheet_rate']['AUD'];
+                    document.getElementById('audsubcartprice').innerHTML = html['sheet_rate']['AUD'];
+                    document.getElementById('audtotalprice').innerHTML = html['sheet_rate']['AUD'];
+                });
         </script>
         <!-- SLIDER -->
         <script src="js/tiny-slider.js "></script>

@@ -313,9 +313,9 @@
 		fetch('/liveinfo/totals.json')
 		.then(response => response.json())
 		.then(html => {
-		    document.getElementById('auditemprice').textContent = html['sheet_rate']['AUD'];
-		    document.getElementById('audsubcartprice').textContent = html['sheet_rate']['AUD'];
-		    document.getElementById('audtotalprice').textContent = html['sheet_rate']['AUD'];
+		    document.getElementById('auditemprice').innerHTML = html['sheet_rate']['AUD'];
+		    document.getElementById('audsubcartprice').innerHTML = html['sheet_rate']['AUD'];
+		    document.getElementById('audtotalprice').innerHTML = html['sheet_rate']['AUD'];
 		});
         </script>
         <!-- SLIDER -->

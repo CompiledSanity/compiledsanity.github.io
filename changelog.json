@@ -3,6 +3,22 @@
 	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
 	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
 	"releases": [{
+			"version": "2.12.1",
+			"comment": null,
+			"release_date": "3rd December 2021",
+			"major_version": false,
+			"major_version_redditcurrent": null,
+			"major_version_redditrequest": null,
+			"additions": [],
+			"updates": [],
+			"fixes": [
+				"Bug in History tab causing 'Could not find month to write' error",
+				"End of month summary email referencing incorrect Mortgage and Loans value",
+				"Incorrectly reverise Loan/Value ratio value in Property tab"
+			],
+			"removed": []
+		},
+		{
 			"version": "2.12.0",
 			"comment": "The Capital Gains Update",
 			"release_date": "14th October 2021",

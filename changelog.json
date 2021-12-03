@@ -12,6 +12,7 @@
 			"additions": [],
 			"updates": [],
 			"fixes": [
+				"Graphs in Net Worth tab having gaps between months. These are not gaps in the data, just a weird quirk in the chart.",
 				"Bug in History tab causing 'Could not find month to write' error",
 				"End of month summary email referencing incorrect Mortgage and Loans value",
 				"Incorrectly reverise Loan/Value ratio value in Property tab"

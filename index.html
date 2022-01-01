@@ -100,7 +100,10 @@
                 <a class="logo" href="index.html">
                     <img src="/img/CS2021_SquareLogov2.png" height="24" class="logo-light-mode" alt="">
                     <img src="/img/CS2021_SquareLogov2.png" height="24" class="logo-dark-mode" alt="">
-                    <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext"><span class="logospantext text-success">CompiledSanity</span> Automated Finance</span>
+                    <span class="logo-light-mode">
+                        <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext l-dark text-dark"><span class="logospantext text-success">CompiledSanity</span> Automated Finance</span>
+                        <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext l-light text-light"><span class="logospantext">CompiledSanity</span> Automated Finance</span>
+                    </span>
                 </a>
                 <!-- End Logo container-->
                 <div class="menu-extras">
@@ -119,7 +122,7 @@
 
                 <div id="navigation">
                     <!-- Navigation Menu-->
-                    <ul class="navigation-menu nav-right">
+                    <ul class="navigation-menu nav-light nav-right">
                         <li style="margin: 0 0px;"><a href="index.html" class="sub-menu-item">Home</a></li>
                         <li style="margin: 0 0px;"><a href="#about" class="sub-menu-item">About</a></li>
                         <li style="margin: 0 0px;"><a href="#features" class="sub-menu-item">Features</a></li>
@@ -137,22 +140,25 @@
         <!-- Navbar End -->
 
         <!-- New Hero Start -->
-        <section class="bg-home d-flex align-items-center" style="background: url('images/saas/home-shape.png') center center; height: 95vh;" id="home">
-            <div class="container mt-md-5">
+        <section class="vh-100 bg-home d-flex align-items-center bg-animation-left task-management-home" id="home">
+            <div class="container position-relative" style="z-index: 1;">
                 <div class="row justify-content-center">
-                    <div class="col-lg-12 text-center mt-0 pt-0">
+                    <div class="col-lg-12 text-center">
                         <div class="title-heading">
-                            <h1 class="heading mb-3" style="font-family: 'Ubuntu', 'Quicksand', 'Nunito', sans-serif; font-weight: 900!important; color: #71c55d;">
+                            <h1 class="heading mb-3 text-light" style="font-family: 'Ubuntu', 'Quicksand', 'Nunito', sans-serif; font-weight: 900!important;">
                                 <!--<img src="images/CS2021_SquareLogov2.png" style="max-height: 1.2em; margin-bottom: 1rem!important;">-->CompiledSanity Personal Finance Templates
                             </h1>
-                            <p class="para-desc mx-auto text-muted">Personal Finance, Net Worth &amp; FIRE Tracking made automated &amp; easy <img src="/img/greencheck.png" style="line-height: inherit; max-height: 24px; margin-bottom: 0px;"></p>
+                            <p class="para-desc mx-auto text-light">Personal Finance, Net Worth & FIRE Tracking made automated & easy <img src="/img/greencheck.png" style="line-height: inherit; max-height: 24px; margin-bottom: 0px;"></p>
+                            <img data-mdb-animation-delay="300" data-mdb-toggle="animation" data-mdb-animation-start="onLoad" data-mdb-animation="fade-in" src="https://cspersonalfinance.io/img/NetWorthPureChromev4.png" alt="" style="top: 0px !important; max-height: 60vh;" class="img-fluid">
                         </div>
 
-                        <div class="home-dashboard">
-                            <!-- <img src="images/MacMockup5.png" alt="" class="img-fluid"> -->
-                            <img data-mdb-animation-delay="300" data-mdb-toggle="animation" data-mdb-animation-start="onLoad" data-mdb-animation="fade-in" src="img/NetWorthPureChromev4.png" alt="" style="top: 0px !important; max-height: 60vh;" class="img-fluid">
-                            <div class="pt-2 mover">
-                                <a href="#about" class="btn btn-pills btn-primary">Get Started <i class="uil uil-angle-right-b"></i></a>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 text-center">
+                                <div class="home-dashboard">
+                                    <div class="pt-2 mover">
+                                        <a href="#about" class="btn btn-pills btn-light">Get Started <i class="uil uil-angle-right-b"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

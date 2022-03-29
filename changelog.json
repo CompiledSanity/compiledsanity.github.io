@@ -15,10 +15,10 @@
 				"Improvements to Sheet performance"
 			],
 			"fixes": [
-				"Innaccurate Savings Rate values (in hundreds of thousands) in some particular cases. NOTE: If you were seeing this issue, please ensure your Property/Mortage values are entered with the correct +/- symbol. Data validation should warn you if you try and reenter these in the wrong way. You can also consult the template to double check you have entered them correctly.",
+				"Innaccurate Savings Rate values (in hundreds of thousands) in some particular cases. NOTE: If you were seeing this issue, please ensure your Property/Mortage values are entered with the correct +/- symbol. Data validation should warn you if you try and reenter these in the wrong way. You can also consult the template to double check you have entered them correctly. (thanks to J.C.)",
 				"Sheet initialisation process not launching correctly",
 				"Message boxes not always appearing",
-				"L/R Ratio being inversed in Property tab Graph"
+				"L/R Ratio being inversed in Property tab Graph (thanks to J.C.)"
 			],
 			"removed": []
 		},

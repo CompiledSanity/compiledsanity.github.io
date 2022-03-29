@@ -3,6 +3,26 @@
 	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
 	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
 	"releases": [{
+			"version": "2.12.2",
+			"comment": "Apologies everyone for the delay in this update. Due to some personal issues over the past couple of months, while I have been actively supporting the Sheet work was slower then expected on the next few versions. Development has again started and more updates will be out soon. Thanks for your patience and for your bug/feature submissions in the meantime.",
+			"release_date": "29th March 2022",
+			"major_version": false,
+			"major_version_redditcurrent": null,
+			"major_version_redditrequest": null,
+			"additions": [],
+			"updates": [
+				"Added Data Validation to the Property Tab to ensure values were entered with correct +/- symbol",
+				"Improvements to Sheet performance"
+			],
+			"fixes": [
+				"Innaccurate Savings Rate values (in hundreds of Thousands) in some particular cases. NOTE: If you were seeing this issue, please ensure your Property/Mortage values are entered with the correct +/- symbol. Please consult the template to ensure you have entered them correcetly. Data validation should also warn you if you try and reenter these in the wrong way.",
+				"Sheet initialisation process not launching correctly",
+				"Message boxes not always appearing",
+				"L/R Ratio being inversed in Property tab Graph"
+			],
+			"removed": []
+		},
+		{
 			"version": "2.12.1",
 			"comment": null,
 			"release_date": "3rd December 2021",

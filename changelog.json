@@ -4,7 +4,7 @@
 	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
 	"releases": [{
 			"version": "2.12.2",
-			"comment": "Apologies everyone for the delay in this update. Due to some change in personal circumstances over the past couple of months, while I have been actively supporting the Sheet work was slower then expected on the next few versions. Development has again started and more updates will be out soon. Thanks for your patience and for your bug/feature submissions in the meantime.",
+			"comment": "Apologies for the delay in this update. Due to some change in personal circumstances over the past couple of months, while I have been actively supporting the Sheet work was slower then expected on the next few versions. Development has again started and more updates will be out soon. Thanks for your patience and for your bug/feature submissions in the meantime.",
 			"release_date": "29th March 2022",
 			"major_version": false,
 			"major_version_redditcurrent": null,

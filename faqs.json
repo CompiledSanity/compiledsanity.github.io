@@ -19,8 +19,8 @@
 				"Answer": [
 					"A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg.<br><br>",
 					"You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your net worth & associated performance.<br><br>",
-                    "Furthermore, there are 2 versions of the sheet - Full and Slimmed.<br><br>",
-                    "The Full version contains all the features on offer in the Sheet, but as such requires some additional permissions to complete these tasks. The Slimmed version has been designed to be more private and self-contained, but as a trade off has had some features removed to not require additional permissions. You will receive a link to both versions to download in your email invite."
+					"Furthermore, there are 2 versions of the sheet - Full and Slimmed.<br><br>",
+					"The Full version contains all the features on offer in the Sheet, but as such requires some additional permissions to complete these tasks. The Slimmed version has been designed to be more private and self-contained, but as a trade off has had some features removed to not require additional permissions. You will receive a link to both versions to download in your email invite."
 				],
 				"Summary": true
 			},
@@ -32,17 +32,17 @@
 					"",
 					"<b>Full Version Permissions:</b>",
 					"<ol>",
-					"    <li><i>See, edit, create, and delete all your Google Sheets spreadsheets</i> - To allow the Migration Tool to access and copy your data across from an older Sheet version when you upgrade.</li>",
-					"    <li><i>See, edit, share, and permanently delete all the calendars you can access using Google Calendar</i> - To allow the setting of reminders to record your month and also for algorythmic rebalancing prompts.</li>",
-					"    <li><i>Connect to an external service</i> - To allow the fetching of live Stock/Crypto/ETF prices from sources such as MorningStar, Yahoo, FT.com and CoinMarketCap.</li>",
+					"    <li><i>See, edit, create, and delete all your Google Sheets spreadsheets</i> - To allow the Migration tool to automatically copy your data across from an older Sheet version when you upgrade to a newer version.</li>",
+					"    <li><i>See, edit, share, and permanently delete all the calendars you can access using Google Calendar</i> - To allow the setting of reminders to record your month and also for algorithmic rebalancing prompts.</li>",
+					"    <li><i>Connect to an external service</i> - To allow the fetching of live Stock/Crypto/ETF prices from sources such as MorningStar, Yahoo, FT.com and CoinMarketCap where GoogleFinance does not provide a live price.</li>",
 					"    <li><i>Send email as you</i> - <a href='https://cspersonalfinance.io/img/SummaryEmail.jpg'>To send you a record of your end of month progress</a></li>",
 					"    <li><i>Display and run third-party web content in prompts and sidebars inside Google applications</i> - To display the end of month summary prompt in your Google Sheet <a href='https://cspersonalfinance.io/img/SummaryEmail.jpg'>(same content as the Email)</a></li>",
 					"</ol><br>",
 					"<b>Slimmed Version Permissions:</b>",
 					"<ol>",
-					"    <li><i>View and manage spreadsheets that this application has been installed in</i> - </li>",
-					"    <li><i>Connect to an external service</i> - </li>",
-					"    <li><i>Display and run third-party web content in prompts and sidebars inside Google applications</i> - </li>",
+					"    <li><i>View and manage spreadsheets that this application has been installed in</i> - To allow the script to process your monthly numbers and then write them back to the Sheet as history in the History Tab</li>",
+					"    <li><i>Connect to an external service</i> - To allow the fetching of live Stock/Crypto/ETF prices from sources such as MorningStar, Yahoo, FT.com and CoinMarketCap where GoogleFinance does not provide a live price.</li>",
+					"    <li><i>Display and run third-party web content in prompts and sidebars inside Google applications</i> - To display the end of month summary prompt in your Google Sheet <a href='https://cspersonalfinance.io/img/SummaryEmail.jpg'>(same content as the Email)</a></li>",
 					"</ol>"
 				],
 				"Summary": true

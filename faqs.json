@@ -2,9 +2,9 @@
 	"FAQs": {
 		"Using the Sheet": [{
 				"Slug": "EnteringHistoricalData",
-				"Question": "How do I enter my own Historical data into a new Sheet?",
+				"Question": "How do I enter my own historical data into a new Sheet?",
 				"Answer": [
-					"To enter your own historical Data into the Sheet, follow the instructions below:<br>",
+					"To enter your own historical data into the Sheet, follow the instructions below:<br>",
 					"<ol>",
 					"    <li>Head to the History tab</li>",
 					"    <li>Starting in Cell A3 and working down, enter in the dates (ie. 1/6/2020, 1/7/2020 etc.) for the previous data you want in the sheet. Don't worry about the months already in the sheet, they will automatically move down.</li>",
@@ -15,10 +15,12 @@
 			},
 			{
 				"Slug": "DataPrivacy",
-				"Question": "How do I know my Data is kept private?",
+				"Question": "How do I know my data is kept private?",
 				"Answer": [
 					"A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg.<br><br>",
-					"You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your Net Worth & associated performance."
+					"You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your net worth & associated performance.",
+					"Furthermore, there are 2 versions of the sheet - Full and Slimmed.",
+					"The Full version contains all the features on offer in the Sheet, but as such requires some additional permissions to complete these tasks. The Slimmed version has been designed to be more private and self-contained, but as a trade off has had some features removed to not require additional permissions. You will receive a link to both versions to download in your email invite."
 				],
 				"Summary": true
 			},
@@ -26,21 +28,21 @@
 				"Slug": "FullSlimmedVersions",
 				"Question": "What is the difference between the Full and Slimmed Versions?",
 				"Answer": [
-					"There are 2 sub-versions of the Complete v2 Sheet that you can download, and these differ to offer varying levels of privacy and feature sets. The Full version contains all the features on offer in the Sheet, but as such requires some additional permissions to complete these tasks. The Slimmed version has been designed to be more private and self-contained, but as a trade off has had some features removed to not require additional permissions.",
+					"There are 2 sub-versions of the Complete v2 Sheet that you can download, and these differ to offer varying levels of privacy and feature sets. The Full version contains all the features on offer in the Sheet, but as such requires some additional permissions to complete these tasks. The Slimmed version has been designed to be more private and self-contained, but as a trade off has had some features removed to not require additional permissions. You will receive a link to both versions to download in your email invite.",
 					"",
 					"<b>Full Version Permissions:</b>",
 					"<ol>",
-					"    <li>See, edit, create, and delete all your Google Sheets spreadsheets</li>",
-					"    <li>See, edit, share, and permanently delete all the calendars you can access using Google Calendar</li>",
-					"    <li>Connect to an external service</li>",
-					"    <li>Send email as you</li>",
-					"    <li>Display and run third-party web content in prompts and sidebars inside Google applications</li>",
+					"    <li><i>See, edit, create, and delete all your Google Sheets spreadsheets</i> - To allow the Migration Tool to access and copy your data across from an older Sheet version when you upgrade.</li>",
+					"    <li><i>See, edit, share, and permanently delete all the calendars you can access using Google Calendar</i> - To allow the setting of reminders to record your month and also for algorythmic rebalancing prompts.</li>",
+					"    <li><i>Connect to an external service</i> - To allow the fetching of live Stock/Crypto/ETF prices from sources such as MorningStar, Yahoo, FT.com and CoinMarketCap.</li>",
+					"    <li><i>Send email as you</i> - <a href='https://cspersonalfinance.io/img/SummaryEmail.jpg'>To send you a record of your end of month progress</a></li>",
+					"    <li><i>Display and run third-party web content in prompts and sidebars inside Google applications</i> - To display the end of month summary prompt in your Google Sheet <a href='https://cspersonalfinance.io/img/SummaryEmail.jpg'>(same content as the Email)</a></li>",
 					"</ol><br>",
 					"<b>Slimmed Version Permissions:</b>",
 					"<ol>",
-					"    <li>View and manage spreadsheets that this application has been installed in</li>",
-					"    <li>Connect to an external service</li>",
-					"    <li>Display and run third-party web content in prompts and sidebars inside Google applications</li>",
+					"    <li><i>View and manage spreadsheets that this application has been installed in</i> - </li>",
+					"    <li><i>Connect to an external service</i> - </li>",
+					"    <li><i>Display and run third-party web content in prompts and sidebars inside Google applications</i> - </li>",
 					"</ol>"
 				],
 				"Summary": true
@@ -49,7 +51,7 @@
 				"Slug": "ChoosingRegion",
 				"Question": "What region of the Sheet should I pick?",
 				"Answer": [
-					"It is recommended that you choose the Sheet region that matches your region due to Retirement/Tax differences, or alternatively if you are earning internationally the currency you are paid in."
+					"It is recommended that you choose the Sheet region that matches your region due to retirement/tax differences, or alternatively if you are earning internationally the currency you are paid in."
 				],
 				"Summary": true
 			},
@@ -69,9 +71,9 @@
 			},
 			{
 				"Slug": "AccidentlyEndedMonth",
-				"Question": "I accidently clicked the button to end the month too early and hadn't updated all my Assets, what do I do?",
+				"Question": "I accidently clicked the button to end the month too early and hadn't updated all my assets, what do I do?",
 				"Answer": [
-					"If you accidently ended the Month too early it's extremely easy to undo. Simply follow these steps:",
+					"If you accidently ended the month too early it's extremely easy to undo. Simply follow these steps:",
 					"<ol>",
 					"    <li>Click File -> Version History -> See Version History</li>",
 					"    <li>In the right Sidebar, click on the dated version of the Sheet <i>before</i> you clicked to end the month</li>",
@@ -193,7 +195,7 @@
 			},
 			{
 				"Slug": "sheet-into-app",
-				"Question": "Can I make the Sheet into more of an App?",
+				"Question": "Can I make the Sheet into more of an app?",
 				"Answer": [
 					"For those running a Chromium browser (ie. Google Chrome, Microsoft Edge, Brave etc) you have the ability to package and view your spreadsheet as a pseudo app.</br></br>",
 					"To do so follow the instructions below:</br>",

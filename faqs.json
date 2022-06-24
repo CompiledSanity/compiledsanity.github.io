@@ -18,9 +18,9 @@
 				"Question": "How do I know my data is kept private?",
 				"Answer": [
 					"A very valid question! The Sheet has been designed to be completely self-contained. When you download the Sheet and make a copy, it's now it's own independent copy hosted by <i>you</i>. The external services permission is triggered because the Sheet uses live Crypto, Stock and Managed Fund prices which requires the sheet to fetch external prices from Google Finance, Yahoo Finance & Bloomberg.<br><br>",
-					"You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your net worth & associated performance.",
-					"Furthermore, there are 2 versions of the sheet - Full and Slimmed.",
-					"The Full version contains all the features on offer in the Sheet, but as such requires some additional permissions to complete these tasks. The Slimmed version has been designed to be more private and self-contained, but as a trade off has had some features removed to not require additional permissions. You will receive a link to both versions to download in your email invite."
+					"You can review all the formulas to see how that works, but it's strictly a one way fetch process and if you go Tools -> Script Editor in the Document you can review all the code yourself to make sure it checks out. Furthermore, no personally identifying information or sensitive information such as passwords/usernames are needed nor requested. The only inputs into this Sheet are holdings and amounts, the minimum information needed to determine your net worth & associated performance.<br><br>",
+                    "Furthermore, there are 2 versions of the sheet - Full and Slimmed.<br><br>",
+                    "The Full version contains all the features on offer in the Sheet, but as such requires some additional permissions to complete these tasks. The Slimmed version has been designed to be more private and self-contained, but as a trade off has had some features removed to not require additional permissions. You will receive a link to both versions to download in your email invite."
 				],
 				"Summary": true
 			},

@@ -173,17 +173,23 @@
 				"Slug": "sheet-permissions",
 				"Question": "What are all the Sheet permissions for?",
 				"Answer": [
-					"Here is a breakdown of the permissions needed by the v2 Sheet and their uses:",
+					"Here is a breakdown of the permissions needed by the v2 Sheet and their uses:<br>",
+					"<b>Full Version Permissions:</b>",
 					"<ol>",
-					"<li><b>See, edit, create, and delete all your Google Sheets spreadsheets</b> - This is used for the Sheet migration feature. When a new Sheet version is released, the migration feature will automatically move data from your old to your new Sheet.</li>",
-					"<li><b>Connect to an external service</b> - This is used to fetch external live prices from MorningStar, Bloomberg, CoinMarketCap and FT.com when not provided by GoogleFinance.</li>",
-					"<li><b>Send email as you</b> - This is to email you your end of month progress update for record purposes.</li>",
-					"<li><b>Display and run third-party web content in prompts and sidebars inside Google applications</b> - This is to display the the end of month progress update in the Google Sheet as a popup when recording the month.</li>",
-					"<li><b>See, edit, share, and permanently delete all the calendars you can access using Google Calendar</b> - This is used to create new investment reminders (if enabled in the SheetOptions tab)</li>",
-					"</ol>",
-					"Please see the FAQ entry on Data privacy if you have any further questions in this area. All code is fully accessible and auditable at any time by going Tools -> Script Editor in your Sheet."
+					"    <li><i>See, edit, create, and delete all your Google Sheets spreadsheets</i> - To allow the Migration tool to automatically copy your data across from an older Sheet version when you upgrade to a newer version.</li>",
+					"    <li><i>See, edit, share, and permanently delete all the calendars you can access using Google Calendar</i> - To allow the setting of reminders to record your month and also for algorithmic rebalancing prompts.</li>",
+					"    <li><i>Connect to an external service</i> - To allow the fetching of live Stock/Crypto/ETF prices from sources such as MorningStar, Yahoo, FT.com and CoinMarketCap where GoogleFinance does not provide a live price.</li>",
+					"    <li><i>Send email as you</i> - <a href='https://cspersonalfinance.io/img/SummaryEmail.jpg'>To send you a record of your end of month progress</a></li>",
+					"    <li><i>Display and run third-party web content in prompts and sidebars inside Google applications</i> - To display the end of month summary prompt in your Google Sheet <a href='https://cspersonalfinance.io/img/SummaryEmail.jpg'>(same content as the Email)</a></li>",
+					"</ol><br>",
+					"<b>Slimmed Version Permissions:</b>",
+					"<ol>",
+					"    <li><i>View and manage spreadsheets that this application has been installed in</i> - To allow the script to process your monthly numbers and then write them back to the Sheet as history in the History Tab</li>",
+					"    <li><i>Connect to an external service</i> - To allow the fetching of live Stock/Crypto/ETF prices from sources such as MorningStar, Yahoo, FT.com and CoinMarketCap where GoogleFinance does not provide a live price.</li>",
+					"    <li><i>Display and run third-party web content in prompts and sidebars inside Google applications</i> - To display the end of month summary prompt in your Google Sheet <a href='https://cspersonalfinance.io/img/SummaryEmail.jpg'>(same content as the Email)</a></li>",
+					"</ol>"
 				],
-				"Summary": false
+				"Summary": true
 			},
 			{
 				"Slug": "sheet-changelog",

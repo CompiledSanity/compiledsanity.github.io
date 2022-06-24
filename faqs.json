@@ -23,6 +23,29 @@
 				"Summary": true
 			},
 			{
+				"Slug": "FullSlimmedVersions",
+				"Question": "What is the difference between the Full and Slimmed Versions?",
+				"Answer": [
+					"There are 2 sub-versions of the Complete v2 Sheet that you can download, and these differ to offer varying levels of privacy and feature sets. The Full version contains all the features on offer in the Sheet, but as such requires some additional permissions to complete these tasks. The Slimmed version has been designed to be more private and self-contained, but as a trade off has had some features removed to not require additional permissions.<br><br>",
+					"",
+					"<b>Full Version Permissions:<b>",
+					"<ol>",
+					"    <li>Click File -> Version History -> See Version History</li>",
+					"    <li>In the right Sidebar, click on the dated version of the Sheet <i>before</i> you clicked to end the month</li>",
+					"    <li>At the top of the screen, click the green 'Restore this version' button</li>",
+					"    <li>Finish off entering your data and run the Sheet again</li>",
+					"</ol><br>",
+					"<b>Slimmed Version Permissions:<b>",
+					"<ol>",
+					"    <li>Click File -> Version History -> See Version History</li>",
+					"    <li>In the right Sidebar, click on the dated version of the Sheet <i>before</i> you clicked to end the month</li>",
+					"    <li>At the top of the screen, click the green 'Restore this version' button</li>",
+					"    <li>Finish off entering your data and run the Sheet again</li>",
+					"</ol><br>"
+				],
+				"Summary": true
+			},
+			{
 				"Slug": "ChoosingRegion",
 				"Question": "What region of the Sheet should I pick?",
 				"Answer": [

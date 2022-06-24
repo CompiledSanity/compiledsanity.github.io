@@ -187,7 +187,8 @@
 					"<ol>",
 					"    <li><i>View and manage spreadsheets that this application has been installed in</i> - To allow the script to process your monthly numbers and then write them back to the Sheet as history in the History Tab</li>",
 					"    <li><i>Connect to an external service</i> - To allow the fetching of live Stock/Crypto/ETF prices from sources such as MorningStar, Yahoo, FT.com and CoinMarketCap where GoogleFinance does not provide a live price.</li>",
-					"    <li><i>Display and run third-party web content in prompts and sidebars inside Google applications</i> - To display the end of month summary prompt in your Google Sheet <a href='https://cspersonalfinance.io/img/SummaryEmail.jpg'>(same content as the Email)</a></li>",
+					"    <li><i>Display and run third-party web content in prompts and sidebars inside Google applications</i> - <a href='https://cspersonalfinance.io/img/SavingsRate_Cropped.jpg'>To display the end of month summary prompt in your Google Sheet</a></li>",
+					"    <li>Missing features - No migration tool (if the destination sheet), monthly email updates or calender invites/prompts.</li>",
 					"</ol>"
 				],
 				"Summary": true

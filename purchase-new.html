@@ -173,7 +173,7 @@
                                         <div class="mb-3">
                                             <label class="form-label">Your Email<span class="text-danger">*</span></label>
                                             <input type="hidden" name="on1" value="Email Address to Invite" required>
-                                            <input required name="os1" id="email" type="email" class="form-control" placeholder="Your Sheet and future updates will be sent to this address">
+                                            <input required name="os1" id="sheetEmailInput" type="email" class="form-control" placeholder="Your Sheet and future updates will be sent to this address">
                                         </div>
                                     </div>
                                     <!--end col-->
@@ -181,7 +181,7 @@
                                         <div class="mb-3">
                                             <label class="form-label">Region<span class="text-danger">*</span></label>
                                             <input type="hidden" name="on0" value="Region" required>
-                                            <select class="form-select form-control" aria-label="Default select example" name="os0">
+                                            <select id="sheetRegionSelect" class="form-select form-control" aria-label="Default select example" name="os0">
                                                 <option value="Australia">Australia </option>
                                                 <option value="UK">UK </option>
                                                 <option value="US">US </option>
@@ -194,8 +194,8 @@
                                         <div class="mb-3">
                                             <label class="form-label">How did you hear about the Sheet? <span class="text-danger">*</span></label>
                                             <input required type="hidden" name="on2" value="Source">
-                                            <select class="form-select form-control" aria-label="Default select example" name="os2">
-                                                <option disabled selected value="">Please specify</option>
+                                            <select id="sheetReferralSourceSelect" class="form-select form-control" aria-label="Default select example" name="os2">
+                                                <option disabled selected value="N/A">Please specify</option>
                                                 <option value="r/AusFinance">r/AusFinance</option>
                                                 <option value="r/FIAustralia">r/FIAustralia</option>
                                                 <option value="r/UKPersonalFinance">r/UKPersonalFinance</option>
@@ -276,8 +276,30 @@
                                                         },
 
                                                         createOrder: function (data, actions) {
+                                                            user_email = document.getElementById('sheetEmailInput').value;
+                                                            sheet_region = document.getElementById('sheetRegionSelect').value;
+                                                            referral_source = document.getElementById('sheetReferralSourceSelect').value;
+
                                                             return actions.order.create({
-                                                                purchase_units: [{ "description": "CompiledSanity Personal Savings Template", "amount": { "currency_code": "AUD", "value": 8 } }]
+                                                                purchase_units: [{
+                                                                    "description": "CompiledSanity Personal Savings Template",
+                                                                    "reference_id": user_email, // Invite Email
+                                                                    "custom_id": referral_source, // Referral Source
+                                                                    "items": [{
+                                                                        "name": "CompiledSanity Personal Savings Template",
+                                                                        "quantity": "1",
+                                                                        "unit_amount": "8",
+                                                                        "category": "DIGITAL_GOODS",
+                                                                        "sku": sheet_region
+                                                                    }],
+                                                                    "amount": {
+                                                                        "currency_code": "AUD",
+                                                                        "value": 8,
+                                                                        "breakdown": {
+                                                                            "item_total": 8
+                                                                        }
+                                                                    }
+                                                                }]
                                                             });
                                                         },
 
@@ -304,7 +326,6 @@
                                                 }
                                                 initPayPalButton();
                                             </script>
-                                            <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
                                         </div>
                                     </div>
                                 </div>

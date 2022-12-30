@@ -298,10 +298,7 @@
                                                             sheet_region = document.getElementById('sheetRegionSelect').value;
                                                             referral_source = document.getElementById('sheetReferralSourceSelect').value;
 
-                                                            if (user_email.length == 0) {
-                                                                alert("No email address has been entered");
-                                                                return false;
-                                                            }
+                                                            document.getElementById('sheetEmailInput').reportValidity();
 
                                                             console.log(user_email);
                                                             console.log(sheet_region);

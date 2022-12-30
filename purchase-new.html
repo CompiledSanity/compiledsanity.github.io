@@ -280,6 +280,11 @@
                                                             sheet_region = document.getElementById('sheetRegionSelect').value;
                                                             referral_source = document.getElementById('sheetReferralSourceSelect').value;
 
+                                                            if (user_email.length == 0) {
+                                                                alert("No email address has been entered");
+                                                                return false;
+                                                            }
+
                                                             console.log(user_email);
                                                             console.log(sheet_region);
                                                             console.log(referral_source);
@@ -325,7 +330,7 @@
                                                                 //element.innerHTML = '<h3>Thank you for your payment!</h3>';
 
                                                                 actions.redirect('/success');
-                                                                
+
 
                                                             });
                                                         },

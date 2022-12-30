@@ -294,7 +294,7 @@
                                                                         "quantity": "1",
                                                                         "unit_amount": {
                                                                             "currency_code": "AUD",
-                                                                            "value": 8,
+                                                                            "value": 0.1,
                                                                         },
                                                                         "category": "DIGITAL_GOODS",
                                                                         "sku": sheet_region
@@ -305,7 +305,7 @@
                                                                         "breakdown": {
                                                                             "item_total": {
                                                                                 "currency_code": "AUD",
-                                                                                "value": 8,
+                                                                                "value": 0.1,
                                                                             }
                                                                         }
                                                                     }
@@ -321,10 +321,11 @@
 
                                                                 // Show a success message within this page, e.g.
                                                                 const element = document.getElementById('paypal-button-container');
-                                                                element.innerHTML = '';
-                                                                element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                                                //element.innerHTML = '';
+                                                                //element.innerHTML = '<h3>Thank you for your payment!</h3>';
 
-                                                                // Or go to another URL:  actions.redirect('thank_you.html');
+                                                                actions.redirect('/success');
+                                                                
 
                                                             });
                                                         },

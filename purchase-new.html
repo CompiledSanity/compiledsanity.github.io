@@ -163,19 +163,17 @@
         <!-- Start -->
         <section class="section" style="padding-bottom: 150px !important; min-height: 65vh;">
             <div class="container">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="mt-4">
+                <div class="mt-4">
                     <div class="row">
                         <div class="col-lg-7 col-md-6">
                             <div class="rounded shadow-lg p-4">
                                 <h5 class="mb-2">Express Checkout:</h5>
-                                <input type="hidden" name="cmd" value="_s-xclick">
-                                <input type="hidden" name="hosted_button_id" value="K5DFNU8Z799ML">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="mb-3">
                                             <label class="form-label">Your Email<span class="text-danger">*</span></label>
                                             <input type="hidden" name="on1" value="Email Address to Invite" required>
-                                            <input required name="os1" id="email" type="email" class="form-control" placeholder="Your invite will be sent to this address">
+                                            <input required name="os1" id="email" type="email" class="form-control" placeholder="Your Sheet and future updates will be sent to this address">
                                         </div>
                                     </div>
                                     <!--end col-->
@@ -202,12 +200,14 @@
                                                 <option value="r/FIAustralia">r/FIAustralia</option>
                                                 <option value="r/UKPersonalFinance">r/UKPersonalFinance</option>
                                                 <option value="Reddit">Reddit</option>
+                                                <option value="Twitter">Twitter</option>
                                                 <option value="Reddit Ad">Reddit Ad</option>
                                                 <option value="Word of Mouth">Word of Mouth</option>
                                                 <option value="Whirlpool">Whirlpool</option>
                                                 <option value="Facebook">Facebook</option>
                                                 <option value="Google">Google</option>
                                                 <option value="OzBargain">OzBargain</option>
+                                                <option value="Etsy">Etsy</option>
                                                 <option value="Other">Other</option>
                                             </select>
                                         </div>
@@ -256,9 +256,54 @@
                                         </li>
                                     </ul>
 
-                                    <div class="mb-4 pt-4">
+                                    <div class="mb-4 pt-5">
                                         <div class="d-grid">
-                                            <input class="mx-auto" type="image" src="/img/PayPal-Buy.jpg" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                                            <div id="smart-button-container">
+                                                <div style="text-align: center;">
+                                                    <div id="paypal-button-container"></div>
+                                                </div>
+                                            </div>
+                                            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=AUD" data-sdk-integration-source="button-factory"></script>
+                                            <script>
+                                                function initPayPalButton() {
+                                                    paypal.Buttons({
+                                                        style: {
+                                                            shape: 'rect',
+                                                            color: 'gold',
+                                                            layout: 'vertical',
+                                                            label: 'checkout',
+
+                                                        },
+
+                                                        createOrder: function (data, actions) {
+                                                            return actions.order.create({
+                                                                purchase_units: [{ "description": "CompiledSanity Personal Savings Template", "amount": { "currency_code": "AUD", "value": 8 } }]
+                                                            });
+                                                        },
+
+                                                        onApprove: function (data, actions) {
+                                                            return actions.order.capture().then(function (orderData) {
+
+                                                                // Full available details
+                                                                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+                                                                // Show a success message within this page, e.g.
+                                                                const element = document.getElementById('paypal-button-container');
+                                                                element.innerHTML = '';
+                                                                element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+                                                                // Or go to another URL:  actions.redirect('thank_you.html');
+
+                                                            });
+                                                        },
+
+                                                        onError: function (err) {
+                                                            console.log(err);
+                                                        }
+                                                    }).render('#paypal-button-container');
+                                                }
+                                                initPayPalButton();
+                                            </script>
                                             <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
                                         </div>
                                     </div>
@@ -267,8 +312,8 @@
                         </div>
                     </div>
                     <!--end row-->
-                </form>
-                <!--end form-->
+                </div>
+                <!--end div-->
             </div>
             <!--end container-->
         </section>

@@ -296,6 +296,7 @@
                                                             user_email = document.getElementById('sheetEmailInput').value;
                                                             sheet_region = document.getElementById('sheetRegionSelect').value;
                                                             referral_source = document.getElementById('sheetReferralSourceSelect').value;
+                                                            sp = parseFloat(document.getElementById('audtotalprice').textContent);
 
                                                             document.getElementById('sheetEmailInput').reportValidity();
 
@@ -309,18 +310,18 @@
                                                                         "quantity": "1",
                                                                         "unit_amount": {
                                                                             "currency_code": "AUD",
-                                                                            "value": 0.1,
+                                                                            "value": sp,
                                                                         },
                                                                         "category": "DIGITAL_GOODS",
                                                                         "sku": sheet_region
                                                                     }],
                                                                     "amount": {
                                                                         "currency_code": "AUD",
-                                                                        "value": 0.1,
+                                                                        "value": sp,
                                                                         "breakdown": {
                                                                             "item_total": {
                                                                                 "currency_code": "AUD",
-                                                                                "value": 0.1,
+                                                                                "value": sp,
                                                                             }
                                                                         }
                                                                     }

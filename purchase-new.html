@@ -284,10 +284,11 @@
                                                                 .addEventListener('change', function (event) {
 
                                                                     // Enable or disable the button when it has a value
-                                                                    if (event.target.value.length > 0) {
+                                                                    if (event.target.checkValidity()) {
                                                                         actions.enable();
                                                                     } else {
                                                                         actions.disable();
+                                                                        event.target.reportValidity();
                                                                     }
                                                                 });
                                                         },

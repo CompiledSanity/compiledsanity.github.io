@@ -271,8 +271,7 @@
                                                             shape: 'rect',
                                                             color: 'gold',
                                                             layout: 'vertical',
-                                                            label: 'checkout',
-
+                                                            label: 'paypal',
                                                         },
 
                                                         onInit: function (data, actions) {
@@ -299,10 +298,6 @@
                                                             referral_source = document.getElementById('sheetReferralSourceSelect').value;
 
                                                             document.getElementById('sheetEmailInput').reportValidity();
-
-                                                            console.log(user_email);
-                                                            console.log(sheet_region);
-                                                            console.log(referral_source);
 
                                                             return actions.order.create({
                                                                 purchase_units: [{

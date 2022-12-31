@@ -54,10 +54,10 @@
 
             gtag('config', 'AW-378607729');
         </script>
-        
+
         <!-- PayPal BEGIN -->
         <script>
-          ;(function(a,t,o,m,s){a[m]=a[m]||[];a[m].push({t:new Date().getTime(),event:'snippetRun'});var f=t.getElementsByTagName(o)[0],e=t.createElement(o),d=m!=='paypalDDL'?'&m='+m:'';e.async=!0;e.src='https://www.paypal.com/tagmanager/pptm.js?id='+s+d;f.parentNode.insertBefore(e,f);})(window,document,'script','paypalDDL','1bcf1d50-b824-40bb-8240-1b502fcb1351');
+            ; (function (a, t, o, m, s) { a[m] = a[m] || []; a[m].push({ t: new Date().getTime(), event: 'snippetRun' }); var f = t.getElementsByTagName(o)[0], e = t.createElement(o), d = m !== 'paypalDDL' ? '&m=' + m : ''; e.async = !0; e.src = 'https://www.paypal.com/tagmanager/pptm.js?id=' + s + d; f.parentNode.insertBefore(e, f); })(window, document, 'script', 'paypalDDL', '1bcf1d50-b824-40bb-8240-1b502fcb1351');
         </script>
         <!-- PayPal END -->
 
@@ -178,7 +178,7 @@
                                     <div class="col-12">
                                         <div class="mb-3">
                                             <label class="form-label">Your Email<span class="text-danger">*</span></label>
-                                            <div id="emailWarning" style="display: none;" class="bg-soft-info fw-medium alert alert-success fade show d-none" role="alert"><i class="uil uil-info-circle fs-5 align-middle me-1"></i>  Please enter a valid email address</div>
+                                            <div id="emailWarning" style="display: none;" class="bg-soft-info fw-medium alert alert-success fade show d-none" role="alert"><i class="uil uil-info-circle fs-5 align-middle me-1"></i> Please enter a valid email address</div>
                                             <input type="hidden" name="on1" value="Email Address to Invite" required>
                                             <input required name="os1" id="sheetEmailInput" type="email" class="form-control" placeholder="Your Sheet and future updates will be sent to this address">
                                         </div>
@@ -283,14 +283,15 @@
                                                         onClick: function (data, actions) {
                                                             // Enable or disable the button when it has a value
                                                             emailWarning = document.getElementById('emailWarning');
+                                                            sheetEmailInput = document.getElementById('sheetEmailInput');
 
-                                                            if (emailWarning.checkValidity() && emailWarning.value != "" && emailWarning.value.includes("@") && emailWarning.value.includes(".")) {
+                                                            if (sheetEmailInput.checkValidity() && sheetEmailInput.value != "" && sheetEmailInput.value.includes("@") && sheetEmailInput.value.includes(".")) {
                                                                 actions.enable();
                                                                 emailWarning.style.display = "none";
                                                             } else {
                                                                 actions.disable();
                                                                 emailWarning.style.display = "block";
-                                                                emailWarning.reportValidity();
+                                                                sheetEmailInput.reportValidity();
                                                             }
                                                         },
 

@@ -54,10 +54,10 @@
 
             gtag('config', 'AW-378607729');
         </script>
-        
+
         <!-- PayPal BEGIN -->
         <script>
-          ;(function(a,t,o,m,s){a[m]=a[m]||[];a[m].push({t:new Date().getTime(),event:'snippetRun'});var f=t.getElementsByTagName(o)[0],e=t.createElement(o),d=m!=='paypalDDL'?'&m='+m:'';e.async=!0;e.src='https://www.paypal.com/tagmanager/pptm.js?id='+s+d;f.parentNode.insertBefore(e,f);})(window,document,'script','paypalDDL','1bcf1d50-b824-40bb-8240-1b502fcb1351');
+            ; (function (a, t, o, m, s) { a[m] = a[m] || []; a[m].push({ t: new Date().getTime(), event: 'snippetRun' }); var f = t.getElementsByTagName(o)[0], e = t.createElement(o), d = m !== 'paypalDDL' ? '&m=' + m : ''; e.async = !0; e.src = 'https://www.paypal.com/tagmanager/pptm.js?id=' + s + d; f.parentNode.insertBefore(e, f); })(window, document, 'script', 'paypalDDL', '1bcf1d50-b824-40bb-8240-1b502fcb1351');
         </script>
         <!-- PayPal END -->
 
@@ -178,7 +178,7 @@
                                     <div class="col-12">
                                         <div class="mb-3">
                                             <label class="form-label">Your Email<span class="text-danger">*</span></label>
-                                            <div id="emailWarning" style="display: none;" class="bg-soft-info fw-medium alert alert-success fade show d-none" role="alert"><i class="uil uil-info-circle fs-5 align-middle me-1"></i>  Please enter a valid email address</div>
+                                            <div id="emailWarning" style="display: none;" class="bg-soft-info fw-medium alert alert-success fade show d-none" role="alert"><i class="uil uil-info-circle fs-5 align-middle me-1"></i> Please enter a valid email address</div>
                                             <input type="hidden" name="on1" value="Email Address to Invite" required>
                                             <input required name="os1" id="sheetEmailInput" type="email" class="form-control" placeholder="Your Sheet and future updates will be sent to this address">
                                         </div>
@@ -280,81 +280,97 @@
                                                             label: 'paypal',
                                                         },
 
-                                                        onInit: function (data, actions) {
-                                                            // Disable the buttons
-                                                            actions.disable();
 
-                                                            // Listen for changes..
-                                                            document.querySelector('#sheetEmailInput')
-                                                                .addEventListener('change', function (event) {
+                                                        onClick: function (data, actions) {
+                                                            // Enable or disable the button when it has a value
+                                                            emailWarning = document.getElementById('emailWarning');
 
-                                                                    // Enable or disable the button when it has a value
-                                                                    emailWarning = document.getElementById('emailWarning');
+                                                            if (emailWarning.checkValidity() && emailWarning.value != "" && emailWarning.value.includes("@") && emailWarning.value.includes(".")) {
+                                                                actions.enable();
+                                                                emailWarning.style.display = "none";
+                                                            } else {
+                                                                actions.disable();
+                                                                emailWarning.style.display = "block";
+                                                                emailWarning.reportValidity();
+                                                            }
+                                                        });
+                                                },
 
-                                                                    if (event.target.checkValidity() && event.target.value != "" && event.target.value.includes("@") && event.target.value.includes(".")) {
-                                                                        actions.enable();
-                                                                        emailWarning.style.display = "none";
-                                                                    } else {
-                                                                        actions.disable();
-                                                                        emailWarning.style.display = "block";
-                                                                        event.target.reportValidity();
-                                                                    }
-                                                                });
-                                                        },
+                                                onInit: function (data, actions) {
+                                                    // Disable the buttons
+                                                    actions.disable();
 
-                                                        createOrder: function (data, actions) {
-                                                            user_email = document.getElementById('sheetEmailInput').value;
-                                                            sheet_region = document.getElementById('sheetRegionSelect').value;
-                                                            referral_source = document.getElementById('sheetReferralSourceSelect').value;
-                                                            sp = parseFloat(document.getElementById('audtotalprice').textContent);
+                                                    // Listen for changes..
+                                                    document.querySelector('#sheetEmailInput')
+                                                        .addEventListener('change', function (event) {
 
-                                                            return actions.order.create({
-                                                                purchase_units: [{
-                                                                    "description": "CompiledSanity Personal Savings Template",
-                                                                    "reference_id": user_email, // Invite Email
-                                                                    "custom_id": referral_source, // Referral Source
-                                                                    "items": [{
-                                                                        "name": "CompiledSanity Personal Savings Template",
-                                                                        "quantity": "1",
-                                                                        "unit_amount": {
-                                                                            "currency_code": "AUD",
-                                                                            "value": sp,
-                                                                        },
-                                                                        "category": "DIGITAL_GOODS",
-                                                                        "sku": sheet_region
-                                                                    }],
-                                                                    "amount": {
+                                                            // Enable or disable the button when it has a value
+                                                            emailWarning = document.getElementById('emailWarning');
+
+                                                            if (event.target.checkValidity() && event.target.value != "" && event.target.value.includes("@") && event.target.value.includes(".")) {
+                                                                actions.enable();
+                                                                emailWarning.style.display = "none";
+                                                            } else {
+                                                                actions.disable();
+                                                                emailWarning.style.display = "block";
+                                                                event.target.reportValidity();
+                                                            }
+                                                        });
+                                                },
+
+                                                createOrder: function (data, actions) {
+                                                    user_email = document.getElementById('sheetEmailInput').value;
+                                                    sheet_region = document.getElementById('sheetRegionSelect').value;
+                                                    referral_source = document.getElementById('sheetReferralSourceSelect').value;
+                                                    sp = parseFloat(document.getElementById('audtotalprice').textContent);
+
+                                                    return actions.order.create({
+                                                        purchase_units: [{
+                                                            "description": "CompiledSanity Personal Savings Template",
+                                                            "reference_id": user_email, // Invite Email
+                                                            "custom_id": referral_source, // Referral Source
+                                                            "items": [{
+                                                                "name": "CompiledSanity Personal Savings Template",
+                                                                "quantity": "1",
+                                                                "unit_amount": {
+                                                                    "currency_code": "AUD",
+                                                                    "value": sp,
+                                                                },
+                                                                "category": "DIGITAL_GOODS",
+                                                                "sku": sheet_region
+                                                            }],
+                                                            "amount": {
+                                                                "currency_code": "AUD",
+                                                                "value": sp,
+                                                                "breakdown": {
+                                                                    "item_total": {
                                                                         "currency_code": "AUD",
                                                                         "value": sp,
-                                                                        "breakdown": {
-                                                                            "item_total": {
-                                                                                "currency_code": "AUD",
-                                                                                "value": sp,
-                                                                            }
-                                                                        }
                                                                     }
-                                                                }]
-                                                            });
-                                                        },
+                                                                }
+                                                            }
+                                                        }]
+                                                    });
+                                                },
 
-                                                        onApprove: function (data, actions) {
-                                                            return actions.order.capture().then(function (orderData) {
+                                                onApprove: function (data, actions) {
+                                                    return actions.order.capture().then(function (orderData) {
 
-                                                                // Full available details
-                                                                // console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                                        // Full available details
+                                                        // console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
 
-                                                                // Show a success message within this page, e.g.
-                                                                // const element = document.getElementById('paypal-button-container');
-                                                                //element.innerHTML = '';
-                                                                //element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                                        // Show a success message within this page, e.g.
+                                                        // const element = document.getElementById('paypal-button-container');
+                                                        //element.innerHTML = '';
+                                                        //element.innerHTML = '<h3>Thank you for your payment!</h3>';
 
-                                                                window.location.href = "https://cspersonalfinance.io/success";
-                                                            });
-                                                        },
+                                                        window.location.href = "https://cspersonalfinance.io/success";
+                                                    });
+                                                },
 
-                                                        onError: function (err) {
-                                                            console.log(err);
-                                                        }
+                                                onError: function (err) {
+                                                    console.log(err);
+                                                }
                                                     }).render('#paypal-button-container');
                                                 }
                                                 initPayPalButton();

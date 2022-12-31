@@ -286,10 +286,8 @@
                                                             sheetEmailInput = document.getElementById('sheetEmailInput');
 
                                                             if (sheetEmailInput.checkValidity() && sheetEmailInput.value != "" && sheetEmailInput.value.includes("@") && sheetEmailInput.value.includes(".")) {
-                                                                actions.enable();
                                                                 emailWarning.style.display = "none";
                                                             } else {
-                                                                actions.disable();
                                                                 emailWarning.style.display = "block";
                                                                 sheetEmailInput.reportValidity();
                                                             }

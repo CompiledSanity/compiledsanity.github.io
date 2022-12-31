@@ -291,13 +291,13 @@
                                                                     // Enable or disable the button when it has a value
                                                                     emailWarning = document.getElementById('emailWarning');
 
-                                                                    if (event.target.checkValidity() && event.target.value != "") {
+                                                                    if (event.target.checkValidity() && event.target.value != "" && event.target.value.includes("@") && event.target.value.includes(".")) {
                                                                         actions.enable();
                                                                         emailWarning.style.display = "none";
                                                                     } else {
                                                                         actions.disable();
-                                                                        event.target.reportValidity();
                                                                         emailWarning.style.display = "block";
+                                                                        event.target.reportValidity();
                                                                     }
                                                                 });
                                                         },

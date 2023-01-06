@@ -319,19 +319,19 @@
                                                             user_email = document.getElementById('sheetEmailInput').value;
                                                             sheet_region = document.getElementById('sheetRegionSelect').value;
                                                             referral_source = document.getElementById('sheetReferralSourceSelect').value;
-                                                            sp = parseFloat(document.getElementById('audtotalprice').textContent);
+                                                            sp = parseFloat(document.getElementById('audtotalprice').textContent); // This is checked Server side, so change at your own peril ;)
 
                                                             return actions.order.create({
                                                                 purchase_units: [{
                                                                     "description": "CompiledSanity Personal Savings Template",
-                                                                    "reference_id": user_email, // Invite Email
-                                                                    "custom_id": referral_source, // Referral Source
+                                                                    "reference_id": user_email,
+                                                                    "custom_id": referral_source,
                                                                     "items": [{
                                                                         "name": "CompiledSanity Personal Savings Template",
                                                                         "quantity": "1",
                                                                         "unit_amount": {
                                                                             "currency_code": "AUD",
-                                                                            "value": sp,
+                                                                            "value": sp, // This is checked Server side, so change at your own peril ;)
                                                                         },
                                                                         "category": "DIGITAL_GOODS",
                                                                         "sku": sheet_region
@@ -342,7 +342,7 @@
                                                                         "breakdown": {
                                                                             "item_total": {
                                                                                 "currency_code": "AUD",
-                                                                                "value": sp,
+                                                                                "value": sp, // This is checked Server side, so change at your own peril ;)
                                                                             }
                                                                         }
                                                                     }

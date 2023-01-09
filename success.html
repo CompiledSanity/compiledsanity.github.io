@@ -89,7 +89,11 @@
 
                             <div class="alert bg-soft-muted alert-pills px-5" role="alert" style="/* background: #a4b0be; *//* border-color: #dfe4ea !important; */">
                                 <span class="alert-content fw-bold"><i class="uil uil-info-circle text-white fw-bold"></i>
-                                    <script> document.write(new Date().toLocaleDateString('en-us', { year:"numeric", month:"short"}));</script>:
+                                    <script>
+                                        var d = new Date();
+                                        d.setDate(d.getDate() - 5);
+                                        document.write(d.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
+                                    </script>:
                                 </span>
                                 <span class="alert-content"> There are currently some issues with deliverability to iCloud addresses. Please use the resend link above or email </br><b>sheets (at) cspersonalfinance.io</b> if you do not receive your link shortly.</span>
                             </div>

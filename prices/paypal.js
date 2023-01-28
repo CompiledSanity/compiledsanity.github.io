@@ -73,14 +73,7 @@ function initPayPalButton() {
                             }
                         }
                     }
-                }],
-                "payment_source": {
-                    "paypal": {
-                        "experience_context": {
-                            "shipping_preference": "NO_SHIPPING"
-                        }
-                    }
-                }
+                }]
             });
         },
 

@@ -31,7 +31,7 @@ function initPayPalButton() {
                     // Enable or disable the button when it has a value
                     emailWarning = document.getElementById('emailWarning');
 
-                    if (event.target.checkValidity() && event.target.value != "" && event.target.value.includes("@") && event.target.value.includes(".")) {
+                    if (event.target.checkValidity() && event.target.value != "" && event.target.value.includes("@") && event.target.value.includes(".") && !event.target.value.endsWith(".cm") && !event.target.value.endsWith("gmal.com") && !event.target.value.endsWith("gmaill.com") && !event.target.value.endsWith("gmail.com.au")) {
                         actions.enable();
                         emailWarning.style.display = "none";
                     } else {

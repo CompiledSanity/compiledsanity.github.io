@@ -12,7 +12,7 @@ function initPayPalButton() {
             emailWarning = document.getElementById('emailWarning');
             sheetEmailInput = document.getElementById('sheetEmailInput');
 
-            if (sheetEmailInput.checkValidity() && sheetEmailInput.value != "" && sheetEmailInput.value.includes("@") && sheetEmailInput.value.includes(".")) {
+            if (sheetEmailInput.checkValidity() && sheetEmailInput.value != "" && sheetEmailInput.value.includes("@") && sheetEmailInput.value.includes(".") && !sheetEmailInput.value.endsWith(".cm") && !sheetEmailInput.value.endsWith("gmal.com") && !sheetEmailInput.value.endsWith("gmaill.com") && !sheetEmailInput.value.endsWith("gmail.com.au")) {
                 emailWarning.style.display = "none";
             } else {
                 emailWarning.style.display = "block";

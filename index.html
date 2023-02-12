@@ -1002,7 +1002,7 @@
                     document.getElementById("eur-price").textContent = html['sheet_rate']['EUR'];
                     document.getElementById("gbp-price").textContent = html['sheet_rate']['GBP'];
                     document.getElementById("aud-price").textContent = html['sheet_rate']['AUD'];
-                    document.getElementById("aud-price-full").textContent = 8;
+                    document.getElementById("aud-price-full").textContent = html['sheet_rate']['AUD'] + Math.ceil(html['sheet_rate']['AUD'] / 4)*2;
                 });
         </script>
         <script>

@@ -1,10 +1,10 @@
 {
    "Total": "18,000",
-   "sale_text": "",
+   "sale_text": "<div class=\"fw-bold text-primary h4 pb-2\">\u26a1 2023 NEW YEAR SALE \u26a1</div>",
    "sheet_rate": {
-      "AUD": "8",
-      "EUR": "5",
-      "GBP": "4.50",
-      "USD": "5.50"
+      "AUD": "6",
+      "EUR": "3.50",
+      "GBP": "3",
+      "USD": "4"
    }
 }

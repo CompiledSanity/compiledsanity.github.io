@@ -791,7 +791,9 @@
                                 <p class="mb-0 text-light">Contains all features &amp; <a href="/changelog" target="_blank" class="text-light text-decoration-underline">future updates</a></p>
                             </div>
                             <div class="border-bottom py-4">
-                                <!-- <div class="fw-bold text-primary h4">⚡ 2023 NEW YEAR SALE ⚡</div> -->
+                                <div id="saleText">
+                                    
+                                </div>
                                 <div class="d-flex justify-content-center mt-4 mb-3">
                                     <span class="h2 pt-1" style="line-height: 0px !important; text-decoration: line-through;">$<span id="aud-price-full">12</span></span><span class="ps-2 price h1 mb-0" style="line-height: 0px !important; color: red;">$<span id="aud-price">10</span></span><span style="line-height: 0px !important;" class="ps-2 price h2 pt-1 mb-0"> AUD</span>
                                     <!-- <span class="price h1 mb-0">$<span id="aud-price">8</span> AUD</span> -->
@@ -1003,6 +1005,7 @@
                     document.getElementById("gbp-price").textContent = html['sheet_rate']['GBP'];
                     document.getElementById("aud-price").textContent = html['sheet_rate']['AUD'];
                     document.getElementById("aud-price-full").textContent = Number(html['sheet_rate']['AUD']) + Math.ceil(Number(html['sheet_rate']['AUD']) / 4) * 2;
+                    document.getElementById("saleText").innerHTML = html['sale_text'];
                 });
         </script>
         <script>

@@ -144,16 +144,17 @@
                         document.getElementById("lookupResultAlert").style.display = 'none';
                         var lookupID = document.getElementById("lookupID").value.split("/").slice(-1);
 
-                        if (lookupID.length < 1 || lookupID == null) {
+                        if (lookupID.length < 2 || lookupID == null) {
                             document.getElementById("lookupResult").innerHTML = "No ID entered";
                             document.getElementById("lookupResultAlert").style.display = 'block';
+                            return;
                         }
 
                         fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
                             .then(response => response.json())
                             .then(html => {
                                 if (html['id'] !== null) {
-                                    document.getElementById("lookupResult").innerHTML = lookupID.length;
+                                    document.getElementById("lookupResult").innerHTML = html['id'];
                                 } else {
                                     document.getElementById("lookupResult").innerHTML = "No valid ID found";
                                 }

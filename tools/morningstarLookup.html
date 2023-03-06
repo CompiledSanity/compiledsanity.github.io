@@ -144,6 +144,11 @@
                         document.getElementById("lookupResultAlert").style.display = 'none';
                         var lookupID = document.getElementById("lookupID").value.split("/").slice(-1);
 
+                        if (lookupID.length < 1) {
+                            document.getElementById("lookupResult").innerHTML = "No ID entered";
+                            document.getElementById("lookupResultAlert").style.display = 'block';
+                        }
+
                         fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
                             .then(response => response.json())
                             .then(html => {

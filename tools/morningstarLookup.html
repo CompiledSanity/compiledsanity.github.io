@@ -136,48 +136,34 @@
         <!-- Form Start -->
         <section class="section">
             <div class="container justify-content-center text-center">
+
+
+                <script>
+
+                    function findMorningstarID() {
+                        var lookupID = document.getElementById("lookupID").innerHTML;
+
+                        fetch('https://54p6n9lho4.execute-api.ap-southeast-2.amazonaws.com/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
+                            .then(response => response.json())
+                            .then(html => {
+                                document.getElementById("lookupResult").innerHTML = html['id'];
+                            });
+                    }
+
+                </script>
+
                 <h5 class="mb-4 text-muted fw-normal">Fill out the form below to have your invite re-emailed to you instantly.</h5>
                 <div class="w-75 mx-auto alert alert-light fade show" role="alert" sty>
                     <i class="uil uil-info-circle text-primary fw-bold"></i>
                     New versions of the v2 Sheet are emailed to you as major version are released (ie. v2.9, v2.10). Minor version releases (ie. v2.10.1, v2.10.2) are distributed using the original invite links for the major version and are unannounced.
                 </div>
 
-                <!-- Mail Resender -->
-                <script>
-                    (function (m, a, i, l, e, r) {
-                        m['MailerLiteObject'] = e; function f() {
-                            var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
-                        }
-                        f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
-                        var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
-                        _.parentNode.insertBefore(r, _);
-                    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+                <input type="text" id="lookupID" name="fname"><br><br>
 
-                    var ml_account = ml('accounts', '3115018', 'q4q3l0t9q3', 'load');
-                </script>
-                <!-- End Resender -->
+                <div>Your ID IS:<span id="lookupResult"></span></div>
 
-                <div class="ml-form-embed" data-account="3115018:q4q3l0t9q3" data-form="4110301:x4z1z7">
-                </div>
+                <button onclick="findMorningstarID()" type="button">Find ID!</button>
 
-                <div class="mt-4 alert alert-pills" role="alert" style="/* background: #a4b0be; *//* border-color: #dfe4ea !important; */">
-                    <span class="alert-content fw-bold"> Please note: </span>
-                    <span class="alert-content">
-                        If you haven't received your invite please check your Spam or <a href="https://www.pinpointe.com/blog/wp-content/uploads/gmail-tabs1.png">Promotions sub-inbox</a> (Gmail only).
-                        <br>
-                        If after 30 minutes you still haven't received the invite, please email me via the email address you originally received your first welcome email from.
-                    </span>
-                </div>
-                <div class="alert bg-soft-muted alert-pills px-5" role="alert" style="/* background: #a4b0be; *//* border-color: #dfe4ea !important; */">
-                    <span class="alert-content fw-bold"><i class="uil uil-info-circle text-dark fw-bold"></i>
-                        <script>
-                            var d = new Date();
-                            d.setDate(d.getDate() - 5);
-                            document.write(d.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
-                        </script>:
-                    </span>
-                    <span class="alert-content"> There are some current issues with deliverability to iCloud addresses. Please use the resend link above or email </br><b>sheets (at) cspersonalfinance.io</b> if you do not receive your link shortly. We aim to have this resolved with our mailout partner ASAP.</span>
-                </div>
             </div><!--end container-->
         </section><!--end section-->
         <!-- Form End -->

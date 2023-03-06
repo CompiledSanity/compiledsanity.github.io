@@ -147,6 +147,7 @@
                             .then(response => response.json())
                             .then(html => {
                                 document.getElementById("lookupResult").innerHTML = html['id'];
+                                document.getElementById("lookupResultAlert").style.display = 'block';
                             });
                     }
 
@@ -156,18 +157,24 @@
 
 
                 <div className="form-icon position-relative">
-                    <FeatherIcon icon="user" className="fea icon-sm icons"></FeatherIcon>
+                    <i class="uil uil-user text-primary fw-bold"></i>
                     <input type="text" id="lookupID" className="form-control ps-5">
                 </div>
 
-
-                <Alert className="bg-soft-primary fw-medium">
-                    Your ID is:
-                    <i className="uil uil-info-circle fs-5 align-middle me-1"></i>
-                    <span class="h2" id="lookupResult"></span>
-                </Alert>
-
                 <button class="btn btn-pills btn-primary" onclick="findMorningstarID()" type="button">Find ID!</button>
+
+
+                <div class="mt-4 alert alert-pills" id="lookupResultAlert" role="alert" style="/* background: #a4b0be; *//* border-color: #dfe4ea !important; */">
+                    <span class="alert-content">
+                        <i className="uil uil-info-circle fs-5 align-middle me-1"></i>
+
+                        Your ID is:
+                        </br></br>
+                        <span class="h2" id="lookupResult"></span>
+                    </span>
+                </div>
+
+
 
             </div><!--end container-->
         </section><!--end section-->

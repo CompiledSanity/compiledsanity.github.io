@@ -152,17 +152,22 @@
 
                 </script>
 
-                <h5 class="mb-4 text-muted fw-normal">Fill out the form below to have your invite re-emailed to you instantly.</h5>
-                <div class="w-75 mx-auto alert alert-light fade show" role="alert" sty>
-                    <i class="uil uil-info-circle text-primary fw-bold"></i>
-                    New versions of the v2 Sheet are emailed to you as major version are released (ie. v2.9, v2.10). Minor version releases (ie. v2.10.1, v2.10.2) are distributed using the original invite links for the major version and are unannounced.
+                <h5 class="mb-4 text-muted fw-normal">Fill out the form below to convert your old MorningstarID to the new format</h5>
+
+
+                <div className="form-icon position-relative">
+                    <FeatherIcon icon="user" className="fea icon-sm icons"></FeatherIcon>
+                    <input type="text" id="lookupID" className="form-control ps-5">
                 </div>
 
-                <input type="text" id="lookupID"><br><br>
 
-                <div>Your ID IS:<span id="lookupResult"></span></div>
+                <Alert className="bg-soft-primary fw-medium">
+                    Your ID is:
+                    <i className="uil uil-info-circle fs-5 align-middle me-1"></i>
+                    <span class="h2" id="lookupResult"></span>
+                </Alert>
 
-                <button onclick="findMorningstarID()" type="button">Find ID!</button>
+                <button class="btn btn-pills btn-primary" onclick="findMorningstarID()" type="button">Find ID!</button>
 
             </div><!--end container-->
         </section><!--end section-->

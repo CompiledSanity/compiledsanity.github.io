@@ -147,7 +147,7 @@
                             .then(response => response.json())
                             .then(html => {
                                 if (html['id'] !== null) {
-                                document.getElementById("lookupResult").innerHTML = html['id'];
+                                    document.getElementById("lookupResult").innerHTML = html['id'];
                                 } else {
                                     document.getElementById("lookupResult").innerHTML = "No valid ID found";
                                 }
@@ -156,23 +156,25 @@
                     }
 
                 </script>
+                <div class="border border-light rounded">
+                    <h5 class="mb-4 text-muted fw-normal">Fill out the form below to convert your old MorningstarID to the new format</h5>
 
-                <h5 class="mb-4 text-muted fw-normal">Fill out the form below to convert your old MorningstarID to the new format</h5>
 
-
-                <div className="form-icon position-relative">
-                    <input type="text" class="rounded" id="lookupID" className="form-control ps-5" placeholder="Enter your Morningstar ID here">
-                </div>
-
-                <button class="mt-4 btn btn-pills btn-primary" onclick="findMorningstarID()" type="button">Find ID!</button>
-
-                <div class="mt-4 alert alert-light alert-pills" id="lookupResultAlert" role="alert" style="display: none;">
-                    <div class="alert-content fw-bold">
-                        Your ID is:
+                    <div className="form-icon position-relative">
+                        <input type="text" class="rounded" id="lookupID" className="form-control ps-5" placeholder="Enter your Morningstar ID here">
                     </div>
-                    <div class="alert-content">
-                        <span class="h2" id="lookupResult"></span>
+
+                    <button class="mt-4 btn btn-pills btn-primary" onclick="findMorningstarID()" type="button">Find ID!</button>
+
+                    <div class="mt-4 alert alert-light alert-pills" id="lookupResultAlert" role="alert" style="display: none; max-width: 50%">
+                        <div class="alert-content fw-bold">
+                            Your ID is:
+                        </div>
+                        <div class="alert-content">
+                            <span class="h2" id="lookupResult"></span>
+                        </div>
                     </div>
+
                 </div>
 
             </div><!--end container-->

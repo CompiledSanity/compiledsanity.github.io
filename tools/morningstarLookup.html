@@ -141,6 +141,7 @@
                 <script>
 
                     function findMorningstarID() {
+                        document.getElementById("lookupResultAlert").style.display = 'none';
                         var lookupID = document.getElementById("lookupID").value;
 
                         fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
@@ -156,7 +157,7 @@
                     }
 
                 </script>
-                <div class="border border-light rounded">
+                <div class="border border-light rounded p-5" style="max-width: 70%">
                     <h5 class="mb-4 text-muted fw-normal">Fill out the form below to convert your old MorningstarID to the new format</h5>
 
 

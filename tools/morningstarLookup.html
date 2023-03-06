@@ -141,7 +141,7 @@
                 <script>
 
                     function findMorningstarID() {
-                        var lookupID = document.getElementById("lookupID").innerHTML;
+                        var lookupID = document.getElementById("lookupID").value;
 
                         fetch('api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
                             .then(response => response.json())
@@ -158,7 +158,7 @@
                     New versions of the v2 Sheet are emailed to you as major version are released (ie. v2.9, v2.10). Minor version releases (ie. v2.10.1, v2.10.2) are distributed using the original invite links for the major version and are unannounced.
                 </div>
 
-                <input type="text" id="lookupID" name="fname"><br><br>
+                <input type="text" id="lookupID"><br><br>
 
                 <div>Your ID IS:<span id="lookupResult"></span></div>
 

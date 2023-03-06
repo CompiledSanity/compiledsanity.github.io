@@ -146,7 +146,11 @@
                         fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
                             .then(response => response.json())
                             .then(html => {
+                                if (html['id'] !== null) {
                                 document.getElementById("lookupResult").innerHTML = html['id'];
+                                } else {
+                                    document.getElementById("lookupResult").innerHTML = "No valid ID found";
+                                }
                                 document.getElementById("lookupResultAlert").style.display = 'block';
                             });
                     }

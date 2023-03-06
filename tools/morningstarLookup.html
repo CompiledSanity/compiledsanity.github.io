@@ -143,7 +143,7 @@
                     function findMorningstarID() {
                         var lookupID = document.getElementById("lookupID").innerHTML;
 
-                        fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
+                        fetch('api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
                             .then(response => response.json())
                             .then(html => {
                                 document.getElementById("lookupResult").innerHTML = html['id'];

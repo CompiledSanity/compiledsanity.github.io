@@ -153,7 +153,7 @@
                             .then(response => response.json())
                             .then(html => {
                                 if (html['id'] !== null) {
-                                    document.getElementById("lookupResult").innerHTML = html['id'];
+                                    document.getElementById("lookupResult").innerHTML = lookupID.length;
                                 } else {
                                     document.getElementById("lookupResult").innerHTML = "No valid ID found";
                                 }

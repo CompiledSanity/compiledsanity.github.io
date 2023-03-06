@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Resend Your Invite | CompiledSanity Personal Finance & Net Worth Spreadsheets</title>
+        <meta name="keywords" content="Personal Finance, Net Worth & FIRE Tracking made Automated & Easy. Through the wonders of Google Sheets & a bit of techno magic, CS Templates reveal and track your financial position.">
+        <meta name="author" content="CompiledSanity">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://cspersonalfinance.io/img/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cspersonalfinance.io/img/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://cspersonalfinance.io/img/fav/favicon-16x16.png">
+        <link rel="manifest" href="https://cspersonalfinance.io/img/fav/site.webmanifest">
+        <link rel="mask-icon" href="https://cspersonalfinance.io/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Bootstrap -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Icons -->
+        <link href="../css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <!-- Slider -->
+        <link rel="stylesheet" href="../css/tiny-slider.css" />
+        <!-- Main Css -->
+        <link href="../css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <link href="../css/colors/green.css" rel="stylesheet" id="color-opt">
+        <link href="../scss/compiledmods.css" rel="stylesheet" type="text/css" />
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i|Quicksand:500,500i|Ubuntu:400,400i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
+        </style>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196003461-1">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-196003461-1');
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Loader -->
+        <!-- <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Loader -->
+
+        <!-- Navbar STart -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <!-- Logo container-->
+                <a class="logo" href="../index.html">
+                    <img src="https://cspersonalfinance.io/img/CS2021_SquareLogov2.png" height="24" class="logo-light-mode" alt="">
+                    <img src="https://cspersonalfinance.io/img/CS2021_SquareLogov2.png" height="24" class="logo-dark-mode" alt="">
+                    <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext"><span class="logospantext" style="color: #71c55d;">CompiledSanity</span> Automated Finance</span>
+                </a>
+                <!-- End Logo container-->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                </div>
+
+                <div id="navigation">
+                    <!-- Navigation Menu-->
+                    <ul class="navigation-menu nav-right">
+                        <li style="margin: 0 0px;"><a href="../index.html" class="sub-menu-item">Home</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#about" class="sub-menu-item">About</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#features" class="sub-menu-item">Features</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#download" class="sub-menu-item">Download</a></li>
+                        <li style="margin: 0 0px;"><a href="https://guide.cspersonalfinance.io/" class="sub-menu-item">Guide</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#faq" class="sub-menu-item">FAQ</a></li>
+                    </ul><!--end navigation menu-->
+                </div><!--end navigation-->
+            </div><!--end container-->
+        </header><!--end header-->
+        <!-- Navbar End -->
+
+        <!-- Hero Start -->
+        <section class="bg-half bg-light d-table w-100" style="padding: 110px 0 40px;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <div class="page-next-level">
+                            <h2 class="fw-bold title text-primary"> Resend your Invite </h2>
+                            <div class="page-next">
+                                <nav aria-label="breadcrumb" class="d-inline-block">
+                                    <ul class="breadcrumb bg-white rounded shadow mb-0">
+                                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Resend your Invite</li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div> <!--end container-->
+        </section><!--end section-->
+        <!-- Hero End -->
+
+        <!-- Shape Start -->
+        <div class="position-relative">
+            <div class="shape overflow-hidden text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!--Shape End-->
+
+        <!-- Form Start -->
+        <section class="section">
+            <div class="container justify-content-center text-center">
+                <h5 class="mb-4 text-muted fw-normal">Fill out the form below to have your invite re-emailed to you instantly.</h5>
+                <div class="w-75 mx-auto alert alert-light fade show" role="alert" sty>
+                    <i class="uil uil-info-circle text-primary fw-bold"></i>
+                    New versions of the v2 Sheet are emailed to you as major version are released (ie. v2.9, v2.10). Minor version releases (ie. v2.10.1, v2.10.2) are distributed using the original invite links for the major version and are unannounced.
+                </div>
+
+                <!-- Mail Resender -->
+                <script>
+                    (function (m, a, i, l, e, r) {
+                        m['MailerLiteObject'] = e; function f() {
+                            var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
+                        }
+                        f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
+                        var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
+                        _.parentNode.insertBefore(r, _);
+                    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+                    var ml_account = ml('accounts', '3115018', 'q4q3l0t9q3', 'load');
+                </script>
+                <!-- End Resender -->
+
+                <div class="ml-form-embed" data-account="3115018:q4q3l0t9q3" data-form="4110301:x4z1z7">
+                </div>
+
+                <div class="mt-4 alert alert-pills" role="alert" style="/* background: #a4b0be; *//* border-color: #dfe4ea !important; */">
+                    <span class="alert-content fw-bold"> Please note: </span>
+                    <span class="alert-content">
+                        If you haven't received your invite please check your Spam or <a href="https://www.pinpointe.com/blog/wp-content/uploads/gmail-tabs1.png">Promotions sub-inbox</a> (Gmail only).
+                        <br>
+                        If after 30 minutes you still haven't received the invite, please email me via the email address you originally received your first welcome email from.
+                    </span>
+                </div>
+                <div class="alert bg-soft-muted alert-pills px-5" role="alert" style="/* background: #a4b0be; *//* border-color: #dfe4ea !important; */">
+                    <span class="alert-content fw-bold"><i class="uil uil-info-circle text-dark fw-bold"></i>
+                        <script>
+                            var d = new Date();
+                            d.setDate(d.getDate() - 5);
+                            document.write(d.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
+                        </script>:
+                    </span>
+                    <span class="alert-content"> There are some current issues with deliverability to iCloud addresses. Please use the resend link above or email </br><b>sheets (at) cspersonalfinance.io</b> if you do not receive your link shortly. We aim to have this resolved with our mailout partner ASAP.</span>
+                </div>
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Form End -->
+
+        <!-- Footer Start -->
+        <footer class="footer mt-100" style="border-top: none !important;">
+            <div class="footer-bar container text-center" style="padding: 25px;">
+                <div class="row justify-content-between">
+                    <div class="col-sm-12" style="margin: auto 0px;">
+                        <a href="#" class="logo-footer">
+                            <img src="images/CS2021_SquareLogov2.png" height="35" alt="">
+                        </a>
+                        <div class="text-sm-start">
+                            <p class="mb-0" style="text-align: center;font-size: 15px;">Made with love by <a href="https://www.reddit.com/user/CompiledSanity/" target="_blank" class="text-reset">u/CompiledSanity</a> <i class="mdi mdi-heart text-danger"></i> ©
+                                <script>document.write(new Date().getFullYear())</script>
+                            </p>
+                        </div>
+                    </div><!--end col-->
+                    <div class="col-sm-3">
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer>
+        <!-- Footer End -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
+        <!-- Back to top -->
+
+
+
+        <!-- javascript -->
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <!-- SLIDER -->
+        <script src="../js/tiny-slider.js "></script>
+        <!-- Icons -->
+        <script src="../js/feather.min.js"></script>
+        <!-- Main Js -->
+        <script src="../js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="../js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    </body>
+
+</html>

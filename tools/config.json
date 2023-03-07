@@ -1,3 +1,4 @@
 {
-	"msk": "lstzFDEOhfFNMLikKa0am9mgEKLBl49T"
+	"msk": "lstzFDEOhfFNMLikKa0am9mgEKLBl49T",
+	"url": "https://api-global.morningstar.com/sal-service/v1/etf/quote/v1/${symbol}/data?fundServCode=&showAnalystRatingChinaFund=false&showAnalystRating=false&languageId=en&locale=en&clientId=MDC&benchmarkId=mstarorcat&component=sal-components-mip-quote&version=3.79.0"
 }

@@ -142,7 +142,7 @@
 
                     function findMorningstarID() {
                         document.getElementById("lookupResultAlert").style.display = 'none';
-                        document.getElementById("lookupResult").innerHTML = "No valid ID found";
+                        
                         var lookupID = document.getElementById("lookupID").value.split("/").slice(-1);
 
                         if (lookupID[0].length < 1 || lookupID == null) {
@@ -156,6 +156,7 @@
                             .then(html => {
                                 if (lookupID in html['MorningStarIds']) {
                                     document.getElementById("lookupResult").innerHTML = html['MorningStarIds'][lookupID];
+                                    console.log("Found using cached value");
                                 } else {
 
                                     fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
@@ -163,6 +164,9 @@
                                         .then(html => {
                                             if (html['id'] !== null) {
                                                 document.getElementById("lookupResult").innerHTML = html['id'];
+                                                console.log("Found using MS Lookup");
+                                            } else {
+                                                document.getElementById("lookupResult").innerHTML = "No valid ID found";
                                             }
                                         });
                                 }
@@ -194,22 +198,23 @@
                     <div class="alert-content">
                         <span class="h2 mt-1" id="lookupResult"></span>
                     </div>
+                    <div class="mt-2 alert-content">
+                        <span class="alert-content fw-bold"> How to use this new ID: </span>
+                        <span class="alert-content">
+                            <ol>
+                                <li>Find the replacement Morningstar ID using the tool above</li>
+                                <li>Open the <b>Managed Funds</b> tab in your Sheet</li>
+                                <li>Click <b>Edit</b> → <b>Find and Replace</b></li>
+                                <li>Next to the <b>Search</b> option, change this option from <b>All Sheets</b> → <b>This Sheet</b></li>
+                                <li>In the Find box enter in the OLD Id. In the replace box enter in the NEW Id</b></li>
+                                <li>Click <b>Replace All</b></li>
+                            </ol>
+                        </span>
+                        <span class="alert-content">This will update the old values in both your watch table and Purchase History. Your Live Price should now populate!</span>
+                    </div>
                 </div>
 
-                <div class="mt-4 alert alert-pills" role="alert" style="/* background: #a4b0be; *//* border-color: #dfe4ea !important; */">
-                    <span class="alert-content fw-bold"> How to use this new ID: </span>
-                    <span class="alert-content">
-                        <ol>
-                            <li>Find the replacement Morningstar ID using the tool above</li>
-                            <li>Open the <b>Managed Funds</b> tab in your Sheet</li>
-                            <li>Click <b>Edit</b> → <b>Find and Replace</b></li>
-                            <li>Next to the <b>Search</b> option, change this option from <b>All Sheets</b> → <b>This Sheet</b></li>
-                            <li>In the Find box enter in the OLD Id. In the replace box enter in the NEW Id</b></li>
-                            <li>Click <b>Replace All</b></li>
-                        </ol>
-                    </span>
-                    <span class="alert-content">This will update the old values in both your watch table and Purchase History. Your Live Price should now populate!</span>
-                </div>
+                
 
             </div><!--end container-->
         </section><!--end section-->

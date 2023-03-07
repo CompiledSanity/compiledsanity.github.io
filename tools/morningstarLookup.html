@@ -141,14 +141,17 @@
                 <script>
 
                     function findMorningstarID() {
-                        document.getElementById("lookupResultAlert").style.display = 'none';
-                        document.getElementById("lookupResult").innerHTML = "--";
+                        var lookupResultAlert = document.getElementById("lookupResultAlert");
+                        var lookupResult = document.getElementById("lookupResult");
+
+                        lookupResultAlert.style.display = 'none';
+                        lookupResult.innerHTML = "--";
 
                         var lookupID = document.getElementById("lookupID").value.split("/").slice(-1);
 
                         if (lookupID[0].length < 1 || lookupID == null) {
-                            document.getElementById("lookupResult").innerHTML = "No ID entered";
-                            document.getElementById("lookupResultAlert").style.display = 'block';
+                            lookupResult.innerHTML = "No ID entered";
+                            lookupResultAlert.style.display = 'block';
                             return;
                         }
 
@@ -156,7 +159,7 @@
                             .then(response => response.json())
                             .then(html => {
                                 if (lookupID in html['MorningStarIds']) {
-                                    document.getElementById("lookupResult").innerHTML = html['MorningStarIds'][lookupID];
+                                    lookupResult.innerHTML = html['MorningStarIds'][lookupID];
                                     console.log("Found using cached value");
                                 } else {
 
@@ -164,16 +167,16 @@
                                         .then(response => response.json())
                                         .then(html => {
                                             if (html['id'] !== null) {
-                                                document.getElementById("lookupResult").innerHTML = html['id'];
+                                                lookupResult.innerHTML = html['id'];
                                                 console.log("Found using MS Lookup");
                                             } else {
-                                                document.getElementById("lookupResult").innerHTML = "No valid ID found";
+                                                lookupResult.innerHTML = "No valid ID found";
                                             }
                                         });
                                 }
                             });
-                            
-                        document.getElementById("lookupResultAlert").style.display = 'block';
+
+                        lookupResultAlert.style.display = 'block';
                     }
 
                 </script>

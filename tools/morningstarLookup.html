@@ -142,6 +142,7 @@
 
                     function findMorningstarID() {
                         document.getElementById("lookupResultAlert").style.display = 'none';
+                        document.getElementById("lookupResult").innerHTML = "No valid ID found";
                         var lookupID = document.getElementById("lookupID").value.split("/").slice(-1);
 
                         if (lookupID[0].length < 1 || lookupID == null) {
@@ -150,13 +151,20 @@
                             return;
                         }
 
-                        fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
+                        fetch('https://cspersonalfinance.io/prices/morningstarIds.json')
                             .then(response => response.json())
                             .then(html => {
-                                if (html['id'] !== null) {
-                                    document.getElementById("lookupResult").innerHTML = html['id'];
+                                if (lookupID in html['MorningStarIds']) {
+                                    document.getElementById("lookupResult").innerHTML = html['MorningStarIds'][lookupID];
                                 } else {
-                                    document.getElementById("lookupResult").innerHTML = "No valid ID found";
+
+                                    fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
+                                        .then(response => response.json())
+                                        .then(html => {
+                                            if (html['id'] !== null) {
+                                                document.getElementById("lookupResult").innerHTML = html['id'];
+                                            }
+                                        });
                                 }
                                 document.getElementById("lookupResultAlert").style.display = 'block';
                             });
@@ -195,7 +203,7 @@
                             <li>Next to the <b>Search</b> option, change this option from <b>All Sheets</b> → <b>This Sheet</b></li>
                             <li>In the Find box enter in the OLD Id. In the replace box enter in the NEW Id</b></li>
                             <li>Click <b>Replace All</b></li>
-                          </ol>
+                        </ol>
                     </span>
                     <span class="alert-content">This will update the old values in both your watch table and Purchase History. Your Live Price should now populate!</span>
                 </div>

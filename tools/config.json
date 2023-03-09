@@ -16,8 +16,8 @@
 			"method": "post",
 			"contentType": "application/json",
 			"headers": {
-				"Referer": "https://markets.ft.com/data/etfs/tearsheet/summary?s={ticker}:{currency}"
 				"Content-Type": "application/json",
+				"Referer": "https://markets.ft.com/data/etfs/tearsheet/summary?s={ticker}:{currency}"
 			},
 			"payload": {
 				"days": 1,

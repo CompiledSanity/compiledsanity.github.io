@@ -12,41 +12,40 @@
 	},
 	"ft": {
 		"p": "/exitPrice",
-		"b": {
-			"days": 1,
-			"dataNormalized": false,
-			"dataPeriod": "Day",
-			"dataInterval": 1,
-			"realtime": true,
-			"yFormat": "0.###",
-			"timeServiceFormat": "JSON",
-			"rulerIntradayStart": 26,
-			"rulerIntradayStop": 3,
-			"rulerInterdayStart": 1,
-			"rulerInterdayStop": 1,
-			"returnDateType": "ISO8601",
-			"elements": [{
-					"Label": "{ftid}",
-					"Type": "price",
-					"Symbol": "18461765",
-					"OverlayIndicators": [],
-					"Params": {}
-				},
-				{
-					"Label": "{ftid}",
-					"Type": "volume",
-					"Symbol": "18461765",
-					"OverlayIndicators": [],
-					"Params": {}
-				}
-			]
-		},
 		"h": {
 			"method": "get",
 			"contentType": "application/json",
-			"Referer": "https://markets.ft.com/data/etfs/tearsheet/summary?s={ticker}:{currency}",
 			"headers": {
 				"Referer": "https://markets.ft.com/data/etfs/tearsheet/summary?s={ticker}:{currency}"
+			},
+			"payload": {
+				"days": 1,
+				"dataNormalized": false,
+				"dataPeriod": "Day",
+				"dataInterval": 1,
+				"realtime": true,
+				"yFormat": "0.###",
+				"timeServiceFormat": "JSON",
+				"rulerIntradayStart": 26,
+				"rulerIntradayStop": 3,
+				"rulerInterdayStart": 1,
+				"rulerInterdayStop": 1,
+				"returnDateType": "ISO8601",
+				"elements": [{
+						"Label": "{ftid}",
+						"Type": "price",
+						"Symbol": "18461765",
+						"OverlayIndicators": [],
+						"Params": {}
+					},
+					{
+						"Label": "{ftid}",
+						"Type": "volume",
+						"Symbol": "18461765",
+						"OverlayIndicators": [],
+						"Params": {}
+					}
+				]
 			}
 		},
 		"u": "https://markets.ft.com/data/chartapi/series"

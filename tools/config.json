@@ -15,35 +15,7 @@
 		"h": {
 			"method": "post",
 			"contentType": "application/json",
-			"payload": {
-				"days": 1,
-				"dataNormalized": false,
-				"dataPeriod": "Day",
-				"dataInterval": 1,
-				"realtime": true,
-				"yFormat": "0.###",
-				"timeServiceFormat": "JSON",
-				"rulerIntradayStart": 26,
-				"rulerIntradayStop": 3,
-				"rulerInterdayStart": 1,
-				"rulerInterdayStop": 1,
-				"returnDateType": "ISO8601",
-				"elements": [{
-						"Label": "9a97ddc5",
-						"Type": "price",
-						"Symbol": "{ftid}",
-						"OverlayIndicators": [],
-						"Params": {}
-					},
-					{
-						"Label": "7779ea61",
-						"Type": "volume",
-						"Symbol": "{ftid}",
-						"OverlayIndicators": [],
-						"Params": {}
-					}
-				]
-			}
+			"payload": "{\"days\":1,\"dataNormalized\":false,\"dataPeriod\":\"Day\",\"dataInterval\":1,\"realtime\":true,\"yFormat\":\"0.###\",\"timeServiceFormat\":\"JSON\",\"rulerIntradayStart\":26,\"rulerIntradayStop\":3,\"rulerInterdayStart\":1,\"rulerInterdayStop\":1,\"returnDateType\":\"ISO8601\",\"elements\":[{\"Label\":\"9a97ddc5\",\"Type\":\"price\",\"Symbol\":\"{ftid}\",\"OverlayIndicators\":[],\"Params\":{}},{\"Label\":\"7779ea61\",\"Type\":\"volume\",\"Symbol\":\"{ftid}\",\"OverlayIndicators\":[],\"Params\":{}}]}"
 		},
 		"u": "https://markets.ft.com/data/chartapi/series"
 	}

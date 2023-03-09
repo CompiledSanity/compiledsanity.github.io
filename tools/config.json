@@ -10,6 +10,14 @@
 		},
 		"u": "https://api-global.morningstar.com/sal-service/v1/etf/quote/v1/{symbol}/data?fundServCode=&showAnalystRatingChinaFund=false&showAnalystRating=false&languageId=en&locale=en&clientId=MDC&benchmarkId=mstarorcat&component=sal-components-mip-quote&version=3.79.0"
 	},
+	"yh": {
+		"p": "",
+		"h": {
+			"method": "get",
+			"contentType": "application/json"
+		},
+		"u": "https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?region=US&lang=en-US&includePrePost=false&interval=2m&useYfid=true&range=2m&corsDomain=finance.yahoo.com&.tsrc=finance"
+	},
 	"ft": {
 		"p": "/NormalizeValues/Close",
 		"h": {

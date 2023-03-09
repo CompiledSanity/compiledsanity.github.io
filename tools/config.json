@@ -14,7 +14,7 @@
 		"p": "/NormalizeValues/Close",
 		"h": {
 			"method": "post",
-			'contentType': 'application/json',
+			"contentType": "application/json",
 			"payload": {
 				"days": 1,
 				"dataNormalized": false,

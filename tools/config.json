@@ -27,7 +27,7 @@
 				"days": 1,
 				"dataNormalized": false,
 				"dataPeriod": "Hour",
-				"dataInterval": 1,
+				"dataInterval": 24,
 				"realtime": true,
 				"yFormat": "0.###",
 				"timeServiceFormat": "JSON",

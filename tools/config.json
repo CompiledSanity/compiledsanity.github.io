@@ -14,10 +14,7 @@
 		"p": "/NormalizeValues/Close",
 		"h": {
 			"method": "post",
-			"headers": {
-				"Content-Type": "application/json",
-				"Referer": "https://markets.ft.com/data/etfs/tearsheet/summary?s={ticker}:{currency}"
-			},
+			'contentType': 'application/json',
 			"payload": {
 				"days": 1,
 				"dataNormalized": false,

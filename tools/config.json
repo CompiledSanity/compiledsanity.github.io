@@ -32,16 +32,16 @@
 				"rulerInterdayStop": 1,
 				"returnDateType": "ISO8601",
 				"elements": [{
-						"Label": "{ftid}",
+						"Label": "9a97ddc5",
 						"Type": "price",
-						"Symbol": "18461765",
+						"Symbol": "{ftid}",
 						"OverlayIndicators": [],
 						"Params": {}
 					},
 					{
-						"Label": "{ftid}",
+						"Label": "7779ea61",
 						"Type": "volume",
-						"Symbol": "18461765",
+						"Symbol": "{ftid}",
 						"OverlayIndicators": [],
 						"Params": {}
 					}

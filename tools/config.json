@@ -1,5 +1,6 @@
 {
 	"ms": {
+		"bp": "/nav",
 		"p": "/exitPrice",
 		"h": {
 			"method": "get",

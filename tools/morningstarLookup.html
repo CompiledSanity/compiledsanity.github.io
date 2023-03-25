@@ -153,6 +153,10 @@
                             lookupResult.innerHTML = "No ID entered";
                             lookupResultAlert.style.display = 'block';
                             return;
+                        } else if (lookupID[0].charAt(0) == "F") {
+                            lookupResult.innerHTML = "Already new Morningstar ID";
+                            lookupResultAlert.style.display = 'block';
+                            return;
                         }
 
                         fetch('https://cspersonalfinance.io/prices/morningstarIds.json')

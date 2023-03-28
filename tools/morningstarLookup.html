@@ -181,7 +181,7 @@
                                     console.log("Found using cached value");
                                 } else {
 
-                                    fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupValue + '&token=YPhLoQAXSsiCZ1DaJh1V')
+                                    fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
                                         .then(response => response.json())
                                         .then(html => {
                                             if (html['id'] !== null) {

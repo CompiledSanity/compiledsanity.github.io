@@ -162,15 +162,23 @@
                             return;
                         }
 
+                        var lookupValue = lookupID.split("/")[0];
+                        
+                        if (lookupValue.includes("id=")) {
+                            lookupValue = lookupValue.split("id=")[1];
+                        }
+
+                        lookupValue = lookupValue.split("&")[0];
+
                         fetch('https://cspersonalfinance.io/prices/morningstarIds.json')
                             .then(response => response.json())
                             .then(html => {
-                                if (lookupID in html['MorningStarIds']) {
-                                    lookupResult.innerHTML = html['MorningStarIds'][lookupID];
+                                if (lookupValue in html['MorningStarIds']) {
+                                    lookupResult.innerHTML = html['MorningStarIds'][lookupValue];
                                     console.log("Found using cached value");
                                 } else {
 
-                                    fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
+                                    fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupValue + '&token=YPhLoQAXSsiCZ1DaJh1V')
                                         .then(response => response.json())
                                         .then(html => {
                                             if (html['id'] !== null) {

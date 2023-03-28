@@ -162,7 +162,7 @@
                             return;
                         }
 
-                        var lookupValue = lookupID.split("/")[0];
+                        var lookupValue = lookupID.split("/")[-1];
 
                         if (lookupValue.includes("id=")) {
                             lookupValue = lookupValue.split("id=")[1];

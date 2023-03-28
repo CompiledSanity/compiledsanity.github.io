@@ -163,12 +163,15 @@
                         }
 
                         var lookupValue = lookupID.split("/")[0];
-                        
+
                         if (lookupValue.includes("id=")) {
                             lookupValue = lookupValue.split("id=")[1];
                         }
 
                         lookupValue = lookupValue.split("&")[0];
+
+                        console.log(lookupID);
+                        console.log(lookupValue);
 
                         fetch('https://cspersonalfinance.io/prices/morningstarIds.json')
                             .then(response => response.json())

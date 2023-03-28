@@ -168,7 +168,9 @@
                             lookupValue = lookupValue.split("id=").slice(1);
                         }
 
-                        lookupValue = lookupValue.split("&").slice(0);
+                        if (lookupValue.includes("&")) {
+                            lookupValue = lookupValue.split("&").slice(0);
+                        }
 
                         console.log(lookupID);
                         console.log(lookupValue);

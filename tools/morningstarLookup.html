@@ -148,7 +148,7 @@
                         lookupResultAlert.style.display = 'none';
                         lookupResult.innerHTML = "--";
 
-                        var lookupID = document.getElementById("lookupID").value.split("/").slice(-1);
+                        var lookupID = document.getElementById("lookupID").value;
 
                         if (lookupID[0].length < 1 || lookupID == null) {
                             lookupResult.innerHTML = "No ID entered";

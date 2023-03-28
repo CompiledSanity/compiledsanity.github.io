@@ -23,7 +23,300 @@
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
         <!-- Slider -->
         <link rel="stylesheet" href="../css/tiny-slider.css" />
+        <!-- Main Css --><!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Morningstar ID Lookup | CompiledSanity Personal Finance & Net Worth Spreadsheets</title>
+        <meta name="keywords" content="Personal Finance, Net Worth & FIRE Tracking made Automated & Easy. Through the wonders of Google Sheets & a bit of techno magic, CS Templates reveal and track your financial position.">
+        <meta name="author" content="CompiledSanity">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://cspersonalfinance.io/img/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cspersonalfinance.io/img/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://cspersonalfinance.io/img/fav/favicon-16x16.png">
+        <link rel="manifest" href="https://cspersonalfinance.io/img/fav/site.webmanifest">
+        <link rel="mask-icon" href="https://cspersonalfinance.io/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Bootstrap -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Icons -->
+        <link href="../css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <!-- Slider -->
+        <link rel="stylesheet" href="../css/tiny-slider.css" />
         <!-- Main Css -->
+        <link href="../css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <link href="../css/colors/green.css" rel="stylesheet" id="color-opt">
+        <link href="../scss/compiledmods.css" rel="stylesheet" type="text/css" />
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i|Quicksand:500,500i|Ubuntu:400,400i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
+        </style>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196003461-1">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-196003461-1');
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Loader -->
+        <!-- <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Loader -->
+
+        <!-- Navbar STart -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <!-- Logo container-->
+                <a class="logo" href="../index.html">
+                    <img src="https://cspersonalfinance.io/img/CS2021_SquareLogov2.png" height="24" class="logo-light-mode" alt="">
+                    <img src="https://cspersonalfinance.io/img/CS2021_SquareLogov2.png" height="24" class="logo-dark-mode" alt="">
+                    <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext"><span class="logospantext" style="color: #71c55d;">CompiledSanity</span> Automated Finance</span>
+                </a>
+                <!-- End Logo container-->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                </div>
+
+                <div id="navigation">
+                    <!-- Navigation Menu-->
+                    <ul class="navigation-menu nav-right">
+                        <li style="margin: 0 0px;"><a href="../index.html" class="sub-menu-item">Home</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#about" class="sub-menu-item">About</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#features" class="sub-menu-item">Features</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#download" class="sub-menu-item">Download</a></li>
+                        <li style="margin: 0 0px;"><a href="https://guide.cspersonalfinance.io/" class="sub-menu-item">Guide</a></li>
+                        <li style="margin: 0 0px;"><a href="https://cspersonalfinance.io/#faq" class="sub-menu-item">FAQ</a></li>
+                    </ul><!--end navigation menu-->
+                </div><!--end navigation-->
+            </div><!--end container-->
+        </header><!--end header-->
+        <!-- Navbar End -->
+
+        <!-- Hero Start -->
+        <section class="bg-half bg-light d-table w-100" style="padding: 110px 0 40px;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <div class="page-next-level">
+                            <h2 class="fw-bold title text-primary"> Morningstar ID Lookup </h2>
+                            <div class="page-next">
+                                <nav aria-label="breadcrumb" class="d-inline-block">
+                                    <ul class="breadcrumb bg-white rounded shadow mb-0">
+                                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Morningstar ID Lookup</li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div> <!--end container-->
+        </section><!--end section-->
+        <!-- Hero End -->
+
+        <!-- Shape Start -->
+        <div class="position-relative">
+            <div class="shape overflow-hidden text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!--Shape End-->
+
+        <!-- Form Start -->
+        <section class="section">
+            <div class="container justify-content-center text-center">
+
+
+                <script>
+
+                    function findMorningstarID() {
+                        var lookupResultAlert = document.getElementById("lookupResultAlert");
+                        var lookupResult = document.getElementById("lookupResult");
+                        var lookupInstructions = document.getElementById("lookupInstructions");
+
+                        lookupResultAlert.style.display = 'none';
+                        lookupResult.innerHTML = "--";
+
+                        var lookupID = document.getElementById("lookupID").value;
+
+                        if (lookupID[0].length < 1 || lookupID == null) {
+                            lookupResult.innerHTML = "No ID entered";
+                            lookupInstructions.style.display = 'none';
+                            lookupResultAlert.style.display = 'block';
+                            return;
+                        } else if (lookupID[0].charAt(0) == "F") {
+                            lookupResult.innerHTML = "Already new Morningstar ID";
+                            lookupInstructions.style.display = 'none';
+                            lookupResultAlert.style.display = 'block';
+                            return;
+                        }
+
+                        var lookupValue = lookupID.split("/").slice(-1);
+
+                        if (lookupValue.includes("id=")) {
+                            lookupValue = lookupValue.split("id=").slice(1);
+                        }
+
+                        lookupValue = lookupValue.split("&").slice(0);
+
+                        console.log(lookupID);
+                        console.log(lookupValue);
+
+                        fetch('https://cspersonalfinance.io/prices/morningstarIds.json')
+                            .then(response => response.json())
+                            .then(html => {
+                                if (lookupValue in html['MorningStarIds']) {
+                                    lookupResult.innerHTML = html['MorningStarIds'][lookupValue];
+                                    console.log("Found using cached value");
+                                } else {
+
+                                    fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
+                                        .then(response => response.json())
+                                        .then(html => {
+                                            if (html['id'] !== null) {
+                                                lookupResult.innerHTML = html['id'];
+                                                console.log("Found using MS Lookup");
+                                            } else {
+                                                lookupResult.innerHTML = "No valid ID found";
+                                            }
+                                        });
+                                }
+                            });
+
+                        lookupResultAlert.style.display = 'block';
+                    }
+
+                </script>
+
+                <h5 class="mb-4 text-muted fw-normal">Fill out the form below to convert your old Morningstar AU ID to the new format</h5>
+                <div class="w-75 mx-auto alert alert-light fade show" role="alert" sty>
+                    <i class="uil uil-info-circle text-primary fw-bold"></i>
+                    Please note this tool has mainly been designed for Morningstar AU Fund IDs.</br>If you have a Morningstar ID that isn't working, please let us know <a href="https://www.reddit.com/r/CSPersonalFinance/comments/yh3837/morningstar_pricing_issues_your_help_needed/">via this Reddit post.</a>
+                </div>
+
+
+                <div className="form-icon position-relative">
+                    <input style="min-width: 350px; text-align: center;" type="text" class="rounded" id="lookupID" className="form-control ps-5" placeholder="Enter your Morningstar ID">
+                </div>
+
+                <div>
+                    <button class="mt-4 btn btn-pills btn-primary" onclick="findMorningstarID()" type="button">Find ID!</button>
+                </div>
+
+                <div class="mt-4 alert alert-light alert-pills" id="lookupResultAlert" role="alert" style="transition: all 0.2s; display: none; margin: auto; max-width: 80%">
+                    <div class="alert-content fw-bold">
+                        Your new ID is:
+                    </div>
+                    <div class="alert-content">
+                        <span class="h2 mt-1" id="lookupResult"></span>
+                    </div>
+                    <div id="lookupInstructions" class="mt-3 alert-content">
+                        <span class="alert-content fw-bold"> How to use this new ID: </span>
+                        
+                        
+                        <span class="alert-content">
+                            <ol>
+                                <li>Find your replacement Morningstar ID using the tool above</li>
+                                <li>Open the <b>Managed Funds</b> tab in your Sheet</li>
+                                <li>Click <b>Edit</b> → <b>Find and Replace</b></li>
+                                <li>Next to the <b>Search</b> option, change this option from <b>All Sheets</b> → <b>This Sheet</b></li>
+                                <li>Tick the <b>Match entire Cell contents</b> option</li>
+                                <li>In the Find box enter in the OLD ID. In the replace box enter in the NEW ID</b></li>
+                                <li>Click <b>Replace All</b></li>
+                            </ol>
+                        </span>
+            
+                        <div class="m-2">
+                            <div class="alert-content fw-bold"> Example: </div>
+                            <img src="/img/ReplaceDialog.png" width="50%" height="auto">
+                        </div>
+            
+                        <span class="alert-content">This will update the old values in both your watch table and purchase history.</br>Your live price should now populate!</span>
+                    </div>
+                </div>
+
+
+
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Form End -->
+
+        <!-- Footer Start -->
+        <footer class="footer mt-100" style="border-top: none !important;">
+            <div class="footer-bar container text-center" style="padding: 25px;">
+                <div class="row justify-content-between">
+                    <div class="col-sm-12" style="margin: auto 0px;">
+                        <a href="#" class="logo-footer">
+                            <img src="/images/CS2021_SquareLogov2.png" height="35" alt="">
+                        </a>
+                        <div class="text-sm-start">
+                            <p class="mb-0" style="text-align: center;font-size: 15px;">Made with love by <a href="https://www.reddit.com/user/CompiledSanity/" target="_blank" class="text-reset">u/CompiledSanity</a> <i class="mdi mdi-heart text-danger"></i> ©
+                                <script>document.write(new Date().getFullYear())</script>
+                            </p>
+                        </div>
+                    </div><!--end col-->
+                    <div class="col-sm-3">
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer>
+        <!-- Footer End -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
+        <!-- Back to top -->
+
+
+
+        <!-- javascript -->
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <!-- SLIDER -->
+        <script src="../js/tiny-slider.js "></script>
+        <!-- Icons -->
+        <script src="../js/feather.min.js"></script>
+        <!-- Main Js -->
+        <script src="../js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="../js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    </body>
+
+</html>
+
         <link href="../css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
         <link href="../css/colors/green.css" rel="stylesheet" id="color-opt">
         <link href="../scss/compiledmods.css" rel="stylesheet" type="text/css" />

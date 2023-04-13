@@ -55,6 +55,39 @@
 				]
 			}
 		},
+		"bh": {
+			"method": "post",
+			"contentType": "application/json",
+			"payload": {
+				"days": 30,
+				"dataNormalized": false,
+				"dataPeriod": "Day",
+				"dataInterval": 1,
+				"realtime": true,
+				"yFormat": "0.###",
+				"timeServiceFormat": "JSON",
+				"rulerIntradayStart": 0,
+				"rulerIntradayStop": 0,
+				"rulerInterdayStart": 0,
+				"rulerInterdayStop": 0,
+				"returnDateType": "ISO8601",
+				"elements": [{
+						"Label": "9a97ddc5",
+						"Type": "price",
+						"Symbol": "{ftid}",
+						"OverlayIndicators": [],
+						"Params": {}
+					},
+					{
+						"Label": "7779ea61",
+						"Type": "volume",
+						"Symbol": "{ftid}",
+						"OverlayIndicators": [],
+						"Params": {}
+					}
+				]
+			}
+		},
 		"u": "https://markets.ft.com/data/chartapi/series"
 	}
 }

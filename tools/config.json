@@ -3,6 +3,7 @@
 		"bp": "/nav",
 		"bbp": "/latestPrice",
 		"p": "/exitPrice",
+		"spf": ["F", "V"],
 		"h": {
 			"method": "get",
 			"contentType": "application/json",

@@ -209,7 +209,7 @@
             fetch('/changelog.json')
                 .then(response => response.json())
                 .then(response_json => {
-                    var ch_majorversion = "https://www.reddit.com/r/CSPersonalFinance/";    
+                    var ch_majorversion = response_json["current_release_thread"];
                 
                     const urlSearchParams = new URLSearchParams(window.location.search);
                     const searched_version = urlSearchParams.get("version");

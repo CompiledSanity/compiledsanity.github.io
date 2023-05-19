@@ -1,14 +1,14 @@
 {
 	"last_updated": 0,
-	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
-	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
+	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/13lsy8s/cs_personal_savings_template_v213_now_live/",
+	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/13lt2xq/v214_feature_request_thread/",
 	"releases": [{
 			"version": "2.13.0",
 			"comment": "The Long Awaited Update!",
 			"release_date": "19th May 2023",
 			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
+			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/13lsy8s/cs_personal_savings_template_v213_now_live/",
+			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/13lt2xq/v214_feature_request_thread/",
 			"additions": [
 				"Complete rework of live price fetching mechanism for all assets, improving the speeds and reliability of price fetching across all providers. This will in particular fix issues with MorningStar prices",
 				"Ability to select the month that you would like to record",

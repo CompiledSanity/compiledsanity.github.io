@@ -3,6 +3,43 @@
 	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
 	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
 	"releases": [{
+			"version": "2.13.0",
+			"comment": "The QOL Update",
+			"release_date": "19th May 2023",
+			"major_version": true,
+			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
+			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
+			"additions": [
+				"Complete rework of live price fetching mechanism for all assets, improving the speeds and reliability of price fetching across all providers. This will in particular fix issues with MorningStar prices",
+				"Ability to select the month that you would like to record",
+				"Ability to re-record a month after already having recorded previously",
+				"Ability to use IDs alongside Symbols for Crypto CoinMarketCap. Please be aware that mixing and matching IDs and Symbols will result in 2 separate API calls (thanks u/ottyacat)",
+				"Widened compatibility for Morningstar Funds",
+				"Added system to be able to determine if month was recorded manually/automatically",
+				"Migration script will now warn you if you incorrectly specify the version you're upgrading from"
+			],
+			"updates": [
+				"Complete overhaul of Budget Tab migration to hopefully resolve a number of issues",
+				"CoinMarketCap API to latest v2 Quote endpoint",
+				"Layout of Monthly Dividend Summary Table in Dividend Tab",
+				"Further updates to various UI messages to clarify messaging"
+			],
+			"fixes": [
+				"Fixed bug with GBX -> GBP and GBX -> EUR conversion not working correctly",
+				"Fix for unclicked onscreen UIs timing out scripts",
+				"Bug where contributions for assets in your first month are not calculated correctly",
+				"Fix for Side Income migration issue (Number of Columns error)",
+				"Cash Notes column to be correct yellow color to indicate user-input",
+				"Incorrect 3-month Cash Slope percentage",
+				"Fixed rounding issues for EU/GBP currencies",
+				"Fixed Super formula error in Australian History Tab",
+				"Cosmetics of certain tabs"
+			],
+			"removed": [
+				"Calendar integration with the Sheet - this was causing a lot of concern due to the permission required. I've therefore removed it as I think the negative perception of the permission outweighed the benefits"
+			]
+		},
+		{
 			"version": "2.12.2",
 			"comment": "Apologies for the delay in this update. Due to some change in personal circumstances over the past couple of months, while I have been actively supporting the Sheet work was slower then expected on the next few versions. Development has again started and more updates will be out soon. Thanks for your patience and for your bug/feature submissions in the meantime.",
 			"release_date": "29th March 2022",
@@ -79,7 +116,6 @@
 				"Stock/Managed Fund/ETF retirement funds showing incorrectly in the investment contribution instead of retirement contribution",
 				"ETFs not being included in the Asset distribution graph",
 				"'Recalculate' Capital Gains buttons not working"
-
 			],
 			"removed": []
 		},

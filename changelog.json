@@ -15,24 +15,25 @@
 				"Ability to re-record a month after already having recorded previously",
 				"Ability to use IDs alongside Symbols for Crypto CoinMarketCap. Please be aware that mixing and matching IDs and Symbols will result in 2 separate API calls (thanks u/ottyacat)",
 				"Widened compatibility for Morningstar Funds",
-				"Added system to be able to determine if month was recorded manually/automatically",
+				"System to to determine if month was recorded manually/automatically",
 				"Migration script will now warn you if you incorrectly specify the version you're upgrading from"
 			],
 			"updates": [
 				"Complete overhaul of Budget Tab migration to hopefully resolve a number of issues",
 				"CoinMarketCap API to latest v2 Quote endpoint",
 				"Layout of Monthly Dividend Summary Table in Dividend Tab",
+				"Numerous updates and bug fixes to migration tool",
 				"Further updates to various UI messages to clarify messaging"
 			],
 			"fixes": [
-				"Fixed bug with GBX -> GBP and GBX -> EUR conversion not working correctly",
-				"Fix for unclicked onscreen UIs timing out scripts",
+				"Bug with GBX -> GBP and GBX -> EUR conversion not working correctly",
+				"Issue where unclicked onscreen UIs timed out background scripts",
 				"Bug where contributions for assets in your first month are not calculated correctly",
-				"Fix for Side Income migration issue (Number of Columns error)",
+				"Side Income migration bug (Number of Columns error)",
 				"Cash Notes column to be correct yellow color to indicate user-input",
 				"Incorrect 3-month Cash Slope percentage",
-				"Fixed rounding issues for EU/GBP currencies",
-				"Fixed Super formula error in Australian History Tab",
+				"Rounding issues for EU/GBP currencies",
+				"Super formula error in Australian History Tab",
 				"Cosmetics of certain tabs"
 			],
 			"removed": [

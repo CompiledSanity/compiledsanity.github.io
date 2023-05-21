@@ -209,23 +209,27 @@
             fetch('/changelog.json')
                 .then(response => response.json())
                 .then(response_json => {
-                    var ch_majorversion = response_json["future_requests_thread"];
-                
-                    const urlSearchParams = new URLSearchParams(window.location.search);
-                    const searched_version = urlSearchParams.get("version");
-                
-                    for (var changelog_entry in response_json["releases"]) {
-                        var ch_majorversion_match = response_json["releases"][changelog_entry]["major_version_redditrequest"];  
-                        var ch_version_number = response_json["releases"][changelog_entry]["version"];  
-                        
-                        if (ch_majorversion_match != null && searched_version == null) {
-                            var ch_majorversion = ch_majorversion_match;
-                            break;
-                        } else if (searched_version == null) {
-                        } else if ((searched_version.toString().replace(/"/g, '') + ".0") == ch_version_number) {
-                            var ch_majorversion = ch_majorversion_match;
-                            break;
-                        }
+                    try {
+                        var ch_majorversion = response_json["future_requests_thread"];
+                    
+                        const urlSearchParams = new URLSearchParams(window.location.search);
+                        const searched_version = urlSearchParams.get("version");
+                    
+                        for (var changelog_entry in response_json["releases"]) {
+                            var ch_majorversion_match = response_json["releases"][changelog_entry]["major_version_redditrequest"];  
+                            var ch_version_number = response_json["releases"][changelog_entry]["version"];  
+                            
+                            if (ch_majorversion_match != null && searched_version == null) {
+                                var ch_majorversion = ch_majorversion_match;
+                                break;
+                            } else if (searched_version == null) {
+                            } else if ((searched_version.toString().replace(/"/g, '') + ".0") == ch_version_number) {
+                                var ch_majorversion = ch_majorversion_match;
+                                break;
+                            }
+                        } 
+                    } catch {
+                        var ch_majorversion = "https://cspersonalfinance.io/";
                     }
                     window.location.href = ch_majorversion;
             });

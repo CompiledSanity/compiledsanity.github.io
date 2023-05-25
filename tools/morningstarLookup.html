@@ -145,6 +145,7 @@
                         var lookupResult = document.getElementById("lookupResult");
                         var lookupInstructions = document.getElementById("lookupInstructions");
 
+                        lookupInstructions.style.display = 'none';
                         lookupResultAlert.style.display = 'none';
                         lookupResult.innerHTML = "--";
 
@@ -185,7 +186,6 @@
                             </circle>
                         </svg>`;
 
-                        lookupInstructions.style.display = 'none';
                         lookupResultAlert.style.display = 'block';
 
                         console.log(lookupID);
@@ -196,6 +196,7 @@
                             .then(html => {
                                 if (lookupValue in html['MorningStarIds']) {
                                     lookupResult.innerHTML = html['MorningStarIds'][lookupValue];
+                                    lookupInstructions.style.display = 'block';
                                     console.log("Found using cached value");
                                 } else {
 
@@ -205,6 +206,7 @@
                                             if (html['id'] !== null) {
                                                 lookupResult.innerHTML = html['id'];
                                                 console.log("Found using MS Lookup");
+                                                lookupInstructions.style.display = 'block';
                                             } else {
                                                 lookupResult.innerHTML = "No valid ID found";
                                             }
@@ -212,7 +214,6 @@
                                 }
                             });
                         
-                        lookupInstructions.style.display = 'block';
                         lookupResultAlert.style.display = 'block';
                     }
 

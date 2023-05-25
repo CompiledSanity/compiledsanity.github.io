@@ -160,6 +160,11 @@
                             lookupInstructions.style.display = 'none';
                             lookupResultAlert.style.display = 'block';
                             return;
+                        } else if (isNaN(lookupID) && lookupID[0].charAt(0) != "F" && lookupID[0].charAt(0) != "V" && lookupID[0].charAt(0) != "O") {
+                            lookupResult.innerHTML = "Not a Morningstar ID";
+                            lookupInstructions.style.display = 'none';
+                            lookupResultAlert.style.display = 'block';
+                            return;
                         }
 
                         var lookupValue = lookupID.split("/").slice(-1);

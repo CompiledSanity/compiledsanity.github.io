@@ -185,6 +185,7 @@
                             </circle>
                         </svg>`;
 
+                        lookupInstructions.style.display = 'none';
                         lookupResultAlert.style.display = 'block';
 
                         console.log(lookupID);
@@ -210,7 +211,8 @@
                                         });
                                 }
                             });
-
+                        
+                        lookupInstructions.style.display = 'block';
                         lookupResultAlert.style.display = 'block';
                     }
 

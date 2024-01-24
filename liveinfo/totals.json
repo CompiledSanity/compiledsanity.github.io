@@ -1,11 +1,11 @@
 {
    "Total": "22,000",
-   "dateLastChange": "2023-08-10",
-   "sale_text": "",
+   "dateLastChange": "2024-01-24",
+   "sale_text": "<div class=\"fw-bold text-primary h2 pb-2\">\u26a1 NEW-YEAR SALE \u26a1</div>",
    "sheet_rate": {
-      "AUD": "8",
-      "EUR": "4.50",
-      "GBP": "4",
-      "USD": "5"
+      "AUD": "6",
+      "EUR": "3.50",
+      "GBP": "3",
+      "USD": "3.50"
    }
 }

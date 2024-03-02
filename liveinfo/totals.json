@@ -2,5 +2,10 @@
    "Total": "24,000",
    "dateLastChange": "2024-01-23",
    "sale_text": "",
-   "sheet_rate": {}
+   "sheet_rate": {
+      "AUD": "8",
+      "EUR": "4.50",
+      "GBP": "4",
+      "USD": "5"
+   }
 }

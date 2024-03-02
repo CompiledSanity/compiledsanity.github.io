@@ -324,9 +324,15 @@
             fetch('/liveinfo/totals.json')
                 .then(response => response.json())
                 .then(html => {
-                    document.getElementById('auditemprice').textContent = html['sheet_rate']['AUD'];
-                    document.getElementById('audsubcartprice').textContent = html['sheet_rate']['AUD'];
-                    document.getElementById('audtotalprice').textContent = html['sheet_rate']['AUD'];
+                    try {
+                        document.getElementById('auditemprice').textContent = html['sheet_rate']['AUD'];
+                        document.getElementById('audsubcartprice').textContent = html['sheet_rate']['AUD'];
+                        document.getElementById('audtotalprice').textContent = html['sheet_rate']['AUD'];
+                    } catch (error) {
+                        document.getElementById('auditemprice').textContent = "8";
+                        document.getElementById('audsubcartprice').textContent = "8";
+                        document.getElementById('audtotalprice').textContent = "8";
+                    }
                 });
         </script>
         <!-- SLIDER -->

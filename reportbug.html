@@ -50,6 +50,17 @@
             gtag('config', 'UA-196003461-1');
         </script>
 
+        <!-- Mautic Pixel -->
+        <script>
+            (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+                w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+                m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://mau.cspersonalfinance.io/mtc.js','mt');
+        
+            mt('send', 'pageview');
+        </script>
+        <!-- End Muatic Pixel -->
+
         <style>
             .release-section {
                 border-radius: 10px;

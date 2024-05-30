@@ -2,7 +2,27 @@
 	"last_updated": 0,
 	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/13lsy8s/cs_personal_savings_template_v213_now_live/",
 	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/13lt2xq/v214_feature_request_thread/",
-	"releases": [{
+	"releases": [
+		{
+			"version": "2.13.1",
+			"comment": "Back from a gap in updates, I've now improved a bunch of back-end processes that were hampering deployments and updates to the sheet. This is just a small update with a few QOS fixes that were being requested. More coming soon!",
+			"release_date": "30th May 2024",
+			"major_version": false,
+			"major_version_redditcurrent": null,
+			"major_version_redditrequest": null,
+			"additions": [
+				"Asset allocations to Net Worth tab Asset Allocations table (suggestion by u/cuNdaEUW)",
+				"Clarification message on Migration tab to advise to only copy in the URL of the source sheet and not the full paste including Page Title. This will cause an error in the migration process."
+			],
+			"updates": [],
+			"fixes": [
+				"Gold & Silver live pricing in Other Assets tab (report thanks to u/oncernhan)",
+				"Various places in Dividend Tab of UK sheet showing Dollar symbols (report thanks to u/fubarsanfu)",
+				"Help link in Retirement tab pointing towards other assets help link (report thanks to u/floorlight)"
+			],
+			"removed": []
+		},
+		{
 			"version": "2.13.0",
 			"comment": "",
 			"release_date": "19th May 2023",

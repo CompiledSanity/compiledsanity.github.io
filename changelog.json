@@ -12,10 +12,10 @@
 			"major_version_redditrequest": null,
 			"additions": [],
 			"updates": [
-				"Reintroduced 'invest next in' text below the asset table in the Net Worth sheet"
+				"Reintroduced 'invest next in' text below the asset table in the Net Worth tab"
 			],
 			"fixes": [
-				"Manual month recording when selecting a prior month showing a blank dropdown box. This will enforce only being able to re-record your second month onwards, as well as better handling issues with blank rows in the History sheet. This should make the dropdown more reliable and not show blank values  (report and debugging thanks go to u/AccordingSorbet4 and u/fubarsanfu)",
+				"Manual month recording when selecting a prior month showing a blank dropdown box. Please note - this will enforce only being able to re-record your second month onwards, as well as better handling issues with blank rows in the History sheet. This should make the dropdown more reliable and not show blank values  (report and debugging thanks go to u/AccordingSorbet4 and u/fubarsanfu. Thanks for your help!)",
 				"Migration script to help handle when incorrect URLs are provided in the Previous Sheet URL box",
 				"Correctly matched Sheet timezones to Script timezones to resolve a number of bugs around the sheet",
 				"Various values around the sheet showing '0' for the next rebalanced investment"

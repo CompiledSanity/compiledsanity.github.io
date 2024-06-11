@@ -4,6 +4,25 @@
 	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/13lt2xq/v214_feature_request_thread/",
 	"releases": [
 		{
+			"version": "2.13.2",
+			"comment": "",
+			"release_date": "30th May 2024",
+			"major_version": false,
+			"major_version_redditcurrent": null,
+			"major_version_redditrequest": null,
+			"additions": [],
+			"updates": [
+				"Reintroduced 'invest next in' text below the asset table in the Net Worth sheet"
+			],
+			"fixes": [
+				"Manual month recording when selecting a prior month showing a blank dropdown box. This will enforce only being able to re-record your second month onwards, as well as better handling issues with blank rows in the History sheet. This should make the dropdown more reliable and not show blank values  (report and debugging thanks go to u/AccordingSorbet4 and u/fubarsanfu)",
+				"Migration script to help handle when incorrect URLs are provided in the Previous Sheet URL box",
+				"Correctly matched Sheet timezones to Script timezones to resolve a number of bugs around the sheet",
+				"Various values around the sheet showing '0' for the next rebalanced investment"
+			],
+			"removed": []
+		},
+		{
 			"version": "2.13.1",
 			"comment": "Back from a gap in updates, I've now improved a bunch of back-end processes that were hampering deployments and updates to the sheet. This is just a small update with a few QOS fixes that were being requested. More coming soon!",
 			"release_date": "30th May 2024",

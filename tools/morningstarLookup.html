@@ -149,7 +149,7 @@
                         lookupResultAlert.style.display = 'none';
                         lookupResult.innerHTML = "--";
 
-                        var lookupID = document.getElementById("lookupID").value;
+                        var lookupID = document.getElementById("lookupID").value.toUpperCase();
 
                         if (lookupID[0].length < 1 || lookupID == null) {
                             lookupResult.innerHTML = "No ID entered";

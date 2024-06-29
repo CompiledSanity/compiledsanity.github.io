@@ -4,6 +4,22 @@
 	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/13lt2xq/v214_feature_request_thread/",
 	"releases": [
 		{
+			"version": "2.13.3",
+			"comment": "",
+			"release_date": "29th June 2024",
+			"major_version": false,
+			"major_version_redditcurrent": null,
+			"major_version_redditrequest": null,
+			"additions": [],
+			"updates": [],
+			"fixes": [
+				"Migration tool incorrectly migrating Crypto tab Watch Table",
+				"Migration tool incorrectly migrating Side Income Tab",
+				"Migration tool incorrectly migrating Managed Fund Watch and Transaction Table"
+			],
+			"removed": []
+		},
+		{
 			"version": "2.13.2",
 			"comment": "",
 			"release_date": "11th June 2024",

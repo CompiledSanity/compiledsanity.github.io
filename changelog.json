@@ -5,7 +5,7 @@
 	"releases": [
 		{
 			"version": "2.13.3",
-			"comment": "",
+			"comment": "Minor patch to improve robustness of Migration tool logic. This should fix any issues that were reported in v2.13. Report and thanks to u/r-3300, u/gonpleursb, u/silentSpyDk <a href='https://www.reddit.com/r/CSPersonalFinance/comments/1dm9fc4/migration_from_2131_to_2132_is_broken/>'via Reddit</a>",
 			"release_date": "29th June 2024",
 			"major_version": false,
 			"major_version_redditcurrent": null,

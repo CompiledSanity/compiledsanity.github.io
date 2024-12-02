@@ -11,7 +11,7 @@
             "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4spm3/cs_personal_savings_template_v214_now_live/",
             "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
             "additions": [
-                "Historical price lookup support for Stocks, ETFs and Managed Funds (limited support) with added currency conversion ability. Note this comes with caveats -- see <a href='https://guide.cspersonalfinance.io/investments/etfs-and-shares#buying-and-selling'>Sheet guide for more details</a>",
+                "Historical price lookup support for Stocks, ETFs and Managed Funds (limited support) with added currency conversion ability. Note this comes with caveats -- see <b><a href='https://guide.cspersonalfinance.io/investments/etfs-and-shares#buying-and-selling'>Sheet guide for more details</a></b>",
                 "300 additional new slots to all tabs for further history and transaction support",
                 "Asset allocations to Net Worth tab asset allocations table",
                 "Clarification message on Migration tab to advise to only copy in the URL of the source sheet and not the full paste including page title. This would otherwise cause an error in the migration process",

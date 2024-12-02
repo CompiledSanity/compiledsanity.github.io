@@ -1,8 +1,42 @@
 {
 	"last_updated": 0,
-	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/13lsy8s/cs_personal_savings_template_v213_now_live/",
-	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/13lt2xq/v214_feature_request_thread/",
+	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4spm3/cs_personal_savings_template_v214_now_live/",
+	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
 	"releases": [
+		{
+			"version": "2.14.0",
+			"comment": "",
+			"release_date": "2nd December 2024",
+			"major_version": true,
+			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4spm3/cs_personal_savings_template_v214_now_live/",
+			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
+			"additions": [
+				"Historical price lookup support for Stocks, ETFs and Managed Funds (limited support) with added currency conversion ability. Note this comes with caveats -- see Sheet guide for more details",
+				"300 additional new slots to all tabs for further history and transaction support",
+				"Asset allocations to Net Worth tab Asset Allocations table",
+				"Clarification message on Migration tab to advise to only copy in the URL of the source sheet and not the full paste including Page Title. This would otherwise cause an error in the migration process",
+				"Better progress reporting to Migration script for better user feedback"
+			],
+			"updates": [
+				"Significant updates to 'lookback' recording ability, whereby you can choose a prior month to record. This involves a number of bug fixes, as well as changes to make the process faster and more robust",
+				"Various assets showing incorrect movement figures in the History tab for the first recorded month of the sheet",
+			],
+			"fixes": [
+				"'Consider 0' for next investment message",
+				"UK & EU Sheet: Dividend tables incorrectly showing $ symbols",
+				"End of Month lookback recording showing incorrect months",
+				"Migration tool incorrectly migrating Crypto tab Watch Table",
+				"Migration tool incorrectly migrating Side Income Tab",
+				"Migration tool incorrectly migrating Managed Fund Watch and Transaction Table",
+				"Migration script to help handle when incorrect URLs are provided in the Previous Sheet URL box",
+				"Correctly matched Sheet timezones to Script timezones to resolve a number of bugs around the sheet",
+				"Various values around the sheet showing '0' for the next rebalanced investment",
+				"Gold & Silver live pricing in Other Assets tab (report thanks to u/oncernhan)",
+				"Various places in Dividend Tab of UK sheet showing Dollar symbols (report thanks to u/fubarsanfu)",
+				"Help link in Retirement tab pointing towards other assets help link (report thanks to u/floorlight)"
+			],
+			"removed": []
+		},
 		{
 			"version": "2.13.3",
 			"comment": "Minor patch to improve robustness of Migration tool logic. This should fix any issues that were reported in v2.13. <i>Report and thanks to u/r-3300, u/gonpleursb, u/silentSpyDk <a href='https://www.reddit.com/r/CSPersonalFinance/comments/1dm9fc4/migration_from_2131_to_2132_is_broken/'>via Reddit.</a></i>",

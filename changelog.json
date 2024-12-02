@@ -1,748 +1,749 @@
 {
-	"last_updated": 0,
-	"current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4spm3/cs_personal_savings_template_v214_now_live/",
-	"future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
-	"releases": [
-		{
-			"version": "2.14.0",
-			"comment": "",
-			"release_date": "2nd December 2024",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4spm3/cs_personal_savings_template_v214_now_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
-			"additions": [
-				"Historical price lookup support for Stocks, ETFs and Managed Funds (limited support) with added currency conversion ability. Note this comes with caveats -- see Sheet guide for more details",
-				"300 additional new slots to all tabs for further history and transaction support",
-				"Asset allocations to Net Worth tab Asset Allocations table",
-				"Clarification message on Migration tab to advise to only copy in the URL of the source sheet and not the full paste including Page Title. This would otherwise cause an error in the migration process",
-				"Better progress reporting to Migration script for better user feedback"
-			],
-			"updates": [
-				"Significant updates to 'lookback' recording ability, whereby you can choose a prior month to record. This involves a number of bug fixes, as well as changes to make the process faster and more robust",
-				"Various assets showing incorrect movement figures in the History tab for the first recorded month of the sheet",
-			],
-			"fixes": [
-				"'Consider 0' for next investment message",
-				"UK & EU Sheet: Dividend tables incorrectly showing $ symbols",
-				"End of Month lookback recording showing incorrect months",
-				"Migration tool incorrectly migrating Crypto tab Watch Table",
-				"Migration tool incorrectly migrating Side Income Tab",
-				"Migration tool incorrectly migrating Managed Fund Watch and Transaction Table",
-				"Migration script to help handle when incorrect URLs are provided in the Previous Sheet URL box",
-				"Correctly matched Sheet timezones to Script timezones to resolve a number of bugs around the sheet",
-				"Various values around the sheet showing '0' for the next rebalanced investment",
-				"Gold & Silver live pricing in Other Assets tab (report thanks to u/oncernhan)",
-				"Various places in Dividend Tab of UK sheet showing Dollar symbols (report thanks to u/fubarsanfu)",
-				"Help link in Retirement tab pointing towards other assets help link (report thanks to u/floorlight)"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.13.3",
-			"comment": "Minor patch to improve robustness of Migration tool logic. This should fix any issues that were reported in v2.13. <i>Report and thanks to u/r-3300, u/gonpleursb, u/silentSpyDk <a href='https://www.reddit.com/r/CSPersonalFinance/comments/1dm9fc4/migration_from_2131_to_2132_is_broken/'>via Reddit.</a></i>",
-			"release_date": "29th June 2024",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [],
-			"fixes": [
-				"Migration tool incorrectly migrating Crypto tab Watch Table",
-				"Migration tool incorrectly migrating Side Income Tab",
-				"Migration tool incorrectly migrating Managed Fund Watch and Transaction Table"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.13.2",
-			"comment": "",
-			"release_date": "11th June 2024",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [
-				"Reintroduced 'invest next in' text below the asset table in the Net Worth tab"
-			],
-			"fixes": [
-				"Manual month recording when selecting a prior month showing a blank dropdown box. Please note - this will enforce only being able to re-record your second month onwards, as well as better handling issues with blank rows in the History sheet. This should make the dropdown more reliable and not show blank values  (report and debugging thanks go to u/AccordingSorbet4 and u/fubarsanfu. Thanks for your help!)",
-				"Migration script to help handle when incorrect URLs are provided in the Previous Sheet URL box",
-				"Correctly matched Sheet timezones to Script timezones to resolve a number of bugs around the sheet",
-				"Various values around the sheet showing '0' for the next rebalanced investment"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.13.1",
-			"comment": "Back from a gap in updates, I've now improved a bunch of back-end processes that were hampering deployments and updates to the sheet. This is just a small update with a few QOS fixes that were being requested. More coming soon!",
-			"release_date": "30th May 2024",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [
-				"Asset allocations to Net Worth tab Asset Allocations table (suggestion by u/cuNdaEUW)",
-				"Clarification message on Migration tab to advise to only copy in the URL of the source sheet and not the full paste including Page Title. This will cause an error in the migration process."
-			],
-			"updates": [],
-			"fixes": [
-				"Gold & Silver live pricing in Other Assets tab (report thanks to u/oncernhan)",
-				"Various places in Dividend Tab of UK sheet showing Dollar symbols (report thanks to u/fubarsanfu)",
-				"Help link in Retirement tab pointing towards other assets help link (report thanks to u/floorlight)"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.13.0",
-			"comment": "",
-			"release_date": "19th May 2023",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/13lsy8s/cs_personal_savings_template_v213_now_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/13lt2xq/v214_feature_request_thread/",
-			"additions": [
-				"Complete rework of live price fetching mechanism for all assets, improving the speeds and reliability of price fetching across all providers. This will in particular fix issues with MorningStar prices</br></br><b><u>ℹ️ Important note for MorningStar-AU Tickers</u></b> - As part of the new pricing update the Sheet uses new modern ticker IDs for funds sourced from MorningStar AU. Legacy tickers that need updating are those that are just a number and do not start with <b>F</b> or <b>V</b>.</br>It is heavily recommended that you swap over to these new ticker IDs using <a href='/tools/morningstarLookup'>this conversion tool and instructions here.</a></br>This will not only make your price lookups faster, but they will be more robust into the future. For now the sheet will internally do this conversion, but this may not work forever and also adds delay to prices being fetched.<hr>",
-				"Ability to select the month that you would like to record",
-				"Ability to re-record a month after already having recorded previously",
-				"Ability to use IDs alongside Symbols for Crypto CoinMarketCap. Please be aware that mixing and matching IDs and Symbols will result in 2 separate API calls (thanks u/ottyacat)",
-				"Widened compatibility for Morningstar Funds",
-				"System to to determine if month was recorded manually/automatically",
-				"Migration script will now warn you if you incorrectly specify the version you're upgrading from"
-			],
-			"updates": [
-				"Complete overhaul of Budget Tab migration to hopefully resolve a number of issues",
-				"CoinMarketCap API to latest v2 Quote endpoint",
-				"Layout of Monthly Dividend Summary Table in Dividend Tab",
-				"Numerous updates and bug fixes to migration tool",
-				"Further updates to various UI messages to clarify messaging"
-			],
-			"fixes": [
-				"Bug with GBX -> GBP and GBX -> EUR conversion not working correctly",
-				"Issue where unclicked onscreen UIs timed out background scripts",
-				"Bug where contributions for assets in your first month are not calculated correctly",
-				"Side Income migration bug (Number of Columns error)",
-				"Cash Notes column to be correct yellow color to indicate user-input",
-				"Incorrect 3-month Cash Slope percentage",
-				"Rounding issues for EU/GBP currencies",
-				"Super formula error in Australian History Tab",
-				"Cosmetics of certain tabs"
-			],
-			"removed": [
-				"Calendar integration with the Sheet - this was causing a lot of concern due to the permission required. I've therefore removed it as I think the negative perception of the permission outweighed the benefits"
-			]
-		},
-		{
-			"version": "2.12.2",
-			"comment": "Apologies for the delay in this update. Due to some change in personal circumstances over the past couple of months, while I have been actively supporting the Sheet work was slower then expected on the next few versions. Development has again started and more updates will be out soon. Thanks for your patience and for your bug/feature submissions in the meantime.",
-			"release_date": "29th March 2022",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [
-				"Added Data Validation to the Property Tab to ensure values were entered with correct +/- symbol",
-				"Improvements to Sheet performance"
-			],
-			"fixes": [
-				"Innaccurate Savings Rate values (in hundreds of thousands) in some particular cases. NOTE: If you were seeing this issue, please ensure your Property/Mortage values are entered with the correct +/- symbol. Data validation should warn you if you try and reenter these in the wrong way. You can also consult the template to double check you have entered them correctly. (thanks to J.C.)",
-				"Sheet initialisation process not launching correctly",
-				"Message boxes not always appearing",
-				"L/R Ratio being inversed in Property tab Graph (thanks to J.C.)"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.12.1",
-			"comment": null,
-			"release_date": "3rd December 2021",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [],
-			"fixes": [
-				"Graphs in Net Worth tab having gaps between months. These are not gaps in the data, just a weird quirk in the chart.",
-				"Bug in History tab causing 'Could not find month to write' error",
-				"End of month summary email referencing incorrect Mortgage and Loans value",
-				"Incorrectly reversed Loan/Value ratio value in Property tab"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.12.0",
-			"comment": "The Capital Gains Update",
-			"release_date": "14th October 2021",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
-			"additions": [
-				"FIFO Capital Gains System",
-				"UK Shared Pooling Capital Gains system",
-				"Support for up to 12 House purchases",
-				"Loan/Value performance tracking to Property Tab",
-				"Upgraded Sheet Scripts to Google V8 Runtime for faster performance",
-				"House purchases now count in savings rate",
-				"CoinGecko support for Crypto pricing",
-				"Bimonthly pay option",
-				"Extra statistics to Stocks, Managed Funds and Crypto tabs",
-				"Salaries now support currency conversion",
-				"Stocks can now be included in retirement balance",
-				"Major version update notification & changelog mechanism"
-			],
-			"updates": [
-				"Changed Spaceship pricing to more robust price source",
-				"Improved Side Income date column layout",
-				"Moved Brokerage columns next to other purchase columns",
-				"Net Worth Tab Graphs now only show equity owned in profit after the mortgage deduction",
-				"UK Capital Gains sheet now accounts for tax-free allowance",
-				"Net Worth tab graphs to better display more than 12 months of data at a time",
-				"Many graphs for usability"
-			],
-			"fixes": [
-				"Graphs in Net Worth tab not dynamically resizing and becoming crowded over time",
-				"Total growth ($) and total growth (%) calculations showing incorrect values in some cases",
-				"Capital Gains tab showing negative tax values",
-				"Issue with Crypto tab not sorting correctly",
-				"Double reporting of income in Side Income tab",
-				"Disclaimer accept message now showing, leading to 'Maximum time exceeded' errors",
-				"Stock/Managed Fund/ETF retirement funds showing incorrectly in the investment contribution instead of retirement contribution",
-				"ETFs not being included in the Asset distribution graph",
-				"'Recalculate' Capital Gains buttons not working"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.11.5",
-			"comment": "This is a minor bug-fix release as development is now in progress for v2.12.",
-			"release_date": "8th August 2021",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [
-				"Improved performance of Capital Gains Tab"
-			],
-			"fixes": [
-				"Issue with misaligned Capital Gains rows in investment tabs",
-				"Issue with blank rows in Capital Gains tab",
-				"Retirement contributions being included in the Managed Funds tab contributions tables & graphs",
-				"Months displaying blank values in Net Worth summary table when valid values are present",
-				"Invalid Other Assets Shortcut in the Net Worth tab summary table"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.11.4",
-			"comment": null,
-			"release_date": "15th July 2021",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [
-				"FIFO Capital Gains Calculator. This Calculator will automatically calculate the FIFO Capital Gains on all sold assets and provide a Tax estimation per FY. <a href='https: //guide.cspersonalfinance.io/summary-tabs/capital-gain'>More information here.</a> Please note a Average Cost and Shared Pooling system is in the works and will be added shortly."
-			],
-			"updates": [
-				"Brokerage formulas across all asset classes to list brokerage for both Buy/Sell parcels to be accurate according to Capital Gains calculations."
-			],
-			"fixes": [
-				"Stocks tab migrating rows into incorrect places (credit K.E).",
-				"Predicted Yearly Side Income in SheetOptions tab incorrectly doubling up yearly prediction (credit u/gbr_1234)",
-				"Several Performance and Stability improvements",
-				"Original v2.11.4 Migration process to fix issues in ETF/Stock/Managed Funds migration that caused data to be moved into rows incorrectly."
-			],
-			"removed": []
-		},
-		{
-			"version": "2.11.3",
-			"comment": null,
-			"release_date": "12th June 2021",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [
-				"Message for each investment class if your total target allocation does not add to 100% (credit u/drl7098)."
-			],
-			"updates": [
-				"Budget Tab to be be simpler to use and be less cluttered."
-			],
-			"fixes": [
-				"Variety of conditional formatting issues across the Stocks/ETFs and Crypto Tabs (credit u/avendr)",
-				"Spaceship Funds now use the Fund ID and not Fund Name to fetch prices. If your prices are no longer fetching, please ensure you are using <a href='https: //guide.cspersonalfinance.io/investments/managed-funds#spaceship-raiz-and-microinvesting-platform-support'>the correct Fund ID.</a>",
-				"Duplication of Stock graphs (credit u/riqjuan)"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.11.2",
-			"comment": null,
-			"release_date": "1st June 2021",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [],
-			"fixes": [
-				"Non-reinvested Dividends not being included in Savings rate (credit u/iquito)",
-				"'Refused to connect' error in Monthly Update popup (credit u/gmx02)",
-				"Incorrect FIRE calculator values if Spend figure average is $0 (credit H.D.)",
-				"Other Assets retrieving outdated Current Price if in international currency (credit M.V.)"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.11.1",
-			"comment": null,
-			"release_date": "1st May 2021",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [
-				"Restored end of Month emails. If reinitialising, you may be asked to add the Email permission which was removed in v2.11.0",
-				"Performance improvements to Month Recording Process"
-			],
-			"fixes": [
-				"Additional fixes for Timezone issues causing incorrect months to be written",
-				"Cannot find function getMonth() in Object error",
-				"'Error: truez is not defined' error"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.11.0",
-			"comment": "Please note there have been <i>many</i> significant changes in the minor releases of v2.10 that aren't shown in this list. If you upgrading from v2.10.0, please review all the way down to the v2.10.0 release for other major features and fixes.",
-			"release_date": "27th April 2021",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/mzdx3a/cs_personal_savings_template_v211_just_released/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/mze01f/v212_feature_request_thread/",
-			"additions": [
-				"Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!",
-				"Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts",
-				"Crypto Staking support",
-				"Yahoo Finance pricing support for ETFs/Stocks/Managed Funds",
-				"Support for Spaceship Origin & Earth Funds. See here for info",
-				"Support for using Stocks/ETFs/Managed Funds as Retirement balances",
-				"Names now automatically prefill for Stocks/ETFs",
-				"Average Price of Unit to all Investment classes",
-				"2 additional Cash accounts",
-				"Visual UI for end of month report",
-				"Retirement annual performance statistic",
-				"Support for fixed investment amounts in the Budget Tab",
-				"Old Sheets will now have Crypto function disabled to save on API calls",
-				"Net Worth breakdown graph in Net Worth tab",
-				"Other Assets Purchases to Added Investments & Savings Rate calculations",
-				"Help links to all Tabs"
-			],
-			"updates": [
-				"Cleaned up Investment Columns for a more refined look",
-				"Many UI enhancements",
-				"Performance & efficiency increases when running end of month script",
-				"many improvements to the Migration Script for future versions"
-			],
-			"fixes": [
-				"Timezones in Sheet lead to the End of Month script writing the wrong month or duplicating a month (with a blank gap above)",
-				"Dividends still showing in total returns when unit balance is 0",
-				"Issue with Crypto purchases not migrating correctly",
-				"Issue where 'Added Savings' value only reported added investments in Email and End of Month Prompt",
-				"Handling of 'Timed out waiting for user response' error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message.",
-				"'Price @ Dividend' column in the Dividend tab now included in the migration.",
-				"Issue with ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live.",
-				"Issue with certain tabs not resizing rows correctly and adjusting formulas during migration.",
-				"Minor issues with Graphs & figures in the Sheet.",
-				"'Years to House' target date showing an error if no house target price",
-				"Conditional Formatting and Highlighting",
-				"FIRE tab migrating values and not formulas",
-				"Spreadsheet Locale now migrates from prior Sheet",
-				"Crypto tab Live Price formatting in EU Sheet showing pounds symbol",
-				"Managed Funds Dividend amount in UK Sheet showing dollar symbol",
-				"Dividends tab not summing prior FY correctly according to FY dates",
-				"Crypto 'Units purchased' column incorrectly formatting units as currency",
-				"Incorrect spelling of Portfolio",
-				"Stocks Live Price column showing the currency instead of the live price.",
-				"Crypto Tab allocation graphs"
-			],
-			"removed": [
-				"Removed need for Email permission"
-			]
-		},
-		{
-			"version": "2.10.9",
-			"comment": null,
-			"release_date": "30th March 2021",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [
-				"Other Assets Purchases to Added Investments & Savings Rate calculations",
-				"Version & Region numbers are now appended to all error messages for debugging"
-			],
-			"updates": [
-				"All graphs are now currency rounded for aesthetic cleanness"
-			],
-			"fixes": [
-				"'Could not get Function' due to new version error",
-				"Duplicate Sector Charts in Stock tabs",
-				"Issue with Crypto purchases not migrating correctly",
-				"Other Asset history not displaying correctly",
-				"Added Savings value only reported added investments in Email and End of Month Prompt"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.10.8",
-			"comment": null,
-			"release_date": "21st February 2021",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [
-				"Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts",
-				"Support for Spaceship Origin & Earth Funds. <a href='https: //compiledsanity.gitbook.io/personalfinance/investments/managed-funds#spaceship-raiz-and-microinvesting-platform-support'>See here for info.</a>",
-				"Date cells in the Sheet now feature a dropdown box to select dates (thanks to u/avendr for the suggestion!)",
-				"ETFs now auto-populate fund names. This is coming to the Stocks tab in v2.11 (thanks to u/avendr for the suggestion!)"
-			],
-			"updates": [],
-			"fixes": [
-				"Handling of 'Timed out waiting for user response' error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message",
-				"'Net Dividends after Tax' reporting an incorrect number on the Stocks tab."
-			],
-			"removed": []
-		},
-		{
-			"version": "2.10.7",
-			"comment": null,
-			"release_date": "12th February 2021",
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [
-				"Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!",
-				"Sheet upgrade system where the Sheet will notify you if a new major/minor version has been released. <a href='https: //i.imgur.com/2kuC2pw.png'>Also added latest version area to Net Worth tab.</a>",
-				"'Price @ Dividend' column in the Dividend tab now included in the migration.",
-				"Cash notes in the Cash tab are now included in the migration.",
-				"References to new Getting Started Guide: <a href='https: //compiledsanity.gitbook.io'>compiledsanity.gitbook.io</a>"
-			],
-			"updates": [],
-			"fixes": [],
-			"removed": []
-		},
-		{
-			"version": "2.10.6",
-			"comment": null,
-			"release_date": null,
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [
-				"Performance & efficiency increases when running end of month script"
-			],
-			"fixes": [
-				"Migration process now filters out errors from prior Sheets with errors in the History tab. This includes duplicate dates, out of order dates and incorrect dates (ie. Year 2670)",
-				"End of Month script causing incorrect dates (as above) to appear in the History tab",
-				"Handling of months shown in History Tab if there are issues with dates. This will stop any dates cascading incorrectly",
-				"End of month script errors appearing if Summary prompt is not clicked within 180s Google Script timeout window"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.10.5",
-			"comment": null,
-			"release_date": null,
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [],
-			"fixes": [
-				"ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live",
-				"Certain tabs not resizing rows correctly and adjusting formulas during migration",
-				".getMonth() error during End of Month update",
-				"End of month update displaying 'Timed out waiting for user response'",
-				"End of Month summary displaying 'NaN' for values",
-				"UK Sheet not showing Managed Funds summary correctly in Summary table and graphs",
-				"Weird duplicate and out of order dates in the History tab and after running the end of month script"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.10.4",
-			"comment": null,
-			"release_date": null,
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [
-				"Support for Property & Liabilities migration from v2.9 and below. This may be glitchy, please report bugs if you have any! Note that if you have Mortgages mixed in with other debts in the Liabilities tab, migration is not supported (this is asked during the process).",
-				"Side Income notes now included in migration."
-			],
-			"updates": [],
-			"fixes": [
-				"Small bug in SheetOptions migration where not all options are copied."
-			],
-			"removed": []
-		},
-		{
-			"version": "2.10.3",
-			"comment": null,
-			"release_date": null,
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [
-				"Migration Process now automatically corrects Liabilities/Mortgage data to correct positive/negative direction for v2.10.2 changes"
-			],
-			"updates": [],
-			"fixes": [
-				"Stocks Tab giving NaN error upon migration.",
-				"Cannot call method 'abs' of undefined error that may interfere with the end of month update.",
-				".getName() error in Retirement step when migrating from v2.10 to v2.10.3"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.10.2",
-			"comment": null,
-			"release_date": null,
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [
-				"Data validation to Property/Liabilities cells in the History tabs to enforce correct positive/negative numbering when migrating",
-				"Mortgage progression to end of month emails/readouts."
-			],
-			"updates": [],
-			"fixes": [
-				"Liabilities values being incorrect and including property values.",
-				"Liability/mortgage showing debts as negative"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.10.1",
-			"comment": null,
-			"release_date": null,
-			"major_version": false,
-			"major_version_redditcurrent": null,
-			"major_version_redditrequest": null,
-			"additions": [],
-			"updates": [],
-			"fixes": [
-				"Net Worth tab showing incorrect Liabilities value (missing mortgage) and therefore incorrect rolling Net Worth value.",
-				"Mortgage & Liabilities tab calculations showing incorrect total interest."
-			],
-			"removed": []
-		},
-		{
-			"version": "2.10.0",
-			"comment": null,
-			"release_date": "9th January 2021",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/kthlzn/cs_personal_savings_template_v210_now_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/kthmbe/v211_feature_request_thread/",
-			"additions": [
-				"FIRE 🔥 Dashboard: Automatically ties in with the rest of the Sheet to show your progress to FIRE and forecasting until retirement. Minimal input is needed!",
-				"Spaceship Voyager Universe support in Managed Funds tab (Universe only, updates ~8-12hrs, see MF example)",
-				"Automatic Budget Tab Migration",
-				"Improved Consolidation of Property & Mortgages into one tab",
-				"Other Property tracking & Dashboard improvements",
-				"Retirement/Super Voluntary contribution support (inc. FHSS)",
-				"End of month Summary prompt alongisde Email",
-				"Budget & Loan Tabs now support weekly/fortnightly pay cycles",
-				"Graphical representation of mortgage repayments over time",
-				"Personalization system to simplify Sheet setup",
-				"Property/Loan Figures: Total Interest paid predictions",
-				"US Sheet can now support other base-sheet currencies in Crypto tab",
-				"Live spot prices for Silver and Gold in Other Assets tab.",
-				"International currency support in Other Assets tab.",
-				"Couple tax calculator to help with determining average Tax rate (see cell note)",
-				"EU Sheet Version"
-			],
-			"updates": [
-				"Improvements to Sheet number crunching scripts to give clearer feedback about errors and what their causes are (hopefully this makes life easier debugging!)"
-			],
-			"fixes": [
-				"End of month email and prompt having savings rate and added savings swapped.",
-				"Historical months may show strange values (ie. December 3799)",
-				"Gaps inbetween Months in the History tab",
-				"Upgrading from a v1.3 which resulted in gaps between months or date duplicates",
-				"Issue with 'Other Assets' not being included in 'Liquid Assets' in the Net Worth tab.",
-				"Cash Tab savings dates showing December",
-				"Savings Rate/Income not being correctly reported if Budget tab not used.",
-				"Month not saving correctly with .getMonth or .getYear error",
-				"Graphs not always showing correct months in labels",
-				"Sheet names without spaces (ie. 'ManagedFunds')",
-				"Hidden tabs now migrate",
-				"Past history property values not remaining static.",
-				"Liabilities tab graphs showing currency instead of dates.",
-				"Managed Fund tab contributions still showing funds for sold off funds.",
-				"Version number being incorrectly reported in Sheet",
-				"Lots and lots of back end code clean up leading to future features",
-				"MorningStar Funds showing as $0.",
-				"Some ETF & Stocks showing incorrect prices.",
-				"Migration script not migration 'Last Run' and 'Last Refreshed' dates.",
-				"Feedback in Sheet if CoinMarketCap does not recognize a Crypto ticker.",
-				"Cash showing a huge gain if prior month wasn't recorded."
-			],
-			"removed": [
-				"Removed and cleaned up redundant permissions"
-			]
-		},
-		{
-			"version": "2.9.0",
-			"comment": null,
-			"release_date": "19th September 2020",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/ivkjue/cs_personal_savings_template_v29_now_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/ivkkzo/v210_feature_request_thread/",
-			"additions": [
-				"Automatic Migration Tool! This will automatically copy all data from old Sheets to the new one, making upgrades take just 30 seconds now.",
-				"Calender reminders to run monthly data recording.",
-				"Support for CoinMarketCap crypto prices. All cryptos now supported!",
-				"New end of month progression prompt",
-				"Sold Units' are now automatically calculated FIFO for every asset class.",
-				"MorningStar support to Managed Fund pricing",
-				"International currency support for Bank accounts. If you would like to see the balance of international accounts in your local/base currency, please unhide column D.",
-				"Improvements to ETF/Stock price fetching performance",
-				"Dividends for international assets will try and return a converted automatic 'Price @ Dividend' price",
-				"Investment Sector classification system",
-				"Emergency fund duration is now configurable in the SheetOptions tab"
-			],
-			"updates": [
-				"Cleaned up all Asset type graphs to be consistent.",
-				"Readjusted layout of dividends tab to allow for dividends from more than 15 companies at once."
-			],
-			"fixes": [
-				"Managed Fund, Stock and ETF prices when sourced from Bloomberg.",
-				"Dividends not being included in total return values.",
-				"Crypto prices returning 'ERROR'",
-				"Investment autobalance referencing incorrect cell.",
-				"Managed Fund allocation formulas & filtering.",
-				"Managed Funds not appearing on Net Worth tracker graph in Net Worth tab.",
-				"Migration script copying over the current unwritten month.",
-				"Automatic stock brokerage missing.",
-				"GBX currency erroring.",
-				"Investment Gain (%) and values if original purchase price was $0.",
-				"Bug where reinvested dividends were double counted as contributions.",
-				"History sheet not migrating all data."
-			],
-			"removed": []
-		},
-		{
-			"version": "2.8.0",
-			"comment": null,
-			"release_date": "11th July 2020",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/hp62dc/personal_savings_template_v28_now_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/hq4pya/development_of_v29_is_in_progress_what_would_you/",
-			"additions": [
-				"Tracker for all your Generic Assets, see the new 'Other Assets' tab",
-				"Massively improved Stock/ETF support for wider range of tickers and more robust Live Price fetching",
-				"Overhauled Crypto sheet to include full buy/sell support and performance tracking. NOTE: This is only supported in FIAT pairs, not Crypto-Crypto transactions. Please convert your Crypto-Crypto transactions to your Sheet base currency if needed.",
-				"Crypto purchases now included in Added investments",
-				"Settings around House Deposit % targets and investment contribution allocation",
-				"Managed Funds & Liability progress now added to Monthly Email update",
-				"Converted Auto-brokerage columns into user-input columns"
-			],
-			"updates": [],
-			"fixes": [
-				"Errors from external sources interfering with Calculations in the Sheet",
-				"Debt table in Net Worth tab not showing current past debt",
-				"History Sheet if a month is missed in recording result in no data being written into the sheet",
-				"Issue where data was not being written into the Sheet",
-				"Performance improvements through optimisation of formulas",
-				"House Deposit Savings calculations",
-				"Managed Funds Graphs and History values",
-				"Market return calculations in Investment Calculator",
-				"Lots of protected ranges not being applied correctly",
-				"Certain Funds (ie. ASX:BBOZ & ASX:BBUS) not showing correctly",
-				"Dividends not filtering to current Financial Year",
-				"Net Worth calculations not showing",
-				"Incorrect Values being reported in Progress emails",
-				"Crypto Ticker errors"
-			],
-			"removed": [
-				"Need for day of month paid requirement"
-			]
-		},
-		{
-			"version": "2.7.0",
-			"comment": null,
-			"release_date": "13th April 2020",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/g0ejmr/personal_savings_template_v27_now_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/gqtd4y/development_of_v28_is_in_progress_what/",
-			"additions": [
-				"Full Debt/Loan Support - let me know what you think!",
-				"Graphs to see investment performance against contributions",
-				"Managed Fund Fees tracking",
-				"Full international support for Stocks/Managed Funds/ETFs in local currency",
-				"Added FAQ page on website"
-			],
-			"updates": [
-				"Improved Property Tab & Tracking",
-				"Simplified monthly update process & removed Cash/Super date requirement rejoice!",
-				"History Sheet migration instructions",
-				"Improved Stock failover support",
-				"General Code & Sheet optimisations & cleanup",
-				"Networth update script to increase ease of use"
-			],
-			"fixes": [
-				"Fixed bug with International stocks not having a base currency of AUD",
-				"Bugs in investment optimisation",
-				"Bugs in monthly write process"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.6.0",
-			"comment": null,
-			"release_date": "6th March 2020",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/fea0ai/personal_savings_sheet_v26_update_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/fitztj/development_of_v27_is_in_progress_what_would_you/",
-			"additions": [
-				"Managed Fund Support! Check out the fancy new tab."
-			],
-			"updates": [
-				"Improved Investment contribution balance system (see disclaimer)",
-				"Sheet reorganisation to make future migrations quicker",
-				"UI Improvements",
-				"Budget Sheet improvements",
-				"Improved currency support for Dividends"
-			],
-			"fixes": [
-				"Net Worth Update Script (fixes Date errors, Stock values, general improvements)",
-				"Stock gains figures",
-				"Performance fixes",
-				"Lots of formula fixes/optimisations throughout sheet"
-			],
-			"removed": []
-		},
-		{
-			"version": "2.5.0",
-			"comment": null,
-			"release_date": "19th February 2020",
-			"major_version": true,
-			"major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/f67dql/personal_savings_template_v25_now_live/",
-			"major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/f67dql/personal_savings_template_v25_now_live/",
-			"additions": [
-				"Weekly/2-week pay support",
-				"Better Migration Support",
-				"Side Income (including Rental income) in your Budget"
-			],
-			"updates": [
-				"Improvements to Stocks",
-				"Cleaned up and reduced permissions"
-			],
-			"fixes": [
-				"Fixes to Monthly Update Scripts",
-				"Numerous of fixes to Dividend sheet ",
-				"ETF/Stock prices to be more reliable",
-				"Net Worth Calculations",
-				"Net Worth recording for more miscelaneous situations",
-				"Pension/Cash Date error",
-				"Efficiency fixes"
-			],
-			"removed": []
-		}
-	]
+    "last_updated": 0,
+    "current_release_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4spm3/cs_personal_savings_template_v214_now_live/",
+    "future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
+    "releases": [
+        {
+            "version": "2.14.0",
+            "comment": "",
+            "release_date": "2nd December 2024",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4spm3/cs_personal_savings_template_v214_now_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
+            "additions": [
+                "Historical price lookup support for Stocks, ETFs and Managed Funds (limited support) with added currency conversion ability. Note this comes with caveats -- see Sheet guide for more details",
+                "300 additional new slots to all tabs for further history and transaction support",
+                "Asset allocations to Net Worth tab asset allocations table",
+                "Clarification message on Migration tab to advise to only copy in the URL of the source sheet and not the full paste including page title. This would otherwise cause an error in the migration process",
+                "Better progress reporting to Migration script for better user feedback"
+            ],
+            "updates": [
+                "Significant updates to 'lookback' recording ability, whereby you can choose a prior month to record. This involves a number of bug fixes, as well as changes to make the process faster and more robust. For users who reported blank rows being recorded in v2.13, this should hopefully fix that issue",
+                "Various assets showing incorrect movement figures in the History tab for the first recorded month of the sheet"
+            ],
+            "fixes": [
+                "'Consider 0' for next investment message",
+                "UK & EU Sheet: Dividend tables incorrectly showing $ symbols",
+                "End of Month lookback recording showing incorrect months",
+				"End of Month lookback recording recording blank rows",
+                "Migration tool incorrectly migrating Crypto tab Watch Table",
+                "Migration tool incorrectly migrating Side Income Tab",
+                "Migration tool incorrectly migrating Managed Fund Watch and Transaction Table",
+                "Migration script to help handle when incorrect URLs are provided in the Previous Sheet URL box",
+                "Correctly matched Sheet timezones to Script timezones to resolve a number of bugs around the sheet",
+                "Various values around the sheet showing '0' for the next rebalanced investment",
+                "Gold & Silver live pricing in Other Assets tab (report thanks to u/oncernhan)",
+                "Various places in Dividend Tab of UK sheet showing Dollar symbols (report thanks to u/fubarsanfu)",
+                "Help link in Retirement tab pointing towards other assets help link (report thanks to u/floorlight)"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.13.3",
+            "comment": "Minor patch to improve robustness of Migration tool logic. This should fix any issues that were reported in v2.13. <i>Report and thanks to u/r-3300, u/gonpleursb, u/silentSpyDk <a href='https://www.reddit.com/r/CSPersonalFinance/comments/1dm9fc4/migration_from_2131_to_2132_is_broken/'>via Reddit.</a></i>",
+            "release_date": "29th June 2024",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [],
+            "fixes": [
+                "Migration tool incorrectly migrating Crypto tab Watch Table",
+                "Migration tool incorrectly migrating Side Income Tab",
+                "Migration tool incorrectly migrating Managed Fund Watch and Transaction Table"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.13.2",
+            "comment": "",
+            "release_date": "11th June 2024",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [
+                "Reintroduced 'invest next in' text below the asset table in the Net Worth tab"
+            ],
+            "fixes": [
+                "Manual month recording when selecting a prior month showing a blank dropdown box. Please note - this will enforce only being able to re-record your second month onwards, as well as better handling issues with blank rows in the History sheet. This should make the dropdown more reliable and not show blank values  (report and debugging thanks go to u/AccordingSorbet4 and u/fubarsanfu. Thanks for your help!)",
+                "Migration script to help handle when incorrect URLs are provided in the Previous Sheet URL box",
+                "Correctly matched Sheet timezones to Script timezones to resolve a number of bugs around the sheet",
+                "Various values around the sheet showing '0' for the next rebalanced investment"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.13.1",
+            "comment": "Back from a gap in updates, I've now improved a bunch of back-end processes that were hampering deployments and updates to the sheet. This is just a small update with a few QOS fixes that were being requested. More coming soon!",
+            "release_date": "30th May 2024",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Asset allocations to Net Worth tab Asset Allocations table (suggestion by u/cuNdaEUW)",
+                "Clarification message on Migration tab to advise to only copy in the URL of the source sheet and not the full paste including Page Title. This will cause an error in the migration process."
+            ],
+            "updates": [],
+            "fixes": [
+                "Gold & Silver live pricing in Other Assets tab (report thanks to u/oncernhan)",
+                "Various places in Dividend Tab of UK sheet showing Dollar symbols (report thanks to u/fubarsanfu)",
+                "Help link in Retirement tab pointing towards other assets help link (report thanks to u/floorlight)"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.13.0",
+            "comment": "",
+            "release_date": "19th May 2023",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/13lsy8s/cs_personal_savings_template_v213_now_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/13lt2xq/v214_feature_request_thread/",
+            "additions": [
+                "Complete rework of live price fetching mechanism for all assets, improving the speeds and reliability of price fetching across all providers. This will in particular fix issues with MorningStar prices</br></br><b><u>ℹ️ Important note for MorningStar-AU Tickers</u></b> - As part of the new pricing update the Sheet uses new modern ticker IDs for funds sourced from MorningStar AU. Legacy tickers that need updating are those that are just a number and do not start with <b>F</b> or <b>V</b>.</br>It is heavily recommended that you swap over to these new ticker IDs using <a href='/tools/morningstarLookup'>this conversion tool and instructions here.</a></br>This will not only make your price lookups faster, but they will be more robust into the future. For now the sheet will internally do this conversion, but this may not work forever and also adds delay to prices being fetched.<hr>",
+                "Ability to select the month that you would like to record",
+                "Ability to re-record a month after already having recorded previously",
+                "Ability to use IDs alongside Symbols for Crypto CoinMarketCap. Please be aware that mixing and matching IDs and Symbols will result in 2 separate API calls (thanks u/ottyacat)",
+                "Widened compatibility for Morningstar Funds",
+                "System to to determine if month was recorded manually/automatically",
+                "Migration script will now warn you if you incorrectly specify the version you're upgrading from"
+            ],
+            "updates": [
+                "Complete overhaul of Budget Tab migration to hopefully resolve a number of issues",
+                "CoinMarketCap API to latest v2 Quote endpoint",
+                "Layout of Monthly Dividend Summary Table in Dividend Tab",
+                "Numerous updates and bug fixes to migration tool",
+                "Further updates to various UI messages to clarify messaging"
+            ],
+            "fixes": [
+                "Bug with GBX -> GBP and GBX -> EUR conversion not working correctly",
+                "Issue where unclicked onscreen UIs timed out background scripts",
+                "Bug where contributions for assets in your first month are not calculated correctly",
+                "Side Income migration bug (Number of Columns error)",
+                "Cash Notes column to be correct yellow color to indicate user-input",
+                "Incorrect 3-month Cash Slope percentage",
+                "Rounding issues for EU/GBP currencies",
+                "Super formula error in Australian History Tab",
+                "Cosmetics of certain tabs"
+            ],
+            "removed": [
+                "Calendar integration with the Sheet - this was causing a lot of concern due to the permission required. I've therefore removed it as I think the negative perception of the permission outweighed the benefits"
+            ]
+        },
+        {
+            "version": "2.12.2",
+            "comment": "Apologies for the delay in this update. Due to some change in personal circumstances over the past couple of months, while I have been actively supporting the Sheet work was slower then expected on the next few versions. Development has again started and more updates will be out soon. Thanks for your patience and for your bug/feature submissions in the meantime.",
+            "release_date": "29th March 2022",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [
+                "Added Data Validation to the Property Tab to ensure values were entered with correct +/- symbol",
+                "Improvements to Sheet performance"
+            ],
+            "fixes": [
+                "Innaccurate Savings Rate values (in hundreds of thousands) in some particular cases. NOTE: If you were seeing this issue, please ensure your Property/Mortage values are entered with the correct +/- symbol. Data validation should warn you if you try and reenter these in the wrong way. You can also consult the template to double check you have entered them correctly. (thanks to J.C.)",
+                "Sheet initialisation process not launching correctly",
+                "Message boxes not always appearing",
+                "L/R Ratio being inversed in Property tab Graph (thanks to J.C.)"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.12.1",
+            "comment": null,
+            "release_date": "3rd December 2021",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [],
+            "fixes": [
+                "Graphs in Net Worth tab having gaps between months. These are not gaps in the data, just a weird quirk in the chart.",
+                "Bug in History tab causing 'Could not find month to write' error",
+                "End of month summary email referencing incorrect Mortgage and Loans value",
+                "Incorrectly reversed Loan/Value ratio value in Property tab"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.12.0",
+            "comment": "The Capital Gains Update",
+            "release_date": "14th October 2021",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mypd/cs_personal_savings_template_v212_now_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/q7mzij/v213_feature_request_thread/",
+            "additions": [
+                "FIFO Capital Gains System",
+                "UK Shared Pooling Capital Gains system",
+                "Support for up to 12 House purchases",
+                "Loan/Value performance tracking to Property Tab",
+                "Upgraded Sheet Scripts to Google V8 Runtime for faster performance",
+                "House purchases now count in savings rate",
+                "CoinGecko support for Crypto pricing",
+                "Bimonthly pay option",
+                "Extra statistics to Stocks, Managed Funds and Crypto tabs",
+                "Salaries now support currency conversion",
+                "Stocks can now be included in retirement balance",
+                "Major version update notification & changelog mechanism"
+            ],
+            "updates": [
+                "Changed Spaceship pricing to more robust price source",
+                "Improved Side Income date column layout",
+                "Moved Brokerage columns next to other purchase columns",
+                "Net Worth Tab Graphs now only show equity owned in profit after the mortgage deduction",
+                "UK Capital Gains sheet now accounts for tax-free allowance",
+                "Net Worth tab graphs to better display more than 12 months of data at a time",
+                "Many graphs for usability"
+            ],
+            "fixes": [
+                "Graphs in Net Worth tab not dynamically resizing and becoming crowded over time",
+                "Total growth ($) and total growth (%) calculations showing incorrect values in some cases",
+                "Capital Gains tab showing negative tax values",
+                "Issue with Crypto tab not sorting correctly",
+                "Double reporting of income in Side Income tab",
+                "Disclaimer accept message now showing, leading to 'Maximum time exceeded' errors",
+                "Stock/Managed Fund/ETF retirement funds showing incorrectly in the investment contribution instead of retirement contribution",
+                "ETFs not being included in the Asset distribution graph",
+                "'Recalculate' Capital Gains buttons not working"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.11.5",
+            "comment": "This is a minor bug-fix release as development is now in progress for v2.12.",
+            "release_date": "8th August 2021",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [
+                "Improved performance of Capital Gains Tab"
+            ],
+            "fixes": [
+                "Issue with misaligned Capital Gains rows in investment tabs",
+                "Issue with blank rows in Capital Gains tab",
+                "Retirement contributions being included in the Managed Funds tab contributions tables & graphs",
+                "Months displaying blank values in Net Worth summary table when valid values are present",
+                "Invalid Other Assets Shortcut in the Net Worth tab summary table"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.11.4",
+            "comment": null,
+            "release_date": "15th July 2021",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "FIFO Capital Gains Calculator. This Calculator will automatically calculate the FIFO Capital Gains on all sold assets and provide a Tax estimation per FY. <a href='https: //guide.cspersonalfinance.io/summary-tabs/capital-gain'>More information here.</a> Please note a Average Cost and Shared Pooling system is in the works and will be added shortly."
+            ],
+            "updates": [
+                "Brokerage formulas across all asset classes to list brokerage for both Buy/Sell parcels to be accurate according to Capital Gains calculations."
+            ],
+            "fixes": [
+                "Stocks tab migrating rows into incorrect places (credit K.E).",
+                "Predicted Yearly Side Income in SheetOptions tab incorrectly doubling up yearly prediction (credit u/gbr_1234)",
+                "Several Performance and Stability improvements",
+                "Original v2.11.4 Migration process to fix issues in ETF/Stock/Managed Funds migration that caused data to be moved into rows incorrectly."
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.11.3",
+            "comment": null,
+            "release_date": "12th June 2021",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Message for each investment class if your total target allocation does not add to 100% (credit u/drl7098)."
+            ],
+            "updates": [
+                "Budget Tab to be be simpler to use and be less cluttered."
+            ],
+            "fixes": [
+                "Variety of conditional formatting issues across the Stocks/ETFs and Crypto Tabs (credit u/avendr)",
+                "Spaceship Funds now use the Fund ID and not Fund Name to fetch prices. If your prices are no longer fetching, please ensure you are using <a href='https: //guide.cspersonalfinance.io/investments/managed-funds#spaceship-raiz-and-microinvesting-platform-support'>the correct Fund ID.</a>",
+                "Duplication of Stock graphs (credit u/riqjuan)"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.11.2",
+            "comment": null,
+            "release_date": "1st June 2021",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [],
+            "fixes": [
+                "Non-reinvested Dividends not being included in Savings rate (credit u/iquito)",
+                "'Refused to connect' error in Monthly Update popup (credit u/gmx02)",
+                "Incorrect FIRE calculator values if Spend figure average is $0 (credit H.D.)",
+                "Other Assets retrieving outdated Current Price if in international currency (credit M.V.)"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.11.1",
+            "comment": null,
+            "release_date": "1st May 2021",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [
+                "Restored end of Month emails. If reinitialising, you may be asked to add the Email permission which was removed in v2.11.0",
+                "Performance improvements to Month Recording Process"
+            ],
+            "fixes": [
+                "Additional fixes for Timezone issues causing incorrect months to be written",
+                "Cannot find function getMonth() in Object error",
+                "'Error: truez is not defined' error"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.11.0",
+            "comment": "Please note there have been <i>many</i> significant changes in the minor releases of v2.10 that aren't shown in this list. If you upgrading from v2.10.0, please review all the way down to the v2.10.0 release for other major features and fixes.",
+            "release_date": "27th April 2021",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/mzdx3a/cs_personal_savings_template_v211_just_released/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/mze01f/v212_feature_request_thread/",
+            "additions": [
+                "Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!",
+                "Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts",
+                "Crypto Staking support",
+                "Yahoo Finance pricing support for ETFs/Stocks/Managed Funds",
+                "Support for Spaceship Origin & Earth Funds. See here for info",
+                "Support for using Stocks/ETFs/Managed Funds as Retirement balances",
+                "Names now automatically prefill for Stocks/ETFs",
+                "Average Price of Unit to all Investment classes",
+                "2 additional Cash accounts",
+                "Visual UI for end of month report",
+                "Retirement annual performance statistic",
+                "Support for fixed investment amounts in the Budget Tab",
+                "Old Sheets will now have Crypto function disabled to save on API calls",
+                "Net Worth breakdown graph in Net Worth tab",
+                "Other Assets Purchases to Added Investments & Savings Rate calculations",
+                "Help links to all Tabs"
+            ],
+            "updates": [
+                "Cleaned up Investment Columns for a more refined look",
+                "Many UI enhancements",
+                "Performance & efficiency increases when running end of month script",
+                "many improvements to the Migration Script for future versions"
+            ],
+            "fixes": [
+                "Timezones in Sheet lead to the End of Month script writing the wrong month or duplicating a month (with a blank gap above)",
+                "Dividends still showing in total returns when unit balance is 0",
+                "Issue with Crypto purchases not migrating correctly",
+                "Issue where 'Added Savings' value only reported added investments in Email and End of Month Prompt",
+                "Handling of 'Timed out waiting for user response' error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message.",
+                "'Price @ Dividend' column in the Dividend tab now included in the migration.",
+                "Issue with ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live.",
+                "Issue with certain tabs not resizing rows correctly and adjusting formulas during migration.",
+                "Minor issues with Graphs & figures in the Sheet.",
+                "'Years to House' target date showing an error if no house target price",
+                "Conditional Formatting and Highlighting",
+                "FIRE tab migrating values and not formulas",
+                "Spreadsheet Locale now migrates from prior Sheet",
+                "Crypto tab Live Price formatting in EU Sheet showing pounds symbol",
+                "Managed Funds Dividend amount in UK Sheet showing dollar symbol",
+                "Dividends tab not summing prior FY correctly according to FY dates",
+                "Crypto 'Units purchased' column incorrectly formatting units as currency",
+                "Incorrect spelling of Portfolio",
+                "Stocks Live Price column showing the currency instead of the live price.",
+                "Crypto Tab allocation graphs"
+            ],
+            "removed": [
+                "Removed need for Email permission"
+            ]
+        },
+        {
+            "version": "2.10.9",
+            "comment": null,
+            "release_date": "30th March 2021",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Other Assets Purchases to Added Investments & Savings Rate calculations",
+                "Version & Region numbers are now appended to all error messages for debugging"
+            ],
+            "updates": [
+                "All graphs are now currency rounded for aesthetic cleanness"
+            ],
+            "fixes": [
+                "'Could not get Function' due to new version error",
+                "Duplicate Sector Charts in Stock tabs",
+                "Issue with Crypto purchases not migrating correctly",
+                "Other Asset history not displaying correctly",
+                "Added Savings value only reported added investments in Email and End of Month Prompt"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.10.8",
+            "comment": null,
+            "release_date": "21st February 2021",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Overhauled and completely rewrote Crypto price fetching. This will resolve issues with too many API calls being used, performance issues and improve price accuracy across all coins and alts",
+                "Support for Spaceship Origin & Earth Funds. <a href='https: //compiledsanity.gitbook.io/personalfinance/investments/managed-funds#spaceship-raiz-and-microinvesting-platform-support'>See here for info.</a>",
+                "Date cells in the Sheet now feature a dropdown box to select dates (thanks to u/avendr for the suggestion!)",
+                "ETFs now auto-populate fund names. This is coming to the Stocks tab in v2.11 (thanks to u/avendr for the suggestion!)"
+            ],
+            "updates": [],
+            "fixes": [
+                "Handling of 'Timed out waiting for user response' error when the end of month summary box isn't closed within 3 minutes of starting the run script. This isn't a problem and please ignore if you see this message",
+                "'Net Dividends after Tax' reporting an incorrect number on the Stocks tab."
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.10.7",
+            "comment": null,
+            "release_date": "12th February 2021",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Overhauled and refined look of Sheet to reduce clutter and refine the Sheet aesthetic. Let me know what you think!",
+                "Sheet upgrade system where the Sheet will notify you if a new major/minor version has been released. <a href='https: //i.imgur.com/2kuC2pw.png'>Also added latest version area to Net Worth tab.</a>",
+                "'Price @ Dividend' column in the Dividend tab now included in the migration.",
+                "Cash notes in the Cash tab are now included in the migration.",
+                "References to new Getting Started Guide: <a href='https: //compiledsanity.gitbook.io'>compiledsanity.gitbook.io</a>"
+            ],
+            "updates": [],
+            "fixes": [],
+            "removed": []
+        },
+        {
+            "version": "2.10.6",
+            "comment": null,
+            "release_date": null,
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [
+                "Performance & efficiency increases when running end of month script"
+            ],
+            "fixes": [
+                "Migration process now filters out errors from prior Sheets with errors in the History tab. This includes duplicate dates, out of order dates and incorrect dates (ie. Year 2670)",
+                "End of Month script causing incorrect dates (as above) to appear in the History tab",
+                "Handling of months shown in History Tab if there are issues with dates. This will stop any dates cascading incorrectly",
+                "End of month script errors appearing if Summary prompt is not clicked within 180s Google Script timeout window"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.10.5",
+            "comment": null,
+            "release_date": null,
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [],
+            "fixes": [
+                "ETF/Stocks/Managed Funds tabs showing $0 Balance when stocks are live",
+                "Certain tabs not resizing rows correctly and adjusting formulas during migration",
+                ".getMonth() error during End of Month update",
+                "End of month update displaying 'Timed out waiting for user response'",
+                "End of Month summary displaying 'NaN' for values",
+                "UK Sheet not showing Managed Funds summary correctly in Summary table and graphs",
+                "Weird duplicate and out of order dates in the History tab and after running the end of month script"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.10.4",
+            "comment": null,
+            "release_date": null,
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Support for Property & Liabilities migration from v2.9 and below. This may be glitchy, please report bugs if you have any! Note that if you have Mortgages mixed in with other debts in the Liabilities tab, migration is not supported (this is asked during the process).",
+                "Side Income notes now included in migration."
+            ],
+            "updates": [],
+            "fixes": [
+                "Small bug in SheetOptions migration where not all options are copied."
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.10.3",
+            "comment": null,
+            "release_date": null,
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Migration Process now automatically corrects Liabilities/Mortgage data to correct positive/negative direction for v2.10.2 changes"
+            ],
+            "updates": [],
+            "fixes": [
+                "Stocks Tab giving NaN error upon migration.",
+                "Cannot call method 'abs' of undefined error that may interfere with the end of month update.",
+                ".getName() error in Retirement step when migrating from v2.10 to v2.10.3"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.10.2",
+            "comment": null,
+            "release_date": null,
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Data validation to Property/Liabilities cells in the History tabs to enforce correct positive/negative numbering when migrating",
+                "Mortgage progression to end of month emails/readouts."
+            ],
+            "updates": [],
+            "fixes": [
+                "Liabilities values being incorrect and including property values.",
+                "Liability/mortgage showing debts as negative"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.10.1",
+            "comment": null,
+            "release_date": null,
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [],
+            "fixes": [
+                "Net Worth tab showing incorrect Liabilities value (missing mortgage) and therefore incorrect rolling Net Worth value.",
+                "Mortgage & Liabilities tab calculations showing incorrect total interest."
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.10.0",
+            "comment": null,
+            "release_date": "9th January 2021",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/kthlzn/cs_personal_savings_template_v210_now_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/kthmbe/v211_feature_request_thread/",
+            "additions": [
+                "FIRE 🔥 Dashboard: Automatically ties in with the rest of the Sheet to show your progress to FIRE and forecasting until retirement. Minimal input is needed!",
+                "Spaceship Voyager Universe support in Managed Funds tab (Universe only, updates ~8-12hrs, see MF example)",
+                "Automatic Budget Tab Migration",
+                "Improved Consolidation of Property & Mortgages into one tab",
+                "Other Property tracking & Dashboard improvements",
+                "Retirement/Super Voluntary contribution support (inc. FHSS)",
+                "End of month Summary prompt alongisde Email",
+                "Budget & Loan Tabs now support weekly/fortnightly pay cycles",
+                "Graphical representation of mortgage repayments over time",
+                "Personalization system to simplify Sheet setup",
+                "Property/Loan Figures: Total Interest paid predictions",
+                "US Sheet can now support other base-sheet currencies in Crypto tab",
+                "Live spot prices for Silver and Gold in Other Assets tab.",
+                "International currency support in Other Assets tab.",
+                "Couple tax calculator to help with determining average Tax rate (see cell note)",
+                "EU Sheet Version"
+            ],
+            "updates": [
+                "Improvements to Sheet number crunching scripts to give clearer feedback about errors and what their causes are (hopefully this makes life easier debugging!)"
+            ],
+            "fixes": [
+                "End of month email and prompt having savings rate and added savings swapped.",
+                "Historical months may show strange values (ie. December 3799)",
+                "Gaps inbetween Months in the History tab",
+                "Upgrading from a v1.3 which resulted in gaps between months or date duplicates",
+                "Issue with 'Other Assets' not being included in 'Liquid Assets' in the Net Worth tab.",
+                "Cash Tab savings dates showing December",
+                "Savings Rate/Income not being correctly reported if Budget tab not used.",
+                "Month not saving correctly with .getMonth or .getYear error",
+                "Graphs not always showing correct months in labels",
+                "Sheet names without spaces (ie. 'ManagedFunds')",
+                "Hidden tabs now migrate",
+                "Past history property values not remaining static.",
+                "Liabilities tab graphs showing currency instead of dates.",
+                "Managed Fund tab contributions still showing funds for sold off funds.",
+                "Version number being incorrectly reported in Sheet",
+                "Lots and lots of back end code clean up leading to future features",
+                "MorningStar Funds showing as $0.",
+                "Some ETF & Stocks showing incorrect prices.",
+                "Migration script not migration 'Last Run' and 'Last Refreshed' dates.",
+                "Feedback in Sheet if CoinMarketCap does not recognize a Crypto ticker.",
+                "Cash showing a huge gain if prior month wasn't recorded."
+            ],
+            "removed": [
+                "Removed and cleaned up redundant permissions"
+            ]
+        },
+        {
+            "version": "2.9.0",
+            "comment": null,
+            "release_date": "19th September 2020",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/ivkjue/cs_personal_savings_template_v29_now_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/ivkkzo/v210_feature_request_thread/",
+            "additions": [
+                "Automatic Migration Tool! This will automatically copy all data from old Sheets to the new one, making upgrades take just 30 seconds now.",
+                "Calender reminders to run monthly data recording.",
+                "Support for CoinMarketCap crypto prices. All cryptos now supported!",
+                "New end of month progression prompt",
+                "Sold Units' are now automatically calculated FIFO for every asset class.",
+                "MorningStar support to Managed Fund pricing",
+                "International currency support for Bank accounts. If you would like to see the balance of international accounts in your local/base currency, please unhide column D.",
+                "Improvements to ETF/Stock price fetching performance",
+                "Dividends for international assets will try and return a converted automatic 'Price @ Dividend' price",
+                "Investment Sector classification system",
+                "Emergency fund duration is now configurable in the SheetOptions tab"
+            ],
+            "updates": [
+                "Cleaned up all Asset type graphs to be consistent.",
+                "Readjusted layout of dividends tab to allow for dividends from more than 15 companies at once."
+            ],
+            "fixes": [
+                "Managed Fund, Stock and ETF prices when sourced from Bloomberg.",
+                "Dividends not being included in total return values.",
+                "Crypto prices returning 'ERROR'",
+                "Investment autobalance referencing incorrect cell.",
+                "Managed Fund allocation formulas & filtering.",
+                "Managed Funds not appearing on Net Worth tracker graph in Net Worth tab.",
+                "Migration script copying over the current unwritten month.",
+                "Automatic stock brokerage missing.",
+                "GBX currency erroring.",
+                "Investment Gain (%) and values if original purchase price was $0.",
+                "Bug where reinvested dividends were double counted as contributions.",
+                "History sheet not migrating all data."
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.8.0",
+            "comment": null,
+            "release_date": "11th July 2020",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/hp62dc/personal_savings_template_v28_now_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/hq4pya/development_of_v29_is_in_progress_what_would_you/",
+            "additions": [
+                "Tracker for all your Generic Assets, see the new 'Other Assets' tab",
+                "Massively improved Stock/ETF support for wider range of tickers and more robust Live Price fetching",
+                "Overhauled Crypto sheet to include full buy/sell support and performance tracking. NOTE: This is only supported in FIAT pairs, not Crypto-Crypto transactions. Please convert your Crypto-Crypto transactions to your Sheet base currency if needed.",
+                "Crypto purchases now included in Added investments",
+                "Settings around House Deposit % targets and investment contribution allocation",
+                "Managed Funds & Liability progress now added to Monthly Email update",
+                "Converted Auto-brokerage columns into user-input columns"
+            ],
+            "updates": [],
+            "fixes": [
+                "Errors from external sources interfering with Calculations in the Sheet",
+                "Debt table in Net Worth tab not showing current past debt",
+                "History Sheet if a month is missed in recording result in no data being written into the sheet",
+                "Issue where data was not being written into the Sheet",
+                "Performance improvements through optimisation of formulas",
+                "House Deposit Savings calculations",
+                "Managed Funds Graphs and History values",
+                "Market return calculations in Investment Calculator",
+                "Lots of protected ranges not being applied correctly",
+                "Certain Funds (ie. ASX:BBOZ & ASX:BBUS) not showing correctly",
+                "Dividends not filtering to current Financial Year",
+                "Net Worth calculations not showing",
+                "Incorrect Values being reported in Progress emails",
+                "Crypto Ticker errors"
+            ],
+            "removed": [
+                "Need for day of month paid requirement"
+            ]
+        },
+        {
+            "version": "2.7.0",
+            "comment": null,
+            "release_date": "13th April 2020",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/g0ejmr/personal_savings_template_v27_now_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/gqtd4y/development_of_v28_is_in_progress_what/",
+            "additions": [
+                "Full Debt/Loan Support - let me know what you think!",
+                "Graphs to see investment performance against contributions",
+                "Managed Fund Fees tracking",
+                "Full international support for Stocks/Managed Funds/ETFs in local currency",
+                "Added FAQ page on website"
+            ],
+            "updates": [
+                "Improved Property Tab & Tracking",
+                "Simplified monthly update process & removed Cash/Super date requirement rejoice!",
+                "History Sheet migration instructions",
+                "Improved Stock failover support",
+                "General Code & Sheet optimisations & cleanup",
+                "Networth update script to increase ease of use"
+            ],
+            "fixes": [
+                "Fixed bug with International stocks not having a base currency of AUD",
+                "Bugs in investment optimisation",
+                "Bugs in monthly write process"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.6.0",
+            "comment": null,
+            "release_date": "6th March 2020",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/fea0ai/personal_savings_sheet_v26_update_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/fitztj/development_of_v27_is_in_progress_what_would_you/",
+            "additions": [
+                "Managed Fund Support! Check out the fancy new tab."
+            ],
+            "updates": [
+                "Improved Investment contribution balance system (see disclaimer)",
+                "Sheet reorganisation to make future migrations quicker",
+                "UI Improvements",
+                "Budget Sheet improvements",
+                "Improved currency support for Dividends"
+            ],
+            "fixes": [
+                "Net Worth Update Script (fixes Date errors, Stock values, general improvements)",
+                "Stock gains figures",
+                "Performance fixes",
+                "Lots of formula fixes/optimisations throughout sheet"
+            ],
+            "removed": []
+        },
+        {
+            "version": "2.5.0",
+            "comment": null,
+            "release_date": "19th February 2020",
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/f67dql/personal_savings_template_v25_now_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/f67dql/personal_savings_template_v25_now_live/",
+            "additions": [
+                "Weekly/2-week pay support",
+                "Better Migration Support",
+                "Side Income (including Rental income) in your Budget"
+            ],
+            "updates": [
+                "Improvements to Stocks",
+                "Cleaned up and reduced permissions"
+            ],
+            "fixes": [
+                "Fixes to Monthly Update Scripts",
+                "Numerous of fixes to Dividend sheet ",
+                "ETF/Stock prices to be more reliable",
+                "Net Worth Calculations",
+                "Net Worth recording for more miscelaneous situations",
+                "Pension/Cash Date error",
+                "Efficiency fixes"
+            ],
+            "removed": []
+        }
+    ]
 }

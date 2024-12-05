@@ -4,6 +4,21 @@
     "future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
     "releases": [
         {
+            "version": "2.14.1",
+            "comment": "",
+            "release_date": "5th December 2024",
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [],
+            "updates": [],
+            "fixes": [
+                "Migration tool giving 'The data you entered in cell XX violates the data validation rules set on this cell.' error",
+                "'Asset Allocations - Other Assets' giving unbalanced allocations error"
+            ],
+            "removed": []
+        },
+        {
             "version": "2.14.0",
             "comment": "",
             "release_date": "2nd December 2024",

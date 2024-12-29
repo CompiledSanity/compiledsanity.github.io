@@ -55,3 +55,28 @@
     transform: rotate(360deg);
   }
 }
+
+.example-5 {
+  position: relative;
+}
+
+.example-5 svg {
+  position: absolute;
+}
+
+.example-5 .line {
+  stroke-dasharray: 260;
+  stroke-width: 1px;
+  fill: transparent;
+  stroke: rgba(78, 255, 13, 0.3);
+  animation: svgAnimation 2.5s linear infinite;
+}
+
+@keyframes svgAnimation {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1000;
+  }
+}

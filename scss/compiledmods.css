@@ -1,123 +1,125 @@
 .pricing-rates li {
-    line-height: 1.2 !important;
-    font-weight: 500 !important;
-    padding-left: 27px;
-    text-indent: -14px;
-    margin-bottom: 10px !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  padding-left: 27px;
+  text-indent: -14px;
+  margin-bottom: 10px !important;
 }
 
 div.pricing-rates {
- box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 4px 0 rgb(0 0 0 / 19%);   
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 4px 0 rgb(0 0 0 / 19%);
 }
 
 div.pricing-rates .text-muted {
-    color: #363c44 !important;
+  color: #363c44 !important;
 }
 
 @media screen and (max-width: 450px) {
-    span.logospantext {
-        font-size: 3.6vw !important;
-    }
+  span.logospantext {
+    font-size: 3.6vw !important;
+  }
 }
 
-.pricing-rates h3, .h3 {
-    font-size: 35px !important;
-    font-family: 'Ubuntu', 'Nunito', sans-serif;
+.pricing-rates h3,
+.h3 {
+  font-size: 35px !important;
+  font-family: "Ubuntu", "Nunito", sans-serif;
 }
 
-.pricing-rates h4, .h4 {
-    font-size: 27px !important;
-    font-family: 'Ubuntu', 'Nunito', sans-serif;
-    color: #7ccd87 !important;
+.pricing-rates h4,
+.h4 {
+  font-size: 27px !important;
+  font-family: "Ubuntu", "Nunito", sans-serif;
+  color: #7ccd87 !important;
 }
 
 .paidsheet a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 @media (min-width: 1200px) {
-    .pricing-rates h3, .h3 {
-        font-size: 1.75rem;
-    }
+  .pricing-rates h3,
+  .h3 {
+    font-size: 1.75rem;
+  }
 }
 
 @media (min-width: 992px) {
-    #download .col-lg-4 {
-        width: 38% !important; 
-    }
+  #download .col-lg-4 {
+    width: 38% !important;
+  }
 }
 
 .bg-animation-left.task-management-home:after {
-    background: url(/img/bg.png) #2f55d4;
-    width: 100%;
-    clip-path: circle(65% at 40% 25%);
-    background-color: #2f55d4 !important;
+  background: url(/img/bg.png) #2f55d4;
+  width: 100%;
+  clip-path: circle(65% at 40% 25%);
+  background-color: #2f55d4 !important;
 }
 
 #download .ribbon.ribbon-right {
-   right: 10px !important;
-   top: 7px !important;
+  right: 10px !important;
+  top: 7px !important;
 }
 
 /* Ensure the button has the correct base styles */
 a.btn.border-animation {
-    position: relative !important;
-    overflow: hidden !important;
-    padding: 10px 20px !important;
-    font-size: 16px !important;
-    text-align: center !important;
-    color: #333 !important;
-    border: 2px solid transparent !important;
-    border-radius: 30px !important;
-    background-color: #f8f9fa !important;
-    transition: color 0.3s, background-color 0.3s !important;
-  }
-  
-  /* Create the animated golden outline */
-  a.btn.border-animation::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  color: #333 !important;
+  border: 2px solid transparent !important;
+  border-radius: 30px !important;
+  background-color: #f8f9fa !important;
+  transition: color 0.3s, background-color 0.3s !important;
+}
+
+/* Create the animated golden outline */
+a.btn.border-animation::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300% !important;
+  height: 300% !important;
+  background-color: transparent !important;
+  border: 2px solid gold !important;
+  border-radius: 50% !important;
+  transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none;
+  animation: none !important;
+}
+
+/* Hover state to trigger the animation */
+a.btn.border-animation:hover::before {
+  width: 0 !important;
+  height: 0 !important;
+  top: 50% !important;
+  left: 50% !important;
+  animation: borderAnimation 1.5s infinite !important;
+}
+
+/* Keyframes to animate the golden circle */
+@keyframes borderAnimation {
+  0% {
     width: 300% !important;
     height: 300% !important;
-    background-color: transparent !important;
-    border: 2px solid gold !important;
-    border-radius: 50% !important;
-    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s !important;
-    transform: translate(-50%, -50%) !important;
-    pointer-events: none;
-    animation: none !important;
+    top: 50% !important;
+    left: 50% !important;
   }
-  
-  /* Hover state to trigger the animation */
-  a.btn.border-animation:hover::before {
+  50% {
     width: 0 !important;
     height: 0 !important;
     top: 50% !important;
     left: 50% !important;
-    animation: borderAnimation 1.5s infinite !important;
   }
-  
-  /* Keyframes to animate the golden circle */
-  @keyframes borderAnimation {
-    0% {
-      width: 300% !important;
-      height: 300% !important;
-      top: 50% !important;
-      left: 50% !important;
-    }
-    50% {
-      width: 0 !important;
-      height: 0 !important;
-      top: 50% !important;
-      left: 50% !important;
-    }
-    100% {
-      width: 300% !important;
-      height: 300% !important;
-      top: 50% !important;
-      left: 50% !important;
-    }
+  100% {
+    width: 300% !important;
+    height: 300% !important;
+    top: 50% !important;
+    left: 50% !important;
   }
-  
+}

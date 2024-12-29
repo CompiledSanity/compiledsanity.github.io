@@ -1,62 +1,62 @@
-/* Set up the base styles for the button */
-.btn.border-animation {
-    position: relative;
-    overflow: hidden;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
-    color: #333;
-    border: 2px solid transparent;
-    border-radius: 30px;
-    background-color: #f8f9fa;
-    transition: color 0.3s, background-color 0.3s;
+/* Ensure the button has the correct base styles */
+a.btn.border-animation {
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    color: #333 !important;
+    border: 2px solid transparent !important;
+    border-radius: 30px !important;
+    background-color: #f8f9fa !important;
+    transition: color 0.3s, background-color 0.3s !important;
   }
   
   /* Create the animated golden outline */
-  .btn.border-animation::before {
+  a.btn.border-animation::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300%;
-    height: 300%;
-    background-color: transparent;
-    border: 2px solid gold;
-    border-radius: 50%;
-    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
-    transform: translate(-50%, -50%);
+    width: 300% !important;
+    height: 300% !important;
+    background-color: transparent !important;
+    border: 2px solid gold !important;
+    border-radius: 50% !important;
+    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s !important;
+    transform: translate(-50%, -50%) !important;
     pointer-events: none;
-    animation: none;
+    animation: none !important;
   }
   
   /* Hover state to trigger the animation */
-  .btn.border-animation:hover::before {
-    width: 0;
-    height: 0;
-    top: 50%;
-    left: 50%;
-    animation: borderAnimation 1.5s infinite;
+  a.btn.border-animation:hover::before {
+    width: 0 !important;
+    height: 0 !important;
+    top: 50% !important;
+    left: 50% !important;
+    animation: borderAnimation 1.5s infinite !important;
   }
   
   /* Keyframes to animate the golden circle */
   @keyframes borderAnimation {
     0% {
-      width: 300%;
-      height: 300%;
-      top: 50%;
-      left: 50%;
+      width: 300% !important;
+      height: 300% !important;
+      top: 50% !important;
+      left: 50% !important;
     }
     50% {
-      width: 0;
-      height: 0;
-      top: 50%;
-      left: 50%;
+      width: 0 !important;
+      height: 0 !important;
+      top: 50% !important;
+      left: 50% !important;
     }
     100% {
-      width: 300%;
-      height: 300%;
-      top: 50%;
-      left: 50%;
+      width: 300% !important;
+      height: 300% !important;
+      top: 50% !important;
+      left: 50% !important;
     }
   }
   

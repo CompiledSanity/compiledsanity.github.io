@@ -1,38 +1,57 @@
-
-.block {
-	position: relative;
-	margin: 300px auto 0;
-	width: 500px;
-	height: 250px;
-	background: linear-gradient(0deg, #000, #272727);
+.getting-start-button {
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+  border-radius: var(--border-radius);
 }
 
-.block:before, .block:after {
-	content: '';
-	position: absolute;
-	left: -2px;
-	top: -2px;
-	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
-		#0000ff, #00ff00,#ffff00, #ff0000);
-	background-size: 400%;
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	z-index: -1;
-	animation: steam 20s linear infinite;
+.getting-start-button .inner {
+  padding: 25px;
+  background: #222;
+  color: #fff;
+  border-radius: var(--border-radius);
 }
 
-@keyframes steam {
-	0% {
-		background-position: 0 0;
-	}
-	50% {
-		background-position: 400% 0;
-	}
-	100% {
-		background-position: 0 0;
-	}
+.getting-start-button h3 {
+  margin-bottom: 15px;
 }
 
-.block:after {
-	filter: blur(50px);
+.example-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.example-1 .inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 5px;
+}
+
+.example-1::before {
+  content: "";
+  display: block;
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 64%, 1) 0%,
+    hsla(339, 100%, 55%, 1) 100%
+  );
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  animation: rotate 8s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,62 +1,38 @@
-/* Ensure the button has the correct base styles */
-a.btn.border-animation {
-    position: relative !important;
-    overflow: hidden !important;
-    padding: 10px 20px !important;
-    font-size: 16px !important;
-    text-align: center !important;
-    color: #333 !important;
-    border: 2px solid transparent !important;
-    border-radius: 30px !important;
-    background-color: #f8f9fa !important;
-    transition: color 0.3s, background-color 0.3s !important;
-  }
-  
-  /* Create the animated golden outline */
-  a.btn.border-animation::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300% !important;
-    height: 300% !important;
-    background-color: transparent !important;
-    border: 2px solid gold !important;
-    border-radius: 50% !important;
-    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s !important;
-    transform: translate(-50%, -50%) !important;
-    pointer-events: none;
-    animation: none !important;
-  }
-  
-  /* Hover state to trigger the animation */
-  a.btn.border-animation:hover::before {
-    width: 0 !important;
-    height: 0 !important;
-    top: 50% !important;
-    left: 50% !important;
-    animation: borderAnimation 1.5s infinite !important;
-  }
-  
-  /* Keyframes to animate the golden circle */
-  @keyframes borderAnimation {
-    0% {
-      width: 300% !important;
-      height: 300% !important;
-      top: 50% !important;
-      left: 50% !important;
-    }
-    50% {
-      width: 0 !important;
-      height: 0 !important;
-      top: 50% !important;
-      left: 50% !important;
-    }
-    100% {
-      width: 300% !important;
-      height: 300% !important;
-      top: 50% !important;
-      left: 50% !important;
-    }
-  }
-  
+
+.block {
+	position: relative;
+	margin: 300px auto 0;
+	width: 500px;
+	height: 250px;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}

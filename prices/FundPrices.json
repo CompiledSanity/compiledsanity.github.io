@@ -1,9 +1,13 @@
 {
-   "LastUpdated": 1735523386,
-   "SPACEVOYEARTH": 1.57864,
-   "SPACEVOYORIGIN": 1.840401,
-   "SPACEVOYUNIV": 2.581614,
-   "SpaceshipVoyagerEarth": 1.57864,
-   "SpaceshipVoyagerOrigin": 1.840401,
-   "SpaceshipVoyagerUniverse": 2.581614
+   "LastUpdated": 1735608563,
+   "SPACEVOYEARTH": 1.558015,
+   "SPACEVOYEXPLORER": 1.048491,
+   "SPACEVOYGALAXY": 1.118748,
+   "SPACEVOYORIGIN": 1.824039,
+   "SPACEVOYUNIV": 2.551861,
+   "SpaceshipVoyagerEarth": 1.558015,
+   "SpaceshipVoyagerExplorer": 1.048491,
+   "SpaceshipVoyagerGalaxy": 1.118748,
+   "SpaceshipVoyagerOrigin": 1.824039,
+   "SpaceshipVoyagerUniverse": 2.551861
 }

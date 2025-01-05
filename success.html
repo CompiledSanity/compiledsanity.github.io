@@ -37,28 +37,6 @@
         </script>
         <!-- End Google Tag Manager -->
 
-        <!-- Mautic Pixel -->
-        <script>
-            const disableMauticTracking = false;
-            
-            if (!disableMauticTracking) {
-                (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
-                    w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
-                    m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','https://mau2.cspersonalfinance.io/mtc.js','mt');
-            
-                mt('send', 'pageview');
-            }
-        </script>
-        <!-- End Muatic Pixel -->
-
-        <!-- Reddit Pixel -->
-        <script>
-            !function (w, d) { if (!w.rdt) { var p = w.rdt = function () { p.sendEvent ? p.sendEvent.apply(p, arguments) : p.callQueue.push(arguments) }; p.callQueue = []; var t = d.createElement("script"); t.src = "https://www.redditstatic.com/ads/pixel.js", t.async = !0; var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s) } }(window, document); rdt('init', 't2_8vi78'); rdt('track', 'PageVisit'); rdt('track', 'Purchase');
-        </script>
-        <!-- DO NOT MODIFY -->
-        <!-- End Reddit Pixel -->
-
     </head>
 
     <body>

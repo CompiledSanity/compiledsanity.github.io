@@ -15,7 +15,7 @@
                 "Support for Spaceship Galaxy and Explorer Portfolios"
             ],
             "updates": [
-                "Increased robustness for Yahoo Finance and MorningStar price fetching logic",
+                "Increased robustness for Yahoo Finance and MorningStar logic",
                 "Improvements to month selection dropdown box in the EOM process to give better feedback on errors and provided solutions in specific conditions (thanks u/oscarandjo)"
             ],
             "fixes": [],

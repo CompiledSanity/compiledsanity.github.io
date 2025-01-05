@@ -4,9 +4,28 @@
     "future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
     "releases": [
         {
+            "version": "2.14.2",
+            "comment": "",
+            "release_date": "5th January 2025",
+            "timestamp": 1733067125,
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Support for Spaceship Galaxy and Explorer Portfolios"
+            ],
+            "updates": [
+                "Increased robustness for Yahoo Finance and MorningStar price fetching logic",
+                "Improvements to month selection dropdown box in the EOM process to give better feedback on errors and provided solutions in specific conditions (thanks u/oscarandjo)"
+            ],
+            "fixes": [],
+            "removed": []
+        },
+        {
             "version": "2.14.1",
             "comment": "",
             "release_date": "5th December 2024",
+            "timestamp": 1733326325,
             "major_version": false,
             "major_version_redditcurrent": null,
             "major_version_redditrequest": null,
@@ -22,6 +41,7 @@
             "version": "2.14.0",
             "comment": "",
             "release_date": "2nd December 2024",
+            "timestamp": 1733067125,
             "major_version": true,
             "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4spm3/cs_personal_savings_template_v214_now_live/",
             "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
@@ -40,7 +60,7 @@
                 "'Consider 0' for next investment message",
                 "UK & EU Sheet: Dividend tables incorrectly showing $ symbols",
                 "End of Month lookback recording showing incorrect months",
-				"End of Month lookback recording recording blank rows",
+                "End of Month lookback recording recording blank rows",
                 "Migration tool incorrectly migrating Crypto tab Watch Table",
                 "Migration tool incorrectly migrating Side Income Tab",
                 "Migration tool incorrectly migrating Managed Fund Watch and Transaction Table",
@@ -111,6 +131,7 @@
             "version": "2.13.0",
             "comment": "",
             "release_date": "19th May 2023",
+            "timestamp": 1684427525,
             "major_version": true,
             "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/13lsy8s/cs_personal_savings_template_v213_now_live/",
             "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/13lt2xq/v214_feature_request_thread/",

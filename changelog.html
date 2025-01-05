@@ -308,7 +308,7 @@
                         var ch_comment = response_json["releases"][changelog_entry]["comment"];
                         var ch_timestamp = response_json["releases"][changelog_entry]["timestamp"];
 
-                        if (ch_timestamp !== undefined) {
+                        if (ch_timestamp !== undefined && ch_timestamp != 0) {
                             var ch_release_date = formatDate(ch_timestamp);
                         } else {
                             var ch_release_date = response_json["releases"][changelog_entry]["release_date"];

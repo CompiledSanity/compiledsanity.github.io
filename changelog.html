@@ -306,10 +306,10 @@
                     for (var changelog_entry in response_json["releases"]) {
                         var ch_version = response_json["releases"][changelog_entry]["version"];
                         var ch_comment = response_json["releases"][changelog_entry]["comment"];
-                        var timestamp = response_json["releases"][changelog_entry]["timestamp"];
+                        var ch_timestamp = response_json["releases"][changelog_entry]["timestamp"];
 
-                        if (timestamp !== undefined) {
-                            var ch_release_date = formatDate(timestamp);
+                        if (ch_timestamp !== undefined) {
+                            var ch_release_date = formatDate(ch_timestamp);
                             console.log("Successfully found timestamp for " + ch_version);
                         } else {
                             var ch_release_date = response_json["releases"][changelog_entry]["release_date"];

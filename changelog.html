@@ -273,6 +273,30 @@
 
         <!-- Changelog Script -->
         <script>
+            function formatDate(epochTimestamp) {
+                const date = new Date(epochTimestamp * 1000); // Convert to milliseconds
+                
+                // Get day with ordinal suffix
+                const day = date.getDate();
+                const ordinal = (day) => {
+                    if (day > 3 && day < 21) return 'th';
+                    switch (day % 10) {
+                        case 1: return 'st';
+                        case 2: return 'nd';
+                        case 3: return 'rd';
+                        default: return 'th';
+                    }
+                };
+
+                // Get month name
+                const months = [
+                    'January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December'
+                ];
+
+                return `${day}${ordinal(day)} ${months[date.getMonth()]} ${date.getFullYear()}`;
+            }
+
             fetch('/changelog.json')
                 .then(response => response.json())
                 .then(response_json => {
@@ -282,7 +306,13 @@
                     for (var changelog_entry in response_json["releases"]) {
                         var ch_version = response_json["releases"][changelog_entry]["version"];
                         var ch_comment = response_json["releases"][changelog_entry]["comment"];
-                        var ch_release_date = response_json["releases"][changelog_entry]["release_date"];
+                        try {
+                            var ch_release_date = formatDate(response_json["releases"][changelog_entry]["timestamp"]);
+                            console.log("Successfully found timestamp for " + ch_version);
+                        } catch(error) {
+                            var ch_release_date = response_json["releases"][changelog_entry]["release_date"];
+                            console.log("Could not find timestamp for " + ch_version);
+                        }
                         var ch_majorversion = response_json["releases"][changelog_entry]["major_version"];
                         var ch_custom_cssclass = "";
 

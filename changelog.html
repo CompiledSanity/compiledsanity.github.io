@@ -310,13 +310,10 @@
 
                         if (ch_timestamp !== undefined) {
                             var ch_release_date = formatDate(ch_timestamp);
-                            //console.log("Successfully found timestamp for " + ch_version);
                         } else {
                             var ch_release_date = response_json["releases"][changelog_entry]["release_date"];
-                            //console.log("Could not find timestamp for " + ch_version);
+                            console.log("Could not find timestamp for " + ch_version);
                         }
-
-                        console.log(response_json["releases"][changelog_entry]["release_date"]);
 
                         var ch_majorversion = response_json["releases"][changelog_entry]["major_version"];
                         var ch_custom_cssclass = "";

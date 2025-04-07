@@ -2,7 +2,7 @@
 const inputElement = document.getElementById('sheetEmailInput');
 
 // Array of words to check for
-const wordsToCheck = ['spam'];
+const wordsToCheck = ['spam', 'noreply', 'postmaster', 'webmaster'];
 
 // Function to check input value and show warning
 function checkForForbiddenWords(event) {

@@ -20,7 +20,7 @@ function checkForForbiddenWords(event) {
     if (!warningElement) {
       warningElement = document.createElement('div');
       warningElement.id = 'word-warning';
-      warningElement.className = 'alert alert-warning';
+      warningElement.className = 'alert alert-warning mt-1';
       
       // Insert the warning after the input
       event.target.parentNode.insertBefore(warningElement, event.target.nextSibling);
@@ -28,10 +28,11 @@ function checkForForbiddenWords(event) {
     
     // Create the warning message with the detected words
     if (foundWords.length === 1) {
-      warningElement.textContent = `Warning: "${foundWords[0]}" detected in input!`;
+      warningElement.textContent = `<b>Please note:</b>The word '${foundWords[0]}' in your email may cause issues with email deliverability, or not be delivered at all. This is a restriction by our mailer. For best results, try an alternative address.`;
     } else {
       const lastWord = foundWords.pop();
       warningElement.textContent = `Warning: "${foundWords.join('", "')}" and "${lastWord}" detected in input!`;
+      warningElement.textContent = `<b>Please note:</b>The words '${foundWords.join("', '")}' and '${lastWord}' in your email may cause issues with email deliverability, or not be delivered at all. This is a restriction by our mailer. For best results, try an alternative address.`;
     }
   } else {
     // Remove warning if it exists and input doesn't contain any forbidden words

@@ -232,17 +232,20 @@
                 </div>
 
                 <div>
-                    <button class="btn btn-pills btn-primary" onclick="findAverageTaxRate()"
-                        type="button">Calculate Rate</button>
+                    <button class="btn btn-pills btn-primary" onclick="findAverageTaxRate()" type="button">Calculate
+                        Rate</button>
                 </div>
 
                 <div class="mt-4 alert alert-light alert-pills mx-auto" id="lookupResultAlert" role="alert"
                     style="transition: all 0.2s; display: none; max-width: 40%">
                     <div class="alert-content fw-bold">
-                        Your Average Tax Rate is:
+                        Your Weighted Average Tax Rate is:
                     </div>
                     <div class="alert-content">
                         <span class="h2 mt-1" id="lookupResult"></span>
+                    </div>
+                    <div class="alert-content">
+                        <span class="text-muted mt-1">*Please note this is only an estimate.</span>
                     </div>
                 </div>
 
@@ -251,7 +254,7 @@
                     function findAverageTaxRate() {
                         var lookupResultAlert = document.getElementById("lookupResultAlert");
                         var lookupResult = document.getElementById("lookupResult");
-                        
+
                         var partner_1_salary = document.getElementById("partner1-salary");
                         var partner_1_tax_rate = document.getElementById("partner1-tax-rate");
                         var partner_2_salary = document.getElementById("partner2-salary");
@@ -276,7 +279,10 @@
 
                         var weightedTaxRate = ((salary1 * taxRate1) + (salary2 * taxRate2)) / totalSalary;
 
-                        lookupResult.innerHTML = weightedTaxRate;
+                        var weightedTaxRateString = weightedTaxRate.toFixed(1) + '%*'; // returns a string like "28.7%"
+
+
+                        lookupResult.innerHTML = weightedTaxRateString;
                         lookupResultAlert.style.display = 'block';
                         return;
                     }

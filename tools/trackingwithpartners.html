@@ -232,7 +232,7 @@
                 </div>
 
                 <div>
-                    <button class="mt-4 btn btn-pills btn-primary" onclick="findAverageTaxRate()"
+                    <button class="btn btn-pills btn-primary" onclick="findAverageTaxRate()"
                         type="button">Calculate Rate</button>
                 </div>
 
@@ -249,7 +249,9 @@
                 <script>
 
                     function findAverageTaxRate() {
-
+                        var lookupResultAlert = document.getElementById("lookupResultAlert");
+                        var lookupResult = document.getElementById("lookupResult");
+                        
                         var partner_1_salary = document.getElementById("partner1-salary");
                         var partner_1_tax_rate = document.getElementById("partner1-tax-rate");
                         var partner_2_salary = document.getElementById("partner2-salary");

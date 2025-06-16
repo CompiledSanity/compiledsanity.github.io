@@ -183,7 +183,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="form-icon position-relative">
                                         <i-feather name="user" class="fea icon-sm icons"></i-feather>
-                                        <input name="name" id="name" type="text" class="form-control ps-5"
+                                        <input name="name" id="partner1-salary" type="text" class="form-control ps-5"
                                             placeholder="60,000">
                                     </div>
                                 </div>
@@ -193,7 +193,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="form-icon position-relative">
                                         <i-feather name="user" class="fea icon-sm icons"></i-feather>
-                                        <input name="name" id="name" type="text" class="form-control ps-5"
+                                        <input name="name" id="partner1-tax-rate" type="text" class="form-control ps-5"
                                             placeholder="34%">
                                     </div>
                                 </div>
@@ -211,7 +211,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="form-icon position-relative">
                                         <i-feather name="user" class="fea icon-sm icons"></i-feather>
-                                        <input name="name" id="name" type="text" class="form-control ps-5"
+                                        <input name="name" id="partner2-salary" type="text" class="form-control ps-5"
                                             placeholder="60,000">
                                     </div>
                                 </div>
@@ -221,7 +221,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="form-icon position-relative">
                                         <i-feather name="user" class="fea icon-sm icons"></i-feather>
-                                        <input name="name" id="name" type="text" class="form-control ps-5"
+                                        <input name="name" id="partner2-tax-rate" type="text" class="form-control ps-5"
                                             placeholder="34%">
                                     </div>
                                 </div>
@@ -249,80 +249,34 @@
                 <script>
 
                     function findAverageTaxRate() {
-                        var lookupResultAlert = document.getElementById("lookupResultAlert");
-                        var lookupResult = document.getElementById("lookupResult");
-                        var lookupInstructions = document.getElementById("lookupInstructions");
 
-                        lookupInstructions.style.display = 'none';
+                        var partner_1_salary = document.getElementById("partner1-salary");
+                        var partner_1_tax_rate = document.getElementById("partner1-tax-rate");
+                        var partner_2_salary = document.getElementById("partner2-salary");
+                        var partner_2_tax_rate = document.getElementById("partner2-tax-rate");
+
                         lookupResultAlert.style.display = 'none';
                         lookupResult.innerHTML = "--";
 
-                        var lookupID = document.getElementById("lookupID").value.toString().toUpperCase().trim();
+                        // Parse values as floats and strip percent signs if needed
+                        var salary1 = parseFloat(partner_1_salary.value.replace(/[^\d.]/g, '')) || 0;
+                        var taxRate1 = parseFloat(partner_1_tax_rate.value.replace('%', '')) || 0;
 
-                        if (lookupID[0].length < 1 || lookupID == null) {
-                            lookupResult.innerHTML = "No ID entered";
-                            lookupInstructions.style.display = 'none';
-                            lookupResultAlert.style.display = 'block';
-                            return;
-                        } else if (lookupID[0].charAt(0) == "F") {
-                            lookupResult.innerHTML = "Already new Morningstar ID";
-                            lookupInstructions.style.display = 'none';
-                            lookupResultAlert.style.display = 'block';
-                            return;
-                        } else if (isNaN(lookupID) && lookupID[0].charAt(0) != "F" && lookupID[0].charAt(0) != "V" && lookupID[0].charAt(0) != "O") {
-                            lookupResult.innerHTML = 'Not a Morningstar-AU ID</br><p class="h6 fw-light mt-1">Please note this tool is for MorningStar-AU IDs only</p>';
-                            lookupInstructions.style.display = 'none';
-                            lookupResultAlert.style.display = 'block';
-                            return;
+                        var salary2 = parseFloat(partner_2_salary.value.replace(/[^\d.]/g, '')) || 0;
+                        var taxRate2 = parseFloat(partner_2_tax_rate.value.replace('%', '')) || 0;
+
+                        // Calculate weighted average
+                        var totalSalary = salary1 + salary2;
+
+                        if (totalSalary === 0) {
+                            return 0; // avoid divide by zero
                         }
 
-                        var lookupValue = lookupID.split("/").slice(-1);
+                        var weightedTaxRate = ((salary1 * taxRate1) + (salary2 * taxRate2)) / totalSalary;
 
-                        if (lookupValue.includes("id=")) {
-                            lookupValue = lookupValue.split("id=").slice(1);
-                        }
-
-                        if (lookupValue.includes("&")) {
-                            lookupValue = lookupValue.split("&").slice(0);
-                        }
-
-                        lookupResult.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-                                <circle cx="50" cy="50" r="30" stroke="#53ab8b" stroke-width="10" fill="none"></circle>
-                                <circle cx="50" cy="50" r="30" stroke="#157759" stroke-width="8" stroke-linecap="round" fill="none">
-                                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"></animateTransform>
-                                <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1s" values="18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882" keyTimes="0;0.5;1"></animate>
-                                </circle>
-                            </svg>`;
-
+                        lookupResult.innerHTML = weightedTaxRate;
                         lookupResultAlert.style.display = 'block';
-
-                        console.log(lookupID);
-                        console.log(lookupValue);
-
-                        fetch('https://cspersonalfinance.io/prices/morningstarIds.json')
-                            .then(response => response.json())
-                            .then(html => {
-                                if (lookupValue in html['MorningStarIds']) {
-                                    lookupResult.innerHTML = html['MorningStarIds'][lookupValue];
-                                    lookupInstructions.style.display = 'block';
-                                    console.log("Found using cached value");
-                                } else {
-
-                                    fetch('https://api.cspersonalfinance.io/msLookup?msTicker=' + lookupID + '&token=YPhLoQAXSsiCZ1DaJh1V')
-                                        .then(response => response.json())
-                                        .then(html => {
-                                            if (html['id'] !== null) {
-                                                lookupResult.innerHTML = html['id'];
-                                                console.log("Found using MS Lookup");
-                                                lookupInstructions.style.display = 'block';
-                                            } else {
-                                                lookupResult.innerHTML = "No valid ID found";
-                                            }
-                                        });
-                                }
-                            });
-
-                        lookupResultAlert.style.display = 'block';
+                        return;
                     }
 
                 </script>

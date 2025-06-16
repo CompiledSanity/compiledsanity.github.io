@@ -171,7 +171,7 @@
             </div>
 
             <div class="col-lg-9 col-md-8 col-12 mt-4 pt-2 mt-sm-0 pt-sm-0  mx-auto">
-                <h6 class="mt-2 fw-normal text-center">Weighted Average Tax Rate</h6>
+                <h6 class="mt-5 fw-normal text-center">Weighted Average Tax Rate</h6>
 
                 <div class="row mb-5 justify-content-center text-center">
                     <div class="col-lg-6 col-12 mt-4 pt-2">
@@ -184,8 +184,8 @@
                                             class="text-danger">*</span></label>
                                     <div class="form-icon position-relative">
                                         <i-feather name="user" class="fea icon-sm icons"></i-feather>
-                                        <input name="name" id="partner1-salary" type="text" class="form-control text-center"
-                                            placeholder="60,000">
+                                        <input id="partner1-salary" type="number" min="0" step="1"
+                                            class="form-control text-center" placeholder="60,000">
                                     </div>
                                 </div>
 
@@ -194,8 +194,8 @@
                                             class="text-danger">*</span></label>
                                     <div class="form-icon position-relative">
                                         <i-feather name="user" class="fea icon-sm icons"></i-feather>
-                                        <input name="name" id="partner1-tax-rate" type="text" class="form-control text-center"
-                                            placeholder="34%">
+                                        <input id="partner1-tax-rate" type="number" min="0" step="1"
+                                            class="form-control text-center" placeholder="34%">
                                     </div>
                                 </div>
                             </div>
@@ -212,8 +212,8 @@
                                             class="text-danger">*</span></label>
                                     <div class="form-icon position-relative">
                                         <i-feather name="user" class="fea icon-sm icons"></i-feather>
-                                        <input name="name" id="partner2-salary" type="text" class="form-control text-center"
-                                            placeholder="60,000">
+                                        <inputid="partner2-salary" type="number" min="0" step="1"
+                                            class="form-control text-center" placeholder="60,000">
                                     </div>
                                 </div>
 
@@ -222,8 +222,8 @@
                                             class="text-danger">*</span></label>
                                     <div class="form-icon position-relative">
                                         <i-feather name="user" class="fea icon-sm icons"></i-feather>
-                                        <input name="name" id="partner2-tax-rate" type="text" class="form-control text-center"
-                                            placeholder="34%">
+                                        <input id="partner2-tax-rate" type="number" min="0" step="1"
+                                            class="form-control text-center" placeholder="34%">
                                     </div>
                                 </div>
                             </div>
@@ -233,7 +233,8 @@
                 </div>
 
                 <div>
-                    <button class="btn btn-pills btn-primary text-muted" onclick="findAverageTaxRate()" type="button">Calculate
+                    <button class="btn btn-pills btn-primary text-muted" onclick="findAverageTaxRate()"
+                        type="button">Calculate
                         Average Rate</button>
                 </div>
 
@@ -255,33 +256,36 @@
                     function findAverageTaxRate() {
                         var lookupResultAlert = document.getElementById("lookupResultAlert");
                         var lookupResult = document.getElementById("lookupResult");
+                        try {
 
-                        var partner_1_salary = document.getElementById("partner1-salary");
-                        var partner_1_tax_rate = document.getElementById("partner1-tax-rate");
-                        var partner_2_salary = document.getElementById("partner2-salary");
-                        var partner_2_tax_rate = document.getElementById("partner2-tax-rate");
+                            var partner_1_salary = document.getElementById("partner1-salary");
+                            var partner_1_tax_rate = document.getElementById("partner1-tax-rate");
+                            var partner_2_salary = document.getElementById("partner2-salary");
+                            var partner_2_tax_rate = document.getElementById("partner2-tax-rate");
 
-                        lookupResultAlert.style.display = 'none';
-                        lookupResult.innerHTML = "--";
+                            lookupResultAlert.style.display = 'none';
+                            lookupResult.innerHTML = "--";
 
-                        // Parse values as floats and strip percent signs if needed
-                        var salary1 = parseFloat(partner_1_salary.value.replace(/[^\d.]/g, '')) || 0;
-                        var taxRate1 = parseFloat(partner_1_tax_rate.value.replace('%', '')) || 0;
+                            // Parse values as floats and strip percent signs if needed
+                            var salary1 = parseFloat(partner_1_salary.value.replace(/[^\d.]/g, '')) || 0;
+                            var taxRate1 = parseFloat(partner_1_tax_rate.value.replace('%', '')) || 0;
 
-                        var salary2 = parseFloat(partner_2_salary.value.replace(/[^\d.]/g, '')) || 0;
-                        var taxRate2 = parseFloat(partner_2_tax_rate.value.replace('%', '')) || 0;
+                            var salary2 = parseFloat(partner_2_salary.value.replace(/[^\d.]/g, '')) || 0;
+                            var taxRate2 = parseFloat(partner_2_tax_rate.value.replace('%', '')) || 0;
 
-                        // Calculate weighted average
-                        var totalSalary = salary1 + salary2;
+                            // Calculate weighted average
+                            var totalSalary = salary1 + salary2;
 
-                        if (totalSalary === 0) {
-                            return 0; // avoid divide by zero
+                            if (totalSalary === 0) {
+                                return 0; // avoid divide by zero
+                            }
+
+                            var weightedTaxRate = ((salary1 * taxRate1) + (salary2 * taxRate2)) / totalSalary;
+
+                            var weightedTaxRateString = weightedTaxRate.toFixed(1) + '%*'; // returns a string like "28.7%"
+                        } catch (error) {
+                            lookupResult.innerHTML = "Error with Inputs";
                         }
-
-                        var weightedTaxRate = ((salary1 * taxRate1) + (salary2 * taxRate2)) / totalSalary;
-
-                        var weightedTaxRateString = weightedTaxRate.toFixed(1) + '%*'; // returns a string like "28.7%"
-
 
                         lookupResult.innerHTML = weightedTaxRateString;
                         lookupResultAlert.style.display = 'block';

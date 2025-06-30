@@ -4,6 +4,32 @@
     "future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
     "releases": [
         {
+            "version": "2.15.0",
+            "comment": "",
+            "release_date": "30th June 2025",
+            "timestamp": 1751280757,
+            "major_version": true,
+            "major_version_redditcurrent": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4spm3/cs_personal_savings_template_v214_now_live/",
+            "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/1h4sr8u/v215_feature_request_thread/",
+            "additions": [
+                "<b>New Graph compression features 📊<b> - This new feature automatically compresses graphs around the sheet down to a monthly, quarterly or yearly level. Additionally, you can also set how far back you want the graphs to display, whether it be 6 months or 6 years. The choice is yours! <i>ℹ️ This setting sits in the bottom of the Net Worth tab in cells G60.</i>",
+                "Converted all estimated performance and Estimated %/Year figures to XIRR calculations - This will ensure that performance figures more accurately calculate the internal rate of return for a range of cash flows that may not be scheduled at regular intervals. This will ensure that overtime your performances for assets are more accurate. <b>Please note that you may see a drift from your prior performance figures as a result (potentially <10% for short-term purchases).</b>",
+                "Added Frozen Rows to History Tab"
+            ],
+            "updates": [
+                "Retirement Fund voluntary contributions can be excluded from 'Added Investments' and Savings rate figures"
+            ],
+            "fixes": [
+                "Divide by 0 error in Total Return (%) area of Managed Funds Tab",
+                "Fixed 'You do not have permission to call MailApp.sendEmail' error",
+                "Fixed 'You do not have permission to call Ui.showModalDialog' error",
+                "Fixed 'did not find value '45XXX' in VLOOKUP evaluation' error in Liabilities tab",
+                "Fixed issue in US sheet where SheetOptions tab incorrect asked for Yes/No for Other Asset Allocations. This has been update to a % based input.",
+                "ETF Gain Figure (%) in Net Worth tab to use correct Gain (%) value"
+            ],
+            "removed": []
+        },
+        {
             "version": "2.14.2",
             "comment": "",
             "release_date": "5th January 2025",

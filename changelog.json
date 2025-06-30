@@ -13,7 +13,7 @@
             "major_version_redditrequest": "https://www.reddit.com/r/CSPersonalFinance/comments/1lo4uiv/v216_feature_request_thread/",
             "additions": [
                 "<b>New Graph compression features 📊</b> - This new feature automatically compresses graphs around the sheet down to a monthly, quarterly or yearly level. Additionally, you can also set how far back you want the graphs to display, whether it be 6 months or 6 years. The choice is yours! <i>ℹ️ This setting sits in the bottom of the Net Worth tab in cells G60.</i>",
-                "Converted all estimated performance and Estimated %/Year figures to XIRR calculations - This will ensure that performance figures more accurately calculate the internal rate of return for a range of cash flows that may not be scheduled at regular intervals. This will ensure that overtime your performances for assets are more accurate. <b>Please note that you may see a drift from your prior performance figures as a result (potentially <10% for short-term purchases).</b>",
+                "Converted all estimated performance and Estimated %/Year figures to XIRR calculations - This will ensure that performance figures more accurately calculate the internal rate of return for a range of cash flows that may not be scheduled at regular intervals. This will ensure that overtime your performances for assets are more accurate. <b>Please note that you may see a drift from your prior performance figures as a result (potentially <10% for short-term purchases). Historical and sold assets are also now included.</b>",
                 "Added Frozen Rows to History Tab"
             ],
             "updates": [

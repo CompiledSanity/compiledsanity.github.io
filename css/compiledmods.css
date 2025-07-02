@@ -74,7 +74,7 @@
     background: linear-gradient(45deg, 
         #ff006e, #8338ec, #3a86ff, #06ffa5, 
         #ffbe0b, #fb5607, #ff006e);
-    background-size: 400% 400%;
+    background-size: 300% 300%;
     animation: futuristicGradientShift 3s ease infinite;
 }
 
@@ -89,7 +89,7 @@
     background: linear-gradient(45deg, 
         #ff006e, #8338ec, #3a86ff, #06ffa5, 
         #ffbe0b, #fb5607, #ff006e);
-    background-size: 400% 400%;
+    background-size: 300% 300%;
     animation: futuristicGradientShift 3s ease infinite reverse;
     z-index: -1;
     filter: blur(8px);
@@ -107,7 +107,7 @@
     background: linear-gradient(45deg, 
         #ff006e, #8338ec, #3a86ff, #06ffa5, 
         #ffbe0b, #fb5607, #ff006e);
-    background-size: 400% 400%;
+    background-size: 300% 300%;
     animation: futuristicGradientShift 2s ease infinite;
     z-index: -2;
     filter: blur(16px);
@@ -123,17 +123,17 @@
 
 /* Hover effects */
 .futuristic-glow-wrapper:hover {
-    animation-duration: 1.5s;
+    animation-duration: 5.5s;
 }
 
 .futuristic-glow-wrapper:hover::before {
-    animation-duration: 1.5s;
+    animation-duration: 5.5s;
     filter: blur(12px);
     opacity: 1;
 }
 
 .futuristic-glow-wrapper:hover::after {
-    animation-duration: 1s;
+    animation-duration: 5s;
     filter: blur(20px);
     opacity: 0.8;
 }

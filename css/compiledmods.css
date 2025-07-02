@@ -64,3 +64,98 @@
     opacity: 1;
   }
 }
+
+.getting-started-btn {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    padding: 2px;
+    border-radius: 16px;
+    background: linear-gradient(45deg, 
+        #ff006e, #8338ec, #3a86ff, #06ffa5, 
+        #ffbe0b, #fb5607, #ff006e);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+}
+
+.getting-started-btn::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 18px;
+    background: linear-gradient(45deg, 
+        #ff006e, #8338ec, #3a86ff, #06ffa5, 
+        #ffbe0b, #fb5607, #ff006e);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite reverse;
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0.8;
+}
+
+.getting-started-btn::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, 
+        #ff006e, #8338ec, #3a86ff, #06ffa5, 
+        #ffbe0b, #fb5607, #ff006e);
+    background-size: 400% 400%;
+    animation: gradientShift 2s ease infinite;
+    z-index: -2;
+    filter: blur(16px);
+    opacity: 0.6;
+}
+
+.content-box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f0f23);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.futuristic-text {
+    color: #00ffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    text-align: center;
+    z-index: 1;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hover effects for extra interactivity */
+.getting-started-btn:hover {
+    animation-duration: 1.5s;
+}
+
+.getting-started-btn:hover::before {
+    animation-duration: 1.5s;
+    filter: blur(12px);
+    opacity: 1;
+}
+
+.getting-started-btn:hover::after {
+    animation-duration: 1s;
+    filter: blur(20px);
+    opacity: 0.8;
+}

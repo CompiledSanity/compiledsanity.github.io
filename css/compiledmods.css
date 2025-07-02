@@ -75,7 +75,7 @@
         #ff006e, #8338ec, #3a86ff, #06ffa5, 
         #ffbe0b, #fb5607, #ff006e);
     background-size: 300% 300%;
-    animation: futuristicGradientShift 6s ease infinite;
+    animation: futuristicGradientShift 4s ease infinite;
 }
 
 .futuristic-glow-wrapper::before {
@@ -90,7 +90,7 @@
         #ff006e, #8338ec, #3a86ff, #06ffa5, 
         #ffbe0b, #fb5607, #ff006e);
     background-size: 300% 300%;
-    animation: futuristicGradientShift 6s ease infinite reverse;
+    animation: futuristicGradientShift 4s ease infinite reverse;
     z-index: -1;
     filter: blur(8px);
     opacity: 0.8;
@@ -108,7 +108,7 @@
         #ff006e, #8338ec, #3a86ff, #06ffa5, 
         #ffbe0b, #fb5607, #ff006e);
     background-size: 300% 300%;
-    animation: futuristicGradientShift 4s ease infinite;
+    animation: futuristicGradientShift 2s ease infinite;
     z-index: -2;
     filter: blur(16px);
     opacity: 0.6;

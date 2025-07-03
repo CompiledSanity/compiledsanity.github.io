@@ -74,7 +74,7 @@
     background: linear-gradient(45deg, 
         #ff006e, #8338ec, #3a86ff, #06ffa5, 
         #ffbe0b, #fb5607, #ff006e, #ff006e);
-    background-size: 300% 300%;
+    background-size: 400% 400%;
     -webkit-animation: futuristicGradientShift 4s linear infinite;
     animation: futuristicGradientShift 4s linear infinite;
 }
@@ -90,7 +90,7 @@
     background: linear-gradient(45deg, 
         #ff006e, #8338ec, #3a86ff, #06ffa5, 
         #ffbe0b, #fb5607, #ff006e, #ff006e);
-    background-size: 300% 300%;
+    background-size: 400% 400%;
     -webkit-animation: futuristicGradientShiftReverse 4s linear infinite;
     animation: futuristicGradientShiftReverse 4s linear infinite;
     z-index: -1;
@@ -110,7 +110,7 @@
     background: linear-gradient(45deg, 
         #ff006e, #8338ec, #3a86ff, #06ffa5, 
         #ffbe0b, #fb5607, #ff006e, #ff006e);
-    background-size: 300% 300%;
+    background-size: 400% 400%;
     -webkit-animation: futuristicGradientShift 2s linear infinite;
     animation: futuristicGradientShift 2s linear infinite;
     z-index: -2;

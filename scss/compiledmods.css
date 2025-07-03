@@ -53,7 +53,7 @@ div.pricing-rates .text-muted {
 
 .bg-animation-left.task-management-home:after {
   /* background: url(/img/bg.png) #2f55d4; */
-  background: url(/img/striped-bg.webp) #000;
+  background: url(/img/striped-bg-lg.webp) #000;
   background-size: cover;
   width: 100%;
   /* clip-path: circle(65% at 40% 25%); */

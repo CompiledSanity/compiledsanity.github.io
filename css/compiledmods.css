@@ -209,21 +209,21 @@
 
 /* Hover effects - iOS compatible */
 .futuristic-glow-wrapper:hover {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
 }
 
 .futuristic-glow-wrapper:hover::before {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
   -webkit-filter: blur(6px);
   filter: blur(6px);
   opacity: 1;
 }
 
 .futuristic-glow-wrapper:hover::after {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
   -webkit-filter: blur(10px);
   filter: blur(10px);
   opacity: 0.8;

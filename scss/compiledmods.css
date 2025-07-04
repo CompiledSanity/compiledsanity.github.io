@@ -56,8 +56,8 @@ div.pricing-rates .text-muted {
   background: url(/img/striped-bg-lg.webp) #000;
   background-size: cover;
   width: 100%;
-  /* clip-path: circle(65% at 40% 25%); */
-  clip-path: circle(70% at 40% 35%);
+  /* clip-path: circle(70% at 40% 25%); */
+  clip-path: none !important;
   background-color: #2f55d4 !important;
 }
 

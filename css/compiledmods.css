@@ -74,8 +74,8 @@
       #ff006e, #8338ec, #3a86ff, #06ffa5,
       #ffbe0b, #fb5607, #ff006e, #ff006e);
   background-size: 300% 300%;
-  -webkit-animation: futuristicGradientShift 5s linear infinite;
-  animation: futuristicGradientShift 5s linear infinite;
+  -webkit-animation: futuristicGradientShift 8s linear infinite;
+  animation: futuristicGradientShift 8s linear infinite;
 }
 
 .futuristic-glow-wrapper::before {
@@ -90,8 +90,8 @@
       #ff006e, #8338ec, #3a86ff, #06ffa5,
       #ffbe0b, #fb5607, #ff006e, #ff006e);
   background-size: 300% 300%;
-  -webkit-animation: futuristicGradientShiftReverse 5s linear infinite;
-  animation: futuristicGradientShiftReverse 5s linear infinite;
+  -webkit-animation: futuristicGradientShiftReverse 8s linear infinite;
+  animation: futuristicGradientShiftReverse 8s linear infinite;
   z-index: -1;
   -webkit-filter: blur(4px);
   filter: blur(4px);
@@ -110,8 +110,8 @@
       #ff006e, #8338ec, #3a86ff, #06ffa5,
       #ffbe0b, #fb5607, #ff006e, #ff006e);
   background-size: 300% 300%;
-  -webkit-animation: futuristicGradientShift 5s linear infinite;
-  animation: futuristicGradientShift 5s linear infinite;
+  -webkit-animation: futuristicGradientShift 8s linear infinite;
+  animation: futuristicGradientShift 8s linear infinite;
   z-index: -2;
   -webkit-filter: blur(8px);
   filter: blur(8px);

@@ -65,12 +65,22 @@
 }
 
 /* NEW: Futuristic border wrapper - iOS compatible version */
+.glow-buffer {
+  position: relative;
+  display: inline-block;
+  padding: 20px; /* this allows blur to show without clipping */
+  overflow: visible;
+  z-index: 0;
+  -webkit-transform: translateZ(0); /* helps iOS Safari render GPU layers correctly */
+}
+
+
 .futuristic-glow-wrapper {
   position: relative;
   display: inline-block;
   padding: 1px;
   border-radius: 52px;
-    overflow: visible;
+  overflow: visible;
   background: linear-gradient(45deg,
       #ff006e, #8338ec, #3a86ff, #06ffa5,
       #ffbe0b, #fb5607, #ff006e, #ff006e);

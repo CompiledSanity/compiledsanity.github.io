@@ -261,3 +261,102 @@
     background-position: 0% 50%;
   }
 }
+
+/* Minimalistic button styles */
+.futuristic-glow-wrapper-min {
+  position: relative;
+  display: inline-block;
+  padding: 1px;
+  border-radius: 52px;
+  overflow: visible;
+  background: linear-gradient(45deg,
+      #ff006e, #8338ec, #3a86ff, #06ffa5,
+      #ffbe0b, #fb5607, #ff006e, #ff006e);
+  background-size: 150% 150%;
+  -webkit-animation: futuristicGradientShift 8s linear infinite;
+  animation: futuristicGradientShift 8s linear infinite;
+  will-change: transform;
+}
+
+.futuristic-glow-wrapper-min::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 56px;
+  background: linear-gradient(45deg,
+      #ff006e, #8338ec, #3a86ff, #06ffa5,
+      #ffbe0b, #fb5607, #ff006e, #ff006e);
+  background-size: 150% 150%;
+  -webkit-animation: futuristicGradientShiftReverse 8s linear infinite;
+  animation: futuristicGradientShiftReverse 8s linear infinite;
+  z-index: -1;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  opacity: 0.8;
+}
+
+.futuristic-glow-wrapper-min::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 60px;
+  background: linear-gradient(45deg,
+      #ff006e, #8338ec, #3a86ff, #06ffa5,
+      #ffbe0b, #fb5607, #ff006e, #ff006e);
+  background-size: 150% 150%;
+  -webkit-animation: futuristicGradientShift 8s linear infinite;
+  animation: futuristicGradientShift 8s linear infinite;
+  z-index: -2;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+  opacity: 0.6;
+}
+
+/* Hover effects - iOS compatible */
+.futuristic-glow-wrapper-min:hover {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+}
+
+.futuristic-glow-wrapper-min:hover::before {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+  opacity: 1;
+}
+
+.futuristic-glow-wrapper-min:hover::after {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  opacity: 0.8;
+}
+
+/* Ensure your button stays on top */
+.futuristic-glow-wrapper-min>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* iOS-specific fallback for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .futuristic-glow-wrapper-min,
+  .futuristic-glow-wrapper-min::before,
+  .futuristic-glow-wrapper-min::after {
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  .futuristic-glow-wrapper-min {
+    background-position: 0% 50%;
+  }
+}

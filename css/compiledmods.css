@@ -560,7 +560,7 @@
       rgba(32, 201, 151, 1.0) 40%,
       rgba(32, 201, 151, 1.0) 60%,
       rgba(40, 167, 69, 1.0) 85%,
-      rgba(231, 76, 60, 0.4) 100%);
+      rgba(231, 76, 60, 0.5) 90%);
   background-size: 200% 200%;
   animation: gradientShift 4s ease-in-out infinite;
   color: white;
@@ -608,7 +608,7 @@
       rgba(30, 126, 52, 1.0) 40%,
       rgba(30, 126, 52, 1.0) 60%,
       rgba(33, 136, 56, 1.0) 85%,
-      rgba(192, 57, 43, 0.4) 100%);
+      rgba(192, 57, 43, 0.5) 90%);
 
   background-size: 200% 200%;
   animation: gradientShift 2s ease-in-out infinite;

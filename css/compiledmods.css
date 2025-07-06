@@ -272,7 +272,7 @@
   background: linear-gradient(45deg,
       #ff006e, #8338ec, #3a86ff, #06ffa5,
       #ffbe0b, #fb5607, #ff006e, #ff006e);
-  background-size: 120% 120%;
+  background-size: 100% 100%;
   -webkit-animation: futuristicGradientShift 8s linear infinite;
   animation: futuristicGradientShift 8s linear infinite;
   will-change: transform;
@@ -289,7 +289,7 @@
   background: linear-gradient(45deg,
       #ff006e, #8338ec, #3a86ff, #06ffa5,
       #ffbe0b, #fb5607, #ff006e, #ff006e);
-  background-size: 120% 120%;
+  background-size: 100% 100%;
   -webkit-animation: futuristicGradientShiftReverse 8s linear infinite;
   animation: futuristicGradientShiftReverse 8s linear infinite;
   z-index: -1;
@@ -309,7 +309,7 @@
   background: linear-gradient(45deg,
       #ff006e, #8338ec, #3a86ff, #06ffa5,
       #ffbe0b, #fb5607, #ff006e, #ff006e);
-  background-size: 120% 120%;
+  background-size: 100% 100%;
   -webkit-animation: futuristicGradientShift 8s linear infinite;
   animation: futuristicGradientShift 8s linear infinite;
   z-index: -2;
@@ -358,221 +358,5 @@
 
   .futuristic-glow-wrapper-min {
     background-position: 0% 50%;
-  }
-}
-
-/* Professional animated border for sales cards */
-.premium-sales-card {
-  position: relative;
-  display: inline-block;
-  padding: 2px;
-  border-radius: 6px;
-  overflow: visible;
-  background: conic-gradient(from 0deg,
-      #ffd700 0%, #ffed4e 15%, #ff6b35 30%, #d4af37 45%, 
-      #b8860b 60%, #ff8c00 75%, #ffa500 90%, #ffd700 100%);
-  background-size: 150% 150%;
-  animation: goldenBorderRotate 4s ease-in-out infinite;
-  will-change: transform, filter;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.premium-sales-card::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: 6px;
-  background: conic-gradient(from 180deg,
-      #ffd700 0%, #ffed4e 15%, #ff6b35 30%, #d4af37 45%, 
-      #b8860b 60%, #ff8c00 75%, #ffa500 90%, #ffd700 100%);
-  background-size: 150% 150%;
-  animation: goldenBorderRotateReverse 4s ease-in-out infinite;
-  z-index: -1;
-  filter: blur(6px);
-  opacity: 0.7;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.premium-sales-card::after {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  border-radius: 6px;
-  background: conic-gradient(from 90deg,
-      #ffd700 0%, #ffed4e 15%, #ff6b35 30%, #d4af37 45%, 
-      #b8860b 60%, #ff8c00 75%, #ffa500 90%, #ffd700 100%);
-  background-size: 150% 150%;
-  animation: goldenBorderRotate 6s ease-in-out infinite;
-  z-index: -2;
-  filter: blur(12px);
-  opacity: 0.4;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Sophisticated hover effects */
-.premium-sales-card:hover {
-  transform: translateY(-2px);
-  animation-duration: 2.5s;
-  filter: brightness(1.1);
-}
-
-.premium-sales-card:hover::before {
-  animation-duration: 2.5s;
-  filter: blur(8px);
-  opacity: 0.9;
-  transform: scale(1.02);
-}
-
-.premium-sales-card:hover::after {
-  animation-duration: 3s;
-  filter: blur(6px);
-  opacity: 0.6;
-  transform: scale(1.02;
-}
-
-/* Active state for touch devices */
-.premium-sales-card:active {
-  transform: translateY(0px);
-  transition-duration: 0.1s;
-}
-
-/* Ensure content stays on top */
-.premium-sales-card > * {
-  position: relative;
-  z-index: 1;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* Smooth circular border rotation animations */
-@keyframes goldenBorderRotate {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 100% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes goldenBorderRotateReverse {
-  0% {
-    background-position: 100% 50%;
-  }
-  25% {
-    background-position: 0% 100%;
-  }
-  50% {
-    background-position: 0% 0%;
-  }
-  75% {
-    background-position: 100% 0%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Subtle shimmer effect for enhanced golden appearance */
-@keyframes goldenShimmer {
-  0%, 100% {
-    filter: brightness(1) saturate(1);
-  }
-  50% {
-    filter: brightness(1.2) saturate(1.3);
-  }
-}
-
-/* Accessibility and performance considerations */
-@media (prefers-reduced-motion: reduce) {
-  .premium-sales-card,
-  .premium-sales-card::before,
-  .premium-sales-card::after {
-    animation: none;
-  }
-  
-  .premium-sales-card {
-    background-position: 0% 50%;
-  }
-  
-  .premium-sales-card:hover {
-    transform: none;
-  }
-  
-  .premium-sales-card:hover::before,
-  .premium-sales-card:hover::after {
-    transform: none;
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .premium-sales-card {
-    background: conic-gradient(from 0deg, #000000 0%, #ffffff 50%, #000000 100%);
-  }
-  
-  .premium-sales-card::before,
-  .premium-sales-card::after {
-    background: conic-gradient(from 180deg, #000000 0%, #ffffff 50%, #000000 100%);
-  }
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-  .premium-sales-card {
-    padding: 1px;
-    border-radius: 6px;
-  }
-  
-  .premium-sales-card::before {
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 6px;
-    filter: blur(4px);
-  }
-  
-  .premium-sales-card::after {
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 6px;
-    filter: blur(8px);
-  }
-  
-  .premium-sales-card > * {
-    border-radius: 6px;
-  }
-}
-
-/* Premium variant with subtle pulse effect */
-.premium-sales-card.featured {
-  animation: goldenBorderRotate 4s linear infinite, 
-             featuredPulse 3s ease-in-out infinite,
-             goldenShimmer 2s ease-in-out infinite;
-}
-
-@keyframes featuredPulse {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(255, 140, 0, 0.6);
   }
 }

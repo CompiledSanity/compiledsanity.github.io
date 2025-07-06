@@ -338,6 +338,10 @@
         </script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
+                // Get URL parameters
+                const params = new URLSearchParams(window.location.search);
+
+                // Map short region codes to full values in the select
                 const regionMap = {
                     AU: "Australia",
                     UK: "UK",
@@ -345,12 +349,24 @@
                     EU: "EU"
                 };
 
-                const hash = window.location.hash.replace("#", "").toUpperCase();
-                const region = regionMap[hash];
+                // === Set Region Dropdown ===
+                const regionCode = params.get("region")?.toUpperCase();
+                if (regionCode && regionMap[regionCode]) {
+                    const regionSelect = document.getElementById("sheetRegionSelect");
+                    regionSelect.value = regionMap[regionCode];
+                }
 
-                if (region) {
-                    const select = document.getElementById("sheetRegionSelect");
-                    select.value = region;
+                // === Set Referral Source Dropdown ===
+                const sourceValue = params.get("source");
+                if (sourceValue) {
+                    const sourceSelect = document.getElementById("sheetReferralSourceSelect");
+                    // Loop through options and match by value
+                    for (const option of sourceSelect.options) {
+                        if (option.value === sourceValue) {
+                            sourceSelect.value = sourceValue;
+                            break;
+                        }
+                    }
                 }
             });
         </script>

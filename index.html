@@ -927,7 +927,7 @@
 
                                     <div class="text-center py-4">
                                         <div class="mt-2 mx-4">
-                                            <a href="/purchase#AU" class="buy-now-btn">
+                                            <a href="/purchase?region=AU" id="purchaseLink" class="buy-now-btn">
                                                 <div class="btn-content">
                                                     <i class="uil uil-shopping-cart mx-1"></i>
                                                     <span class="btn-text">Buy Now - AU</span>
@@ -937,7 +937,7 @@
                                         </div>
 
                                         <div class="mt-4 mx-4">
-                                            <a href="/purchase#UK" class="buy-now-btn">
+                                            <a href="/purchase?region=UK" id="purchaseLink" class="buy-now-btn">
                                                 <div class="btn-content">
                                                     <i class="uil uil-shopping-cart mx-1"></i>
                                                     <span class="btn-text">Buy Now - UK</span>
@@ -947,7 +947,7 @@
                                         </div>
 
                                         <div class="mt-4 mx-4">
-                                            <a href="/purchase#US" class="buy-now-btn">
+                                            <a href="/purchase?region=US" id="purchaseLink" class="buy-now-btn">
                                                 <div class="btn-content">
                                                     <i class="uil uil-shopping-cart mx-1"></i>
                                                     <span class="btn-text">Buy Now - US/CA</span>
@@ -957,7 +957,7 @@
                                         </div>
 
                                         <div class="mt-4 mx-4">
-                                            <a href="/purchase#EU" class="buy-now-btn">
+                                            <a href="/purchase?region=EU" id="purchaseLink" class="buy-now-btn">
                                                 <div class="btn-content">
                                                     <i class="uil uil-shopping-cart mx-1"></i>
                                                     <span class="btn-text">Buy Now - EU</span>
@@ -1079,6 +1079,17 @@
                     }
                 });
         </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const currentParams = new URLSearchParams(window.location.search);
+                const link = document.getElementById("purchaseLink");
+
+                if (link && currentParams.toString()) {
+                    link.href += "&" + currentParams.toString();
+                }
+            });
+        </script>
+
         <script>
             var html_faq = "";
             var faq_iter = 0;

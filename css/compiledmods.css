@@ -371,8 +371,8 @@
   background: conic-gradient(from 0deg,
       #ffd700 0%, #ffed4e 15%, #ff6b35 30%, #d4af37 45%, 
       #b8860b 60%, #ff8c00 75%, #ffa500 90%, #ffd700 100%);
-  background-size: 200% 200%;
-  animation: goldenBorderRotate 4s linear infinite;
+  background-size: 300% 300%;
+  animation: goldenBorderRotate 4s ease-in-out infinite;
   will-change: transform, filter;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -388,8 +388,8 @@
   background: conic-gradient(from 180deg,
       #ffd700 0%, #ffed4e 15%, #ff6b35 30%, #d4af37 45%, 
       #b8860b 60%, #ff8c00 75%, #ffa500 90%, #ffd700 100%);
-  background-size: 200% 200%;
-  animation: goldenBorderRotateReverse 4s linear infinite;
+  background-size: 300% 300%;
+  animation: goldenBorderRotateReverse 4s ease-in-out infinite;
   z-index: -1;
   filter: blur(6px);
   opacity: 0.7;
@@ -407,8 +407,8 @@
   background: conic-gradient(from 90deg,
       #ffd700 0%, #ffed4e 15%, #ff6b35 30%, #d4af37 45%, 
       #b8860b 60%, #ff8c00 75%, #ffa500 90%, #ffd700 100%);
-  background-size: 200% 200%;
-  animation: goldenBorderRotate 6s linear infinite;
+  background-size: 300% 300%;
+  animation: goldenBorderRotate 6s ease-in-out infinite;
   z-index: -2;
   filter: blur(12px);
   opacity: 0.4;
@@ -453,19 +453,37 @@
 /* Smooth circular border rotation animations */
 @keyframes goldenBorderRotate {
   0% {
-    transform: rotate(0deg);
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
   }
   100% {
-    transform: rotate(360deg);
+    background-position: 0% 50%;
   }
 }
 
 @keyframes goldenBorderRotateReverse {
   0% {
-    transform: rotate(360deg);
+    background-position: 100% 50%;
+  }
+  25% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  75% {
+    background-position: 100% 0%;
   }
   100% {
-    transform: rotate(0deg);
+    background-position: 100% 50%;
   }
 }
 
@@ -504,12 +522,12 @@
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .premium-sales-card {
-    background: linear-gradient(135deg, #000000 0%, #ffffff 100%);
+    background: conic-gradient(from 0deg, #000000 0%, #ffffff 50%, #000000 100%);
   }
   
   .premium-sales-card::before,
   .premium-sales-card::after {
-    background: linear-gradient(135deg, #000000 0%, #ffffff 100%);
+    background: conic-gradient(from 180deg, #000000 0%, #ffffff 50%, #000000 100%);
   }
 }
 
@@ -545,15 +563,16 @@
 
 /* Premium variant with subtle pulse effect */
 .premium-sales-card.featured {
-  animation: premiumGradientFlow 6s ease-in-out infinite, 
-             featuredPulse 3s ease-in-out infinite;
+  animation: goldenBorderRotate 4s linear infinite, 
+             featuredPulse 3s ease-in-out infinite,
+             goldenShimmer 2s ease-in-out infinite;
 }
 
 @keyframes featuredPulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
   }
   50% {
-    box-shadow: 0 0 30px rgba(118, 75, 162, 0.5);
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.6);
   }
 }

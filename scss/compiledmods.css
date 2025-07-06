@@ -61,9 +61,8 @@ div.pricing-rates .text-muted {
   background-color: #2f55d4 !important;
 }
 
-/* Removed to fix the ribbon on the right side
-  #download .ribbon.ribbon-right {
-    right: 10px !important;
-    top: 7px !important;
-  }
-*/
+
+#download .ribbon.ribbon-right {
+  right: 2px !important;
+  top: 2px !important;
+}

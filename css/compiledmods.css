@@ -385,7 +385,8 @@
 .rainbow-border-wrapper {
   position: relative;
   display: inline-block;
-  padding: 3px; /* Border thickness */
+  padding: 3px;
+  /* Border thickness */
   overflow: visible;
   z-index: 0;
   -webkit-transform: translateZ(0);
@@ -400,8 +401,15 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg,
-      #ff006e, #8338ec, #3a86ff, #06ffa5,
-      #ffbe0b, #fb5607, #ff006e, #ff006e);
+      rgba(255, 0, 110, 0.5),
+      rgba(131, 56, 236, 0.5),
+      rgba(58, 134, 255, 0.5),
+      rgba(6, 255, 165, 0.5),
+      rgba(255, 190, 11, 0.5),
+      rgba(251, 86, 7, 0.5),
+      rgba(255, 0, 110, 0.5),
+      rgba(255, 0, 110, 0.5));
+
   background-size: 300% 300%;
   -webkit-animation: rainbowShift 8s linear infinite;
   animation: rainbowShift 8s linear infinite;
@@ -449,15 +457,19 @@
   0% {
     background-position: 0% 0%;
   }
+
   25% {
     background-position: 100% 0%;
   }
+
   50% {
     background-position: 100% 100%;
   }
+
   75% {
     background-position: 0% 100%;
   }
+
   100% {
     background-position: 0% 0%;
   }
@@ -467,15 +479,19 @@
   0% {
     background-position: 0% 0%;
   }
+
   25% {
     background-position: 100% 0%;
   }
+
   50% {
     background-position: 100% 100%;
   }
+
   75% {
     background-position: 0% 100%;
   }
+
   100% {
     background-position: 0% 0%;
   }
@@ -488,10 +504,11 @@
 }
 
 /* Ensure your content stays on top */
-.rainbow-border-wrapper > * {
+.rainbow-border-wrapper>* {
   position: relative;
   z-index: 1;
-  background: inherit; /* Ensures content background covers the border */
+  background: inherit;
+  /* Ensures content background covers the border */
 }
 
 /* iOS-specific fallback for reduced motion */

@@ -338,38 +338,37 @@
         </script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                // Get URL parameters
                 const params = new URLSearchParams(window.location.search);
 
-                // Map short region codes to full values in the select
+                // === Get source value from `ref` or fallback to `utm_source`
+                let sourceValue = params.get("ref") || params.get("utm_source");
+                if (sourceValue) {
+                    sourceValue = sourceValue.trim().toLowerCase();
+
+                    const sourceSelect = document.getElementById("sheetReferralSourceSelect");
+                    for (const option of sourceSelect.options) {
+                        if (option.value.trim().toLowerCase() === sourceValue) {
+                            sourceSelect.value = option.value;
+                            break;
+                        }
+                    }
+                }
+
+                // === Region Select logic (remains unchanged unless you want to also normalize casing)
                 const regionMap = {
                     AU: "Australia",
                     UK: "UK",
                     US: "US",
                     EU: "EU"
                 };
-
-                // === Set Region Dropdown ===
                 const regionCode = params.get("region")?.toUpperCase();
                 if (regionCode && regionMap[regionCode]) {
                     const regionSelect = document.getElementById("sheetRegionSelect");
                     regionSelect.value = regionMap[regionCode];
                 }
-
-                // === Set Referral Source Dropdown ===
-                const sourceValue = params.get("ref");
-                if (sourceValue) {
-                    const sourceSelect = document.getElementById("sheetReferralSourceSelect");
-                    // Loop through options and match by value
-                    for (const option of sourceSelect.options) {
-                        if (option.value === sourceValue) {
-                            sourceSelect.value = sourceValue;
-                            break;
-                        }
-                    }
-                }
             });
         </script>
+
 
         <!-- SLIDER -->
         <script src="js/tiny-slider.js "></script>

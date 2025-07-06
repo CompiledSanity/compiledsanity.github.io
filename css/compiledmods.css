@@ -368,10 +368,11 @@
   padding: 2px;
   border-radius: 12px;
   overflow: visible;
-  background: linear-gradient(135deg,
-      #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
-  background-size: 400% 400%;
-  animation: premiumGradientFlow 6s ease-in-out infinite;
+  background: conic-gradient(from 0deg,
+      #ffd700 0%, #ffed4e 15%, #ff6b35 30%, #d4af37 45%, 
+      #b8860b 60%, #ff8c00 75%, #ffa500 90%, #ffd700 100%);
+  background-size: 200% 200%;
+  animation: goldenBorderRotate 4s linear infinite;
   will-change: transform, filter;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -384,10 +385,11 @@
   right: -3px;
   bottom: -3px;
   border-radius: 12px;
-  background: linear-gradient(135deg,
-      #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
-  background-size: 400% 400%;
-  animation: premiumGradientFlowReverse 6s ease-in-out infinite;
+  background: conic-gradient(from 180deg,
+      #ffd700 0%, #ffed4e 15%, #ff6b35 30%, #d4af37 45%, 
+      #b8860b 60%, #ff8c00 75%, #ffa500 90%, #ffd700 100%);
+  background-size: 200% 200%;
+  animation: goldenBorderRotateReverse 4s linear infinite;
   z-index: -1;
   filter: blur(6px);
   opacity: 0.7;
@@ -402,10 +404,11 @@
   right: -8px;
   bottom: -8px;
   border-radius: 12px;
-  background: linear-gradient(135deg,
-      #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
-  background-size: 400% 400%;
-  animation: premiumGradientFlow 8s ease-in-out infinite;
+  background: conic-gradient(from 90deg,
+      #ffd700 0%, #ffed4e 15%, #ff6b35 30%, #d4af37 45%, 
+      #b8860b 60%, #ff8c00 75%, #ffa500 90%, #ffd700 100%);
+  background-size: 200% 200%;
+  animation: goldenBorderRotate 6s linear infinite;
   z-index: -2;
   filter: blur(12px);
   opacity: 0.4;
@@ -415,19 +418,19 @@
 /* Sophisticated hover effects */
 .premium-sales-card:hover {
   transform: translateY(-2px);
-  animation-duration: 3s;
+  animation-duration: 2.5s;
   filter: brightness(1.1);
 }
 
 .premium-sales-card:hover::before {
-  animation-duration: 3s;
+  animation-duration: 2.5s;
   filter: blur(8px);
   opacity: 0.9;
   transform: scale(1.02);
 }
 
 .premium-sales-card:hover::after {
-  animation-duration: 4s;
+  animation-duration: 3s;
   filter: blur(16px);
   opacity: 0.6;
   transform: scale(1.05);
@@ -447,40 +450,32 @@
   overflow: hidden;
 }
 
-/* Smooth gradient animations */
-@keyframes premiumGradientFlow {
+/* Smooth circular border rotation animations */
+@keyframes goldenBorderRotate {
   0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 100% 50%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
+    transform: rotate(0deg);
   }
   100% {
-    background-position: 0% 50%;
+    transform: rotate(360deg);
   }
 }
 
-@keyframes premiumGradientFlowReverse {
+@keyframes goldenBorderRotateReverse {
   0% {
-    background-position: 100% 50%;
-  }
-  25% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 0% 0%;
-  }
-  75% {
-    background-position: 100% 0%;
+    transform: rotate(360deg);
   }
   100% {
-    background-position: 100% 50%;
+    transform: rotate(0deg);
+  }
+}
+
+/* Subtle shimmer effect for enhanced golden appearance */
+@keyframes goldenShimmer {
+  0%, 100% {
+    filter: brightness(1) saturate(1);
+  }
+  50% {
+    filter: brightness(1.2) saturate(1.3);
   }
 }
 

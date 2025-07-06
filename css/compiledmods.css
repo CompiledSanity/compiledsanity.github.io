@@ -536,3 +536,128 @@
 .rainbow-border-wrapper.border-extra-thick {
   padding: 6px;
 }
+
+/* Buy Button CSS */
+.buy-now-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 245px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    
+    /* Animated gradient background */
+    background: linear-gradient(135deg, #28a745 0%, #20c997 50%, #28a745 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease-in-out infinite;
+    color: white;
+    
+    /* Enhanced shadow */
+    box-shadow: 
+        0 4px 15px rgba(40, 167, 69, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.buy-now-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.buy-now-btn:hover::before {
+    left: 100%;
+}
+
+.buy-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 25px rgba(40, 167, 69, 0.4),
+        0 4px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #218838 0%, #1e7e34 50%, #218838 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 2s ease-in-out infinite;
+}
+
+.buy-now-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 4px 15px rgba(40, 167, 69, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.cart-icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.buy-now-btn:hover .cart-icon {
+    transform: scale(1.1);
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) scale(1.1);
+    }
+    40% {
+        transform: translateY(-3px) scale(1.1);
+    }
+    60% {
+        transform: translateY(-1px) scale(1.1);
+    }
+}
+
+.flag-img {
+    height: 22px;
+    width: auto;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+}
+
+.buy-now-btn:hover .flag-img {
+    transform: scale(1.05);
+}
+
+.btn-text {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.buy-now-btn:focus {
+    outline: none;
+    box-shadow: 
+        0 4px 15px rgba(40, 167, 69, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 0 0 3px rgba(40, 167, 69, 0.2);
+}

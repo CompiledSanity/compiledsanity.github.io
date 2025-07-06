@@ -336,6 +336,25 @@
                     }
                 });
         </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const regionMap = {
+                    AU: "Australia",
+                    UK: "UK",
+                    US: "US",
+                    EU: "EU"
+                };
+
+                const hash = window.location.hash.replace("#", "").toUpperCase();
+                const region = regionMap[hash];
+
+                if (region) {
+                    const select = document.getElementById("sheetRegionSelect");
+                    select.value = region;
+                }
+            });
+        </script>
+
         <!-- SLIDER -->
         <script src="js/tiny-slider.js "></script>
         <!-- Icons -->

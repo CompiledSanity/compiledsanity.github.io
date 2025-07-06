@@ -272,14 +272,14 @@
   border-radius: 6px;
   overflow: visible;
   background: linear-gradient(45deg,
-      rgba(255, 0, 110, 0.5),
-      rgba(131, 56, 236, 0.5),
-      rgba(58, 134, 255, 0.5),
-      rgba(6, 255, 165, 0.5),
-      rgba(255, 190, 11, 0.5),
-      rgba(251, 86, 7, 0.5),
-      rgba(255, 0, 110, 0.5),
-      rgba(255, 0, 110, 0.5));
+      rgba(255, 0, 110, 0.3),
+      rgba(131, 56, 236, 0.3),
+      rgba(58, 134, 255, 0.3),
+      rgba(6, 255, 165, 0.3),
+      rgba(255, 190, 11, 0.3),
+      rgba(251, 86, 7, 0.3),
+      rgba(255, 0, 110, 0.3),
+      rgba(255, 0, 110, 0.3));
   background-size: 100% 100%;
   -webkit-animation: futuristicGradientShift 8s linear infinite;
   animation: futuristicGradientShift 8s linear infinite;
@@ -295,14 +295,20 @@
   bottom: -4px;
   border-radius: 6px;
   background: linear-gradient(45deg,
-      #ff006e, #8338ec, #3a86ff, #06ffa5,
-      #ffbe0b, #fb5607, #ff006e, #ff006e);
+      rgba(255, 0, 110, 0.3),
+      rgba(131, 56, 236, 0.3),
+      rgba(58, 134, 255, 0.3),
+      rgba(6, 255, 165, 0.3),
+      rgba(255, 190, 11, 0.3),
+      rgba(251, 86, 7, 0.3),
+      rgba(255, 0, 110, 0.3),
+      rgba(255, 0, 110, 0.3));
   background-size: 100% 100%;
   -webkit-animation: futuristicGradientShiftReverse 8s linear infinite;
   animation: futuristicGradientShiftReverse 8s linear infinite;
   z-index: -1;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
   opacity: 0.8;
 }
 
@@ -315,14 +321,20 @@
   bottom: -8px;
   border-radius: 6px;
   background: linear-gradient(45deg,
-      #ff006e, #8338ec, #3a86ff, #06ffa5,
-      #ffbe0b, #fb5607, #ff006e, #ff006e);
+      rgba(255, 0, 110, 0.3),
+      rgba(131, 56, 236, 0.3),
+      rgba(58, 134, 255, 0.3),
+      rgba(6, 255, 165, 0.3),
+      rgba(255, 190, 11, 0.3),
+      rgba(251, 86, 7, 0.3),
+      rgba(255, 0, 110, 0.3),
+      rgba(255, 0, 110, 0.3));
   background-size: 100% 100%;
   -webkit-animation: futuristicGradientShift 8s linear infinite;
   animation: futuristicGradientShift 8s linear infinite;
   z-index: -2;
-  -webkit-filter: blur(6px);
-  filter: blur(6px);
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
   opacity: 0.6;
 }
 
@@ -335,16 +347,16 @@
 .futuristic-glow-wrapper-min:hover::before {
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
   opacity: 1;
 }
 
 .futuristic-glow-wrapper-min:hover::after {
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
+  -webkit-filter: blur(9px);
+  filter: blur(9px);
   opacity: 0.8;
 }
 

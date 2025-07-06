@@ -380,3 +380,142 @@
     background-position: 0% 50%;
   }
 }
+
+/* Animated rainbow border wrapper - No glow version */
+.rainbow-border-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 3px; /* Border thickness */
+  overflow: visible;
+  z-index: 0;
+  -webkit-transform: translateZ(0);
+  /* helps iOS Safari render GPU layers correctly */
+}
+
+.rainbow-border-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg,
+      #ff006e, #8338ec, #3a86ff, #06ffa5,
+      #ffbe0b, #fb5607, #ff006e, #ff006e);
+  background-size: 300% 300%;
+  -webkit-animation: rainbowShift 8s linear infinite;
+  animation: rainbowShift 8s linear infinite;
+  z-index: -1;
+  will-change: transform;
+}
+
+/* Border radius classes - apply to both wrapper and ::before */
+.rainbow-border-wrapper.rounded-sm,
+.rainbow-border-wrapper.rounded-sm::before {
+  border-radius: 6px;
+}
+
+.rainbow-border-wrapper.rounded,
+.rainbow-border-wrapper.rounded::before {
+  border-radius: 12px;
+}
+
+.rainbow-border-wrapper.rounded-lg,
+.rainbow-border-wrapper.rounded-lg::before {
+  border-radius: 20px;
+}
+
+.rainbow-border-wrapper.rounded-xl,
+.rainbow-border-wrapper.rounded-xl::before {
+  border-radius: 28px;
+}
+
+.rainbow-border-wrapper.rounded-full,
+.rainbow-border-wrapper.rounded-full::before {
+  border-radius: 50%;
+}
+
+/* Custom border radius - use CSS custom properties */
+.rainbow-border-wrapper.custom-radius {
+  border-radius: var(--border-radius, 12px);
+}
+
+.rainbow-border-wrapper.custom-radius::before {
+  border-radius: var(--border-radius, 12px);
+}
+
+/* Animation keyframes */
+@-webkit-keyframes rainbowShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Hover effects - speeds up animation */
+.rainbow-border-wrapper:hover::before {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+/* Ensure your content stays on top */
+.rainbow-border-wrapper > * {
+  position: relative;
+  z-index: 1;
+  background: inherit; /* Ensures content background covers the border */
+}
+
+/* iOS-specific fallback for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .rainbow-border-wrapper::before {
+    -webkit-animation: none;
+    animation: none;
+    background-position: 0% 50%;
+  }
+}
+
+/* Alternative border thickness options */
+.rainbow-border-wrapper.border-thin {
+  padding: 1px;
+}
+
+.rainbow-border-wrapper.border-medium {
+  padding: 2px;
+}
+
+.rainbow-border-wrapper.border-thick {
+  padding: 4px;
+}
+
+.rainbow-border-wrapper.border-extra-thick {
+  padding: 6px;
+}

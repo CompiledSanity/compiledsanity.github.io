@@ -555,12 +555,7 @@
   cursor: pointer;
 
   /* Animated gradient background */
-  background: linear-gradient(135deg,
-      rgba(40, 167, 69, 1.0) 0%,
-      rgba(32, 201, 151, 1.0) 40%,
-      rgba(32, 201, 151, 1.0) 60%,
-      rgba(40, 167, 69, 1.0) 85%,
-      rgba(231, 76, 60, 0.5) 100%);
+  background: linear-gradient(135deg, #28a745 0%, #20c997 50%, #28a745 100%);
   background-size: 200% 200%;
   animation: gradientShift 4s ease-in-out infinite;
   color: white;
@@ -603,13 +598,7 @@
   box-shadow:
     0 8px 25px rgba(40, 167, 69, 0.4),
     0 4px 10px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg,
-      rgba(33, 136, 56, 1.0) 0%,
-      rgba(30, 126, 52, 1.0) 40%,
-      rgba(30, 126, 52, 1.0) 60%,
-      rgba(33, 136, 56, 1.0) 85%,
-      rgba(192, 57, 43, 0.5) 100%);
-
+  background: linear-gradient(135deg, #218838 0%, #1e7e34 50%, #218838 100%);
   background-size: 200% 200%;
   animation: gradientShift 2s ease-in-out infinite;
 }

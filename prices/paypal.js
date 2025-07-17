@@ -105,7 +105,7 @@ function getActualReferralSource() {
 
     // Get the select element and validate it exists
     const sheetReferralSourceSelect = document.getElementById('sheetReferralSourceSelect');
-    
+
     if (!sheetReferralSourceSelect) {
         console.warn('sheetReferralSourceSelect element not found');
         return null; // or throw an error, or return a default value

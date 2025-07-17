@@ -99,9 +99,34 @@ function initPayPalButton() {
 }
 
 function getActualReferralSource() {
-    const sourceSelect = document.getElementById('sheetReferralSourceSelect');
-    const actualSource = sourceSelect.getAttribute('data-actual-source');
-    return actualSource || sourceSelect.value;
+    // Get URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const utmSourceRawInput = params.get("utm_source");
+
+    // Get the select element and validate it exists
+    const sheetReferralSourceSelect = document.getElementById('sheetReferralSourceSelect');
+    
+    if (!sheetReferralSourceSelect) {
+        console.warn('sheetReferralSourceSelect element not found');
+        return null; // or throw an error, or return a default value
+    }
+
+    // If no utm_source parameter, return the select value
+    if (!utmSourceRawInput) {
+        return sheetReferralSourceSelect.value;
+    }
+
+    // Normalize the utm_source value
+    const utmSourceValue = utmSourceRawInput.trim().toLowerCase();
+    const sheetReferralSourceSelectValue = sheetReferralSourceSelect.value.trim();
+
+    // Handle specific utm_source values
+    switch (utmSourceValue) {
+        case "rda":
+            return `Reddit Ad (${sheetReferralSourceSelectValue})`;
+        default:
+            return sheetReferralSourceSelectValue;
+    }
 }
 
 initPayPalButton();

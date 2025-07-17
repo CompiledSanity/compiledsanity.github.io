@@ -383,87 +383,9 @@
                 }
             });
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const params = new URLSearchParams(window.location.search);
-
-            // === Referral alias mapping
-            const referralAliasMap = {
-                "ozb": "OzBargain",
-                "ob": "OzBargain",
-                "reddit": "Reddit",
-                "rda": "Reddit",
-                "rd": "Reddit",
-                "r/ausfinance": " - r/AusFinance",
-                "r/fiaustralia": " - r/FIAustralia",
-                "r/ukpersonalfinance": " - r/UKPersonalFinance",
-                "twitter": "Twitter",
-                "facebook": "Facebook",
-                "google": "Google",
-                "etsy": "Etsy",
-                "whirlpool": "Whirlpool",
-                "wordofmouth": "Word of Mouth",
-                "word-of-mouth": "Word of Mouth",
-                "other": "Other"
-            };
-
-            // === Get source from `ref` or fallback to `utm_source`
-            let sourceValue = params.get("ref") || params.get("utm_source");
-            if (sourceValue) {
-                const rawInput = sourceValue.trim().toLowerCase();
-                const mappedValue = referralAliasMap[rawInput];
-
-                const sourceSelect = document.getElementById("sheetReferralSourceSelect");
-
-                let matched = false;
-
-                // Try alias map match first
-                if (mappedValue) {
-                    for (const option of sourceSelect.options) {
-                        if (option.value.trim().toLowerCase() === mappedValue.toLowerCase()) {
-                            sourceSelect.value = option.value;
-
-                            // Special handling for Reddit Ad
-                            if (rawInput === "rda") {
-                                sourceSelect.setAttribute("data-actual-source", "Reddit Ad");
-                            } else {
-                                sourceSelect.removeAttribute("data-actual-source");
-                            }
-
-                            matched = true;
-                            break;
-                        }
-                    }
-                }
-
-                // Fallback to direct case-insensitive match if alias didn't match
-                if (!matched) {
-                    for (const option of sourceSelect.options) {
-                        if (option.value.trim().toLowerCase() === rawInput) {
-                            sourceSelect.value = option.value;
-                            sourceSelect.removeAttribute("data-actual-source");
-                            break;
-                        }
-                    }
-                }
-            }
-
-            // === Region handling
-            const regionMap = {
-                AU: "Australia",
-                UK: "UK",
-                US: "US",
-                EU: "EU"
-            };
-
-            const regionCode = params.get("region")?.toUpperCase();
-            if (regionCode && regionMap[regionCode]) {
-                const regionSelect = document.getElementById("sheetRegionSelect");
-                regionSelect.value = regionMap[regionCode];
-            }
-        });
-    </script>
-
+    
+    <!-- CUSTOM -->
+    <script src="js/purchase.js "></script>
     <!-- SLIDER -->
     <script src="js/tiny-slider.js "></script>
     <!-- Icons -->

@@ -45,7 +45,7 @@ function initPayPalButton() {
         createOrder: function (data, actions) {
             user_email = document.getElementById('sheetEmailInput').value;
             sheet_region = document.getElementById('sheetRegionSelect').value;
-            referral_source = document.getElementById('sheetReferralSourceSelect').value;
+            referral_source = getActualReferralSource();
             sp = parseFloat(document.getElementById('audtotalprice').textContent); // This is checked Server side, so change at your own peril ;)
 
             return actions.order.create({
@@ -97,4 +97,11 @@ function initPayPalButton() {
         }
     }).render('#paypal-button-container');
 }
+
+function getActualReferralSource() {
+    const sourceSelect = document.getElementById('sheetReferralSourceSelect');
+    const actualSource = sourceSelect.getAttribute('data-actual-source');
+    return actualSource || sourceSelect.value;
+}
+
 initPayPalButton();

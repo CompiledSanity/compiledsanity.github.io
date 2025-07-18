@@ -102,31 +102,64 @@ function getActualReferralSource() {
     // Get URL parameters
     const params = new URLSearchParams(window.location.search);
     const utmSourceRawInput = params.get("utm_source");
+    const refRawInput = params.get("ref");
 
     // Get the select element and validate it exists
     const sheetReferralSourceSelect = document.getElementById('sheetReferralSourceSelect');
 
     if (!sheetReferralSourceSelect) {
         console.warn('sheetReferralSourceSelect element not found');
-        return null; // or throw an error, or return a default value
+        return null;
     }
 
-    // If no utm_source parameter, return the select value
-    if (!utmSourceRawInput) {
-        return sheetReferralSourceSelect.value;
-    }
-
-    // Normalize the utm_source value
-    const utmSourceValue = utmSourceRawInput.trim().toLowerCase();
     const sheetReferralSourceSelectValue = sheetReferralSourceSelect.value.trim();
 
-    // Handle specific utm_source values
-    switch (utmSourceValue) {
+    // Check for utm_source first, then ref
+    const rawSourceInput = utmSourceRawInput || refRawInput;
+
+    // If no query parameters, return just the select value
+    if (!rawSourceInput) {
+        console.log('No utm_source or ref parameter found, returning select value only');
+        return sheetReferralSourceSelectValue;
+    }
+
+    // Normalize the source value
+    const sourceValue = rawSourceInput.trim().toLowerCase();
+
+    console.log('Found source parameter:', sourceValue);
+    console.log('Select value:', sheetReferralSourceSelectValue);
+
+    // Handle specific source values
+    switch (sourceValue) {
         case "rda":
             return `Reddit Ad (${sheetReferralSourceSelectValue})`;
+        case "facebook":
+            return `Facebook (${sheetReferralSourceSelectValue})`;
+        case "google":
+            return `Google (${sheetReferralSourceSelectValue})`;
+        case "twitter":
+            return `Twitter (${sheetReferralSourceSelectValue})`;
         default:
-            return sheetReferralSourceSelectValue;
+            // For any other utm_source/ref value, combine it with the select value
+            return `${rawSourceInput} (${sheetReferralSourceSelectValue})`;
     }
 }
 
+function debugReferralSource() {
+    const params = new URLSearchParams(window.location.search);
+    console.log('Current URL:', window.location.href);
+    console.log('utm_source:', params.get("utm_source"));
+    console.log('ref:', params.get("ref"));
+
+    const selectElement = document.getElementById('sheetReferralSourceSelect');
+    console.log('Select element found:', !!selectElement);
+    console.log('Select value:', selectElement ? selectElement.value : 'N/A');
+
+    const result = getActualReferralSource();
+    console.log('Final result:', result);
+
+    return result;
+}
+
 initPayPalButton();
+debugReferralSource();

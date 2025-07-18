@@ -72,6 +72,10 @@
     <script>
         ; (function (a, t, o, m, s) { a[m] = a[m] || []; a[m].push({ t: new Date().getTime(), event: 'snippetRun' }); var f = t.getElementsByTagName(o)[0], e = t.createElement(o), d = m !== 'paypalDDL' ? '&m=' + m : ''; e.async = !0; e.src = 'https://www.paypal.com/tagmanager/pptm.js?id=' + s + d; f.parentNode.insertBefore(e, f); })(window, document, 'script', 'paypalDDL', '1bcf1d50-b824-40bb-8240-1b502fcb1351');
     </script>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AbaD5YwNr6vtqdUhvnEO_fcqoFN6xOMz6wmdOlJWbdlMZCo8w17yJaeybAutZbBiMMakq6scq_5W_z9u&enable-funding=venmo&components=buttons,applepay&currency=AUD&commit=true"
+        data-sdk-integration-source="button-factory"></script>
+    <script src="/prices/paypal.js"></script>
     <!-- PayPal END -->
 
 </head>
@@ -285,7 +289,7 @@
                                         </tr>
                                         <tr class="bg-light">
                                             <td class="h6 fw-bold" style="border-bottom-width: 0 !important;">Total (AUD)</td>
-                                            <td class="text-end text-primary h5 fw-bold">$<span
+                                            <td class="text-end text-primary h5 fw-bold" style="border-bottom-width: 0 !important;">$<span
                                                     id="audtotalprice">8</span>.00</td>
                                         </tr>
                                     </tbody>
@@ -312,13 +316,9 @@
                                     <div class="d-grid">
                                         <div id="smart-button-container">
                                             <div style="text-align: center;">
-                                                <div id="paypal-button-container"></div>
+                                                <div style="text-align: center;" class="mx-auto d-block" id="paypal-button-container"></div>
                                             </div>
                                         </div>
-                                        <script
-                                            src="https://www.paypal.com/sdk/js?client-id=AbaD5YwNr6vtqdUhvnEO_fcqoFN6xOMz6wmdOlJWbdlMZCo8w17yJaeybAutZbBiMMakq6scq_5W_z9u&enable-funding=venmo&components=buttons,applepay&currency=AUD&commit=true"
-                                            data-sdk-integration-source="button-factory"></script>
-                                        <script src="/prices/paypal.js"></script>
                                     </div>
                                 </div>
                             </div>

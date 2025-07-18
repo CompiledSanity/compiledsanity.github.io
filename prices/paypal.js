@@ -1,5 +1,8 @@
 function initPayPalButton() {
     paypal.Buttons({
+        fundingSource: paypal.FUNDING.PAYPAL,
+        enableFunding: [paypal.FUNDING.APPLEPAY],
+
         style: {
             shape: 'rect',
             color: 'gold',
@@ -9,10 +12,17 @@ function initPayPalButton() {
 
         onClick: function (data, actions) {
             // Enable or disable the button when it has a value
-            emailWarning = document.getElementById('emailWarning');
-            sheetEmailInput = document.getElementById('sheetEmailInput');
+            const emailWarning = document.getElementById('emailWarning');
+            const sheetEmailInput = document.getElementById('sheetEmailInput');
 
-            if (sheetEmailInput.checkValidity() && sheetEmailInput.value != "" && sheetEmailInput.value.includes("@") && sheetEmailInput.value.includes(".") && !sheetEmailInput.value.endsWith(".cm") && !sheetEmailInput.value.endsWith("gmal.com") && !sheetEmailInput.value.endsWith("gmaill.com") && !sheetEmailInput.value.endsWith("gmail.com.au")) {
+            if (sheetEmailInput.checkValidity() &&
+                sheetEmailInput.value != "" &&
+                sheetEmailInput.value.includes("@") &&
+                sheetEmailInput.value.includes(".") &&
+                !sheetEmailInput.value.endsWith(".cm") &&
+                !sheetEmailInput.value.endsWith("gmal.com") &&
+                !sheetEmailInput.value.endsWith("gmaill.com") &&
+                !sheetEmailInput.value.endsWith("gmail.com.au")) {
                 emailWarning.style.display = "none";
             } else {
                 emailWarning.style.display = "block";
@@ -29,9 +39,16 @@ function initPayPalButton() {
                 .addEventListener('change', function (event) {
 
                     // Enable or disable the button when it has a value
-                    emailWarning = document.getElementById('emailWarning');
+                    const emailWarning = document.getElementById('emailWarning');
 
-                    if (event.target.checkValidity() && event.target.value != "" && event.target.value.includes("@") && event.target.value.includes(".") && !event.target.value.endsWith(".cm") && !event.target.value.endsWith("gmal.com") && !event.target.value.endsWith("gmaill.com") && !event.target.value.endsWith("gmail.com.au")) {
+                    if (event.target.checkValidity() &&
+                        event.target.value != "" &&
+                        event.target.value.includes("@") &&
+                        event.target.value.includes(".") &&
+                        !event.target.value.endsWith(".cm") &&
+                        !event.target.value.endsWith("gmal.com") &&
+                        !event.target.value.endsWith("gmaill.com") &&
+                        !event.target.value.endsWith("gmail.com.au")) {
                         actions.enable();
                         emailWarning.style.display = "none";
                     } else {
@@ -43,10 +60,10 @@ function initPayPalButton() {
         },
 
         createOrder: function (data, actions) {
-            user_email = document.getElementById('sheetEmailInput').value;
-            sheet_region = document.getElementById('sheetRegionSelect').value;
-            referral_source = getActualReferralSource();
-            sp = parseFloat(document.getElementById('audtotalprice').textContent); // This is checked Server side, so change at your own peril ;)
+            const user_email = document.getElementById('sheetEmailInput').value;
+            const sheet_region = document.getElementById('sheetRegionSelect').value;
+            const referral_source = getActualReferralSource();
+            const sp = parseFloat(document.getElementById('audtotalprice').textContent); // This is checked Server side, so change at your own peril ;)
 
             return actions.order.create({
                 purchase_units: [{

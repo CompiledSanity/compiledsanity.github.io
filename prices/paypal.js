@@ -109,11 +109,7 @@ function initPayPalButton() {
         },
 
         onError: function (err) {
-            console.log('PayPal Button Error:', err);
-        },
-
-        onRender: function (data) {
-            console.log('PayPal buttons rendered with funding sources:', data.fundingSources);
+            console.log(err);
         }
     }).render('#paypal-button-container');
 }
@@ -181,22 +177,5 @@ function debugReferralSource() {
     return result;
 }
 
-function checkApplePaySupport() {
-    console.log('=== Apple Pay Debug Info ===');
-    console.log('User Agent:', navigator.userAgent);
-    console.log('Apple Pay Session available:', !!window.ApplePaySession);
-
-    if (window.ApplePaySession) {
-        console.log('Can make Apple Pay payments:', ApplePaySession.canMakePayments());
-        console.log('Apple Pay version:', ApplePaySession.version);
-    }
-
-    console.log('PayPal FUNDING.APPLEPAY:', paypal.FUNDING.APPLEPAY);
-    console.log('Current URL protocol:', window.location.protocol);
-    console.log('Current hostname:', window.location.hostname);
-    console.log('=== End Apple Pay Debug ===');
-}
-
 initPayPalButton();
 debugReferralSource();
-checkApplePaySupport();

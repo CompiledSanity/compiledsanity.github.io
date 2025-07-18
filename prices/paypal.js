@@ -1,6 +1,5 @@
 function initPayPalButton() {
     paypal.Buttons({
-        fundingSource: paypal.FUNDING.PAYPAL,
         enableFunding: [paypal.FUNDING.APPLEPAY],
 
         style: {

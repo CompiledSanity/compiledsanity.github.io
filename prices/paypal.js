@@ -175,6 +175,7 @@ function getRefUtmSource() {
     const params = new URLSearchParams(window.location.search);
     const utmSourceRawInput = params.get("utm_source");
     const refRawInput = params.get("ref");
+    const originalReferrerCookie = getOriginalReferrerCookie();
 
     // Check for utm_source first, then ref
     const rawSourceInput = utmSourceRawInput || refRawInput;

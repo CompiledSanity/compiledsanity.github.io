@@ -182,7 +182,7 @@ function getRefUtmSource() {
 
     // If no query parameters, return just the select value
     if (!rawSourceInput) {
-        console.log('No utm_source or ref parameter found, returning null');
+        console.log('No utm_source, ref or cookie found, returning null');
         return null;
     }
 

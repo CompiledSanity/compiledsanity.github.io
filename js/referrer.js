@@ -30,7 +30,7 @@ function getReferrerFullDomain() {
         if (hostname.startsWith('www.')) {
             hostname = hostname.slice(4); // remove 'www.'
         }
-        return hostname;
+        return hostname.slice(0, 30); // Limit to 30 characters
     } catch {
         return 'direct';
     }

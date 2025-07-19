@@ -1,11 +1,9 @@
 // Set the originalReferrer cookie if it doesn't already exist
 function setOriginalReferrerCookie(expiryDays = 30) {
-    if (!getCookie('originalReferrer')) {
-        const referrer = getReferrerBaseDomain() || 'direct';
-        const maxAgeSeconds = expiryDays * 24 * 60 * 60;
-        document.cookie = `originalReferrer=${encodeURIComponent(referrer)}; path=/; max-age=${maxAgeSeconds}`;
-        console.log('Original referrer cookie set:', referrer);
-    }
+    const referrer = getReferrerBaseDomain() || 'direct';
+    const maxAgeSeconds = expiryDays * 24 * 60 * 60;
+    document.cookie = `originalReferrer=${encodeURIComponent(referrer)}; path=/; max-age=${maxAgeSeconds}`;
+    console.log('Original referrer cookie set:', referrer);
 }
 
 // Get the originalReferrer cookie value (or 'direct' if not set)

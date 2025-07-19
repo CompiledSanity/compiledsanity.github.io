@@ -201,7 +201,9 @@ function getRefUtmSource() {
 
 function debugReferralSource() {
     const params = new URLSearchParams(window.location.search);
+    const originalReferrer = getOriginalReferrerCookie();
     console.log('Current URL:', window.location.href);
+    console.log('Original referrer cookie:', originalReferrer);
     console.log('utm_source:', params.get("utm_source"));
     console.log('ref:', params.get("ref"));
 

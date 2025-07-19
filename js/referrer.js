@@ -19,13 +19,41 @@ function getCookie(name) {
     return match ? decodeURIComponent(match[2]) : null;
 }
 
-// Extract the base domain (domain + extension) from a hostname
+// List of common multi-part TLDs to consider (extend as needed)
+const multiPartTLDs = [
+    'com.au',
+    'co.uk',
+    'gov.uk',
+    'ac.uk',
+    'com.br',
+    'net.au',
+    'org.uk',
+    'co.nz',
+    'org.nz'
+];
+
+// Extract the base domain (domain + extension), considering multi-part TLDs
 function getBaseDomain(hostname) {
-    const parts = hostname.split('.');
+    const parts = hostname.toLowerCase().split('.');
+
     if (parts.length <= 2) {
-        return hostname; // e.g. example.com or localhost
+        // e.g., example.com or localhost
+        return hostname.toLowerCase();
+    }
+
+    // Check if the last two parts form a known multi-part TLD
+    const lastTwoParts = parts.slice(-2).join('.');
+    const lastThreeParts = parts.slice(-3).join('.');
+
+    if (multiPartTLDs.includes(lastTwoParts)) {
+        // domain is 3 parts: e.g. google.com.au
+        return parts.slice(-3).join('.');
+    } else if (multiPartTLDs.includes(lastThreeParts)) {
+        // rare case for longer TLDs
+        return lastThreeParts;
     } else {
-        return parts.slice(-2).join('.'); // e.g. www.reddit.com -> reddit.com
+        // Default to last two parts: example.com
+        return lastTwoParts;
     }
 }
 

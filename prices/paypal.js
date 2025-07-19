@@ -137,6 +137,8 @@ function getActualReferralSource() {
         return null;
     }
 
+    return sheetReferralSourceSelect.value.trim();
+
     const sheetReferralSourceSelectValue = sheetReferralSourceSelect.value.trim();
 
     // Check for utm_source first, then ref

@@ -62,13 +62,22 @@ function initPayPalButton() {
             const user_email = document.getElementById('sheetEmailInput').value;
             const sheet_region = document.getElementById('sheetRegionSelect').value;
             const referral_source = getActualReferralSource();
+            const refUtmSource = getRefUtmSource();
             const sp = parseFloat(document.getElementById('audtotalprice').textContent); // This is checked Server side, so change at your own peril ;)
+
+            const metadata = {
+                referral_source: referral_source,
+                refUtmSource: refUtmSource,
+            };
+
+            const metadataString = JSON.stringify(metadata);
+            const encodedMetadata = btoa(metadataString); // Encode safely for transport
 
             return actions.order.create({
                 purchase_units: [{
                     "description": "CompiledSanity Personal Savings Template",
                     "reference_id": user_email,
-                    "custom_id": referral_source,
+                    "custom_id": encodedMetadata, // Store metadata as custom_id
                     "items": [{
                         "name": "CompiledSanity Personal Savings Template",
                         "quantity": "1",
@@ -158,6 +167,34 @@ function getActualReferralSource() {
         default:
             // For any other utm_source/ref value, combine it with the select value
             return `${rawSourceInput} (${sheetReferralSourceSelectValue})`;
+    }
+}
+
+function getRefUtmSource() {
+    // Get URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const utmSourceRawInput = params.get("utm_source");
+    const refRawInput = params.get("ref");
+
+    // Check for utm_source first, then ref
+    const rawSourceInput = utmSourceRawInput || refRawInput;
+
+    // If no query parameters, return just the select value
+    if (!rawSourceInput) {
+        console.log('No utm_source or ref parameter found, returning null');
+        return null;
+    }
+
+    // Normalize the source value
+    const sourceValue = rawSourceInput.trim().toLowerCase();
+
+    // Handle specific source values
+    switch (sourceValue) {
+        case "rda":
+            return `Reddit Ad`;
+        default:
+            // For any other utm_source/ref value, combine it with the select value
+            return sourceValue;
     }
 }
 

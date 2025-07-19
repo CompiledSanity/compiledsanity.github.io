@@ -178,7 +178,7 @@ function getRefUtmSource() {
     const originalReferrerCookie = getOriginalReferrerCookie();
 
     // Check for utm_source first, then ref
-    const rawSourceInput = utmSourceRawInput || refRawInput;
+    const rawSourceInput = utmSourceRawInput || refRawInput || originalReferrerCookie;
 
     // If no query parameters, return just the select value
     if (!rawSourceInput) {

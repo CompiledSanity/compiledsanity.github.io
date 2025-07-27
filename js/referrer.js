@@ -26,10 +26,17 @@ function getReferrerFullDomain() {
 
     try {
         const url = new URL(referrer);
+
         let hostname = url.hostname.toLowerCase();
+
         if (hostname.startsWith('www.')) {
             hostname = hostname.slice(4); // remove 'www.'
         }
+
+        if (hostname === "cspersonalfinance.io") {
+            return 'direct';
+        }
+
         return hostname.slice(0, 30); // Limit to 30 characters
     } catch {
         return 'direct';

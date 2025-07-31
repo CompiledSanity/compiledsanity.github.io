@@ -90,7 +90,7 @@
 				"Answer": [
 					"<ul>",
 					"    <li><a href='https://guide.cspersonalfinance.io/getting-started/upgrading-from-an-older-version'>Click to see instructions on how to upgrade your Sheet.</a></li>",
-					"    <li><a href='/resendinvite'>If needed, click here to send you the latest invite.</a></li>",
+					"    <li><a href='/latest'>If needed, click here to send you the latest invite.</a></li>",
 					"</ul>"
 				],
 				"Summary": true
@@ -130,7 +130,7 @@
 				"Slug": "new-version",
 				"Question": "A new version is released but I haven't received an invite email, what do I do?",
 				"Answer": [
-					"<p class='fw-bold'><a href='/resendinvite'>Please click here to send you the latest invite.</a></p>",
+					"<p class='fw-bold'><a href='/latest'>Please click here to send you the latest invite.</a></p>",
 					"Often due to the keywords in release emails they can be marked as spam or placed in your Promotions Gmail sub-inbox. To stop this happening in the future, please add to your contacts my email address (the same email that you received on the original invite) to stop future emails being filtered.<br><br>",
 					"If you have not received an invite please fill out the above link, <a href='https://www.reddit.com/r/CSPersonalFinance/'>post in the official Subreddit</a>, email me or <a href='https://www.reddit.com/message/compose?to=CompiledSanity'>contact me via Reddit.</a>",
 					"Please also note that only major releases are announced via email. Minor releases are published to the original link of the major release and are unannounced.<br><br>",
@@ -142,7 +142,7 @@
 				"Slug": "missing-invite",
 				"Question": "I haven't received my Sheet invite, what do I do?",
 				"Answer": [
-					"<a href='/resendinvite'>Please fill out the form here.</a>"
+					"<a href='/latest'>Please fill out the form here.</a>"
 				],
 				"Summary": true
 			},

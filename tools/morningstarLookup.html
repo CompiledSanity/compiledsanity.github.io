@@ -162,7 +162,7 @@
                             lookupInstructions.style.display = 'none';
                             lookupResultAlert.style.display = 'block';
                             return;
-                        } else if (lookupID[0].charAt(0) == "F") {
+                        } else if (lookupID[0].charAt(0) == "F" || lookupID[0].charAt(0) == "V" || lookupID[0].charAt(0) == "O") {
                             lookupResult.innerHTML = "Already new Morningstar ID";
                             lookupInstructions.style.display = 'none';
                             lookupResultAlert.style.display = 'block';

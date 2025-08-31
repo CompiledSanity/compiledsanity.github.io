@@ -12,16 +12,16 @@
             "major_version_redditcurrent": null,
             "major_version_redditrequest": null,
             "additions": [
-                "New Offset toggle in the Cash tab - this allows users to mark Cash accounts as Offset accounts which are then used in the Property tab. <a href='https://guide.cspersonalfinance.io/investments/property#how-to-include-your-mortgage-offset-account'>See an explanation of how this feature is used here.</a></br><img src='/img/Offset Account.png'>"
+                "New Offset toggle in the Cash tab - this allows users to mark Cash accounts as Offset accounts which are then used in the Property tab. <a href='https://guide.cspersonalfinance.io/investments/property#how-to-include-your-mortgage-offset-account'>See an explanation of how this feature is used here.</a></br><div class='text-center mx-auto'><img src='/img/Offset Account.png'></div>"
             ],
             "updates": [
-                "Updates to FIFO CGT calculations. This should better handle edge cases and improve overall accuracy. If you encounter any issues or incorrect values please let me know immediately. <i>As per the disclaimer, the CGT calculations are just an estimate and should not be used for official tax purposes.</i>"
+                "Updates to FIFO CGT calculations. This should better handle edge cases and improve overall accuracy. <b>If you encounter any issues or incorrect values please let me know immediately.</b> <i>As per the disclaimer, the CGT calculations are just an estimate and should not be used for official tax purposes.</i>"
             ],
             "fixes": [],
             "removed": []
         },
         {
-            "version": "2.15.0",
+            "version": "2.15.0",S
             "comment": "The Graph Update",
             "release_date": "30th June 2025",
             "timestamp": 1751280757,

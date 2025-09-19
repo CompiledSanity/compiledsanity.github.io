@@ -12,7 +12,7 @@
             "major_version_redditcurrent": null,
             "major_version_redditrequest": null,
             "additions": [
-                "Completely overhauled the UI of the End of Month dialog for a much more cleaner look. Let me know what you think!</br><div class='text-center mx-auto'><img class='w-50 m-3' src='/img/latest_eom_prompt_ui.webp'></div>Also available via the email process:<div class='text-center mx-auto'><img class='w-25 m-3' src='/img/latest_eom_prompt_ui_mobile-portrait.webp'></div>",
+                "Completely overhauled the UI of the End of Month dialog for a much more cleaner look. Let me know what you think!</br><div class='text-center mx-auto'><img class='w-50 m-3' src='/img/latest_eom_prompt_ui.webp'></div>Also available via the email process:<div class='text-center mx-auto'><img class='w-50 m-3' src='/img/latest_eom_prompt_ui_mobile-portrait.webp'></div>",
                 "New Sheet menu that allows easier access to special sheet functions<div class='text-center mx-auto'><img src='/img/sheet_tools_dropdown_ui.webp'></div>",
                 "Completely overhauled the UI of the Sheet Version dialog. This should make it easier to understand what new features have been added since the last release<div class='text-center mx-auto'><img class='w-75 m-3' src='/img/sheet_update_prompt.webp'></div>"
             ],

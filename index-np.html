@@ -68,6 +68,292 @@
         href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- Lightbox -->
+    <style>
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-title {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .zoom-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .zoom-icon {
+            transform: scale(1);
+        }
+
+        .zoom-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            stroke-width: 2;
+        }
+
+        .item-content {
+            padding: 1.5rem;
+        }
+
+        .item-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-category {
+            font-size: 0.875rem;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            position: relative;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .lightbox img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .lightbox-close svg {
+            width: 20px;
+            height: 20px;
+            stroke: white;
+            stroke-width: 2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .filter-tabs {
+                margin-bottom: 2rem;
+            }
+
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .lightbox-close {
+                top: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            body {
+                padding: 1rem 0.5rem;
+            }
+
+            .gallery-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Filter animations */
+        .gallery-item.hide {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        .gallery-item.show {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+    </style>
+
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
@@ -288,7 +574,7 @@
                     style="font-family: 'Ubuntu', 'Quicksand', 'Nunito', sans-serif; font-weight: 900 !important;">
                     Track Your Net Worth. Plan Your Financial Freedom.
                 </h1>
-                
+
                 <div class="col-lg-12 text-center">
                     <div class="title-heading">
 
@@ -506,218 +792,150 @@
             </div>
 
             <!-- Screenshot Gallery -->
-            <div class="container-fluid my-5">
-                <div id="grid" class="row shuffle"
-                    style="position: relative; overflow: hidden; height: 617.673px; transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;">
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible"
-                        data-groups="[&quot;branding&quot;]"
-                        style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <div
-                            class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                            <div class="card-body p-0">
-                                <a href="/img/CashTabv2107.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                    <img src="/img/CashTabv2107.webp" class="img-fluid" alt="Cash Tab">
-                                    <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                                            <polyline points="16 4 20 4 20 8"></polyline>
-                                            <line x1="14" y1="10" x2="20" y2="4"></line>
-                                            <polyline points="8 20 4 20 4 16"></polyline>
-                                            <line x1="4" y1="20" x2="10" y2="14"></line>
-                                            <polyline points="16 20 20 20 20 16"></polyline>
-                                            <line x1="14" y1="14" x2="20" y2="20"></line>
-                                            <polyline points="8 4 4 4 4 8"></polyline>
-                                            <line x1="4" y1="4" x2="10" y2="10"></line>
-                                        </svg></div>
-                                </a>
-                                <div class="content bg-white p-3">
-                                    <h5 class="mb-0"><a href="#" class="text-dark title">Cash Tab</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
+            <div class="gallery-container">
+                <h1 class="gallery-title">Software Gallery</h1>
 
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible"
-                        data-groups="[&quot;photography&quot;]"
-                        style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(570px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <div
-                            class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                            <div class="card-body p-0">
-                                <a href="/img/ETFv2107.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                    <img src="/img/ETFv2107.webp" class="img-fluid" alt="ETFs Tab">
-                                    <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                                            <polyline points="16 4 20 4 20 8"></polyline>
-                                            <line x1="14" y1="10" x2="20" y2="4"></line>
-                                            <polyline points="8 20 4 20 4 16"></polyline>
-                                            <line x1="4" y1="20" x2="10" y2="14"></line>
-                                            <polyline points="16 20 20 20 20 16"></polyline>
-                                            <line x1="14" y1="14" x2="20" y2="20"></line>
-                                            <polyline points="8 4 4 4 4 8"></polyline>
-                                            <line x1="4" y1="4" x2="10" y2="10"></line>
-                                        </svg></div>
-                                </a>
-                                <div class="content bg-white p-3">
-                                    <h5 class="mb-0"><a href="#" class="text-dark title">ETFs Tab</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="branding">Finance</button>
+                    <button class="filter-btn" data-filter="photography">Investments</button>
+                    <button class="filter-btn" data-filter="designing">Analytics</button>
+                </div>
 
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible"
-                        data-groups="[&quot;branding&quot;]"
-                        style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(0px, 206px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <div
-                            class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                            <div class="card-body p-0">
-                                <a href="/img/PropertyTabv2107.webp" class="lightbox d-inline-block tobii-zoom"
-                                    title="">
-                                    <img src="/img/PropertyTabv2107.webp" class="img-fluid" alt="Property Tab">
-                                    <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                                            <polyline points="16 4 20 4 20 8"></polyline>
-                                            <line x1="14" y1="10" x2="20" y2="4"></line>
-                                            <polyline points="8 20 4 20 4 16"></polyline>
-                                            <line x1="4" y1="20" x2="10" y2="14"></line>
-                                            <polyline points="16 20 20 20 20 16"></polyline>
-                                            <line x1="14" y1="14" x2="20" y2="20"></line>
-                                            <polyline points="8 4 4 4 4 8"></polyline>
-                                            <line x1="4" y1="4" x2="10" y2="10"></line>
-                                        </svg></div>
-                                </a>
-                                <div class="content bg-white p-3">
-                                    <h5 class="mb-0"><a href="#" class="text-dark title">Property Tab</a></h5>
+                <div class="gallery-grid">
+                    <div class="gallery-item show" data-category="branding">
+                        <div class="image-container">
+                            <img src="/img/CashTabv2107.webp" alt="Cash Tab" loading="lazy">
+                            <div class="image-overlay">
+                                <div class="zoom-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 15L21 21" stroke="currentColor" />
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor" />
+                                        <path d="M10 7V13" stroke="currentColor" />
+                                        <path d="M7 10H13" stroke="currentColor" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
+                        <div class="item-content">
+                            <h3 class="item-title">Cash Tab</h3>
+                            <p class="item-category">Finance Management</p>
+                        </div>
                     </div>
-                    <!--end col-->
 
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible"
-                        data-groups="[&quot;designing&quot;]"
-                        style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(285px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <div
-                            class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                            <div class="card-body p-0">
-                                <a href="/img/latest_eom_prompt_ui.webp" class="lightbox d-inline-block tobii-zoom"
-                                    title="">
-                                    <img src="/img/latest_eom_prompt_ui.webp" class="img-fluid"
-                                        alt="Monthly Progress Reports">
-                                    <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                                            <polyline points="16 4 20 4 20 8"></polyline>
-                                            <line x1="14" y1="10" x2="20" y2="4"></line>
-                                            <polyline points="8 20 4 20 4 16"></polyline>
-                                            <line x1="4" y1="20" x2="10" y2="14"></line>
-                                            <polyline points="16 20 20 20 20 16"></polyline>
-                                            <line x1="14" y1="14" x2="20" y2="20"></line>
-                                            <polyline points="8 4 4 4 4 8"></polyline>
-                                            <line x1="4" y1="4" x2="10" y2="10"></line>
-                                        </svg></div>
-                                </a>
-                                <div class="content bg-white p-3">
-                                    <h5 class="mb-0"><a href="#" class="text-dark title">Monthly Progress
-                                            Reports</a></h5>
+                    <div class="gallery-item show" data-category="photography">
+                        <div class="image-container">
+                            <img src="/img/ETFv2107.webp" alt="ETFs Tab" loading="lazy">
+                            <div class="image-overlay">
+                                <div class="zoom-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 15L21 21" stroke="currentColor" />
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor" />
+                                        <path d="M10 7V13" stroke="currentColor" />
+                                        <path d="M7 10H13" stroke="currentColor" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
+                        <div class="item-content">
+                            <h3 class="item-title">ETFs Tab</h3>
+                            <p class="item-category">Investment Tracking</p>
+                        </div>
                     </div>
-                    <!--end col-->
 
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible"
-                        data-groups="[&quot;designing&quot;]"
-                        style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(285px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <div
-                            class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                            <div class="card-body p-0">
-                                <a href="/img/latest_eom_prompt_ui_mobile-portrait.webp"
-                                    class="lightbox d-inline-block tobii-zoom" title="">
-                                    <img src="/img/latest_eom_prompt_ui_mobile-portrait.webp" class="img-fluid"
-                                        alt="Progress Emails" style="max-height: 150px;">
-                                    <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                                            <polyline points="16 4 20 4 20 8"></polyline>
-                                            <line x1="14" y1="10" x2="20" y2="4"></line>
-                                            <polyline points="8 20 4 20 4 16"></polyline>
-                                            <line x1="4" y1="20" x2="10" y2="14"></line>
-                                            <polyline points="16 20 20 20 20 16"></polyline>
-                                            <line x1="14" y1="14" x2="20" y2="20"></line>
-                                            <polyline points="8 4 4 4 4 8"></polyline>
-                                            <line x1="4" y1="4" x2="10" y2="10"></line>
-                                        </svg></div>
-                                </a>
-                                <div class="content bg-white p-3">
-                                    <h5 class="mb-0"><a href="#" class="text-dark title">Progress Emails</a>
-                                    </h5>
+                    <div class="gallery-item show" data-category="branding">
+                        <div class="image-container">
+                            <img src="/img/PropertyTabv2107.webp" alt="Property Tab" loading="lazy">
+                            <div class="image-overlay">
+                                <div class="zoom-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 15L21 21" stroke="currentColor" />
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor" />
+                                        <path d="M10 7V13" stroke="currentColor" />
+                                        <path d="M7 10H13" stroke="currentColor" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
+                        <div class="item-content">
+                            <h3 class="item-title">Property Tab</h3>
+                            <p class="item-category">Real Estate Management</p>
+                        </div>
                     </div>
-                    <!--end col-->
 
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible"
-                        data-groups="[&quot;designing&quot;]"
-                        style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(570px, 206px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <div
-                            class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                            <div class="card-body p-0">
-                                <a href="/img/FIREDashv2107.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                    <img src="/img/FIREDashv2107.webp" class="img-fluid" alt="FIRE Dashboard">
-                                    <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                                            <polyline points="16 4 20 4 20 8"></polyline>
-                                            <line x1="14" y1="10" x2="20" y2="4"></line>
-                                            <polyline points="8 20 4 20 4 16"></polyline>
-                                            <line x1="4" y1="20" x2="10" y2="14"></line>
-                                            <polyline points="16 20 20 20 20 16"></polyline>
-                                            <line x1="14" y1="14" x2="20" y2="20"></line>
-                                            <polyline points="8 4 4 4 4 8"></polyline>
-                                            <line x1="4" y1="4" x2="10" y2="10"></line>
-                                        </svg></div>
-                                </a>
-                                <div class="content bg-white p-3">
-                                    <h5 class="mb-0"><a href="#" class="text-dark title">FIRE Dashboard</a></h5>
+                    <div class="gallery-item show" data-category="designing">
+                        <div class="image-container">
+                            <img src="/img/latest_eom_prompt_ui.webp" alt="Monthly Progress Reports" loading="lazy">
+                            <div class="image-overlay">
+                                <div class="zoom-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 15L21 21" stroke="currentColor" />
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor" />
+                                        <path d="M10 7V13" stroke="currentColor" />
+                                        <path d="M7 10H13" stroke="currentColor" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
+                        <div class="item-content">
+                            <h3 class="item-title">Monthly Progress Reports</h3>
+                            <p class="item-category">Analytics & Reporting</p>
+                        </div>
                     </div>
-                    <!--end col-->
 
-                    <div class="d-none col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible"
-                        data-groups="[&quot;branding&quot;]"
-                        style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(285px, 206px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                        <div
-                            class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                            <div class="card-body p-0">
-                                <a href="/img/BudgetTab.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                    <img src="/img/BudgetTab.webp" class="img-fluid" alt="Budget Tab">
-                                    <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                                            <polyline points="16 4 20 4 20 8"></polyline>
-                                            <line x1="14" y1="10" x2="20" y2="4"></line>
-                                            <polyline points="8 20 4 20 4 16"></polyline>
-                                            <line x1="4" y1="20" x2="10" y2="14"></line>
-                                            <polyline points="16 20 20 20 20 16"></polyline>
-                                            <line x1="14" y1="14" x2="20" y2="20"></line>
-                                            <polyline points="8 4 4 4 4 8"></polyline>
-                                            <line x1="4" y1="4" x2="10" y2="10"></line>
-                                        </svg></div>
-                                </a>
-                                <div class="content bg-white p-3">
-                                    <h5 class="mb-0"><a href="#" class="text-dark title">Budget Tab</a></h5>
+                    <div class="gallery-item show" data-category="designing">
+                        <div class="image-container">
+                            <img src="/img/latest_eom_prompt_ui_mobile-portrait.webp" alt="Progress Emails"
+                                loading="lazy">
+                            <div class="image-overlay">
+                                <div class="zoom-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 15L21 21" stroke="currentColor" />
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor" />
+                                        <path d="M10 7V13" stroke="currentColor" />
+                                        <path d="M7 10H13" stroke="currentColor" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
+                        <div class="item-content">
+                            <h3 class="item-title">Progress Emails</h3>
+                            <p class="item-category">Communication Tools</p>
+                        </div>
                     </div>
-                    <!--end col-->
+
+                    <div class="gallery-item show" data-category="designing">
+                        <div class="image-container">
+                            <img src="/img/FIREDashv2107.webp" alt="FIRE Dashboard" loading="lazy">
+                            <div class="image-overlay">
+                                <div class="zoom-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 15L21 21" stroke="currentColor" />
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor" />
+                                        <path d="M10 7V13" stroke="currentColor" />
+                                        <path d="M7 10H13" stroke="currentColor" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h3 class="item-title">FIRE Dashboard</h3>
+                            <p class="item-category">Retirement Planning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <div class="lightbox-content">
+                    <img src="" alt="" id="lightbox-img">
+                    <div class="lightbox-close" id="lightbox-close">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18" stroke="currentColor" />
+                            <path d="M6 6L18 18" stroke="currentColor" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
@@ -1310,6 +1528,80 @@
                     const separator = link.href.includes('?') ? '&' : '?';
                     link.href += separator + currentParams.toString();
                 }
+            });
+        });
+    </script>
+
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.dataset.filter;
+
+                galleryItems.forEach(item => {
+                    const category = item.dataset.category;
+
+                    if (filterValue === 'all' || category === filterValue) {
+                        item.classList.remove('hide');
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                        item.classList.add('hide');
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        // Add click event to all images
+        document.querySelectorAll('.image-container').forEach(container => {
+            container.addEventListener('click', (e) => {
+                const img = container.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Add loading animation for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function () {
+                this.style.opacity = '1';
             });
         });
     </script>

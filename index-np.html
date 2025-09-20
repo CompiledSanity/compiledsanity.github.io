@@ -54,6 +54,8 @@
     <link href="css/colors/green.css" rel="stylesheet" id="color-opt">
     <link href="scss/compiledmods.css" rel="stylesheet" type="text/css" />
     <link href="css/compiledmods.css" rel="stylesheet" type="text/css" />
+    <link href="css/cspf-lightbox.css" rel="stylesheet" type="text/css" />
+    <link href="css/cspf-new-ui.css" rel="stylesheet" type="text/css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,400 +70,6 @@
         href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
-    <!-- Lightbox CSS -->
-    <style>
-        /* Modern Gallery Styles */
-        .sw-gallery-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .sw-gallery-filter-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .sw-gallery-filter-btn {
-            padding: 0.75rem 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            color: inherit;
-            border: 2px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(10px);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-        }
-
-        .sw-gallery-filter-btn:hover,
-        .sw-gallery-filter-btn.sw-active {
-            background: rgba(0, 0, 0, 0.05);
-            border-color: rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .sw-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .sw-gallery-item {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .sw-gallery-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .sw-gallery-image-container {
-            position: relative;
-            overflow: hidden;
-            aspect-ratio: 16/10;
-            cursor: pointer;
-        }
-
-        .sw-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .sw-gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .sw-gallery-image-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .sw-gallery-item:hover .sw-gallery-image-overlay {
-            opacity: 1;
-        }
-
-        .sw-gallery-zoom-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            transform: scale(0.8);
-            transition: all 0.3s ease;
-        }
-
-        .sw-gallery-item:hover .sw-gallery-zoom-icon {
-            transform: scale(1);
-        }
-
-        .sw-gallery-zoom-icon svg {
-            width: 24px;
-            height: 24px;
-            stroke: white;
-            stroke-width: 2;
-            fill: none;
-        }
-
-        .sw-gallery-item-content {
-            padding: 1.5rem;
-        }
-
-        .sw-gallery-item-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-        }
-
-        .sw-gallery-item-category {
-            font-size: 0.875rem;
-            color: #718096;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
-        }
-
-        /* Lightbox Styles */
-        .sw-gallery-lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 9999;
-            backdrop-filter: blur(10px);
-        }
-
-        .sw-gallery-lightbox.sw-active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: swGalleryFadeIn 0.3s ease;
-        }
-
-        .sw-gallery-lightbox-content {
-            max-width: 90vw;
-            max-height: 90vh;
-            position: relative;
-            animation: swGalleryZoomIn 0.3s ease;
-        }
-
-        .sw-gallery-lightbox img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 10px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .sw-gallery-lightbox-close {
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .sw-gallery-lightbox-close:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.1);
-        }
-
-        .sw-gallery-lightbox-close svg {
-            width: 20px;
-            height: 20px;
-            stroke: white;
-            stroke-width: 2;
-            fill: none;
-        }
-
-        /* Filter animations */
-        .sw-gallery-item.sw-hide {
-            opacity: 0;
-            transform: scale(0.8);
-            pointer-events: none;
-        }
-
-        .sw-gallery-item.sw-show {
-            opacity: 1;
-            transform: scale(1);
-            pointer-events: auto;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .sw-gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 1.5rem;
-            }
-
-            .sw-gallery-filter-tabs {
-                margin-bottom: 1.5rem;
-            }
-
-            .sw-gallery-filter-btn {
-                padding: 0.5rem 1rem;
-                font-size: 0.8rem;
-            }
-
-            .sw-gallery-lightbox-close {
-                top: 20px;
-                right: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .sw-gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes swGalleryFadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes swGalleryZoomIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    </style>
-
-    <!-- New UI CSS -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
-
-        /* Custom styles for comparison table */
-        .comparison-table {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .comparison-header {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-            color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .vs-badge {
-            background: #dc3545;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            margin: 0 1rem;
-        }
-
-        .trust-signal {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 0.3rem 1rem;
-            border-radius: 25px;
-            margin: 0.25rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .trust-signal i {
-            color: #28a745;
-            margin-right: 0.5rem;
-        }
-
-        .demo-video-placeholder {
-            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-            border-radius: 15px;
-            padding: 4rem 2rem;
-            color: white;
-            text-align: center;
-            margin: 2rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .demo-video-placeholder::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .demo-video-placeholder::after {
-            content: '▶';
-            position: absolute;
-            top: 50%;
-            left: 52%;
-            transform: translate(-50%, -50%);
-            font-size: 2rem;
-            color: white;
-        }
-
-        .guarantee-badge {
-            background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
-            color: #000;
-            padding: 1rem;
-            border-radius: 15px;
-            text-align: center;
-            font-weight: bold;
-            margin: 1rem 0;
-            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
-        }
-
-        .feature-comparison-table {
-            margin: 2rem 0;
-        }
-
-        .feature-comparison-table th {
-            background: #28a745;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .feature-comparison-table td {
-            text-align: center;
-            padding: 0.75rem;
-            vertical-align: middle;
-        }
-
-        .free-column {
-            background: #f8f9fa;
-        }
-
-        .premium-column {
-            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
-        }
-
-        .about-creator {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-left: 5px solid #28a745;
-        }
-    </style>
 
     <!-- Google Tag Manager -->
     <script>
@@ -482,6 +90,346 @@
         setOriginalReferrerCookie();
     </script>
     <!-- End PayPal SDK -->
+
+    <!-- New Table CSS -->
+    <style>
+        /* Modern Comparison Table Styles */
+        .comparison-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .comparison-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .comparison-title {
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 60px;
+        }
+
+        .comparison-title h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .comparison-title p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .modern-comparison-wrapper {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .sale-badge {
+            position: absolute;
+            top: -10px;
+            right: 30px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            z-index: 3;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .modern-table {
+            margin: 0;
+            background: transparent;
+        }
+
+        .modern-table thead {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        .modern-table thead th {
+            border: none;
+            padding: 30px 20px;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+
+        .plan-header {
+            text-align: center;
+            padding: 25px 20px !important;
+        }
+
+        .plan-header i {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .plan-header h5 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .free-plan i {
+            color: #28a745;
+        }
+
+        .premium-plan i {
+            color: #ffc107;
+        }
+
+        .modern-table tbody tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .modern-table tbody tr:hover {
+            background: rgba(102, 126, 234, 0.04);
+            transform: translateX(5px);
+        }
+
+        .modern-table td {
+            padding: 20px;
+            border: none;
+            vertical-align: middle;
+            font-size: 0.95rem;
+        }
+
+        .feature-name {
+            font-weight: 600;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .feature-name::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modern-table tbody tr:hover .feature-name::before {
+            opacity: 1;
+        }
+
+        .feature-check {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .check-yes {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .check-no {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .check-limited {
+            color: #ffc107;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .price-row {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            font-weight: 700;
+        }
+
+        .price-display {
+            text-align: center;
+        }
+
+        .original-price {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .current-price {
+            color: #28a745;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .currency-alternatives {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .cta-cards {
+            margin-top: 40px;
+            gap: 30px;
+        }
+
+        .cta-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+            height: 100%;
+        }
+
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .premium-card {
+            border: 2px solid #28a745;
+            position: relative;
+        }
+
+        .premium-card .sale-badge-small {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff6b6b;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .region-btn {
+            margin-bottom: 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .region-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+        }
+
+        .region-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .region-btn img {
+            height: 20px;
+            margin-left: 8px;
+            border-radius: 3px;
+        }
+
+        .btn-success.region-btn:hover {
+            background: #20a539;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-outline-secondary.region-btn:hover {
+            background: #6c757d;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .features-highlight {
+            color: #28a745;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-title h1 {
+                font-size: 2rem;
+            }
+
+            .modern-table {
+                font-size: 0.85rem;
+            }
+
+            .modern-table td,
+            .modern-table th {
+                padding: 15px 10px;
+            }
+
+            .cta-cards {
+                margin-top: 30px;
+                gap: 20px;
+            }
+        }
+    </style>
+
 
 </head>
 
@@ -1011,13 +959,13 @@
     <!-- Testimonials End -->
 
     <!-- Free vs Complete Comparison Start -->
-    <section class="section bg-light" id="download">
-        <div class="container">
+    <section class="comparison-section" id="download">
+        <div class="comparison-container container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
-                    <div class="section-title mb-4 pb-2">
-                        <h1 class="mb-4">Free vs Complete Comparison</h1>
-                        <p class="text-muted para-desc mb-0 mx-auto">Choose the version that's right for you</p>
+                    <div class="comparison-title">
+                        <h1>Free vs Complete Comparison</h1>
+                        <p>Choose the version that's right for your financial journey</p>
                     </div>
                 </div>
             </div>
@@ -1025,151 +973,141 @@
             <!-- Comparison Table -->
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="feature-comparison-table">
-                        <div class="ribbon ribbon-right ribbon-warning overflow-hidden">
-                            <span class="text-center d-block shadow small h5" style="font-size: 40%;">SALE</span>
-                            <!-- <span class="text-center d-block shadow small h7" style="font-size: 70%;">POPULAR</span> -->
+                    <div class="modern-comparison-wrapper">
+                        <div class="sale-badge">
+                            🔥 SALE
                         </div>
-                        <table class="table table-bordered">
+
+                        <table class="table modern-table">
                             <thead>
                                 <tr>
-                                    <th style="width: 40%;">Feature</th>
-                                    <th class="free-column" style="width: 30%;">
-                                        <div>
-                                            <i class="uil uil-user-circle h3 text-success"></i>
-                                            <h5>Beginner (Free)</h5>
-                                        </div>
+                                    <th style="width: 40%;">Features</th>
+                                    <th class="plan-header free-plan" style="width: 30%;">
+                                        <i class="uil uil-user-circle"></i>
+                                        <h5>Beginner (Free)</h5>
                                     </th>
-                                    <th class="premium-column" style="width: 30%;">
-                                        <div>
-                                            <i class="uil uil-star h3 text-warning"></i>
-                                            <h5>Complete (Paid)</h5>
-                                        </div>
+                                    <th class="plan-header premium-plan" style="width: 30%;">
+                                        <i class="uil uil-star"></i>
+                                        <h5>Complete (Paid)</h5>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="text-start"><strong>Net Worth Dashboard</strong></td>
-                                    <td class="free-column">✅</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Net Worth Dashboard</td>
+                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Live ETF Stock Tracking</strong></td>
-                                    <td class="free-column">✅</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Live ETF Stock Tracking</td>
+                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Live Crypto Tracking</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Live Crypto Tracking</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Live Managed Fund Tracking</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Live Managed Fund Tracking</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>FIRE Planning Calculator</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">FIRE Planning Calculator</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Investment + Super Tracking</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Investment + Super Tracking</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Property Dashboard</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Property Dashboard</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Credit Card + Loan Dashboard</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Credit Card + Loan Dashboard</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>CGT Estimations</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">CGT Estimations</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Multi-region Support</strong></td>
-                                    <td class="free-column">Limited</td>
-                                    <td class="premium-column">Full (AU/UK/US/EU)</td>
+                                    <td class="feature-name">Multi-region Support</td>
+                                    <td class="feature-check check-limited">Limited</td>
+                                    <td class="feature-check check-yes">Full (AU/UK/US/EU)</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Monthly Email Reports</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
-                                </tr>
-
-
-                                <tr>
-                                    <td class="text-start"><strong>Currency Conversion on International Assets</strong>
-                                    </td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Monthly Email Reports</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Historical price Lookups</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Currency Conversion on International Assets</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Enhanced budgeting system</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Historical Price Lookups</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Dividend tracking and reinvestment support</strong>
-                                    </td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Enhanced Budgeting System</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Generic & asset tracking (including live Gold &
-                                            Silver prices)</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Dividend Tracking and Reinvestment Support</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Rerecord Prior Months</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Generic & Asset Tracking (including live Gold & Silver
+                                        prices)</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Automatic calculation of sold units</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Rerecord Prior Months</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start"><strong>Lifetime Updates</strong></td>
-                                    <td class="free-column">❌</td>
-                                    <td class="premium-column">✅</td>
+                                    <td class="feature-name">Automatic Calculation of Sold Units</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
                                 </tr>
-                                <tr class="table-active">
-                                    <td class="text-start"><strong>Price</strong></td>
-                                    <td class="free-column">
+                                <tr>
+                                    <td class="feature-name">Lifetime Updates</td>
+                                    <td class="feature-check check-no">❌</td>
+                                    <td class="feature-check check-yes">✅</td>
+                                </tr>
+                                <tr class="price-row">
+                                    <td class="feature-name">Price</td>
+                                    <td class="price-display">
                                         <h4>Free</h4>
                                     </td>
-                                    <td class="premium-column">
-                                        <div class="d-flex justify-content-center align-items-center">
-                                            <span class="text-decoration-line-through text-muted me-2">
+                                    <td class="price-display">
+                                        <div>
+                                            <span class="original-price">
                                                 $<span id="aud-price-full">12</span>
                                             </span>
-
-                                            <h4 class="text-success mb-0">
+                                            <div class="current-price">
                                                 $<span id="aud-price">10</span> AUD
-                                            </h4>
+                                            </div>
+                                            <div class="currency-alternatives">
+                                                (~£<span id="gbp-price">4</span>
+                                                / €<span id="eur-price">5</span>
+                                                / $<span id="usd-price">6</span>)
+                                            </div>
                                         </div>
-
-                                        <small class="text-muted">
-                                            (~£<span id="gbp-price">4</span>
-                                            / €<span id="eur-price">5</span>
-                                            / $<span id="usd-price">6</span>)
-                                        </small>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1179,63 +1117,61 @@
             </div>
 
             <!-- CTA Buttons -->
-            <div class="row justify-content-center mt-4">
-                <div class="col-md-5 text-center mb-3">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5>Try Free Version</h5>
-                            <p class="text-muted">Perfect for getting started</p>
-                            <div class="mb-3">
+            <div class="row justify-content-center cta-cards">
+                <div class="col-md-5 text-center mb-4">
+                    <div class="card cta-card">
+                        <div class="card-body p-4">
+                            <h5 class="mb-3">Try Free Version</h5>
+                            <p class="text-muted mb-4">Perfect for getting started with financial tracking</p>
+                            <div>
                                 <a href="https://docs.google.com/spreadsheets/d/1tRJzUsKBNE_JoSTiMLT0-V5zk3cwGW3lpnpboot0IGI/"
-                                    class="btn btn-outline-secondary btn-lg mb-2 w-100">
-                                    View Now - AU <img style="height:20px;" src="/img/flag_au.png" alt="AU">
+                                    class="btn btn-outline-secondary btn-lg region-btn w-100">
+                                    View Now - AU <img src="/img/flag_au.png" alt="AU">
                                 </a>
                                 <a href="https://docs.google.com/spreadsheets/d/1v9ENzdoSIVlfAA2SFVFz6KKVAAu5Knv8klde7bN2Qqo/"
-                                    class="btn btn-outline-secondary btn-lg mb-2 w-100">
-                                    View Now - UK <img style="height:20px;" src="/img/flag_uk.png" alt="UK">
+                                    class="btn btn-outline-secondary btn-lg region-btn w-100">
+                                    View Now - UK <img src="/img/flag_uk.png" alt="UK">
                                 </a>
                                 <a href="https://docs.google.com/spreadsheets/d/1pPK8t8Oe6F53OMw1EG8Hq1tX4F5SnULdf3Cr8TlUCs4/"
-                                    class="btn btn-outline-secondary btn-lg mb-2 w-100">
-                                    View Now - US <img style="height:20px;" src="/img/flag_us.png" alt="US">
+                                    class="btn btn-outline-secondary btn-lg region-btn w-100">
+                                    View Now - US <img src="/img/flag_us.png" alt="US">
                                 </a>
                                 <a href="https://docs.google.com/spreadsheets/d/15v1a96culFW0r5HfyRaAu2gmdK9s-9kOe9ARSUWBuAY/"
-                                    class="btn btn-outline-secondary btn-lg mb-2 w-100">
-                                    View Now - EUR <img style="height:20px;" src="/img/flag_eu.png" alt="EU">
+                                    class="btn btn-outline-secondary btn-lg region-btn w-100">
+                                    View Now - EUR <img src="/img/flag_eu.png" alt="EU">
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-5 text-center mb-3">
-                    <div class="card h-100 border-success">
-                        <div class="card-body">
-                            <div class="ribbon ribbon-right ribbon-warning overflow-hidden">
-                                <span class="text-center d-block shadow small h5" style="font-size: 40%;">SALE</span>
-                                <!-- <span class="text-center d-block shadow small h7" style="font-size: 70%;">POPULAR</span> -->
-                            </div>
-                            <h5 class="text-success">Get Complete Version</h5>
-                            <p class="text-muted">Everything you need for financial freedom</p>
-                            <div class="mb-3">
-                                <a href="/purchase?region=AU" class="btn btn-success btn-lg mb-2 w-100">
-                                    <i class="uil uil-shopping-cart"></i> Buy Now - AU <img style="height:20px;"
-                                        src="/img/flag_au.png" alt="AU">
+                <div class="col-md-5 text-center mb-4">
+                    <div class="card cta-card premium-card">
+                        <div class="sale-badge-small">SALE</div>
+                        <div class="card-body p-4">
+                            <h5 class="text-success mb-3">Get Complete Version</h5>
+                            <p class="text-muted mb-4">Everything you need for comprehensive financial management</p>
+                            <div>
+                                <a href="/purchase?region=AU" class="btn btn-success btn-lg region-btn w-100">
+                                    <i class="uil uil-shopping-cart"></i> Buy Now - AU <img src="/img/flag_au.png"
+                                        alt="AU">
                                 </a>
-                                <a href="/purchase?region=UK" class="btn btn-success btn-lg mb-2 w-100">
-                                    <i class="uil uil-shopping-cart"></i> Buy Now - UK <img style="height:20px;"
-                                        src="/img/flag_uk.png" alt="UK">
+                                <a href="/purchase?region=UK" class="btn btn-success btn-lg region-btn w-100">
+                                    <i class="uil uil-shopping-cart"></i> Buy Now - UK <img src="/img/flag_uk.png"
+                                        alt="UK">
                                 </a>
-                                <a href="/purchase?region=US" class="btn btn-success btn-lg mb-2 w-100">
-                                    <i class="uil uil-shopping-cart"></i> Buy Now - US/CA <img style="height:20px;"
-                                        src="/img/flag_us.png" alt="US"><img style="height:20px;" src="/img/flag_ca.png"
-                                        alt="CA">
+                                <a href="/purchase?region=US" class="btn btn-success btn-lg region-btn w-100">
+                                    <i class="uil uil-shopping-cart"></i> Buy Now - US/CA <img src="/img/flag_us.png"
+                                        alt="US"><img src="/img/flag_ca.png" alt="CA">
                                 </a>
-                                <a href="/purchase?region=EU" class="btn btn-success btn-lg mb-2 w-100">
-                                    <i class="uil uil-shopping-cart"></i> Buy Now - EU <img style="height:20px;"
-                                        src="/img/flag_eu.png" alt="EU">
+                                <a href="/purchase?region=EU" class="btn btn-success btn-lg region-btn w-100">
+                                    <i class="uil uil-shopping-cart"></i> Buy Now - EU <img src="/img/flag_eu.png"
+                                        alt="EU">
                                 </a>
                             </div>
-                            <small class="text-success">✅ One-time purchase • ✅ Lifetime updates</small>
+                            <div class="features-highlight">
+                                ✅ One-time purchase • ✅ Lifetime updates
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -195,6 +195,7 @@
         .plan-header {
             text-align: center;
             padding: 25px 20px !important;
+            position: relative;
         }
 
         .plan-header i {
@@ -209,12 +210,52 @@
             font-size: 1.3rem;
         }
 
+        .free-plan {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            opacity: 0.8;
+        }
+
         .free-plan i {
-            color: #28a745;
+            color: #6c757d;
+        }
+
+        .premium-plan {
+            background: linear-gradient(135deg, #28a745, #20c997) !important;
+            color: white !important;
+            position: relative;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+            border-radius: 15px 15px 0 0 !important;
+        }
+
+        .premium-plan::before {
+            content: '👑 RECOMMENDED';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #2c3e50;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+            }
+
+            to {
+                box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+            }
         }
 
         .premium-plan i {
-            color: #ffc107;
+            color: #ffd700;
         }
 
         .modern-table tbody tr {
@@ -223,7 +264,7 @@
         }
 
         .modern-table tbody tr:hover {
-            background: rgba(102, 126, 234, 0.04);
+            background: rgba(40, 167, 69, 0.04);
             transform: translateX(5px);
         }
 
@@ -232,6 +273,27 @@
             border: none;
             vertical-align: middle;
             font-size: 0.95rem;
+        }
+
+        /* Highlight premium column */
+        .premium-column {
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.08), rgba(32, 201, 151, 0.05));
+            border-left: 3px solid #28a745;
+            position: relative;
+        }
+
+        .free-column {
+            opacity: 0.7;
+        }
+
+        .premium-column::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #28a745, #20c997);
         }
 
         .feature-name {
@@ -266,11 +328,55 @@
         .check-yes {
             color: #28a745;
             font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .premium-column .check-yes {
+            animation: checkPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes checkPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
         }
 
         .check-no {
             color: #dc3545;
             font-weight: bold;
+            opacity: 0.6;
+        }
+
+        .free-column .check-no {
+            position: relative;
+        }
+
+        .free-column .check-no::after {
+            content: '→ Upgrade for this feature';
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #28a745;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.65rem;
+            white-space: nowrap;
+            margin-left: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .modern-table tbody tr:hover .free-column .check-no::after {
+            opacity: 1;
         }
 
         .check-limited {
@@ -284,6 +390,46 @@
             font-weight: 700;
         }
 
+        .price-row .premium-column {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            position: relative;
+        }
+
+        .price-row .premium-column::before {
+            content: '💰 BEST VALUE';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b6b;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
         .price-display {
             text-align: center;
         }
@@ -294,14 +440,15 @@
         }
 
         .current-price {
-            color: #28a745;
-            font-size: 1.5rem;
-            font-weight: 800;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .currency-alternatives {
-            font-size: 0.8rem;
-            color: #6c757d;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
             margin-top: 5px;
         }
 
@@ -341,8 +488,37 @@
         }
 
         .premium-card {
-            border: 2px solid #28a745;
+            border: 3px solid #28a745;
             position: relative;
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(32, 201, 151, 0.02));
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.2);
+        }
+
+        .premium-card::before {
+            background: linear-gradient(90deg, #28a745, #20c997);
+            height: 6px;
+            transform: scaleX(1);
+        }
+
+        .premium-card .card-body {
+            position: relative;
+        }
+
+        .premium-card .card-body::before {
+            content: '⭐ MOST POPULAR CHOICE ⭐';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            animation: pulse 2s infinite;
         }
 
         .premium-card .sale-badge-small {
@@ -429,8 +605,6 @@
             }
         }
     </style>
-
-
 </head>
 
 <body>
@@ -995,106 +1169,106 @@
                             <tbody>
                                 <tr>
                                     <td class="feature-name">Net Worth Dashboard</td>
-                                    <td class="feature-check check-yes">✅</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-yes free-column">✅</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Live ETF Stock Tracking</td>
-                                    <td class="feature-check check-yes">✅</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-yes free-column">✅</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Live Crypto Tracking</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Live Managed Fund Tracking</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">FIRE Planning Calculator</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Investment + Super Tracking</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Property Dashboard</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Credit Card + Loan Dashboard</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">CGT Estimations</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Multi-region Support</td>
-                                    <td class="feature-check check-limited">Limited</td>
-                                    <td class="feature-check check-yes">Full (AU/UK/US/EU)</td>
+                                    <td class="feature-check check-limited free-column">Limited</td>
+                                    <td class="feature-check check-yes premium-column">Full (AU/UK/US/EU)</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Monthly Email Reports</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Currency Conversion on International Assets</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Historical Price Lookups</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Enhanced Budgeting System</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Dividend Tracking and Reinvestment Support</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Generic & Asset Tracking (including live Gold & Silver
                                         prices)</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Rerecord Prior Months</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Automatic Calculation of Sold Units</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr>
                                     <td class="feature-name">Lifetime Updates</td>
-                                    <td class="feature-check check-no">❌</td>
-                                    <td class="feature-check check-yes">✅</td>
+                                    <td class="feature-check check-no free-column">❌</td>
+                                    <td class="feature-check check-yes premium-column">✅</td>
                                 </tr>
                                 <tr class="price-row">
                                     <td class="feature-name">Price</td>
-                                    <td class="price-display">
+                                    <td class="price-display free-column">
                                         <h4>Free</h4>
                                     </td>
-                                    <td class="price-display">
+                                    <td class="price-display premium-column">
                                         <div>
                                             <span class="original-price">
                                                 $<span id="aud-price-full">12</span>
@@ -1111,6 +1285,82 @@
                                     </td>
                                 </tr>
                             </tbody>
+                            </td>
+                            <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Multi-region Support</td>
+                                <td class="feature-check check-limited">Limited</td>
+                                <td class="feature-check check-yes">Full (AU/UK/US/EU)</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Monthly Email Reports</td>
+                                <td class="feature-check check-no">❌</td>
+                                <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Currency Conversion on International Assets</td>
+                                <td class="feature-check check-no">❌</td>
+                                <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Historical Price Lookups</td>
+                                <td class="feature-check check-no">❌</td>
+                                <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Enhanced Budgeting System</td>
+                                <td class="feature-check check-no">❌</td>
+                                <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Dividend Tracking and Reinvestment Support</td>
+                                <td class="feature-check check-no">❌</td>
+                                <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Generic & Asset Tracking (including live Gold & Silver prices)
+                                </td>
+                                <td class="feature-check check-no">❌</td>
+                                <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Rerecord Prior Months</td>
+                                <td class="feature-check check-no">❌</td>
+                                <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Automatic Calculation of Sold Units</td>
+                                <td class="feature-check check-no">❌</td>
+                                <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Lifetime Updates</td>
+                                <td class="feature-check check-no">❌</td>
+                                <td class="feature-check check-yes">✅</td>
+                            </tr>
+                            <tr class="price-row">
+                                <td class="feature-name">Price</td>
+                                <td class="price-display">
+                                    <h4>Free</h4>
+                                </td>
+                                <td class="price-display">
+                                    <div>
+                                        <span class="original-price">
+                                            $<span id="aud-price-full">12</span>
+                                        </span>
+                                        <div class="current-price">
+                                            $<span id="aud-price">10</span> AUD
+                                        </div>
+                                        <div class="currency-alternatives">
+                                            (~£<span id="gbp-price">4</span>
+                                            / €<span id="eur-price">5</span>
+                                            / $<span id="usd-price">6</span>)
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -1118,59 +1368,77 @@
 
             <!-- CTA Buttons -->
             <div class="row justify-content-center cta-cards">
-                <div class="col-md-5 text-center mb-4">
+                <div class="col-md-4 text-center mb-4">
                     <div class="card cta-card">
                         <div class="card-body p-4">
-                            <h5 class="mb-3">Try Free Version</h5>
-                            <p class="text-muted mb-4">Perfect for getting started with financial tracking</p>
+                            <h5 class="mb-3 text-muted">Try Free Version</h5>
+                            <p class="text-muted mb-4" style="font-size: 0.9rem;">Basic features to get you started</p>
                             <div>
                                 <a href="https://docs.google.com/spreadsheets/d/1tRJzUsKBNE_JoSTiMLT0-V5zk3cwGW3lpnpboot0IGI/"
-                                    class="btn btn-outline-secondary btn-lg region-btn w-100">
+                                    class="btn btn-outline-secondary btn-sm region-btn w-100"
+                                    style="margin-bottom: 8px;">
                                     View Now - AU <img src="/img/flag_au.png" alt="AU">
                                 </a>
                                 <a href="https://docs.google.com/spreadsheets/d/1v9ENzdoSIVlfAA2SFVFz6KKVAAu5Knv8klde7bN2Qqo/"
-                                    class="btn btn-outline-secondary btn-lg region-btn w-100">
+                                    class="btn btn-outline-secondary btn-sm region-btn w-100"
+                                    style="margin-bottom: 8px;">
                                     View Now - UK <img src="/img/flag_uk.png" alt="UK">
                                 </a>
                                 <a href="https://docs.google.com/spreadsheets/d/1pPK8t8Oe6F53OMw1EG8Hq1tX4F5SnULdf3Cr8TlUCs4/"
-                                    class="btn btn-outline-secondary btn-lg region-btn w-100">
+                                    class="btn btn-outline-secondary btn-sm region-btn w-100"
+                                    style="margin-bottom: 8px;">
                                     View Now - US <img src="/img/flag_us.png" alt="US">
                                 </a>
                                 <a href="https://docs.google.com/spreadsheets/d/15v1a96culFW0r5HfyRaAu2gmdK9s-9kOe9ARSUWBuAY/"
-                                    class="btn btn-outline-secondary btn-lg region-btn w-100">
+                                    class="btn btn-outline-secondary btn-sm region-btn w-100"
+                                    style="margin-bottom: 8px;">
                                     View Now - EUR <img src="/img/flag_eu.png" alt="EU">
                                 </a>
                             </div>
+                            <small class="text-muted">Limited features • No updates</small>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-5 text-center mb-4">
+                <div class="col-md-8 text-center mb-4">
                     <div class="card cta-card premium-card">
-                        <div class="sale-badge-small">SALE</div>
-                        <div class="card-body p-4">
-                            <h5 class="text-success mb-3">Get Complete Version</h5>
-                            <p class="text-muted mb-4">Everything you need for comprehensive financial management</p>
-                            <div>
-                                <a href="/purchase?region=AU" class="btn btn-success btn-lg region-btn w-100">
-                                    <i class="uil uil-shopping-cart"></i> Buy Now - AU <img src="/img/flag_au.png"
-                                        alt="AU">
-                                </a>
-                                <a href="/purchase?region=UK" class="btn btn-success btn-lg region-btn w-100">
-                                    <i class="uil uil-shopping-cart"></i> Buy Now - UK <img src="/img/flag_uk.png"
-                                        alt="UK">
-                                </a>
-                                <a href="/purchase?region=US" class="btn btn-success btn-lg region-btn w-100">
-                                    <i class="uil uil-shopping-cart"></i> Buy Now - US/CA <img src="/img/flag_us.png"
-                                        alt="US"><img src="/img/flag_ca.png" alt="CA">
-                                </a>
-                                <a href="/purchase?region=EU" class="btn btn-success btn-lg region-btn w-100">
-                                    <i class="uil uil-shopping-cart"></i> Buy Now - EU <img src="/img/flag_eu.png"
-                                        alt="EU">
-                                </a>
+                        <div class="sale-badge-small">🔥 SALE</div>
+                        <div class="card-body p-5">
+                            <h5 class="text-success mb-3" style="font-size: 1.5rem;">🚀 Get Complete Version Now!</h5>
+                            <p class="mb-4" style="font-size: 1.1rem; color: #2c3e50;"><strong>Everything you need for
+                                    complete financial mastery</strong></p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="/purchase?region=AU" class="btn btn-success btn-lg region-btn w-100">
+                                        <i class="uil uil-shopping-cart"></i> Buy Now - AU <img src="/img/flag_au.png"
+                                            alt="AU">
+                                    </a>
+                                    <a href="/purchase?region=UK" class="btn btn-success btn-lg region-btn w-100">
+                                        <i class="uil uil-shopping-cart"></i> Buy Now - UK <img src="/img/flag_uk.png"
+                                            alt="UK">
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="/purchase?region=US" class="btn btn-success btn-lg region-btn w-100">
+                                        <i class="uil uil-shopping-cart"></i> Buy Now - US/CA <img
+                                            src="/img/flag_us.png" alt="US"><img src="/img/flag_ca.png" alt="CA">
+                                    </a>
+                                    <a href="/purchase?region=EU" class="btn btn-success btn-lg region-btn w-100">
+                                        <i class="uil uil-shopping-cart"></i> Buy Now - EU <img src="/img/flag_eu.png"
+                                            alt="EU">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="features-highlight">
-                                ✅ One-time purchase • ✅ Lifetime updates
+
+                            <div class="features-highlight" style="font-size: 1rem; margin-top: 20px;">
+                                ✅ One-time purchase • ✅ Lifetime updates • ✅ Full feature access
+                            </div>
+
+                            <div
+                                style="background: rgba(40, 167, 69, 0.1); padding: 15px; border-radius: 10px; margin-top: 20px;">
+                                <strong style="color: #28a745;">🎯 Why 97% choose Complete:</strong><br>
+                                <small>19 premium features • Multi-region support • Priority updates</small>
                             </div>
                         </div>
                     </div>

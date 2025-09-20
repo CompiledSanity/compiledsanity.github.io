@@ -68,35 +68,28 @@
         href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <!-- Lightbox -->
+
+    <!-- Lightbox CSS -->
     <style>
-        .gallery-container {
+        /* Modern Gallery Styles */
+        .sw-gallery-container {
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .gallery-title {
-            text-align: center;
-            color: white;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .filter-tabs {
+        .sw-gallery-filter-tabs {
             display: flex;
             justify-content: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
 
-        .filter-btn {
+        .sw-gallery-filter-btn {
             padding: 0.75rem 1.5rem;
             background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: inherit;
+            border: 2px solid rgba(0, 0, 0, 0.1);
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,57 +100,57 @@
             font-size: 0.85rem;
         }
 
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.5);
+        .sw-gallery-filter-btn:hover,
+        .sw-gallery-filter-btn.sw-active {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.2);
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .gallery-grid {
+        .sw-gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
 
-        .gallery-item {
-            background: rgba(255, 255, 255, 0.95);
+        .sw-gallery-item {
+            background: white;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .gallery-item:hover {
+        .sw-gallery-item:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
-        .image-container {
+        .sw-gallery-image-container {
             position: relative;
             overflow: hidden;
             aspect-ratio: 16/10;
+            cursor: pointer;
         }
 
-        .gallery-item img {
+        .sw-gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .gallery-item:hover img {
+        .sw-gallery-item:hover img {
             transform: scale(1.1);
         }
 
-        .image-overlay {
+        .sw-gallery-image-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(45deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -165,11 +158,11 @@
             transition: all 0.3s ease;
         }
 
-        .gallery-item:hover .image-overlay {
+        .sw-gallery-item:hover .sw-gallery-image-overlay {
             opacity: 1;
         }
 
-        .zoom-icon {
+        .sw-gallery-zoom-icon {
             width: 60px;
             height: 60px;
             background: rgba(255, 255, 255, 0.2);
@@ -183,29 +176,30 @@
             transition: all 0.3s ease;
         }
 
-        .gallery-item:hover .zoom-icon {
+        .sw-gallery-item:hover .sw-gallery-zoom-icon {
             transform: scale(1);
         }
 
-        .zoom-icon svg {
+        .sw-gallery-zoom-icon svg {
             width: 24px;
             height: 24px;
             stroke: white;
             stroke-width: 2;
+            fill: none;
         }
 
-        .item-content {
+        .sw-gallery-item-content {
             padding: 1.5rem;
         }
 
-        .item-title {
+        .sw-gallery-item-title {
             font-size: 1.25rem;
             font-weight: 600;
             color: #2d3748;
             margin-bottom: 0.5rem;
         }
 
-        .item-category {
+        .sw-gallery-item-category {
             font-size: 0.875rem;
             color: #718096;
             text-transform: uppercase;
@@ -214,30 +208,30 @@
         }
 
         /* Lightbox Styles */
-        .lightbox {
+        .sw-gallery-lightbox {
             display: none;
             position: fixed;
             inset: 0;
             background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
+            z-index: 9999;
             backdrop-filter: blur(10px);
         }
 
-        .lightbox.active {
+        .sw-gallery-lightbox.sw-active {
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: fadeIn 0.3s ease;
+            animation: swGalleryFadeIn 0.3s ease;
         }
 
-        .lightbox-content {
+        .sw-gallery-lightbox-content {
             max-width: 90vw;
             max-height: 90vh;
             position: relative;
-            animation: zoomIn 0.3s ease;
+            animation: swGalleryZoomIn 0.3s ease;
         }
 
-        .lightbox img {
+        .sw-gallery-lightbox img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -245,7 +239,7 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
-        .lightbox-close {
+        .sw-gallery-lightbox-close {
             position: absolute;
             top: -50px;
             right: -50px;
@@ -262,62 +256,63 @@
             transition: all 0.3s ease;
         }
 
-        .lightbox-close:hover {
+        .sw-gallery-lightbox-close:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: scale(1.1);
         }
 
-        .lightbox-close svg {
+        .sw-gallery-lightbox-close svg {
             width: 20px;
             height: 20px;
             stroke: white;
             stroke-width: 2;
+            fill: none;
+        }
+
+        /* Filter animations */
+        .sw-gallery-item.sw-hide {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        .sw-gallery-item.sw-show {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .gallery-title {
-                font-size: 2rem;
-                margin-bottom: 2rem;
-            }
-
-            .gallery-grid {
+            .sw-gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
                 gap: 1.5rem;
             }
 
-            .filter-tabs {
-                margin-bottom: 2rem;
+            .sw-gallery-filter-tabs {
+                margin-bottom: 1.5rem;
             }
 
-            .filter-btn {
+            .sw-gallery-filter-btn {
                 padding: 0.5rem 1rem;
                 font-size: 0.8rem;
             }
 
-            .lightbox-close {
+            .sw-gallery-lightbox-close {
                 top: 20px;
                 right: 20px;
             }
         }
 
         @media (max-width: 480px) {
-            .gallery-grid {
+            .sw-gallery-grid {
                 grid-template-columns: 1fr;
                 gap: 1rem;
-            }
-
-            body {
-                padding: 1rem 0.5rem;
-            }
-
-            .gallery-title {
-                font-size: 1.5rem;
             }
         }
 
         /* Animations */
-        @keyframes fadeIn {
+        @keyframes swGalleryFadeIn {
             from {
                 opacity: 0;
             }
@@ -327,7 +322,7 @@
             }
         }
 
-        @keyframes zoomIn {
+        @keyframes swGalleryZoomIn {
             from {
                 opacity: 0;
                 transform: scale(0.9);
@@ -338,22 +333,9 @@
                 transform: scale(1);
             }
         }
-
-        /* Filter animations */
-        .gallery-item.hide {
-            opacity: 0;
-            transform: scale(0.8);
-            pointer-events: none;
-        }
-
-        .gallery-item.show {
-            opacity: 1;
-            transform: scale(1);
-            pointer-events: auto;
-        }
     </style>
 
-
+    <!-- New UI CSS -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
@@ -792,23 +774,21 @@
             </div>
 
             <!-- Screenshot Gallery -->
-            <div class="gallery-container">
-                <h1 class="gallery-title">Software Gallery</h1>
-
-                <div class="filter-tabs">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="branding">Finance</button>
-                    <button class="filter-btn" data-filter="photography">Investments</button>
-                    <button class="filter-btn" data-filter="designing">Analytics</button>
+            <div class="sw-gallery-container">
+                <div class="sw-gallery-filter-tabs">
+                    <button class="sw-gallery-filter-btn sw-active" data-sw-filter="all">All</button>
+                    <button class="sw-gallery-filter-btn" data-sw-filter="branding">Finance</button>
+                    <button class="sw-gallery-filter-btn" data-sw-filter="photography">Investments</button>
+                    <button class="sw-gallery-filter-btn" data-sw-filter="designing">Analytics</button>
                 </div>
 
-                <div class="gallery-grid">
-                    <div class="gallery-item show" data-category="branding">
-                        <div class="image-container">
+                <div class="sw-gallery-grid">
+                    <div class="sw-gallery-item sw-show" data-sw-category="branding">
+                        <div class="sw-gallery-image-container">
                             <img src="/img/CashTabv2107.webp" alt="Cash Tab" loading="lazy">
-                            <div class="image-overlay">
-                                <div class="zoom-icon">
-                                    <svg viewBox="0 0 24 24" fill="none">
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
                                         <path d="M15 15L21 21" stroke="currentColor" />
                                         <circle cx="10" cy="10" r="7" stroke="currentColor" />
                                         <path d="M10 7V13" stroke="currentColor" />
@@ -817,18 +797,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-content">
-                            <h3 class="item-title">Cash Tab</h3>
-                            <p class="item-category">Finance Management</p>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">Cash Tab</h5>
+                            <p class="sw-gallery-item-category">Finance Management</p>
                         </div>
                     </div>
 
-                    <div class="gallery-item show" data-category="photography">
-                        <div class="image-container">
+                    <div class="sw-gallery-item sw-show" data-sw-category="photography">
+                        <div class="sw-gallery-image-container">
                             <img src="/img/ETFv2107.webp" alt="ETFs Tab" loading="lazy">
-                            <div class="image-overlay">
-                                <div class="zoom-icon">
-                                    <svg viewBox="0 0 24 24" fill="none">
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
                                         <path d="M15 15L21 21" stroke="currentColor" />
                                         <circle cx="10" cy="10" r="7" stroke="currentColor" />
                                         <path d="M10 7V13" stroke="currentColor" />
@@ -837,18 +817,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-content">
-                            <h3 class="item-title">ETFs Tab</h3>
-                            <p class="item-category">Investment Tracking</p>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">ETFs Tab</h5>
+                            <p class="sw-gallery-item-category">Investment Tracking</p>
                         </div>
                     </div>
 
-                    <div class="gallery-item show" data-category="branding">
-                        <div class="image-container">
+                    <div class="sw-gallery-item sw-show" data-sw-category="branding">
+                        <div class="sw-gallery-image-container">
                             <img src="/img/PropertyTabv2107.webp" alt="Property Tab" loading="lazy">
-                            <div class="image-overlay">
-                                <div class="zoom-icon">
-                                    <svg viewBox="0 0 24 24" fill="none">
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
                                         <path d="M15 15L21 21" stroke="currentColor" />
                                         <circle cx="10" cy="10" r="7" stroke="currentColor" />
                                         <path d="M10 7V13" stroke="currentColor" />
@@ -857,18 +837,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-content">
-                            <h3 class="item-title">Property Tab</h3>
-                            <p class="item-category">Real Estate Management</p>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">Property Tab</h5>
+                            <p class="sw-gallery-item-category">Real Estate Management</p>
                         </div>
                     </div>
 
-                    <div class="gallery-item show" data-category="designing">
-                        <div class="image-container">
+                    <div class="sw-gallery-item sw-show" data-sw-category="designing">
+                        <div class="sw-gallery-image-container">
                             <img src="/img/latest_eom_prompt_ui.webp" alt="Monthly Progress Reports" loading="lazy">
-                            <div class="image-overlay">
-                                <div class="zoom-icon">
-                                    <svg viewBox="0 0 24 24" fill="none">
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
                                         <path d="M15 15L21 21" stroke="currentColor" />
                                         <circle cx="10" cy="10" r="7" stroke="currentColor" />
                                         <path d="M10 7V13" stroke="currentColor" />
@@ -877,19 +857,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-content">
-                            <h3 class="item-title">Monthly Progress Reports</h3>
-                            <p class="item-category">Analytics & Reporting</p>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">Monthly Progress Reports</h5>
+                            <p class="sw-gallery-item-category">Analytics & Reporting</p>
                         </div>
                     </div>
 
-                    <div class="gallery-item show" data-category="designing">
-                        <div class="image-container">
+                    <div class="sw-gallery-item sw-show" data-sw-category="designing">
+                        <div class="sw-gallery-image-container">
                             <img src="/img/latest_eom_prompt_ui_mobile-portrait.webp" alt="Progress Emails"
                                 loading="lazy">
-                            <div class="image-overlay">
-                                <div class="zoom-icon">
-                                    <svg viewBox="0 0 24 24" fill="none">
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
                                         <path d="M15 15L21 21" stroke="currentColor" />
                                         <circle cx="10" cy="10" r="7" stroke="currentColor" />
                                         <path d="M10 7V13" stroke="currentColor" />
@@ -898,18 +878,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-content">
-                            <h3 class="item-title">Progress Emails</h3>
-                            <p class="item-category">Communication Tools</p>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">Progress Emails</h5>
+                            <p class="sw-gallery-item-category">Communication Tools</p>
                         </div>
                     </div>
 
-                    <div class="gallery-item show" data-category="designing">
-                        <div class="image-container">
+                    <div class="sw-gallery-item sw-show" data-sw-category="designing">
+                        <div class="sw-gallery-image-container">
                             <img src="/img/FIREDashv2107.webp" alt="FIRE Dashboard" loading="lazy">
-                            <div class="image-overlay">
-                                <div class="zoom-icon">
-                                    <svg viewBox="0 0 24 24" fill="none">
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
                                         <path d="M15 15L21 21" stroke="currentColor" />
                                         <circle cx="10" cy="10" r="7" stroke="currentColor" />
                                         <path d="M10 7V13" stroke="currentColor" />
@@ -918,20 +898,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-content">
-                            <h3 class="item-title">FIRE Dashboard</h3>
-                            <p class="item-category">Retirement Planning</p>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">FIRE Dashboard</h5>
+                            <p class="sw-gallery-item-category">Retirement Planning</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Lightbox -->
-            <div class="lightbox" id="lightbox">
-                <div class="lightbox-content">
-                    <img src="" alt="" id="lightbox-img">
-                    <div class="lightbox-close" id="lightbox-close">
-                        <svg viewBox="0 0 24 24" fill="none">
+            <!-- Lightbox (add at bottom of page) -->
+            <div class="sw-gallery-lightbox" id="swGalleryLightbox">
+                <div class="sw-gallery-lightbox-content">
+                    <img src="" alt="" id="swGalleryLightboxImg">
+                    <div class="sw-gallery-lightbox-close" id="swGalleryLightboxClose">
+                        <svg viewBox="0 0 24 24">
                             <path d="M18 6L6 18" stroke="currentColor" />
                             <path d="M6 6L18 18" stroke="currentColor" />
                         </svg>
@@ -1531,79 +1511,79 @@
             });
         });
     </script>
-
     <script>
-        // Filter functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
+        // Software Gallery functionality
+        (function () {
+            'use strict';
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
+            // Filter functionality
+            const filterBtns = document.querySelectorAll('.sw-gallery-filter-btn');
+            const galleryItems = document.querySelectorAll('.sw-gallery-item');
 
-                const filterValue = btn.dataset.filter;
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('sw-active'));
+                    // Add active class to clicked button
+                    btn.classList.add('sw-active');
 
-                galleryItems.forEach(item => {
-                    const category = item.dataset.category;
+                    const filterValue = btn.dataset.swFilter;
 
-                    if (filterValue === 'all' || category === filterValue) {
-                        item.classList.remove('hide');
-                        item.classList.add('show');
-                    } else {
-                        item.classList.remove('show');
-                        item.classList.add('hide');
-                    }
+                    galleryItems.forEach(item => {
+                        const category = item.dataset.swCategory;
+
+                        if (filterValue === 'all' || category === filterValue) {
+                            item.classList.remove('sw-hide');
+                            item.classList.add('sw-show');
+                        } else {
+                            item.classList.remove('sw-show');
+                            item.classList.add('sw-hide');
+                        }
+                    });
                 });
             });
-        });
 
-        // Lightbox functionality
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxClose = document.getElementById('lightbox-close');
+            // Lightbox functionality
+            const lightbox = document.getElementById('swGalleryLightbox');
+            const lightboxImg = document.getElementById('swGalleryLightboxImg');
+            const lightboxClose = document.getElementById('swGalleryLightboxClose');
 
-        // Add click event to all images
-        document.querySelectorAll('.image-container').forEach(container => {
-            container.addEventListener('click', (e) => {
-                const img = container.querySelector('img');
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
+            if (lightbox && lightboxImg && lightboxClose) {
+                // Add click event to all images
+                document.querySelectorAll('.sw-gallery-image-container').forEach(container => {
+                    container.addEventListener('click', (e) => {
+                        const img = container.querySelector('img');
+                        lightboxImg.src = img.src;
+                        lightboxImg.alt = img.alt;
+                        lightbox.classList.add('sw-active');
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
 
-        // Close lightbox
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
+                // Close lightbox function
+                function closeLightbox() {
+                    lightbox.classList.remove('sw-active');
+                    document.body.style.overflow = '';
+                }
 
-        lightboxClose.addEventListener('click', closeLightbox);
+                // Close button
+                lightboxClose.addEventListener('click', closeLightbox);
 
-        // Close on background click
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
+                // Close on background click
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        closeLightbox();
+                    }
+                });
+
+                // Close on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && lightbox.classList.contains('sw-active')) {
+                        closeLightbox();
+                    }
+                });
             }
-        });
-
-        // Close on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-
-        // Add loading animation for images
-        document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('load', function () {
-                this.style.opacity = '1';
-            });
-        });
+        })();
     </script>
 
     <!-- Other Scripts -->

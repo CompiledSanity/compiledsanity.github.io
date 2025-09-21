@@ -3,7 +3,10 @@
 		"bp": "/nav",
 		"bbp": "/latestPrice",
 		"p": "/exitPrice",
-		"spf": ["F", "V"],
+		"spf": [
+			"F",
+			"V"
+		],
 		"h": {
 			"method": "get",
 			"contentType": "application/json",
@@ -11,7 +14,7 @@
 				"apikey": "lstzFDEOhfFNMLikKa0am9mgEKLBl49T"
 			}
 		},
-		"u": "https://api-global.morningstar.com/sal-service/v1/etf/quote/v1/{symbol}/data?fundServCode=&showAnalystRatingChinaFund=false&showAnalystRating=false&languageId=en&locale=en&clientId=MDC&benchmarkId=mstarorcat&component=sal-components-mip-quote&version=3.79.0"
+		"u": "https://api-global.morningstar.com/sal-service/v1/fund/quote/v7/{symbol}/data?fundServCode=&showAnalystRatingChinaFund=false&showAnalystRating=false&languageId=en&locale=en&clientId=mca.public&benchmarkId=mstarorcat&component=sal-mip-quote&version=4.65.0"
 	},
 	"yh": {
 		"p": "",
@@ -39,7 +42,8 @@
 				"rulerInterdayStart": 0,
 				"rulerInterdayStop": 0,
 				"returnDateType": "ISO8601",
-				"elements": [{
+				"elements": [
+					{
 						"Label": "9a97ddc5",
 						"Type": "price",
 						"Symbol": "{ftid}",
@@ -72,7 +76,8 @@
 				"rulerInterdayStart": 0,
 				"rulerInterdayStop": 0,
 				"returnDateType": "ISO8601",
-				"elements": [{
+				"elements": [
+					{
 						"Label": "9a97ddc5",
 						"Type": "price",
 						"Symbol": "{ftid}",

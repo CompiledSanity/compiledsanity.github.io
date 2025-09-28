@@ -790,106 +790,79 @@
                     style="max-width: 80%; box-shadow: 0 0px 20px 2px rgba(60, 72, 88, 0.4) !important;"
                     title="CompiledSanity Personal Finance Spreadsheets" />
             </div>
+            <style>
+                /* Symbol styles */
+                .symbol {
+                    font-weight: bold;
+                    margin-right: 0.5rem;
+                }
+
+                .symbol-check {
+                    color: #28a745;
+                    /* Bootstrap success green */
+                }
+
+                .symbol-cross {
+                    color: #dc3545;
+                    /* Bootstrap danger red */
+                }
+            </style>
+
             <div class="comparison-table">
                 <div class="row text-center mt-4">
                     <div class="col-md-4 mb-4">
                         <div class="card shadow border-0 h-100">
                             <div class="card-body">
-                                <h5 class="text-muted fw-bold">
-                                    Other Monthly Apps
-                                </h5>
+                                <h5 class="text-muted fw-bold">Other Monthly Apps</h5>
                                 <ul class="list-unstyled">
-                                    <li>
-                                        ❌ $10-30/month forever
-                                    </li>
-                                    <li>
-                                        ❌ They control your data
-                                    </li>
-                                    <li>
-                                        ❌ Limited customization
-                                    </li>
-                                    <li>
-                                        ❌ Privacy concerns
-                                    </li>
-                                    <li>
-                                        ❌ May disappear
-                                    </li>
-                                    <li>
-                                        ✅ Live updates
-                                    </li>
-                                    <li>
-                                        ❌ Subscription dependency
-                                    </li>
+                                    <li><span class="symbol symbol-cross">✖</span>$10-30/month forever</li>
+                                    <li><span class="symbol symbol-cross">✖</span>They control your data</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Limited customization</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Privacy concerns</li>
+                                    <li><span class="symbol symbol-cross">✖</span>May disappear</li>
+                                    <li><span class="symbol symbol-check">✔</span>Live updates</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Subscription dependency</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4 mb-4">
                         <div class="card shadow border-0 h-100">
                             <div class="card-body">
-                                <h5 class="text-success fw-bold">
-                                    Our Sheet
-                                </h5>
+                                <h5 class="text-success fw-bold">Our Sheet</h5>
                                 <ul class="list-unstyled">
-                                    <li>
-                                        ✅ One-time purchase
-                                    </li>
-                                    <li>
-                                        ✅ You own your data
-                                    </li>
-                                    <li>
-                                        ✅ Complete control
-                                    </li>
-                                    <li>
-                                        ✅ Privacy guaranteed
-                                    </li>
-                                    <li>
-                                        ✅ Comprehensive tracking
-                                    </li>
-                                    <li>
-                                        ✅ Live price updates
-                                    </li>
-                                    <li>
-                                        ✅ Works forever
-                                    </li>
+                                    <li><span class="symbol symbol-check">✔</span>One-time purchase</li>
+                                    <li><span class="symbol symbol-check">✔</span>You own your data</li>
+                                    <li><span class="symbol symbol-check">✔</span>Complete control</li>
+                                    <li><span class="symbol symbol-check">✔</span>Privacy guaranteed</li>
+                                    <li><span class="symbol symbol-check">✔</span>Comprehensive tracking</li>
+                                    <li><span class="symbol symbol-check">✔</span>Live price updates</li>
+                                    <li><span class="symbol symbol-check">✔</span>Works forever</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4 mb-4">
                         <div class="card shadow border-0 h-100">
                             <div class="card-body">
-                                <h5 class="text-muted fw-bold">
-                                    Manual Tracking
-                                </h5>
+                                <h5 class="text-muted fw-bold">Manual Tracking</h5>
                                 <ul class="list-unstyled">
-                                    <li>
-                                        ✅ Free to start
-                                    </li>
-                                    <li>
-                                        ✅ You own your data
-                                    </li>
-                                    <li>
-                                        ✅ Complete control
-                                    </li>
-                                    <li>
-                                        ✅ Privacy guaranteed
-                                    </li>
-                                    <li>
-                                        ❌ Time consuming
-                                    </li>
-                                    <li>
-                                        ❌ Manual price updates
-                                    </li>
-                                    <li>
-                                        ❌ Error prone
-                                    </li>
+                                    <li><span class="symbol symbol-check">✔</span>Free to start</li>
+                                    <li><span class="symbol symbol-check">✔</span>You own your data</li>
+                                    <li><span class="symbol symbol-check">✔</span>Complete control</li>
+                                    <li><span class="symbol symbol-check">✔</span>Privacy guaranteed</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Time consuming</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Manual price updates</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Error prone</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- Comparison Section End -->

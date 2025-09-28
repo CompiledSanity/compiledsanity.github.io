@@ -1,1169 +1,1850 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8" />
-        <title>CompiledSanity Personal Finance & Net Worth Spreadsheets</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Personal Finance, Net Worth & FIRE Spreadsheet Tracking made Automated & Easy. Loved by 15,000+ users, CS Net Worth Spreadsheets generate awareness, track investments and save you more.">
-        <meta name="keywords" content="Personal Finance, Net Worth, FIRE, tracker, spreadsheet, Google Sheet, Excel, Financial position.">
-        <meta name="author" content="CompiledSanity">
+<head>
+    <meta charset="utf-8" />
+    <title>
+        CompiledSanity Personal Finance &amp; Net Worth Spreadsheets
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+        content="See your net worth updated live — track all your finances in one sheet. No subscriptions. Just one‑time purchase. Control your data with our powerful Google Sheets template."
+        name="description" />
+    <meta content="Personal Finance, Net Worth, FIRE, tracker, spreadsheet, Google Sheet, Excel, Financial position."
+        name="keywords" />
+    <meta content="CompiledSanity" name="author" />
+    <meta content="CompiledSanity Personal Finance &amp; Net Worth Spreadsheets" property="og:site_name" />
+    <meta content="Track Your Net Worth. Plan Your Financial Freedom." property="og:title" />
+    <meta
+        content="See your net worth updated live — track all your finances in one sheet. No subscriptions. Just one‑time purchase."
+        property="og:description" />
+    <meta content="/" property="og:url" />
+    <!-- og images -->
+    <meta content="/img/og_image_green.webp" property="og:image" />
+    <meta content="1200" property="og:image:width" />
+    <meta content="630" property="og:image:height" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="/img/og_image_green.webp" name="twitter:image" />
+    <meta content="CompiledSanity Personal Finance &amp; Net Worth Spreadsheets" name="twitter:image:alt" />
+    <!-- favicon -->
+    <link href="/img/fav/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/img/fav/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/img/fav/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="/img/fav/site.webmanifest" rel="manifest" />
+    <link color="#5bbad5" href="/img/fav/safari-pinned-tab.svg" rel="mask-icon" />
+    <meta content="#da532c" name="msapplication-TileColor" />
+    <meta content="#ffffff" name="theme-color" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-extras-margins-padding.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- tobii css -->
+    <link href="css/tobii.min.css" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" rel="stylesheet" />
+    <!-- Slider -->
+    <link href="css/tiny-slider.css" rel="stylesheet">
+    <!-- Main Css -->
+    <link href="css/style.css" id="theme-opt" rel="stylesheet" type="text/css">
+    <link href="css/colors/green.css" id="color-opt" rel="stylesheet" />
+    <link href="scss/compiledmods.css" rel="stylesheet" type="text/css">
+    <link href="css/compiledmods.css" rel="stylesheet" type="text/css" />
+    <link href="css/cspf-lightbox.css" rel="stylesheet" type="text/css" />
+    <link href="css/cspf-new-ui.css" rel="stylesheet" type="text/css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Cabin:500,400,400i,700,800,900|Quicksand:500,500i,700,800,900|Ubuntu:400,400i,500,700,800,900"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&amp;family=Quicksand:wght@500&amp;family=Ubuntu:wght@400&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&amp;display=swap" rel="stylesheet" />
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P82M4WK');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- PayPal SDK -->
+    <script src="js/referrer.js">
+    </script>
+    <script>
+        setOriginalReferrerCookie();
+    </script>
+    <!-- End PayPal SDK -->
+    <!-- New Table CSS -->
+    <style>
+        /* Modern Comparison Table Styles */
+        .btn-success .divider {
+            width: 1px;
+            background-color: rgba(255, 255, 255, 0.7);
+            /* light white border */
+        }
 
-        <meta property="og:site_name" content="CompiledSanity Personal Finance & Net Worth Spreadsheets">
-        <meta property="og:title" content="CompiledSanity Personal Finance & Net Worth Spreadsheets">
-        <meta property="og:description" content="Personal Finance & Net Worth Tracking made Automated & Easy. Loved by 15,000+ users, CS Templates generate awareness, track investments and help save.">
-        <meta property="og:url" content="/">
+        .comparison-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
 
-        <!-- og images -->
-        <meta property="og:image" content="/img/og_image_green.webp">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
+        .comparison-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
 
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="/img/og_image_green.webp">
-        <meta name="twitter:image:alt" content="CompiledSanity Personal Finance & Net Worth Spreadsheets">
+        .comparison-container {
+            position: relative;
+            z-index: 2;
+        }
 
-        <!-- favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/img/fav/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/img/fav/favicon-16x16.png">
-        <link rel="manifest" href="/img/fav/site.webmanifest">
-        <link rel="mask-icon" href="/img/fav/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+        .comparison-title {
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 60px;
+        }
 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap-extras-margins-padding.css" rel="stylesheet" type="text/css" />
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        .comparison-title h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-        <!-- tobii css -->
-        <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
+        .comparison-title p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
 
-        <!-- Icons -->
-        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        .modern-comparison-wrapper {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
-        <!-- Slider -->
-        <link rel="stylesheet" href="css/tiny-slider.css" />
+        .sale-badge {
+            position: absolute;
+            top: -10px;
+            right: 30px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            z-index: 3;
+            animation: pulse 2s infinite;
+        }
 
-        <!-- Main Css -->
-        <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
-        <link href="css/colors/green.css" rel="stylesheet" id="color-opt">
-        <link href="scss/compiledmods.css" rel="stylesheet" type="text/css" />
-        <link href="css/compiledmods.css" rel="stylesheet" type="text/css" />
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cabin:500,400,400i,700,800,900|Quicksand:500,500i,700,800,900|Ubuntu:400,400i,500,700,800,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Quicksand:wght@500&family=Ubuntu:wght@400&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Ubuntu:wght@400&display=swap');
-        </style>
+            50% {
+                transform: scale(1.05);
+            }
 
-        <!-- Google Tag Manager -->
-        <script>
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-P82M4WK');
-        </script>
-        <!-- End Google Tag Manager -->
+            100% {
+                transform: scale(1);
+            }
+        }
 
-        <!-- PayPal SDK -->
-        <script src="js/referrer.js"></script>
-            <script>
-            setOriginalReferrerCookie();
-        </script>
-        <!-- End PayPal SDK -->
+        .modern-table {
+            margin: 0;
+            background: transparent;
+        }
 
-    </head>
+        .modern-table thead {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
 
-    <body>
-        <!-- Loader -->
-        <!-- <div id="preloader">
-            <div id="status">
-                <div class="spinner">
-                    <div class="double-bounce1"></div>
-                    <div class="double-bounce2"></div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Loader -->
-         
-        <!-- Google Tag Manager (noscript) -->
-        <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P82M4WK"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-        </noscript>
-        <!-- End Google Tag Manager (noscript) -->
+        .modern-table thead th {
+            border: none;
+            padding: 30px 20px;
+            font-weight: 600;
+            vertical-align: middle;
+        }
 
-        <!-- Navbar STart -->
-        <header id="topnav" class="defaultscroll sticky">
-            <div class="container">
-                <!-- Logo container-->
-                <a class="logo" href="/">
-                    <img src="/img/cspf_logo.webp" height="24" class="logo-light-mode" alt="">
-                    <img src="/img/cspf_logo.webp" height="24" class="logo-dark-mode" alt="">
-                    <span class="logo-light-mode">
-                        <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext l-dark text-dark"><span class="logospantext text-success">CompiledSanity</span> Personal Finance</span>
-                        <span style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;" class="logospantext l-light text-light"><span class="logospantext">CompiledSanity</span> Personal Finance</span>
+        .plan-header {
+            text-align: center;
+            padding: 25px 20px !important;
+            position: relative;
+        }
+
+        .plan-header i {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .plan-header h5 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .free-plan {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            opacity: 0.8;
+        }
+
+        .free-plan i {
+            color: #6c757d;
+        }
+
+        .premium-plan {
+            background: linear-gradient(135deg, #28a745, #38d39f, #20c997) !important;
+            color: white !important;
+            position: relative;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+            border-radius: 15px 15px 0 0 !important;
+        }
+
+        .premium-plan::before {
+            content: '👑 RECOMMENDED';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #2c3e50;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+            }
+
+            to {
+                box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+            }
+        }
+
+        .premium-plan i {
+            color: #ffd700;
+        }
+
+        .modern-table tbody tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .modern-table tbody tr:hover {
+            background: rgba(40, 167, 69, 0.04);
+            transform: translateX(5px);
+        }
+
+        .modern-table td {
+            padding: 20px;
+            border: none;
+            vertical-align: middle;
+            font-size: 0.95rem;
+        }
+
+        /* Highlight premium column */
+        .premium-column {
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.08), rgba(32, 201, 151, 0.05));
+            border-left: 3px solid #28a745;
+            position: relative;
+        }
+
+        .free-column {
+            opacity: 0.7;
+        }
+
+        .premium-column::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #28a745, #20c997);
+        }
+
+        .feature-name {
+            font-weight: 600;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .feature-name::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modern-table tbody tr:hover .feature-name::before {
+            opacity: 1;
+        }
+
+        .feature-check {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .check-yes {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .premium-column .check-yes {
+            animation: checkPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes checkPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .check-no {
+            color: #dc3545;
+            font-weight: bold;
+            opacity: 0.6;
+        }
+
+        .free-column .check-no {
+            position: relative;
+        }
+
+        .free-column .check-no::after {
+            content: '→ Upgrade for this feature';
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #28a745;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.65rem;
+            white-space: nowrap;
+            margin-left: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .modern-table tbody tr:hover .free-column .check-no::after {
+            opacity: 1;
+        }
+
+        .check-limited {
+            color: #ffc107;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .price-row {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            font-weight: 700;
+        }
+
+        .price-row .premium-column {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            position: relative;
+        }
+
+        .price-row .premium-column::before {
+            content: '💰 BEST VALUE';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b6b;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        .price-display {
+            text-align: center;
+        }
+
+        .original-price {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .current-price {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .currency-alternatives {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 5px;
+        }
+
+        .cta-cards {
+            margin-top: 40px;
+            gap: 30px;
+        }
+
+        .cta-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+            height: 100%;
+        }
+
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .premium-card {
+            border: 2px solid #28a745;
+            position: relative;
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(32, 201, 151, 0.02));
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.2);
+        }
+
+        .premium-card::before {
+            background: linear-gradient(90deg, #28a745, #20c997);
+            height: 4px;
+            transform: scaleX(1);
+        }
+
+        .premium-card .card-body {
+            position: relative;
+        }
+
+        .premium-card .sale-badge-small {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff6b6b;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .region-btn {
+            margin-bottom: 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .region-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+        }
+
+        .region-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .region-btn img {
+            height: 20px;
+            margin-left: 8px;
+            border-radius: 3px;
+        }
+
+        .btn-success.region-btn:hover {
+            background: #20a539;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-outline-secondary.region-btn:hover {
+            background: #6c757d;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .features-highlight {
+            color: #28a745;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-title h1 {
+                font-size: 2rem;
+            }
+
+            .modern-table {
+                font-size: 0.85rem;
+            }
+
+            .modern-table td,
+            .modern-table th {
+                padding: 15px 10px;
+            }
+
+            .cta-cards {
+                margin-top: 30px;
+                gap: 20px;
+            }
+        }
+
+        .premium-card {
+            background: linear-gradient(135deg, #fff, #f9fefb)
+        }
+    </style>
+    </link>
+    </link>
+    </link>
+    </link>
+    </link>
+    </link>
+    </link>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-P82M4WK"
+            style="display:none;visibility:hidden" width="0">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Navbar STart -->
+    <header class="defaultscroll sticky" id="topnav">
+        <div class="container">
+            <!-- Logo container-->
+            <a class="logo" href="/">
+                <img alt="" class="logo-light-mode" height="24" src="/img/cspf_logo.webp" />
+                <img alt="" class="logo-dark-mode" height="24" src="/img/cspf_logo.webp" />
+                <span class="logo-light-mode">
+                    <span class="logospantext l-dark text-dark"
+                        style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;">
+                        <span class="logospantext text-success">
+                            CompiledSanity
+                        </span>
+                        Personal Finance
                     </span>
-                </a>
-                <!-- End Logo container-->
-                <div class="menu-extras">
-                    <div class="menu-item">
-                        <!-- Mobile menu toggle-->
-                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
-                            <div class="lines">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                    <span class="logospantext l-light text-light"
+                        style="font-weight: 500; padding-left: 5px; vertical-align: middle; font-family: 'Quicksand', sans-serif !important; letter-spacing: 0.2px !important; font-size: 18px; line-height: 1;">
+                        <span class="logospantext">
+                            CompiledSanity
+                        </span>
+                        Personal Finance
+                    </span>
+                </span>
+            </a>
+            <!-- End Logo container-->
+            <div class="menu-extras">
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                        <div class="lines">
+                            <span>
+                            </span>
+                            <span>
+                            </span>
+                            <span>
+                            </span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+            <div id="navigation">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu nav-light nav-right">
+                    <li style="margin: 0 0px;">
+                        <a class="sub-menu-item" href="/">
+                            Home
                         </a>
-                        <!-- End mobile menu toggle-->
-                    </div>
-                </div>
-
-                <div id="navigation">
-                    <!-- Navigation Menu-->
-                    <ul class="navigation-menu nav-light nav-right">
-                        <li style="margin: 0 0px;"><a href="/" class="sub-menu-item">Home</a></li>
-                        <li style="margin: 0 0px;"><a href="#about" class="sub-menu-item">About</a></li>
-                        <li style="margin: 0 0px;"><a href="#features" class="sub-menu-item">Features</a></li>
-                        <li style="margin: 0 0px;"><a href="#download" class="sub-menu-item">Download</a></li>
-                        <li style="margin: 0 0px;"><a href="https://guide.cspersonalfinance.io/" class="sub-menu-item">Guide</a></li>
-                        <li style="margin: 0 0px;"><a href="https://guide.cspersonalfinance.io/getting-started/faqs" class="sub-menu-item">FAQ</a></li>
-                    </ul>
-                    <!--end navigation menu-->
-                </div>
-                <!--end navigation-->
+                    </li>
+                    <li style="margin: 0 0px;">
+                        <a class="sub-menu-item" href="#about">
+                            About
+                        </a>
+                    </li>
+                    <li style="margin: 0 0px;">
+                        <a class="sub-menu-item" href="#features">
+                            Features
+                        </a>
+                    </li>
+                    <li style="margin: 0 0px;">
+                        <a class="sub-menu-item" href="#demo">
+                            Demo
+                        </a>
+                    </li>
+                    <li style="margin: 0 0px;">
+                        <a class="sub-menu-item" href="#download">
+                            Compare
+                        </a>
+                    </li>
+                    <li style="margin: 0 0px;">
+                        <a class="sub-menu-item" href="https://guide.cspersonalfinance.io/">
+                            Guide
+                        </a>
+                    </li>
+                    <li style="margin: 0 0px;">
+                        <a class="sub-menu-item" href="https://guide.cspersonalfinance.io/getting-started/faqs">
+                            FAQ
+                        </a>
+                    </li>
+                </ul>
+                <!--end navigation menu-->
             </div>
-            <!--end container-->
-        </header>
-        <!--end header-->
-        <!-- Navbar End -->
-
-        <!-- New Hero Start -->
-        <section class="vh-100 bg-home d-flex align-items-center bg-animation-left task-management-home" id="home">
-            <div class="container position-relative" style="z-index: 1;">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 text-center">
-                        <div class="title-heading">
-                            <h1 class="heading mb-4 mb-sm-3 text-light" style="font-family: 'Ubuntu', 'Quicksand', 'Nunito', sans-serif; font-weight: 900 !important;">
-                                <!--<img src="/img/cspf_logo.webp" style="max-height: 1.2em; margin-bottom: 1rem!important;">-->CompiledSanity Personal Finance Spreadsheets
-                            </h1>
-                            <p class="para-desc mx-auto text-light" style="max-width: 900px !important;">Personal Finance, Net Worth & FIRE management made automated & easy <img src="/img/greencheck.png" style="line-height: inherit; max-height: 24px; margin-bottom: 0px;"></p>
-                            <div class="px-5 mx-3-md mt-4 mb-4">
-                                <img data-mdb-animation-delay="300" data-mdb-toggle="animation" data-mdb-animation-start="onLoad" data-mdb-animation="fade-in" src="https://cspersonalfinance.io/img/no-shadow-ui-new-logo.webp" alt="" style="top: 0px !important; max-height: 60vh; /* box-shadow: 0 0px 25px rgba(255, 255, 255, 0.5) !important;*/" class="img-fluid mover">
+            <!--end navigation-->
+        </div>
+        <!--end container-->
+    </header>
+    <!--end header-->
+    <!-- Navbar End -->
+    <!-- Hero Section Start -->
+    <section class="vh-100 bg-home d-flex align-items-center bg-animation-left task-management-home" id="home">
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row justify-content-center text-center">
+                <h1 class="heading mb-3 text-light"
+                    style="font-family: 'Ubuntu', 'Quicksand', 'Nunito', sans-serif; font-weight: 900 !important;">
+                    Track Your Net Worth. Plan Your Financial Freedom.
+                </h1>
+                <div class="col-lg-12 text-center">
+                    <div class="title-heading">
+                        <p class="para-desc mx-auto text-light mb-4"
+                            style="max-width: 700px !important; font-size: 1.2rem;">
+                            See your net worth updated live - track all your finances in one sheet.
+                            <br />
+                            No subscriptions. Just a one‑time purchase.
+                        </p>
+                        <div class="px-5 mx-3-md mt-4 mb-5">
+                            <img alt="Personal Finance Dashboard" class="img-fluid mover" data-mdb-animation="fade-in"
+                                data-mdb-animation-delay="300" data-mdb-animation-start="onLoad"
+                                data-mdb-toggle="animation"
+                                src="https://cspersonalfinance.io/img/no-shadow-ui-new-logo.webp"
+                                style="top: 0px !important; max-height: 40vh;" />
+                        </div>
+                        <!-- Trust Signals -->
+                        <div class="trust-signals mt-4 mb-4">
+                            <div class="trust-signal">
+                                <i class="uil uil-check-circle">
+                                </i>
+                                <span class="mx-1" id="num-clients-trust">
+                                    15,000+ downloads
+                                </span>
+                                &amp; growing
+                            </div>
+                            <div class="trust-signal">
+                                <i class="uil uil-globe">
+                                </i>
+                                Works for AU, US, UK, EU
+                            </div>
+                            <div class="trust-signal">
+                                <i class="uil uil-money-bill">
+                                </i>
+                                One-time payment – yours forever
+                            </div>
+                            <br />
+                            <div class="trust-signal">
+                                <i class="uil uil-lock-alt">
+                                </i>
+                                Your data, your control
+                            </div>
+                            <div class="trust-signal">
+                                <i class="uil uil-plus-circle">
+                                </i>
+                                Includes future updates
                             </div>
                         </div>
-
-                        <div class="row justify-content-center">
-                            <div class="col-lg-10 text-center">
-                                <div class="home-dashboard mt-2">
-                                    <div class="glow-buffer">
-                                        <div class="futuristic-glow-wrapper">
-                                        <div>
-                                            <a href="#about" class="btn btn-pills btn-light btn-lg getting-started-btn">
-                                            Get Started <i class="uil uil-angle-right-b"></i>
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- CTA Buttons -->
+                        <div class="my-5">
+                            <a class="btn btn-success btn-lg me-3 mb-2" href="#download">
+                                <i class="uil uil-eye">
+                                </i>
+                                Try Free Version
+                            </a>
+                            <a class="btn btn-outline-light btn-lg mb-2" href="#download"
+                                style="color: white !important;">
+                                Compare Free vs Complete →
+                            </a>
                         </div>
                     </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-            </div>
-            <!--end container-->
-        </section>
-        <!--end section-->
-        <!-- New Hero End -->
-
-        <!-- Partners start -->
-        <section class="section bg-light mt-0 mt-md-5" id="about">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title mb-4 pb-2">
-                            <h3 class="mb-4 fw-bold">Want to keep track of your entire financial position, <span class="text-primary" style="font-weight: bolder;"> live?</span></h3>
-                            <p class="text-muted mx-auto mb-0">Through the wonders of Google Sheets & a bit of techno magic, you can do exactly that <i class="uil uil-rocket text-primary"></i></p>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <div class="container mt-40">
-                    <div class="row">
-                        <div class="col-md-4 col-12">
-                            <div class="features text-center">
-                                <div class="image position-relative d-inline-block">
-                                    <i class="uil uil-gold h1 text-primary"></i>
-                                </div>
-
-                                <div class="content mt-4">
-                                    <h5 class="fw-bold">Complete Net Worth Tracking</h5>
-                                    <p class="text-muted mb-0">Live tracking of your <i>entire</i> portfolio - Helping you know where you stand financially.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end col-->
-
-                        <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                            <div class="features text-center">
-                                <div class="image position-relative d-inline-block">
-                                    <i class="uil uil-user-check h1 text-primary"></i>
-                                </div>
-
-                                <div class="content mt-4">
-                                    <h5 class="fw-bold">Built for Everyone</h5>
-                                    <p class="text-muted mb-0">A user-friendly interface gives feedback on how you're progressing, reinforcing good habits!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end col-->
-
-                        <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                            <div class="features text-center">
-                                <div class="image position-relative d-inline-block">
-                                    <i class="uil uil-check-circle h1 text-primary"></i>
-                                </div>
-
-                                <div class="content mt-4">
-                                    <h5 class="fw-bold">One Off Purchase</h5>
-                                    <p class="text-muted mb-0">Tired of short-lived apps with a fee each month? This is a strictly one-time purchase - including future updates & upgrades.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end col-->
-                    </div>
-                    <!--end row-->
                 </div>
             </div>
-            <!--end container-->
-        </section>
-        <!--end section-->
-        <!-- Partners End -->
-
-        <!-- Feature Start -->
-        <section class="section" id="features">
-            <div class="container">
-                <div class="row justify-content-center mb-4 section-title">
-                    <h4 class="title text-center fw-bold">Comprehensive & Intelligent Features</h4>
-                    <p class="para-desc text-center text-muted">Intuitive & simple to use features to make your finances smarter.</p>
-                    <img class="mb-3 mt-2 cssbox_thumb shadow-lg p-0 rounded" style="max-width: 75%; box-shadow: 0 0px 20px 2px rgba(60, 72, 88, 0.4) !important;" src="img/no-shadow-ui-new-logo.webp" alt="CompiledSanity Personal Finance Spreadsheets" title="CompiledSanity Personal Finance Spreadsheets">
-                </div>
-                <!--end row-->
-
-                <div class="row align-items-center">
-                    <div class="container-fluid">
-                        <div id="grid" class="row shuffle" style="position: relative; overflow: hidden; height: 617.673px; transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;">
-                            <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;branding&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                                    <div class="card-body p-0">
-                                        <a href="/img/CashTabv2107.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                            <img src="/img/CashTabv2107.webp" class="img-fluid" alt="Cash Tab">
-                                            <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                    <path stroke="none" d="M0 0h24v24H0z"></path>
-                                                    <polyline points="16 4 20 4 20 8"></polyline>
-                                                    <line x1="14" y1="10" x2="20" y2="4"></line>
-                                                    <polyline points="8 20 4 20 4 16"></polyline>
-                                                    <line x1="4" y1="20" x2="10" y2="14"></line>
-                                                    <polyline points="16 20 20 20 20 16"></polyline>
-                                                    <line x1="14" y1="14" x2="20" y2="20"></line>
-                                                    <polyline points="8 4 4 4 4 8"></polyline>
-                                                    <line x1="4" y1="4" x2="10" y2="10"></line>
-                                                </svg></div>
-                                        </a>
-                                        <div class="content bg-white p-3">
-                                            <h5 class="mb-0"><a href="#" class="text-dark title">Cash Tab</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;photography&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(570px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                                    <div class="card-body p-0">
-                                        <a href="/img/ETFv2107.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                            <img src="/img/ETFv2107.webp" class="img-fluid" alt="ETFs Tab">
-                                            <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                    <path stroke="none" d="M0 0h24v24H0z"></path>
-                                                    <polyline points="16 4 20 4 20 8"></polyline>
-                                                    <line x1="14" y1="10" x2="20" y2="4"></line>
-                                                    <polyline points="8 20 4 20 4 16"></polyline>
-                                                    <line x1="4" y1="20" x2="10" y2="14"></line>
-                                                    <polyline points="16 20 20 20 20 16"></polyline>
-                                                    <line x1="14" y1="14" x2="20" y2="20"></line>
-                                                    <polyline points="8 4 4 4 4 8"></polyline>
-                                                    <line x1="4" y1="4" x2="10" y2="10"></line>
-                                                </svg></div>
-                                        </a>
-                                        <div class="content bg-white p-3">
-                                            <h5 class="mb-0"><a href="#" class="text-dark title">ETFs Tab</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;branding&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(0px, 206px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                                    <div class="card-body p-0">
-                                        <a href="/img/PropertyTabv2107.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                            <img src="/img/PropertyTabv2107.webp" class="img-fluid" alt="Property Tab">
-                                            <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                    <path stroke="none" d="M0 0h24v24H0z"></path>
-                                                    <polyline points="16 4 20 4 20 8"></polyline>
-                                                    <line x1="14" y1="10" x2="20" y2="4"></line>
-                                                    <polyline points="8 20 4 20 4 16"></polyline>
-                                                    <line x1="4" y1="20" x2="10" y2="14"></line>
-                                                    <polyline points="16 20 20 20 20 16"></polyline>
-                                                    <line x1="14" y1="14" x2="20" y2="20"></line>
-                                                    <polyline points="8 4 4 4 4 8"></polyline>
-                                                    <line x1="4" y1="4" x2="10" y2="10"></line>
-                                                </svg></div>
-                                        </a>
-                                        <div class="content bg-white p-3">
-                                            <h5 class="mb-0"><a href="#" class="text-dark title">Property Tab</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;designing&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(285px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                                    <div class="card-body p-0">
-                                        <a href="/img/latest_eom_prompt_ui.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                            <img src="/img/latest_eom_prompt_ui.webp" class="img-fluid" alt="Monthly Progress Reports">
-                                            <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                    <path stroke="none" d="M0 0h24v24H0z"></path>
-                                                    <polyline points="16 4 20 4 20 8"></polyline>
-                                                    <line x1="14" y1="10" x2="20" y2="4"></line>
-                                                    <polyline points="8 20 4 20 4 16"></polyline>
-                                                    <line x1="4" y1="20" x2="10" y2="14"></line>
-                                                    <polyline points="16 20 20 20 20 16"></polyline>
-                                                    <line x1="14" y1="14" x2="20" y2="20"></line>
-                                                    <polyline points="8 4 4 4 4 8"></polyline>
-                                                    <line x1="4" y1="4" x2="10" y2="10"></line>
-                                                </svg></div>
-                                        </a>
-                                        <div class="content bg-white p-3">
-                                            <h5 class="mb-0"><a href="#" class="text-dark title">Monthly Progress Reports</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;designing&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(285px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                                    <div class="card-body p-0">
-                                        <a href="/img/latest_eom_prompt_ui_mobile-portrait.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                            <img src="/img/latest_eom_prompt_ui_mobile-portrait.webp" class="img-fluid" alt="Progress Emails" style="max-height: 150px;">
-                                            <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                    <path stroke="none" d="M0 0h24v24H0z"></path>
-                                                    <polyline points="16 4 20 4 20 8"></polyline>
-                                                    <line x1="14" y1="10" x2="20" y2="4"></line>
-                                                    <polyline points="8 20 4 20 4 16"></polyline>
-                                                    <line x1="4" y1="20" x2="10" y2="14"></line>
-                                                    <polyline points="16 20 20 20 20 16"></polyline>
-                                                    <line x1="14" y1="14" x2="20" y2="20"></line>
-                                                    <polyline points="8 4 4 4 4 8"></polyline>
-                                                    <line x1="4" y1="4" x2="10" y2="10"></line>
-                                                </svg></div>
-                                        </a>
-                                        <div class="content bg-white p-3">
-                                            <h5 class="mb-0"><a href="#" class="text-dark title">Progress Emails</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;designing&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(570px, 206px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                                    <div class="card-body p-0">
-                                        <a href="/img/FIREDashv2107.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                            <img src="/img/FIREDashv2107.webp" class="img-fluid" alt="FIRE Dashboard">
-                                            <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                    <path stroke="none" d="M0 0h24v24H0z"></path>
-                                                    <polyline points="16 4 20 4 20 8"></polyline>
-                                                    <line x1="14" y1="10" x2="20" y2="4"></line>
-                                                    <polyline points="8 20 4 20 4 16"></polyline>
-                                                    <line x1="4" y1="20" x2="10" y2="14"></line>
-                                                    <polyline points="16 20 20 20 20 16"></polyline>
-                                                    <line x1="14" y1="14" x2="20" y2="20"></line>
-                                                    <polyline points="8 4 4 4 4 8"></polyline>
-                                                    <line x1="4" y1="4" x2="10" y2="10"></line>
-                                                </svg></div>
-                                        </a>
-                                        <div class="content bg-white p-3">
-                                            <h5 class="mb-0"><a href="#" class="text-dark title">FIRE Dashboard</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-
-                            <div class="d-none col-lg-2 col-md-4 col-6 mt-3 pt-2 picture-item shuffle-item shuffle-item--visible" data-groups="[&quot;branding&quot;]" style="position: absolute; top: 0px; visibility: visible; will-change: transform; left: 0px; opacity: 1; transform: translate(285px, 206px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded">
-                                    <div class="card-body p-0">
-                                        <a href="/img/BudgetTab.webp" class="lightbox d-inline-block tobii-zoom" title="">
-                                            <img src="/img/BudgetTab.webp" class="img-fluid" alt="Budget Tab">
-                                            <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                    <path stroke="none" d="M0 0h24v24H0z"></path>
-                                                    <polyline points="16 4 20 4 20 8"></polyline>
-                                                    <line x1="14" y1="10" x2="20" y2="4"></line>
-                                                    <polyline points="8 20 4 20 4 16"></polyline>
-                                                    <line x1="4" y1="20" x2="10" y2="14"></line>
-                                                    <polyline points="16 20 20 20 20 16"></polyline>
-                                                    <line x1="14" y1="14" x2="20" y2="20"></line>
-                                                    <polyline points="8 4 4 4 4 8"></polyline>
-                                                    <line x1="4" y1="4" x2="10" y2="10"></line>
-                                                </svg></div>
-                                        </a>
-                                        <div class="content bg-white p-3">
-                                            <h5 class="mb-0"><a href="#" class="text-dark title">Budget Tab</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-                        </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- Comparison Section Start -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="section-title pb-2">
+                        <h3 class="mb-4 fw-bold">
+                            Why Choose Our Personal Finance Sheet?
+                        </h3>
+                        <p class="text-muted mx-auto mb-0">
+                            See how we compare to monthly apps and manual tracking
+                        </p>
                     </div>
                 </div>
-                <!--end row-->
-
-                <div class="row mb-5 mt-100">
-                    <div class="col-md-4 col-12">
-                        <div class="features text-center">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-bolt-alt h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Live Prices & Tracking</h5>
-                                <p class="text-muted mb-0">Live prices for ETFs, Stocks, Crypto & Managed Fund assets with built-in Dividend Tracking.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features text-center">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-chart-line h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Monthly Reports</h5>
-                                <p class="text-muted mb-0">Tracks your monthly Net Worth (including Investments, Property, Retirement Funds, Side Income etc) alongside expenses each month, resulting in an easy to read monthly report.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features text-center">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-chart-pie h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Smart Budgeting</h5>
-                                <p class="text-muted mb-0">An easy to use Budget tab with built-in automations, helping you set aside savings each month and plan for those lumpy and irregular expenses.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-
-                <div class="row mb-5">
-                    <div class="col-md-4 col-12">
-                        <div class="features text-center">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-grin h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Easy To Use</h5>
-                                <p class="text-muted mb-0">Designed from the ground up with a user-friendly interface, making managing your budget & finances both simple and easy.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features text-center">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-lock-alt h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Completely Private</h5>
-                                <p class="text-muted mb-0">Unlike 3rd party solutions, you control and host your own financial data. No bank integrations are required, nor is any personal or financial information held or shared with unknown parties. You're in control of your data. <a class="text-primary" href="#UsingtheSheet">Learn More</a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features text-center">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-rocket h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>Loan & Debt Support</h5>
-                                <p class="text-muted mb-0">Tracks and captures progress made on Loan & Debts, including Mortgage payments and Credit Card debt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-
-                </div>
-                <!--end row-->
-
-                <div class="row mb-5">
-                    <div class="col-md-4 col-12">
-                        <div class="features text-center">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-globe h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>AUS, UK, US & EU Support</h5>
-                                <p class="text-muted mb-0">Choose between Australian, UK, US & EU regions with region specific features & currency customisations (ie. Super/Pension/IRA).</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features text-center">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-dollar-alt h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>International Asset Support</h5>
-                                <p class="text-muted mb-0">Support for live currency conversion on all international assets, with international asset values automatically converted to your local currency live on the fly.</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-4 col-12 mt-5 mt-sm-0">
-                        <div class="features text-center">
-                            <div class="image position-relative d-inline-block">
-                                <i class="uil uil-setting h1 text-primary"></i>
-                            </div>
-
-                            <div class="content mt-4">
-                                <h5>One Off Purchase</h5>
-                                <p class="text-muted mb-0">Unlike other products that may come and go, this is not a subscription. Once you own the sheet, you own it for life and will receive future updates as <a class="text-primary" href="/changelog">new versions come out.</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
             </div>
-            <!--end container-->
-
-            <div class="container mt-100 pt-30">
-                <div class="row align-items-start">
-                    <div class="col-lg-7 col-md-6 order-2 order-md-1 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                        <div class="section-title">
-                            <h4 class="title mb-4">Start the journey to your financial big picture</h4>
-                            <p class="text-muted">Built to include every kind of financial asset in your life.</p>
-                            <ul class="list-unstyled text-muted" style="padding-left: 20px;">
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Your Net Worth</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Your Budget</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Cash Accounts</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Stocks</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>ETFs</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Managed Funds</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Crypto</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Property</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Physical Commodities</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Retirement Accounts</li>
-                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Miscellaneous Assets</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-lg-5 col-md-6 order-1 order-md-2 text-center mover">
-                        <!-- <img src="images/app_development_SVG2.svg" alt=""> -->
-                        <img src="img/latest_eom_prompt_ui.webp" alt="" class="shadow-lg" style="max-width: 95%;">
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
+            <div class="justify-content-center mb-4 text-center">
+                <img alt="CompiledSanity Personal Finance Spreadsheets"
+                    class="mb-3 mt-2 cssbox_thumb shadow-lg p-0 rounded" src="img/no-shadow-ui-new-logo.webp"
+                    style="max-width: 80%; box-shadow: 0 0px 20px 2px rgba(60, 72, 88, 0.4) !important;"
+                    title="CompiledSanity Personal Finance Spreadsheets" />
             </div>
-            <!--end container-->
+            <style>
+                /* Symbol styles */
+                .symbol {
+                    font-weight: bold;
+                    margin-right: 0.5rem;
+                }
 
+                .symbol-check {
+                    color: #28a745;
+                    /* Bootstrap success green */
+                }
 
-            <div class="container mt-100 pt-30">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title mb-4 pb-2">
-                            <h4 class="title mb-4 fw-bold">What our Users Say</h4>
-                            <p class="text-muted para-desc mx-auto mb-0">Loved by over <a href="https://www.reddit.com/r/CSPersonalFinance/"><span class="text-success fw-bold fs-5" id="num-clients">10,800+ users</span></a>, the Sheet can provide everything you need to generate awareness, track investments and save more.</p>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
+                .symbol-cross {
+                    color: #dc3545;
+                    /* Bootstrap danger red */
+                }
+            </style>
 
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 mt-4">
-                        <div class="tiny-three-item">
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">"Thanks again for an amazing spreadsheet, you're a legend, everyone should know about this, it's benefits are not only incredibly helpful but motivational."</p>
-                                        <h6 class="text-primary">Reddit User <small class="text-muted"> - r/AusFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">"I just wanted to say a big thank you for creating something that's so flexible and easy to use yet offers such rewarding insights and inspiration to strive for financial goals."</p>
-                                        <h6 class="text-primary">Reddit User <small class="text-muted"> - r/CSPersonalFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">"My partner and I have our finance night at the start of every month, we make the updates and run through the numbers. It's a time of the month we really enjoy. We sit down together with a cup of tea, view our progress and get satisfaction from seeing that the sacrifices we make to save will enable our financial freedom in years to come."</p>
-                                        <h6 class="text-primary">Reddit User <small class="text-muted"> - r/CSPersonalFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star-half text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">"This is awesome and will be my go-to spreadsheet moving forward. Thanks a lot for an amazing spreadsheet."</p>
-                                        <h6 class="text-primary">Reddit User <small class="text-muted"> - r/AusFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">"Is it wrong how excited I am about getting time to try this out?"</p>
-                                        <h6 class="text-primary">Reddit User <small class="text-muted"> - r/UKPersonalFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">"This spreadsheet is the best money I ever spent - thank you :)"</p>
-                                        <h6 class="text-primary">Reddit User <small class="text-muted"> - r/UKPersonalFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tiny-slide">
-                                <div class="d-flex client-testi m-1">
-                                    <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">"This is great, nice work mate! Have been wanting to get something like this together for so long but never able to find the spare time."</p>
-                                        <h6 class="text-primary">Reddit User <small class="text-muted"> - r/AusFinance</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-            </div>
-            <!--end container-->
-        </section>
-        <!--end section-->
-        <!-- Client End -->
-
-        <!-- Price Start -->
-        <section class="section p-0" id="download">
-            <div class="container">
-                <div class="row justify-content-center ">
-                    <div class="col-12 text-center">
-                        <div class="section-title mb-4 pb-2">
-                            <h1 class="mb-4">Sheet Versions</h1>
-                            <p class="text-muted para-desc mb-0 mx-auto">2 different versions of this Sheet are offered.</p>
-                        </div>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-
-                <div class="row align-items-start justify-content-center">
-                    <div class="col-lg-5 col-md-6 col-12 mt-5 pt-4">
-                        <div class="pricing text-center rounded overflow-hidden shadow">
-                            <div class="price-header border-bottom pt-5 pb-5">
-                                <h1 class="text-primary display-5"><i class="uil uil-analysis"></i></h1>
-                                <h4 class="price-title">BEGINNER EDITION</h4>
-                            </div>
-                            <div class="border-bottom py-4">
-                                <h2 class="fw-bold mb-0">FREE</h2>
-                            </div>
-                            <div class="pricing-features text-start p-4">
-                                <h5>What's included:</h5>
-                                <ul class="feature list-unstyled mb-0">
-                                    <li class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-dark me-2">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
-                                        </svg>Net Worth Overview & Tracking</li>
-                                    <li class="text-muted mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-dark me-2">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
-                                        </svg>Live ETF & Stock Tracking</li>
-                                    <li class="text-muted mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-dark me-2">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
-                                        </svg>Dividend Support</li>
-                                    <li class="text-muted mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-dark me-2">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
-                                        </svg>Super/Retirement Fund Tracking</li>
-                                    <li class="text-muted mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-dark me-2">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
-                                        </svg>Budgeting System</li>
+            <div class="comparison-table">
+                <div class="row text-center mt-4">
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow border-0 h-100">
+                            <div class="card-body">
+                                <h5 class="text-muted fw-bold">Other Monthly Apps</h5>
+                                <ul class="list-unstyled">
+                                    <li><span class="symbol symbol-cross">✖</span>$10-30/month forever</li>
+                                    <li><span class="symbol symbol-cross">✖</span>They control your data</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Limited customization</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Privacy concerns</li>
+                                    <li><span class="symbol symbol-cross">✖</span>May disappear</li>
+                                    <li><span class="symbol symbol-check">✔</span>Live updates</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Subscription dependency</li>
                                 </ul>
-                                <div class="text-center py-3">
-                                    <a href="https://docs.google.com/spreadsheets/d/1tRJzUsKBNE_JoSTiMLT0-V5zk3cwGW3lpnpboot0IGI/" style="box-shadow: 0 0px 0px 0 #d3d3d3; background: #D3D3D3 !important; color: #000000 !important; border-color: #c8c8c8 !important;" class="btn btn-pills btn-primary mt-4">View Now - AU <img style="margin-bottom: 3px;height:22px;width:auto;" src="/img/flag_au.png" alt="img" class="img-fluid"></a><br>
-                                    <a href="https://docs.google.com/spreadsheets/d/1v9ENzdoSIVlfAA2SFVFz6KKVAAu5Knv8klde7bN2Qqo/" style="box-shadow: 0 0px 0px 0 #d3d3d3; background: #D3D3D3 !important; color: #000000 !important; border-color: #c8c8c8 !important;" class="btn btn-pills btn-primary mt-4">View Now - UK <img style="margin-bottom: 3px;height:22px;width:auto;" src="/img/flag_uk.png" alt="img" class="img-fluid"></a><br>
-                                    <a href="https://docs.google.com/spreadsheets/d/1pPK8t8Oe6F53OMw1EG8Hq1tX4F5SnULdf3Cr8TlUCs4/" style="box-shadow: 0 0px 0px 0 #d3d3d3; background: #D3D3D3 !important; color: #000000 !important; border-color: #c8c8c8 !important;" class="btn btn-pills btn-primary mt-4">View Now - US <img style="margin-bottom: 3px;height:22px;width:auto;" src="/img/flag_us.png" alt="img" class="img-fluid"></a><br>
-                                    <a href="https://docs.google.com/spreadsheets/d/15v1a96culFW0r5HfyRaAu2gmdK9s-9kOe9ARSUWBuAY/" style="box-shadow: 0 0px 0px 0 #d3d3d3; background: #D3D3D3 !important; color: #000000 !important; border-color: #c8c8c8 !important;" class="btn btn-pills btn-primary mt-4">View Now - EUR <img style="margin-bottom: 3px;height:22px;width:auto;" src="/img/flag_eu.png" alt="img" class="img-fluid"></a><br>
-                                </div>
                             </div>
                         </div>
-                        <!--end price three-->
                     </div>
-                    <!--end col-->
 
-                    <div class="col-lg-6 col-md-6 col-12 mt-4 pt-2">
-                        <div class="rounded custom-radius" style="box-shadow: 0 10px 25px rgba(60, 72, 88, 0.5) !important; --border-radius: 9px;">        
-                            <div class="pricing text-center rounded overflow-hidden bg-white">
-                                <div class="ribbon ribbon-right ribbon-warning overflow-hidden">
-                                    <span class="text-center d-block shadow small h5" style="font-size: 40%;">SALE</span>
-                                    <!-- <span class="text-center d-block shadow small h7" style="font-size: 70%;">POPULAR</span> -->
-                                </div>
-                                <div class="price-header border-bottom bg-success pt-5 pb-5">
-                                    <h1 class="text-light display-2">
-                                        <!-- <i class="uil uil-award"></i> -->
-                                        <img src="/img/cspf_logo.webp" height="125" class="logo-light-mode mb-3" alt="" style="
-                                            filter: drop-shadow(-0px -0px 16px #648464);
-                                        ">
-                                    </h1>
-                                    <h1 style="font-family: 'Ubuntu', 'Quicksand', 'Nunito', sans-serif;" class="price-title text-white fw-bold">COMPLETE EDITION</h1>
-                                    <p class="mb-0 text-light">Contains all features &amp; <a href="/changelog" target="_blank" class="text-light text-decoration-underline">future updates</a></p>
-                                </div>
-                                <div class="border-bottom py-4">
-                                    <div id="saleText">
-                                        
-                                    </div>
-                                    <div class="d-flex justify-content-center fw-bold"> <!-- Previously - mt-4 mb-3 -->
-                                        <span class="h2 pt-1" style="line-height: 1.4 !important; text-decoration: line-through;">$<span id="aud-price-full">12</span></span><span class="ps-2 price h1 mb-0" style="/* line-height: 0px !important; */ color: red;">$<span id="aud-price">10</span></span><span style="/* line-height: 0px !important; */" class="ps-2 price h2 pt-1 mb-0"> AUD</span>
-                                        <!-- <span class="price h1 mb-0">$<span id="aud-price">8</span> AUD</span> -->
-                                    </div>
-                                    <div class="d-flex justify-content-center py-1">
-                                        <h6 class="title fw-light text-secondary text-uppercase mb-0">~£<span id="gbp-price">4</span> GBP / €<span id="eur-price">5</span> EUR / $<span id="usd-price">6</span> USD</h6>
-                                    </div>
-                                    <!-- <div class="d-flex justify-content-center mb-0 mt-2"> -->
-                                    <!--     <small style="letter-spacing: 0.7px; font-size: 80% !important;" class="title text-secondary text-uppercase">ONE-TIME PURCHASE</small> -->
-                                    <!-- </div> -->
-                                </div>
-                                <div class="pricing-features text-start p-4">
-                                    <h5>What's included:</h5>
-                                    <ul class="feature list-unstyled mb-0">
-                                        <li class="text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Net worth tracking and overview</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Live Stock, ETF, Crypto & Managed Funds Prices</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Automated FIRE🔥 Dashboard</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Property value &amp; performance tracking dashboard</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Monitor loans, debts, mortgages, and credit cards with metrics</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Monthly email updates on net worth and savings</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Live currency conversion for international assets</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Automatic historical price lookups (inc. FX support)</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>CGT estimations using FIFO and shared pooling methods</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Crypto staking support &amp; performance metrics</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Managed Funds, ETFs &amp; Stocks can be used as Retirement Balances</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Algorithmic investment rebalancing optimizations</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Enhanced budgeting system</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Dividend tracking  and reinvestment support</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Expanded ETF, Stocks & Managed Fund support</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Retirement & Superannuation tracking</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Generic &amp; asset tracking<br>(including live Gold & Silver prices)</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Option to select and record specific months</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Ability to re-record previously saved months</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Automatic calculation of sold units</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Automatic migration system for future updates</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Notification system for sheet updates</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Live pricing support for Spaceship Voyager (Universe, Origin, and Earth)</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Continuous bug fixes and updates, including enhancements from v1</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>Ongoing Sheet Updates &amp; Releases</li>
-                                        <li class="text mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm text-primary me-2">
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg>One-time cost with no monthly fees or paid upgrades</li>
-                                    </ul>
-
-                                    <div class="text-center py-4">
-                                        <div class="mt-2 mx-4">
-                                            <a href="/purchase?region=AU" id="purchaseLink" class="buy-now-btn">
-                                                <div class="btn-content">
-                                                    <i class="uil uil-shopping-cart mx-1"></i>
-                                                    <span class="btn-text">Buy Now - AU</span>
-                                                    <img src="/img/flag_au.png" alt="AU Flag" class="flag-img">
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <div class="mt-4 mx-4">
-                                            <a href="/purchase?region=UK" id="purchaseLink" class="buy-now-btn">
-                                                <div class="btn-content">
-                                                    <i class="uil uil-shopping-cart mx-1"></i>
-                                                    <span class="btn-text">Buy Now - UK</span>
-                                                    <img src="/img/flag_uk.png" alt="UK Flag" class="flag-img">
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <div class="mt-4 mx-4">
-                                            <a href="/purchase?region=US" id="purchaseLink" class="buy-now-btn">
-                                                <div class="btn-content">
-                                                    <i class="uil uil-shopping-cart mx-1"></i>
-                                                    <span class="btn-text">Buy Now - US/CA</span>
-                                                    <img src="/img/flag_us.png" alt="US Flag" class="flag-img mx-0"><img src="/img/flag_ca.png" alt="CA Flag" class="flag-img mx-0">
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <div class="mt-4 mx-4">
-                                            <a href="/purchase?region=EU" id="purchaseLink" class="buy-now-btn">
-                                                <div class="btn-content">
-                                                    <i class="uil uil-shopping-cart mx-1"></i>
-                                                    <span class="btn-text">Buy Now - EU</span>
-                                                    <img src="/img/flag_eu.png" alt="EU Flag" class="flag-img">
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow border-0 h-100">
+                            <div class="card-body">
+                                <h5 class="text-success fw-bold">Our Sheet</h5>
+                                <ul class="list-unstyled">
+                                    <li><span class="symbol symbol-check">✔</span>One-time purchase</li>
+                                    <li><span class="symbol symbol-check">✔</span>You own your data</li>
+                                    <li><span class="symbol symbol-check">✔</span>Complete control</li>
+                                    <li><span class="symbol symbol-check">✔</span>Privacy guaranteed</li>
+                                    <li><span class="symbol symbol-check">✔</span>Comprehensive tracking</li>
+                                    <li><span class="symbol symbol-check">✔</span>Live price updates</li>
+                                    <li><span class="symbol symbol-check">✔</span>Works forever</li>
+                                </ul>
                             </div>
                         </div>
-                        <!--end price three-->
                     </div>
-                    <!--end col-->
 
-                    <!--end col-->
-                </div>
-                <!--end row-->
-            </div>
-            <!--end container-->
-        </section>
-        <!--end section-->
-        <!-- Price End -->
-
-        <!-- FAQs Start -->
-        <section class="section mt-100 pt-3" id="faq">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12">
-                        <div class="section-title text-center">
-                            <h4 class="title mb-3 fw-bold">Have some questions?</h4>
-                            <h5 class="text-muted para-desc mx-auto mb-0">For a full list of FAQs <a class="fw-bold" href="https://guide.cspersonalfinance.io/getting-started/faqs">click here.</a></h5>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow border-0 h-100">
+                            <div class="card-body">
+                                <h5 class="text-muted fw-bold">Manual Tracking</h5>
+                                <ul class="list-unstyled">
+                                    <li><span class="symbol symbol-check">✔</span>Free to start</li>
+                                    <li><span class="symbol symbol-check">✔</span>You own your data</li>
+                                    <li><span class="symbol symbol-check">✔</span>Complete control</li>
+                                    <li><span class="symbol symbol-check">✔</span>Privacy guaranteed</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Time consuming</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Manual price updates</li>
+                                    <li><span class="symbol symbol-cross">✖</span>Error prone</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-10" id="faq-contents">
-
-                    </div>
-                </div>
-            </div>
-            <!--end container-->
-            <!-- FAQs End -->
-        </section>
-        <!--end section-->
-        <!-- End -->
-
-        <!-- Footer Start -->
-        <footer class="footer mt-100" style="border-top: none !important;">
-            <div class="position-relative">
-                <div class="shape overflow-hidden text-footer">
-                    <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
-                    </svg>
                 </div>
             </div>
 
-            <div class="footer-bar container text-center" style="padding-bottom: 30px;">
-                <div class="row justify-content-between">
-                    <div class="col-sm-12" style="margin: auto 0px;">
-                        <a href="#" class="logo-footer">
-                            <img src="/img/cspf_logo.webp" height="50" alt="">
-                        </a>
-                        <div class="text-sm-start">
-                            <p class="mb-0" style="text-align: center;">Made with love by <a href="https://www.reddit.com/user/CompiledSanity/" target="_blank" class="text-reset">u/CompiledSanity</a> <i class="mdi mdi-heart text-danger"></i> ©
-                                <script>document.write(new Date().getFullYear())</script>
+        </div>
+    </section>
+    <!-- Comparison Section End -->
+    <!-- Features Section Start -->
+    <section class="section bg-light" id="features">
+        <div class="container">
+            <div class="row justify-content-center mb-4 section-title">
+                <h4 class="title text-center fw-bold">
+                    All-In-One Financial Dashboard
+                </h4>
+                <p class="para-desc text-center text-muted">
+                    Everything you need to track your complete financial picture
+                </p>
+            </div>
+            <div class="row row mt-5 mb-2">
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="features text-center h-100">
+                        <div class="image position-relative d-inline-block">
+                            <i class="uil uil-gold h1 text-primary">
+                            </i>
+                        </div>
+                        <div class="content mt-4">
+                            <h5 class="fw-bold">
+                                Net Worth Dashboard
+                            </h5>
+                            <p class="text-muted mb-0">
+                                See your true net worth live, across all your accounts with
+                                real-time updates.
                             </p>
                         </div>
-                        <div class="text-center text-mute" style="font-size: 80%;">
-                            <p><a class="text-muted" href="/privacy">Privacy</a> • <a class="text-muted" href="/terms">Terms of use</a></p>
-                        </div>
-                        <div class="text-center text-mute" style="font-size: 60%;">
-                            <p>Disclaimer: The information & guidance in this webpage and associated resources are for general information only. You should consider seeking independent legal, financial, taxation or other advice to check how information & outputs from this website & sheet relates to your unique circumstances. The creator is not a financial adviser or financial practitioner. The creator does not provide any warranties for and is not liable for any loss caused, whether due to negligence or otherwise arising from the use of, or reliance on, the information provided directly or indirectly, by use of this website, Sheet, or other mentioned resources.</p>
-                        </div>
                     </div>
-                    <!--end col-->
-                    <div class="col-sm-3">
-                    </div>
-                    <!--end col-->
                 </div>
-                <!--end row-->
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="features text-center h-100">
+                        <div class="image position-relative d-inline-block">
+                            <i class="uil uil-chart-line h1 text-primary">
+                            </i>
+                        </div>
+                        <div class="content mt-4">
+                            <h5 class="fw-bold">
+                                Income &amp; Expense Tracking
+                            </h5>
+                            <p class="text-muted mb-0">
+                                Automated monthly reports help you stay in control of your
+                                spending.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="features text-center h-100">
+                        <div class="image position-relative d-inline-block">
+                            <i class="uil uil-chart-pie h1 text-primary">
+                            </i>
+                        </div>
+                        <div class="content mt-4">
+                            <h5 class="fw-bold">
+                                Investment Tracker
+                            </h5>
+                            <p class="text-muted mb-0">
+                                Support for stocks, ETFs, superannuation, crypto and more with
+                                live prices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="features text-center h-100">
+                        <div class="image position-relative d-inline-block">
+                            <i class="uil uil-estate h1 text-primary">
+                            </i>
+                        </div>
+                        <div class="content mt-4">
+                            <h5 class="fw-bold">
+                                Property &amp; Debt
+                            </h5>
+                            <p class="text-muted mb-0">
+                                Track equity, mortgages, and loan repayments with detailed
+                                metrics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="features text-center h-100">
+                        <div class="image position-relative d-inline-block">
+                            <i class="uil uil-fire h1 text-primary">
+                            </i>
+                        </div>
+                        <div class="content mt-4">
+                            <h5 class="fw-bold">
+                                FIRE Planner
+                            </h5>
+                            <p class="text-muted mb-0">
+                                Know your savings rate, time to FI, and safe withdrawal rate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="features text-center h-100">
+                        <div class="image position-relative d-inline-block">
+                            <i class="uil uil-globe h1 text-primary">
+                            </i>
+                        </div>
+                        <div class="content mt-4">
+                            <h5 class="fw-bold">
+                                Multi-Currency Support
+                            </h5>
+                            <p class="text-muted mb-0">
+                                Designed for AU / US / UK / EU users, with auto FX conversion.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--end container-->
-        </footer>
-        <!--end footer-->
-        <!-- Footer End -->
+            <!-- Screenshot Gallery -->
+            <div class="sw-gallery-container mt-5">
+                <div class="sw-gallery-grid">
+                    <div class="sw-gallery-item sw-show">
+                        <div class="sw-gallery-image-container">
+                            <img alt="Cash Tab" loading="lazy" src="/img/CashTabv2107.webp" />
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M15 15L21 21" stroke="currentColor"></path>
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor"></circle>
+                                        <path d="M10 7V13" stroke="currentColor"></path>
+                                        <path d="M7 10H13" stroke="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">Cash Tab</h5>
+                        </div>
+                    </div>
 
-        <!-- Back to top -->
-        <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
-        <!-- Back to top -->
+                    <div class="sw-gallery-item sw-show">
+                        <div class="sw-gallery-image-container">
+                            <img alt="ETFs Tab" loading="lazy" src="/img/ETFv2107.webp" />
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M15 15L21 21" stroke="currentColor"></path>
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor"></circle>
+                                        <path d="M10 7V13" stroke="currentColor"></path>
+                                        <path d="M7 10H13" stroke="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">ETFs Tab</h5>
+                        </div>
+                    </div>
 
-        <!-- javascript -->
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script>
-            fetch('/liveinfo/totals.json')
-                .then(response => response.json())
-                .then(html => {
-                    try {
-                        document.getElementById("num-clients").textContent = html.Total + "+ users";
-                        document.getElementById("usd-price").textContent = html['sheet_rate']['USD'];
-                        document.getElementById("eur-price").textContent = html['sheet_rate']['EUR'];
-                        document.getElementById("gbp-price").textContent = html['sheet_rate']['GBP'];
-                        document.getElementById("aud-price").textContent = html['sheet_rate']['AUD'];
-                        document.getElementById("aud-price-full").textContent = Number(html['sheet_rate']['AUD']) + Math.floor(Number(html['sheet_rate']['AUD']) / 4) * 2;
-                        document.getElementById("saleText").innerHTML = html['sale_text'];
-                    } catch (error) {
-                        document.getElementById("num-clients").textContent = "24,000+ users";
-                        document.getElementById("usd-price").textContent = "5";
-                        document.getElementById("eur-price").textContent = "4.50";
-                        document.getElementById("gbp-price").textContent = "4";
-                        document.getElementById("aud-price").textContent = "8";
-                        document.getElementById("aud-price-full").textContent = "12";
-                        document.getElementById("saleText").innerHTML = "";
-                    }
-                });
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const currentParams = new URLSearchParams(window.location.search);
-                const link = document.getElementById("purchaseLink");
+                    <div class="sw-gallery-item sw-show">
+                        <div class="sw-gallery-image-container">
+                            <img alt="Property Tab" loading="lazy" src="/img/PropertyTabv2107.webp" />
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M15 15L21 21" stroke="currentColor"></path>
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor"></circle>
+                                        <path d="M10 7V13" stroke="currentColor"></path>
+                                        <path d="M7 10H13" stroke="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">Property Tab</h5>
+                        </div>
+                    </div>
 
-                if (link && currentParams.toString()) {
-                    link.href += "&" + currentParams.toString();
-                }
-            });
-        </script>
+                    <div class="sw-gallery-item sw-show">
+                        <div class="sw-gallery-image-container">
+                            <img alt="Monthly Progress Reports" loading="lazy" src="/img/latest_eom_prompt_ui.webp" />
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M15 15L21 21" stroke="currentColor"></path>
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor"></circle>
+                                        <path d="M10 7V13" stroke="currentColor"></path>
+                                        <path d="M7 10H13" stroke="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">Monthly Progress Reports</h5>
+                        </div>
+                    </div>
 
-        <script>
-            var html_faq = "";
-            var faq_iter = 0;
-            fetch('/faqs.json')
-                .then(response => response.json())
-                .then(response_json => {
-                    var overall_return_html = "";
+                    <div class="sw-gallery-item sw-show">
+                        <div class="sw-gallery-image-container">
+                            <img alt="Progress Emails" loading="lazy"
+                                src="/img/latest_eom_prompt_ui_mobile-portrait.webp" />
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M15 15L21 21" stroke="currentColor"></path>
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor"></circle>
+                                        <path d="M10 7V13" stroke="currentColor"></path>
+                                        <path d="M7 10H13" stroke="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">Progress Emails</h5>
+                        </div>
+                    </div>
 
-                    for (var category in response_json["FAQs"]) {
-                        //console.log(category);
-                        var category_slimmed = category.replace(/ /g, "");
+                    <div class="sw-gallery-item sw-show">
+                        <div class="sw-gallery-image-container">
+                            <img alt="FIRE Dashboard" loading="lazy" src="/img/FIREDashv2107.webp" />
+                            <div class="sw-gallery-image-overlay">
+                                <div class="sw-gallery-zoom-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M15 15L21 21" stroke="currentColor"></path>
+                                        <circle cx="10" cy="10" r="7" stroke="currentColor"></circle>
+                                        <path d="M10 7V13" stroke="currentColor"></path>
+                                        <path d="M7 10H13" stroke="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sw-gallery-item-content">
+                            <h5 class="sw-gallery-item-title">FIRE Dashboard</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                        var faq_category_header = `
+            <div class="text-center mt-5">
+                <a class="btn btn-outline-primary" href="https://guide.cspersonalfinance.io/">
+                    See all the functions here →
+                </a>
+            </div>
+
+            <!-- Lightbox (add at bottom of page) -->
+            <div class="sw-gallery-lightbox" id="swGalleryLightbox">
+                <div class="sw-gallery-lightbox-content">
+                    <img alt="" id="swGalleryLightboxImg" src="" />
+                    <div class="sw-gallery-lightbox-close" id="swGalleryLightboxClose">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 6L6 18" stroke="currentColor"></path>
+                            <path d="M6 6L18 18" stroke="currentColor"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <!-- Features Section End -->
+    <!-- Testimonials Start -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="section-title mb-4 pb-2">
+                        <h4 class="title mb-4 fw-bold">
+                            Why Users Love It
+                        </h4>
+                        <p class="text-muted para-desc mx-auto mb-0">Loved by over <a
+                                href="https://www.reddit.com/r/CSPersonalFinance/"><span
+                                    class="text-success fw-bold fs-5" id="num-clients">10,800+ users</span></a>, the
+                            Sheet can provide everything you need to generate awareness, track investments and save
+                            more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12 mt-4">
+                    <div class="tiny-three-item">
+                        <div class="tiny-slide">
+                            <div class="d-flex client-testi m-1">
+                                <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow"
+                                    alt="">
+                                <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                    </ul>
+                                    <p class="text-muted mt-2">"Thanks again for an amazing spreadsheet, you're a
+                                        legend, everyone should know about this, it's benefits are not only incredibly
+                                        helpful but motivational."</p>
+                                    <h6 class="text-primary">Reddit User <small class="text-muted"> -
+                                            r/AusFinance</small></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tiny-slide">
+                            <div class="d-flex client-testi m-1">
+                                <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow"
+                                    alt="">
+                                <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                    </ul>
+                                    <p class="text-muted mt-2">"I just wanted to say a big thank you for creating
+                                        something that's so flexible and easy to use yet offers such rewarding insights
+                                        and inspiration to strive for financial goals."</p>
+                                    <h6 class="text-primary">Reddit User <small class="text-muted"> -
+                                            r/CSPersonalFinance</small></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tiny-slide">
+                            <div class="d-flex client-testi m-1">
+                                <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow"
+                                    alt="">
+                                <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                    </ul>
+                                    <p class="text-muted mt-2">"My partner and I have our finance night at the start of
+                                        every month, we make the updates and run through the numbers. It's a time of the
+                                        month we really enjoy. We sit down together with a cup of tea, view our progress
+                                        and get satisfaction from seeing that the sacrifices we make to save will enable
+                                        our financial freedom in years to come."</p>
+                                    <h6 class="text-primary">Reddit User <small class="text-muted"> -
+                                            r/CSPersonalFinance</small></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tiny-slide">
+                            <div class="d-flex client-testi m-1">
+                                <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow"
+                                    alt="">
+                                <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star-half text-warning"></i></li>
+                                    </ul>
+                                    <p class="text-muted mt-2">"This is awesome and will be my go-to spreadsheet moving
+                                        forward. Thanks a lot for an amazing spreadsheet."</p>
+                                    <h6 class="text-primary">Reddit User <small class="text-muted"> -
+                                            r/AusFinance</small></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tiny-slide">
+                            <div class="d-flex client-testi m-1">
+                                <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow"
+                                    alt="">
+                                <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                    </ul>
+                                    <p class="text-muted mt-2">"Is it wrong how excited I am about getting time to try
+                                        this out?"</p>
+                                    <h6 class="text-primary">Reddit User <small class="text-muted"> -
+                                            r/UKPersonalFinance</small></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tiny-slide">
+                            <div class="d-flex client-testi m-1">
+                                <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow"
+                                    alt="">
+                                <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                    </ul>
+                                    <p class="text-muted mt-2">"This spreadsheet is the best money I ever spent - thank
+                                        you :)"</p>
+                                    <h6 class="text-primary">Reddit User <small class="text-muted"> -
+                                            r/UKPersonalFinance</small></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tiny-slide">
+                            <div class="d-flex client-testi m-1">
+                                <img src="img/cspf_logo.webp" class="avatar avatar-small client-image rounded shadow"
+                                    alt="">
+                                <div class="flex-1 content p-3 shadow rounded bg-white position-relative">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                    </ul>
+                                    <p class="text-muted mt-2">"This is great, nice work mate! Have been wanting to get
+                                        something like this together for so long but never able to find the spare time."
+                                    </p>
+                                    <h6 class="text-primary">Reddit User <small class="text-muted"> -
+                                            r/AusFinance</small></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Testimonials End -->
+    <!-- Free vs Complete Comparison Start -->
+    <section class="comparison-section" id="download">
+        <div class="comparison-container container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="comparison-title">
+                        <h1>
+                            Beginner vs Complete Comparison
+                        </h1>
+                        <p>
+                            Choose the version that's right for your financial journey
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Comparison Table -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <style>
+                        /* Symbol styles for modern comparison table */
+                        .symbol {
+                            font-weight: bold;
+                            font-size: 1.2rem;
+                            display: inline-block;
+                            line-height: 1;
+                            text-align: center;
+                        }
+
+                        .symbol-check {
+                            color: #28a745;
+                            /* green for yes */
+                        }
+
+                        .symbol-cross {
+                            color: #dc3545;
+                            /* red for no */
+                        }
+                    </style>
+
+                    <div class="modern-comparison-wrapper">
+                        <div class="ribbon ribbon-right ribbon-warning overflow-hidden">
+                            <span class="text-center d-block shadow small h5" style="font-size: 40%;">SALE</span>
+                        </div>
+                        <table class="table modern-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40%;">Features</th>
+                                    <th class="plan-header free-plan" style="width: 30%;">
+                                        <h1 class="text-primary display-5"><i height="60" class="uil uil-analysis"></i>
+                                        </h1>
+                                        <h5>Beginner Edition</h5>
+                                    </th>
+                                    <th class="plan-header premium-plan" style="width: 30%;">
+                                        <img src="/img/cspf_logo.webp" height="65" class="logo-light-mode mb-3" alt=""
+                                            style="filter: drop-shadow(-0px -0px 16px #648464);">
+                                        <h4>Complete Edition</h4>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="feature-name">Net Worth Dashboard</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Live ETF Stock Tracking</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Live Crypto Tracking</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Live Managed Fund Tracking</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">FIRE Planning Calculator</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Investment + Super Tracking</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Property Dashboard</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Credit Card + Loan Dashboard</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">CGT Estimations</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Multi-region Support</td>
+                                    <td class="feature-check free-column">Limited</td>
+                                    <td class="feature-check premium-column">Full (AU/UK/US/EU)</td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Monthly Email Reports</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Currency Conversion on International Assets</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Historical Price Lookups</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Enhanced Budgeting System</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Dividend Tracking and Reinvestment Support</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Generic & Asset Tracking (including live Gold & Silver
+                                        prices)</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Rerecord Prior Months</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Automatic Calculation of Sold Units</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-name">Lifetime Updates</td>
+                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                    </td>
+                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
+                                    </td>
+                                </tr>
+                                <tr class="price-row">
+                                    <td class="feature-name">Price</td>
+                                    <td class="price-display">
+                                        <h4>Free</h4>
+                                    </td>
+                                    <td class="price-display">
+                                        <div class="d-flex justify-content-center fw-bold">
+                                            <span class="h2 pt-1"
+                                                style="line-height: 1.4 !important; text-decoration: line-through;">$<span
+                                                    id="aud-price-full">12</span></span>
+                                            <span class="ps-2 price h1 mb-0" style="color: red;">$<span
+                                                    id="aud-price">8</span></span>
+                                            <span class="ps-2 price h2 pt-1 mb-0"> AUD</span>
+                                        </div>
+                                        <div class="d-flex justify-content-center py-1">
+                                            <h7 class="title fw-light text-secondary text-uppercase mb-0">~£<span
+                                                    id="gbp-price">4</span> GBP / €<span id="eur-price">5</span> EUR /
+                                                $<span id="usd-price">6</span> USD</h7>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <!-- CTA Buttons -->
+            <div class="row justify-content-center cta-cards">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="card cta-card" style="height: auto !important;"">
+                        <div class=" card-body p-4">
+                        <h4 class="mb-3 text-muted">
+                            BEGINNER VERSION
+                        </h4>
+                        <p class="text-muted mb-4" style="font-size: 0.9rem;">
+                            Basic features to get you started
+                        </p>
+                        <div>
+                            <a class="btn btn-outline-secondary btn-sm region-btn w-100"
+                                href="https://docs.google.com/spreadsheets/d/1tRJzUsKBNE_JoSTiMLT0-V5zk3cwGW3lpnpboot0IGI/"
+                                style="margin-bottom: 8px; font-size: 14px !important;">
+                                View Now - AU
+                                <img alt="AU" src="/img/flag_au.png" />
+                            </a>
+                            <a class="btn btn-outline-secondary btn-sm region-btn w-100"
+                                href="https://docs.google.com/spreadsheets/d/1v9ENzdoSIVlfAA2SFVFz6KKVAAu5Knv8klde7bN2Qqo/"
+                                style="margin-bottom: 8px; font-size: 14px !important;">
+                                View Now - UK
+                                <img alt="UK" src="/img/flag_uk.png" />
+                            </a>
+                            <a class="btn btn-outline-secondary btn-sm region-btn w-100"
+                                href="https://docs.google.com/spreadsheets/d/1pPK8t8Oe6F53OMw1EG8Hq1tX4F5SnULdf3Cr8TlUCs4/"
+                                style="margin-bottom: 8px; font-size: 14px !important;">
+                                View Now - US
+                                <img alt="US" src="/img/flag_us.png" />
+                            </a>
+                            <a class="btn btn-outline-secondary btn-sm region-btn w-100"
+                                href="https://docs.google.com/spreadsheets/d/15v1a96culFW0r5HfyRaAu2gmdK9s-9kOe9ARSUWBuAY/"
+                                style="margin-bottom: 8px; font-size: 14px !important;">
+                                View Now - EUR
+                                <img alt="EU" src="/img/flag_eu.png" />
+                            </a>
+                        </div>
+                        <small class="text-muted">
+                            Limited features • No updates
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center mb-4">
+                <div class="card cta-card premium-card p-1">
+                    <div class="d-none sale-badge-small">
+                        🔥 SALE
+                    </div>
+                    <div class="ribbon ribbon-right ribbon-warning overflow-hidden">
+                        <span class="text-center d-block shadow small h5" style="font-size: 40%;">SALE</span>
+                        <!-- <span class="text-center d-block shadow small h7" style="font-size: 70%;">POPULAR</span> -->
+                    </div>
+                    <div class="card-body pt-5 px-4 pb-3">
+                        <h2 class="text-success mb-3 price-title text-white fw-bold" style="font-size: 1.5rem;">
+                            COMPLETE EDITION
+                        </h2>
+                        <p class="mb-4" style="font-size: 1.1rem; color: #2c3e50;">
+                            Everything you need for
+                            complete financial mastery
+                        </p>
+                        <div class="row text-center justify-content-center">
+                            <div class="col-md-8">
+                                <a class="btn btn-success btn-lg region-btn w-100" href="/purchase?region=AU">
+                                    <i class="uil uil-shopping-cart">
+                                    </i>
+                                    Buy Now • Australia
+                                    <img alt="UK" src="/img/flag_au.png">
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <a class="btn btn-success btn-lg region-btn w-100" href="/purchase?region=UK">
+                                    <i class="uil uil-shopping-cart">
+                                    </i>
+                                    Buy Now • UK
+                                    <img alt="UK" src="/img/flag_uk.png">
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <a class="btn btn-success btn-lg region-btn w-100" href="/purchase?region=US">
+                                    <i class="uil uil-shopping-cart">
+                                    </i>
+                                    Buy Now • US/CA
+                                    <img alt="US" src="/img/flag_us.png">
+                                    <img alt="CA" style="margin-left: 1px !important;" src="/img/flag_ca.png">
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+
+                                <a class="btn btn-success btn-lg region-btn w-100" href="/purchase?region=EU">
+                                    <i class="uil uil-shopping-cart">
+                                    </i>
+                                    Buy Now • EU
+                                    <img alt="EU" src="/img/flag_eu.png">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="features-highlight mt-0 mb-5" style="/* font-size: 1rem; */margin-top: 20px;">
+                        ✅ One-time purchase • ✅ <a href="/changelog">Lifetime updates</a> • ✅ Full feature
+                        access
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- Free vs Complete Comparison End -->
+    <!-- FAQ Section Start -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h4 class="title mb-3 fw-bold">Have some questions?</h4>
+                        <h5 class="text-muted para-desc mx-auto mb-0">For a full list of FAQs <a class="fw-bold"
+                                href="https://guide.cspersonalfinance.io/getting-started/faqs">click here.</a></h5>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10" id="faq-contents">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section End -->
+    <!-- About Creator Section Start -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="about-creator">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3">
+                                <img alt="Creator" class="rounded-circle shadow" src="/img/cspf_logo.webp"
+                                    style="width: 120px; height: 120px;" />
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="mb-3">
+                                    About the Creator
+                                </h4>
+                                <p class="mb-3">
+                                    Built by a FIRE-focused software developer who created this sheet for
+                                    themselves - then refined it based on feedback from the Reddit personal finance
+                                    community.
+                                </p>
+                                <p class="mb-3">
+                                    "My goal is to help others track, understand, and take control of their
+                                    money,
+                                    <i>
+                                        without
+                                    </i>
+                                    relying on closed apps or monthly fees."
+                                </p>
+                                <div class="mb-0">
+                                    <small class="text-muted">
+                                        <i class="uil uil-envelope me-2">
+                                        </i>
+                                        Need help? Reach out
+                                        <a href="https://www.reddit.com/r/CSPersonalFinance/">
+                                            via the Subreddit
+                                        </a>
+                                        <br />
+                                        <i class="uil uil-refresh me-2">
+                                        </i>
+                                        Lifetime updates included
+                                        <br />
+                                        <i class="uil uil-users-alt me-2">
+                                        </i>
+                                        Used by
+                                        <span id="num-clients-footer">
+                                            15,000+
+                                        </span>
+                                        users worldwide
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Creator Section End -->
+    <!-- Final CTA Section Start -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h3 class="mb-4">
+                        Ready to Take Control of Your Finances?
+                    </h3>
+                    <p class="text-muted para-desc mx-auto mb-4">Loved by over <a
+                            href="https://www.reddit.com/r/CSPersonalFinance/"><span class="text-success fw-bold fs-5"
+                                id="num-clients-footer2">30,000+ users</span></a>, the Sheet can provide everything you
+                        need to
+                        generate awareness, track investments and save more.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mb-3">
+                            <a class="btn btn-outline-success btn-lg w-100" href="#download">
+                                <i class="uil uil-eye">
+                                </i>
+                                Try Beginner Edition
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a class="btn btn-success btn-lg w-100" href="#download">
+                                <i class="uil uil-shopping-cart">
+                                </i>
+                                Get Complete Version
+                            </a>
+                        </div>
+                    </div>
+                    <small class="text-muted mt-3 d-block">
+                        ✅ One-time purchase • ✅ Your data stays private • ✅ <a href="/changelog">Future Updates
+                            Included</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Final CTA Section End -->
+    <!-- Footer Start -->
+    <footer class="footer mt-100" style="border-top: none !important;">
+        <div class="position-relative">
+            <div class="shape overflow-hidden text-footer">
+                <svg fill="none" viewbox="0 0 2880 250" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="footer-bar container text-center" style="padding-bottom: 30px;">
+            <div class="row justify-content-between">
+                <div class="col-sm-12" style="margin: auto 0px;">
+                    <a class="logo-footer" href="#">
+                        <img alt="" height="50" src="/img/cspf_logo.webp" />
+                    </a>
+                    <div class="text-sm-start">
+                        <p class="mb-0" style="text-align: center;">
+                            Made with love by
+                            <a class="text-reset" href="https://www.reddit.com/user/CompiledSanity/" target="_blank">
+                                u/CompiledSanity
+                            </a>
+                            <i class="mdi mdi-heart text-danger">
+                            </i>
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                        </p>
+                    </div>
+                    <div class="text-center text-mute" style="font-size: 80%;">
+                        <p>
+                            <a class="text-muted" href="/privacy">
+                                Privacy
+                            </a>
+                            •
+                            <a class="text-muted" href="/terms">
+                                Terms
+                                of use
+                            </a>
+                        </p>
+                    </div>
+                    <div class="text-center text-mute" style="font-size: 60%;">
+                        <p>
+                            Disclaimer: The information &amp; guidance in this webpage and associated resources are for
+                            general information only. You should consider seeking independent legal, financial, taxation
+                            or other advice to check how information &amp; outputs from this website &amp; sheet relates
+                            to your
+                            unique circumstances. The creator is not a financial adviser or financial practitioner. The
+                            creator does not provide any warranties for and is not liable for any loss caused, whether
+                            due to negligence or otherwise arising from the use of, or reliance on, the information
+                            provided directly or indirectly, by use of this website, Sheet, or other mentioned
+                            resources.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Back to top -->
+    <a class="btn btn-icon btn-primary back-to-top" href="#" id="back-to-top" onclick="topFunction()">
+        <i class="icons" data-feather="arrow-up">
+        </i>
+    </a>
+    <!-- JavaScript -->
+    <script src="js/bootstrap.bundle.min.js">
+    </script>
+    <script>
+        var html_faq = "";
+        var faq_iter = 0;
+        fetch('/faqs.json')
+            .then(response => response.json())
+            .then(response_json => {
+                var overall_return_html = "";
+
+                for (var category in response_json["FAQs"]) {
+                    //console.log(category);
+                    var category_slimmed = category.replace(/ /g, "");
+
+                    var faq_category_header = `
                             <div class="section-title mt-5" id="tech">
                                 <h4 style="text-align: center;">${category}</h4>
                             </div>
                             <div class="accordion mt-4 pt-2" id="${category_slimmed}">
                         `;
 
-                        overall_return_html = overall_return_html + faq_category_header;
+                    overall_return_html = overall_return_html + faq_category_header;
 
-                        for (var faq_entry in response_json["FAQs"][category]) {
-                            faq_iter++;
-                            var indiv_faq_question = response_json["FAQs"][category][faq_entry]["Question"];
-                            var indiv_faq_slug = response_json["FAQs"][category][faq_entry]["Slug"];
-                            var indiv_faq_answer = "";
+                    for (var faq_entry in response_json["FAQs"][category]) {
+                        faq_iter++;
+                        var indiv_faq_question = response_json["FAQs"][category][faq_entry]["Question"];
+                        var indiv_faq_slug = response_json["FAQs"][category][faq_entry]["Slug"];
+                        var indiv_faq_answer = "";
 
-                            for (var faq_answer_array in response_json["FAQs"][category][faq_entry]["Answer"]) {
-                                if (response_json["FAQs"][category][faq_entry]["Answer"][faq_answer_array] == "") {
-                                    indiv_faq_answer = indiv_faq_answer + "</br></br>" + "\n";
-                                } else {
-                                    indiv_faq_answer = indiv_faq_answer + response_json["FAQs"][category][faq_entry]["Answer"][faq_answer_array] + "\n";
-                                }
+                        for (var faq_answer_array in response_json["FAQs"][category][faq_entry]["Answer"]) {
+                            if (response_json["FAQs"][category][faq_entry]["Answer"][faq_answer_array] == "") {
+                                indiv_faq_answer = indiv_faq_answer + "</br></br>" + "\n";
+                            } else {
+                                indiv_faq_answer = indiv_faq_answer + response_json["FAQs"][category][faq_entry]["Answer"][faq_answer_array] + "\n";
                             }
+                        }
 
-                            var indiv_faq_html = `
+                        var indiv_faq_html = `
                                 <div class="accordion-item rounded mt-2">
                                     <h2 class="accordion-header" id="heading${faq_iter}">
                                         <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq_iter}" aria-expanded="false" aria-controls="collapse${faq_iter}">
@@ -1178,35 +1859,157 @@
                                 </div>
                             `;
 
-                            if (response_json["FAQs"][category][faq_entry]["Summary"] == true) {
-                                overall_return_html = overall_return_html + indiv_faq_html;
-                            }
+                        if (response_json["FAQs"][category][faq_entry]["Summary"] == true) {
+                            overall_return_html = overall_return_html + indiv_faq_html;
                         }
+                    }
 
-                        var faq_category_footer = `
+                    var faq_category_footer = `
                             </div>
                         `;
 
-                        overall_return_html = overall_return_html + faq_category_footer;
+                    overall_return_html = overall_return_html + faq_category_footer;
+                }
+                //console.log(overall_return_html);
+                document.getElementById("faq-contents").innerHTML = overall_return_html;
+            });
+    </script>
+    <!-- Price and user count updates -->
+    <script>
+        fetch('/liveinfo/totals.json')
+            .then(response => response.json())
+            .then(html => {
+                try {
+                    // Update user counts
+                    document.getElementById("num-clients").textContent = html.Total + "+ users";
+                    document.getElementById("num-clients-trust").textContent = html.Total + "+ downloads";
+                    document.getElementById("num-clients-footer").textContent = html.Total + "+";
+                    document.getElementById("num-clients-footer2").textContent = html.Total + "+ users";
+
+                    // Update prices
+                    document.getElementById("usd-price").textContent = html['sheet_rate']['USD'];
+                    document.getElementById("eur-price").textContent = html['sheet_rate']['EUR'];
+                    document.getElementById("gbp-price").textContent = html['sheet_rate']['GBP'];
+                    document.getElementById("aud-price").textContent = html['sheet_rate']['AUD'];
+                    document.getElementById("aud-price-full").textContent = Number(html['sheet_rate']['AUD']) + Math.floor(Number(html['sheet_rate']['AUD']) / 4) * 2;
+
+                    // Update sale text if available
+                    if (html['sale_text']) {
+                        document.getElementById("saleText").innerHTML = html['sale_text'];
                     }
-                    //console.log(overall_return_html);
-                    document.getElementById("faq-contents").innerHTML = overall_return_html;
+                } catch (error) {
+                    // Fallback values
+                    document.getElementById("num-clients").textContent = "15,000+ downloads";
+                    document.getElementById("num-clients-footer").textContent = "15,000+";
+                    document.getElementById("usd-price").textContent = "6";
+                    document.getElementById("eur-price").textContent = "5";
+                    document.getElementById("gbp-price").textContent = "4";
+                    document.getElementById("aud-price").textContent = "10";
+                    document.getElementById("aud-price-full").textContent = "12";
+                }
+            });
+    </script>
+    <!-- URL parameter handling -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentParams = new URLSearchParams(window.location.search);
+            const purchaseLinks = document.querySelectorAll('a[href*="/purchase"]');
+
+            purchaseLinks.forEach(link => {
+                if (currentParams.toString()) {
+                    const separator = link.href.includes('?') ? '&' : '?';
+                    link.href += separator + currentParams.toString();
+                }
+            });
+        });
+    </script>
+    <script>
+        // Software Gallery functionality
+        (function () {
+            'use strict';
+
+            // Filter functionality
+            const filterBtns = document.querySelectorAll('.sw-gallery-filter-btn');
+            const galleryItems = document.querySelectorAll('.sw-gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('sw-active'));
+                    // Add active class to clicked button
+                    btn.classList.add('sw-active');
+
+                    const filterValue = btn.dataset.swFilter;
+
+                    galleryItems.forEach(item => {
+                        const category = item.dataset.swCategory;
+
+                        if (filterValue === 'all' || category === filterValue) {
+                            item.classList.remove('sw-hide');
+                            item.classList.add('sw-show');
+                        } else {
+                            item.classList.remove('sw-show');
+                            item.classList.add('sw-hide');
+                        }
+                    });
                 });
-        </script>
+            });
 
-        <!-- SLIDER -->
-        <script src="js/tiny-slider.js "></script>
-        <!-- shuffle and tobii js -->
-        <script src="js/shuffle.min.js"></script>
-        <script src="js/tobii.min.js"></script>
-        <!-- Icons -->
-        <script src="js/feather.min.js"></script>
-        <!-- Main Js -->
-        <script src="js/plugins.init.js"></script>
-        <!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
-        <script src="js/app.js"></script>
-        <!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+            // Lightbox functionality
+            const lightbox = document.getElementById('swGalleryLightbox');
+            const lightboxImg = document.getElementById('swGalleryLightboxImg');
+            const lightboxClose = document.getElementById('swGalleryLightboxClose');
 
-    </body>
+            if (lightbox && lightboxImg && lightboxClose) {
+                // Add click event to all images
+                document.querySelectorAll('.sw-gallery-image-container').forEach(container => {
+                    container.addEventListener('click', (e) => {
+                        const img = container.querySelector('img');
+                        lightboxImg.src = img.src;
+                        lightboxImg.alt = img.alt;
+                        lightbox.classList.add('sw-active');
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+
+                // Close lightbox function
+                function closeLightbox() {
+                    lightbox.classList.remove('sw-active');
+                    document.body.style.overflow = '';
+                }
+
+                // Close button
+                lightboxClose.addEventListener('click', closeLightbox);
+
+                // Close on background click
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        closeLightbox();
+                    }
+                });
+
+                // Close on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && lightbox.classList.contains('sw-active')) {
+                        closeLightbox();
+                    }
+                });
+            }
+        })();
+    </script>
+    <!-- Other Scripts -->
+    <script src="js/tiny-slider.js">
+    </script>
+    <script src="js/shuffle.min.js">
+    </script>
+    <script src="js/tobii.min.js">
+    </script>
+    <script src="js/feather.min.js">
+    </script>
+    <script src="js/plugins.init.js">
+    </script>
+    <script src="js/app.js">
+    </script>
+</body>
 
 </html>

@@ -2023,6 +2023,71 @@
     <!-- JavaScript -->
     <script src="js/bootstrap.bundle.min.js">
     </script>
+    <script>
+        var html_faq = "";
+        var faq_iter = 0;
+        fetch('/faqs.json')
+            .then(response => response.json())
+            .then(response_json => {
+                var overall_return_html = "";
+
+                for (var category in response_json["FAQs"]) {
+                    //console.log(category);
+                    var category_slimmed = category.replace(/ /g, "");
+
+                    var faq_category_header = `
+                            <div class="section-title mt-5" id="tech">
+                                <h4 style="text-align: center;">${category}</h4>
+                            </div>
+                            <div class="accordion mt-4 pt-2" id="${category_slimmed}">
+                        `;
+
+                    overall_return_html = overall_return_html + faq_category_header;
+
+                    for (var faq_entry in response_json["FAQs"][category]) {
+                        faq_iter++;
+                        var indiv_faq_question = response_json["FAQs"][category][faq_entry]["Question"];
+                        var indiv_faq_slug = response_json["FAQs"][category][faq_entry]["Slug"];
+                        var indiv_faq_answer = "";
+
+                        for (var faq_answer_array in response_json["FAQs"][category][faq_entry]["Answer"]) {
+                            if (response_json["FAQs"][category][faq_entry]["Answer"][faq_answer_array] == "") {
+                                indiv_faq_answer = indiv_faq_answer + "</br></br>" + "\n";
+                            } else {
+                                indiv_faq_answer = indiv_faq_answer + response_json["FAQs"][category][faq_entry]["Answer"][faq_answer_array] + "\n";
+                            }
+                        }
+
+                        var indiv_faq_html = `
+                                <div class="accordion-item rounded mt-2">
+                                    <h2 class="accordion-header" id="heading${faq_iter}">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq_iter}" aria-expanded="false" aria-controls="collapse${faq_iter}">
+                                            ${indiv_faq_question}
+                                        </button>
+                                    </h2>
+                                    <div id="collapse${faq_iter}" class="accordion-collapse border-0 collapse" aria-labelledby="heading${faq_iter}" data-bs-parent="#${category_slimmed}">
+                                        <div class="accordion-body text-muted bg-white">
+                                            ${indiv_faq_answer}
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+
+                        if (response_json["FAQs"][category][faq_entry]["Summary"] == true) {
+                            overall_return_html = overall_return_html + indiv_faq_html;
+                        }
+                    }
+
+                    var faq_category_footer = `
+                            </div>
+                        `;
+
+                    overall_return_html = overall_return_html + faq_category_footer;
+                }
+                //console.log(overall_return_html);
+                document.getElementById("faq-contents").innerHTML = overall_return_html;
+            });
+    </script>
     <!-- Price and user count updates -->
     <script>
         fetch('/liveinfo/totals.json')

@@ -86,6 +86,12 @@
     <!-- New Table CSS -->
     <style>
         /* Modern Comparison Table Styles */
+        .btn-success .divider {
+            width: 1px;
+            background-color: rgba(255, 255, 255, 0.7);
+            /* light white border */
+        }
+
         .comparison-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 80px 0;
@@ -1724,9 +1730,9 @@
                 <div class="col-md-4 text-center mb-4">
                     <div class="card cta-card">
                         <div class="card-body p-4">
-                            <h5 class="mb-3 text-muted">
-                                Try Free Version
-                            </h5>
+                            <h4 class="mb-3 text-muted">
+                                BEGINNER VERSION
+                            </h4>
                             <p class="text-muted mb-4" style="font-size: 0.9rem;">
                                 Basic features to get you started
                             </p>
@@ -1762,7 +1768,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 text-center mb-4">
+                <div class="col-md-7 text-center mb-4">
                     <div class="card cta-card premium-card">
                         <div class="d-none sale-badge-small">
                             🔥 SALE
@@ -1783,17 +1789,25 @@
                             </p>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a class="btn btn-success btn-lg region-btn w-100 d-flex justify-content-between align-items-center"
-                                        href="/purchase?region=AU" style="gap: 0.5rem;">
-                                        <span class="d-flex align-items-center" style="gap: 0.5rem;">
-                                            <i class="uil uil-shopping-cart"></i>
+                                    <a class="btn btn-success btn-lg w-100 d-flex p-0 overflow-hidden"
+                                        href="/purchase?region=AU">
+                                        <!-- Left side: Buy Now -->
+                                        <span class="d-flex align-items-center justify-content-center flex-grow-1 px-3">
+                                            <i class="uil uil-shopping-cart me-2"></i>
                                             Buy Now
                                         </span>
-                                        <span class="d-flex align-items-center" style="gap: 0.25rem;">
+
+                                        <!-- Divider -->
+                                        <span class="divider"></span>
+
+                                        <!-- Right side: Country + Flag -->
+                                        <span class="d-flex align-items-center justify-content-center px-3 bg-success">
                                             Australia
-                                            <img alt="AU" src="/img/flag_au.png" style="height: 1.25rem;" />
+                                            <img alt="AU" src="/img/flag_au.png" class="ms-2"
+                                                style="height: 1.25rem;" />
                                         </span>
                                     </a>
+
 
                                     <a class="btn btn-success btn-lg region-btn w-100" href="/purchase?region=UK">
                                         <i class="uil uil-shopping-cart">

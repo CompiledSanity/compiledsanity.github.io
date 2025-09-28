@@ -1982,10 +1982,10 @@
             .then(html => {
                 try {
                     // Update user counts
-                    document.getElementById("num-clients").textContent = html.Total + "+ downloads";
+                    document.getElementById("num-clients").textContent = html.Total + "+ users";
                     document.getElementById("num-clients-trust").textContent = html.Total + "+ downloads";
                     document.getElementById("num-clients-footer").textContent = html.Total + "+";
-                    document.getElementById("num-clients-footer2").textContent = html.Total + "+";
+                    document.getElementById("num-clients-footer2").textContent = html.Total + "+ users";
 
                     // Update prices
                     document.getElementById("usd-price").textContent = html['sheet_rate']['USD'];

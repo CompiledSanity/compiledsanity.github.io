@@ -171,6 +171,15 @@
             }
         }
 
+        @media (max-width: 767.98px) {
+
+            .modern-table td,
+            .modern-table th {
+                padding: 0.3rem 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+
         .modern-table {
             margin: 0;
             background: transparent;
@@ -720,7 +729,7 @@
                                 style="top: 0px !important; max-height: 40vh;" />
                         </div>
                         <!-- Trust Signals -->
-                        <div class="trust-signals mt-4 mb-4">
+                        <div class="d-none d-md-block trust-signals mt-4 mb-4">
                             <div class="trust-signal">
                                 <i class="uil uil-check-circle">
                                 </i>
@@ -737,7 +746,7 @@
                             <div class="trust-signal">
                                 <i class="uil uil-money-bill">
                                 </i>
-                                One-time payment – yours forever
+                                One-time payment - yours forever
                             </div>
                             <br />
                             <div class="trust-signal">
@@ -753,7 +762,7 @@
                         </div>
                         <!-- CTA Buttons -->
                         <div class="my-5">
-                            <a class="btn btn-success btn-lg me-3 mb-2" href="#download">
+                            <a class="d-none d-md-block btn btn-success btn-lg me-3 mb-2" href="#download">
                                 <i class="uil uil-eye">
                                 </i>
                                 Try Free Version
@@ -1337,178 +1346,200 @@
                         <div class="ribbon ribbon-right ribbon-warning overflow-hidden">
                             <span class="text-center d-block shadow small h5" style="font-size: 40%;">SALE</span>
                         </div>
-                        <table class="table modern-table">
-                            <thead>
-                                <tr>
-                                    <th style="width: 40%;">Features</th>
-                                    <th class="plan-header free-plan" style="width: 30%;">
-                                        <h1 class="text-primary display-5"><i height="60" class="uil uil-analysis"></i>
-                                        </h1>
-                                        <h5>Beginner Edition</h5>
-                                    </th>
-                                    <th class="plan-header premium-plan" style="width: 30%;">
-                                        <img src="/img/cspf_logo.webp" height="65" class="logo-light-mode mb-3" alt=""
-                                            style="filter: drop-shadow(-0px -0px 16px #648464);">
-                                        <h4>Complete Edition</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="feature-name">Net Worth Dashboard</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Live ETF Stock Tracking</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Live Crypto Tracking</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Live Managed Fund Tracking</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">FIRE Planning Calculator</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Investment + Super Tracking</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Property Dashboard</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Credit Card + Loan Dashboard</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">CGT Estimations</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Multi-region Support</td>
-                                    <td class="feature-check free-column">Limited</td>
-                                    <td class="feature-check premium-column">Full (AU/UK/US/EU)</td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Monthly Email Reports</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Currency Conversion on International Assets</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Historical Price Lookups</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Enhanced Budgeting System</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Dividend Tracking and Reinvestment Support</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Generic & Asset Tracking (including live Gold & Silver
-                                        prices)</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Rerecord Prior Months</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Automatic Calculation of Sold Units</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-name">Lifetime Updates</td>
-                                    <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
-                                    </td>
-                                    <td class="feature-check premium-column"><span class="symbol symbol-check">✔</span>
-                                    </td>
-                                </tr>
-                                <tr class="price-row">
-                                    <td class="feature-name">Price</td>
-                                    <td class="price-display">
-                                        <h4>Free</h4>
-                                    </td>
-                                    <td class="price-display">
-                                        <div class="d-flex justify-content-center fw-bold">
-                                            <span class="h2 pt-1"
-                                                style="line-height: 1.4 !important; text-decoration: line-through;">$<span
-                                                    id="aud-price-full">12</span></span>
-                                            <span class="ps-2 price h1 mb-0" style="color: red;">$<span
-                                                    id="aud-price">8</span></span>
-                                            <span class="ps-2 price h2 pt-1 mb-0"> AUD</span>
-                                        </div>
-                                        <div class="d-flex justify-content-center py-1">
-                                            <h7 class="title fw-light text-secondary text-uppercase mb-0">~£<span
-                                                    id="gbp-price">4</span> GBP / €<span id="eur-price">5</span> EUR /
-                                                $<span id="usd-price">6</span> USD</h7>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table modern-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 40%;">Features</th>
+                                        <th class="plan-header free-plan" style="width: 30%;">
+                                            <h1 class="text-primary display-5"><i height="60"
+                                                    class="uil uil-analysis"></i>
+                                            </h1>
+                                            <h5>Beginner Edition</h5>
+                                        </th>
+                                        <th class="plan-header premium-plan" style="width: 30%;">
+                                            <img src="/img/cspf_logo.webp" height="65" class="logo-light-mode mb-3"
+                                                alt="" style="filter: drop-shadow(-0px -0px 16px #648464);">
+                                            <h4>Complete Edition</h4>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="feature-name">Net Worth Dashboard</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-check">✔</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Live ETF Stock Tracking</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-check">✔</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Live Crypto Tracking</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Live Managed Fund Tracking</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">FIRE Planning Calculator</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Investment + Super Tracking</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Property Dashboard</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Credit Card + Loan Dashboard</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">CGT Estimations</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Multi-region Support</td>
+                                        <td class="feature-check free-column">Limited</td>
+                                        <td class="feature-check premium-column">Full (AU/UK/US/EU)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Monthly Email Reports</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Currency Conversion on International Assets</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Historical Price Lookups</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Enhanced Budgeting System</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Dividend Tracking and Reinvestment Support</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Generic & Asset Tracking (including live Gold & Silver
+                                            prices)</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Rerecord Prior Months</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Automatic Calculation of Sold Units</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feature-name">Lifetime Updates</td>
+                                        <td class="feature-check free-column"><span class="symbol symbol-cross">✖</span>
+                                        </td>
+                                        <td class="feature-check premium-column"><span
+                                                class="symbol symbol-check">✔</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="price-row">
+                                        <td class="feature-name">Price</td>
+                                        <td class="price-display">
+                                            <h4>Free</h4>
+                                        </td>
+                                        <td class="price-display">
+                                            <div class="d-flex justify-content-center fw-bold">
+                                                <span class="h2 pt-1"
+                                                    style="line-height: 1.4 !important; text-decoration: line-through;">$<span
+                                                        id="aud-price-full">12</span></span>
+                                                <span class="ps-2 price h1 mb-0" style="color: red;">$<span
+                                                        id="aud-price">8</span></span>
+                                                <span class="ps-2 price h2 pt-1 mb-0"> AUD</span>
+                                            </div>
+                                            <div class="d-flex justify-content-center py-1">
+                                                <h7 class="title fw-light text-secondary text-uppercase mb-0">~£<span
+                                                        id="gbp-price">4</span> GBP / €<span id="eur-price">5</span> EUR
+                                                    /
+                                                    $<span id="usd-price">6</span> USD</h7>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                 </div>

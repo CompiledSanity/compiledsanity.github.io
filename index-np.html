@@ -588,7 +588,7 @@
         }
 
         .premium-card {
-            background: linear-gradient(135deg, #e0f8eb, #f4fdf7);
+            background: linear-gradient(135deg, #fff, #f9fefb)
         }
     </style>
     </link>
@@ -724,7 +724,7 @@
                             <div class="trust-signal">
                                 <i class="uil uil-check-circle">
                                 </i>
-                                <span class="mx-1" id="num-clients">
+                                <span class="mx-1" id="num-clients-trust">
                                     15,000+ downloads
                                 </span>
                                 &amp; growing
@@ -1156,10 +1156,11 @@
                         <h4 class="title mb-4 fw-bold">
                             Why Users Love It
                         </h4>
-                        <p class="text-muted para-desc mx-auto mb-0">
-                            Join thousands of users already taking control of
-                            their finances
-                        </p>
+                        <p class="text-muted para-desc mx-auto mb-0">Loved by over <a
+                                href="https://www.reddit.com/r/CSPersonalFinance/"><span
+                                    class="text-success fw-bold fs-5" id="num-clients">10,800+ users</span></a>, the
+                            Sheet can provide everything you need to generate awareness, track investments and save
+                            more.</p>
                     </div>
                 </div>
             </div>
@@ -1767,7 +1768,7 @@
                 </div>
             </div>
             <div class="col-md-6 text-center mb-4">
-                <div class="card cta-card premium-card">
+                <div class="card cta-card premium-card p-1">
                     <div class="d-none sale-badge-small">
                         🔥 SALE
                     </div>
@@ -1923,9 +1924,9 @@
                     <h3 class="mb-4">
                         Ready to Take Control of Your Finances?
                     </h3>
-                    <p class="text-muted para-desc mx-auto mb-0">Loved by over <a
+                    <p class="text-muted para-desc mx-auto mb-4">Loved by over <a
                             href="https://www.reddit.com/r/CSPersonalFinance/"><span class="text-success fw-bold fs-5"
-                                id="num-clients">30,000+ users</span></a>, the Sheet can provide everything you need to
+                                id="num-clients-footer2">30,000+ users</span></a>, the Sheet can provide everything you need to
                         generate awareness, track investments and save more.</p>
                     <div class="row justify-content-center">
                         <div class="col-md-6 mb-3">
@@ -2093,7 +2094,9 @@
                 try {
                     // Update user counts
                     document.getElementById("num-clients").textContent = html.Total + "+ downloads";
+                    document.getElementById("num-clients-trust").textContent = html.Total + "+ downloads";
                     document.getElementById("num-clients-footer").textContent = html.Total + "+";
+                    document.getElementById("num-clients-footer2").textContent = html.Total + "+";
 
                     // Update prices
                     document.getElementById("usd-price").textContent = html['sheet_rate']['USD'];

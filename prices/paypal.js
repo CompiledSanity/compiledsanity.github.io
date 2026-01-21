@@ -6,12 +6,12 @@ function initPayPalButton() {
             layout: 'vertical',
             label: 'paypal',
         },
-          message: {
-            amount: 6,
+        message: {
+            amount: 100,
             align: 'center',
             color: 'black',
             position: 'top',
-        }
+        },
 
         onClick: function (data, actions) {
             // Enable or disable the button when it has a value

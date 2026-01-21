@@ -7,7 +7,7 @@ function initPayPalButton() {
             label: 'paypal',
         },
         message: {
-            amount: 100,
+            amount: 6,
             align: 'center',
             color: 'black',
             position: 'top',

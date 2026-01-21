@@ -1,13 +1,17 @@
 function initPayPalButton() {
     paypal.Buttons({
-        enableFunding: [paypal.FUNDING.APPLEPAY],
-
         style: {
             shape: 'rect',
             color: 'gold',
             layout: 'vertical',
             label: 'paypal',
         },
+          message: {
+            amount: 6,
+            align: 'center',
+            color: 'black',
+            position: 'top',
+        }
 
         onClick: function (data, actions) {
             // Enable or disable the button when it has a value

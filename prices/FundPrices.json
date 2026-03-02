@@ -1,9 +1,9 @@
 {
-   "LastUpdated": 1772419354,
+   "LastUpdated": 1772419604,
    "Metals": {
-      "GoldPrice": 5363.76,
-      "PlatinumPrice": 2435.2,
-      "SilverPrice": 95.66
+      "goldPrice": 5376.34,
+      "platinumPrice": 2444.8,
+      "silverPrice": 96.01
    },
    "SPACEVOYEARTH": 1.58323,
    "SPACEVOYEXPLORER": 1.081448,

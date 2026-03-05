@@ -1,5 +1,5 @@
 {
-   "LastUpdated": 1772664967,
+   "LastUpdated": 1772684051,
    "SPACEVOYEARTH": 1.58323,
    "SPACEVOYEXPLORER": 1.081448,
    "SPACEVOYGALAXY": 1.143904,
@@ -9,5 +9,6 @@
    "SpaceshipVoyagerExplorer": 1.081448,
    "SpaceshipVoyagerGalaxy": 1.143904,
    "SpaceshipVoyagerOrigin": 1.888402,
-   "SpaceshipVoyagerUniverse": 2.563854
+   "SpaceshipVoyagerUniverse": 2.563854,
+   "metals": {}
 }

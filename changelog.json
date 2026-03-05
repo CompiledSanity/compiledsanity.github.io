@@ -4,6 +4,24 @@
     "future_requests_thread": "https://www.reddit.com/r/CSPersonalFinance/comments/1lo4uiv/v216_feature_request_thread/",
     "releases": [
         {
+            "version": "2.15.4",
+            "comment": "",
+            "release_date": "5th March 2026",
+            "timestamp": 1772689178,
+            "major_version": false,
+            "major_version_redditcurrent": null,
+            "major_version_redditrequest": null,
+            "additions": [
+                "Added Platinum live pricing in Other Assets tab"
+            ],
+            "updates": [
+                "Precious Metals - Improvements to price fetching mechanism to make fetching more robust and faster",
+                "Precious Metals - Improvements to prices fetched in AUD currency to price accuracy"
+            ],
+            "fixes": [],
+            "removed": []
+        },
+        {
             "version": "2.15.3",
             "comment": "",
             "release_date": "3rd March 2026",

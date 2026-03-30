@@ -1,5 +1,5 @@
 {
-   "LastUpdated": 1774868167,
+   "LastUpdated": 1774911368,
    "SPACEVOYEARTH": 1.58323,
    "SPACEVOYEXPLORER": 1.081448,
    "SPACEVOYGALAXY": 1.143904,
@@ -12,14 +12,14 @@
    "SpaceshipVoyagerUniverse": 2.563854,
    "metals": {
       "AUD": {
-         "goldPrice": 6637.51,
-         "platinumPrice": 2870.63,
-         "silverPrice": 104.49
+         "goldPrice": 6615.13,
+         "platinumPrice": 2843.27,
+         "silverPrice": 103.42
       },
       "USD": {
-         "goldPrice": 4549.77,
-         "platinumPrice": 1979.46,
-         "silverPrice": 71.57
+         "goldPrice": 4528.47,
+         "platinumPrice": 1958.32,
+         "silverPrice": 70.74
       }
    }
 }

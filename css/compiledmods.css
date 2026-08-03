@@ -702,6 +702,10 @@
   }
 }
 
+.hero-heading {
+    font-size: 50px !important;
+  }
+
 .hero-screenshot {
   width: 100% !important;
 }

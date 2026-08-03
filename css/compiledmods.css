@@ -756,6 +756,44 @@
   font-size: 0.9rem;
 }
 
+.perfect-for-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.perfect-for-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #3d3d3d;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 8px 18px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.perfect-for-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.perfect-for-pill i {
+  font-size: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .perfect-for-pill {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+}
+
 /* (old custom .hero / .hero__* flexbox draft removed — final layout
    uses the existing Bootstrap grid: col-lg-6 / col-12, see index.html.
    Mobile stacking and left/center alignment for the CTA are now handled

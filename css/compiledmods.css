@@ -779,6 +779,7 @@
 .getting-started-btn__label,
 .getting-started-btn__icon {
   position: relative;
+  z-index: 2;
 }
 
 .getting-started-btn__icon {
@@ -787,6 +788,41 @@
   display: inline-block;
   transition: transform 0.2s ease;
   animation: gettingStartedNudge 2.4s ease-in-out infinite;
+}
+
+/* auto-looping reflection sweep, so the button reads as interactive
+   even before anyone hovers it */
+.getting-started-btn__shine {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.getting-started-btn__shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+  transform: skewX(-20deg);
+  animation: gettingStartedShine 4.2s ease-in-out infinite;
+}
+
+@keyframes gettingStartedShine {
+  0% {
+    left: -60%;
+  }
+  35% {
+    left: 130%;
+  }
+  100% {
+    left: 130%;
+  }
 }
 
 @keyframes gettingStartedNudge {
@@ -805,7 +841,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .getting-started-btn::before,
-  .getting-started-btn__icon {
+  .getting-started-btn__icon,
+  .getting-started-btn__shine::before {
     animation: none;
   }
 }

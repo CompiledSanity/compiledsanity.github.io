@@ -690,6 +690,16 @@
   }
 }
 
+.hero-screenshot {
+  width: 100% !important;
+}
+
+@media (min-width: 992px) {
+  .hero-screenshot {
+    width: 80% !important;
+  }
+}
+
 .getting-started-btn {
   font-size: 18px !important;
 }

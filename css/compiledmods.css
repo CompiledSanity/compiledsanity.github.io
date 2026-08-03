@@ -703,7 +703,7 @@
 }
 
 .hero-screenshot {
-  width: 100% !important;
+  width: 80% !important;
 }
 
 @media (min-width: 992px) {

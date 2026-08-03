@@ -679,9 +679,21 @@
   gap: 10px;
 }
 
+@media (min-width: 992px) {
+  .hero-cta {
+    align-items: flex-start;
+  }
+}
+
 .trust-badge-wrap {
-  margin-top: 10px;
+  margin-top: 0;
   text-align: center;
+}
+
+@media (min-width: 992px) {
+  .trust-badge-wrap {
+    text-align: left;
+  }
 }
 
 .trust-badge {
@@ -691,8 +703,8 @@
   font-size: 0.85rem;
   color: #5a5a5a;
   background: none;
-  border: none;        /* explicit reset in case it's inheriting a border */
-  box-shadow: none;     /* explicit reset in case it's inheriting a shadow */
+  border: none;
+  box-shadow: none;
   padding: 0;
 }
 
@@ -721,110 +733,13 @@
   transform: translateX(3px);
 }
 
-/* Additional styling for the "Learn how your data stays private" link */
-.hero {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 24px;
-}
-
-.hero__content {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.hero__media {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.hero__title {
-  display: flex;
-  flex-direction: column;
-  font-size: 2.6rem;
-  line-height: 1.15;
-  font-weight: 700;
-  margin: 0 0 20px;
-}
-
-.hero__title-line2 {
-  color: #2e7d32; /* brand green, adjust to match logo */
-}
-
-.hero__subtext {
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: #4a4a4a;
-  margin: 0 0 12px;
-}
-
-.hero__no-sub {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin: 0 0 28px;
-}
-
-.hero__check {
-  width: 18px;
-  height: 18px;
-}
-
-.hero__cta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.trust-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
-  color: #5a5a5a;
-  border: none;
-  background: none;
-  padding: 0;
-}
-
 .trust-badge__icon {
   color: #2e7d32;
   font-size: 0.9rem;
 }
 
-.hero__screenshot {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Mobile: stack text above image */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    gap: 32px;
-    padding: 40px 20px;
-  }
-
-  .hero__content,
-  .hero__media {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .hero__title {
-    font-size: 2rem;
-    align-items: flex-start;
-  }
-
-  .hero__cta {
-    align-items: flex-start;
-    width: 100%;
-  }
-}
+/* (old custom .hero / .hero__* flexbox draft removed — final layout
+   uses the existing Bootstrap grid: col-lg-6 / col-12, see index.html.
+   Mobile stacking and left/center alignment for the CTA are now handled
+   by the .hero-cta and .trust-badge-wrap rules above, using Bootstrap's
+   lg breakpoint at 992px.) */

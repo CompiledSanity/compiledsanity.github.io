@@ -690,6 +690,10 @@
   }
 }
 
+.getting-started-btn {
+  font-size: 18px !important;
+}
+
 .trust-badge {
   display: inline-flex;
   align-items: center;

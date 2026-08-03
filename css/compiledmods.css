@@ -696,6 +696,10 @@
   }
 }
 
+.hero-heading {
+  font-size: 40px !important;
+}
+
 .hero-screenshot {
   width: 100% !important;
 }
@@ -757,16 +761,24 @@
 }
 
 .perfect-for-wrap {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 260px));
   justify-content: center;
-  gap: 12px;
+  gap: 14px 16px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+@media (max-width: 575.98px) {
+  .perfect-for-wrap {
+    grid-template-columns: minmax(0, 260px);
+  }
 }
 
 .perfect-for-pill {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-size: 0.95rem;
   font-weight: 600;
   color: #3d3d3d;

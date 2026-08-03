@@ -174,7 +174,7 @@
                         <div class="trust-badge-wrap mt-3">
                             <div class="trust-badge">
                                 <span class="trust-badge__icon">★</span>
-                                Trusted by 10,800+ users since 2019
+                                Trusted by <span id="num-clients-pill">10,800+ users</span> since 2019
                             </div>
                         </div>
 
@@ -1121,6 +1121,7 @@
                 .then(html => {
                     try {
                         document.getElementById("num-clients").textContent = html.Total + "+ users";
+                        document.getElementById("num-clients-pill").textContent = html.Total + "+ users";
                         document.getElementById("usd-price").textContent = html['sheet_rate']['USD'];
                         document.getElementById("eur-price").textContent = html['sheet_rate']['EUR'];
                         document.getElementById("gbp-price").textContent = html['sheet_rate']['GBP'];

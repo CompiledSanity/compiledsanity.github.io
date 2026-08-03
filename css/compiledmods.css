@@ -679,18 +679,21 @@
   gap: 10px;
 }
 
+.trust-badge-wrap {
+  margin-top: 10px;
+  text-align: center;
+}
+
 .trust-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 0.85rem;
   color: #5a5a5a;
-  letter-spacing: 0.01em;
-}
-
-.trust-badge__icon {
-  color: #2e7d32; /* matches your green checkmark branding */
-  font-size: 0.9rem;
+  background: none;
+  border: none;        /* explicit reset in case it's inheriting a border */
+  box-shadow: none;     /* explicit reset in case it's inheriting a shadow */
+  padding: 0;
 }
 
 .link-learn-more {

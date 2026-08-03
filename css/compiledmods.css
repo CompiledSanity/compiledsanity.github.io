@@ -675,7 +675,7 @@
 .hero-cta {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   gap: 10px;
 }
 
@@ -690,13 +690,19 @@
   }
 }
 
+@media (min-width: 992px) {
+  .hero-heading {
+    font-size: 50px !important;
+  }
+}
+
 .hero-screenshot {
   width: 100% !important;
 }
 
 @media (min-width: 992px) {
   .hero-screenshot {
-    width: 80% !important;
+    width: 85% !important;
   }
 }
 

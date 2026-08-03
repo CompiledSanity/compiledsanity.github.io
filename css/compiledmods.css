@@ -679,12 +679,6 @@
   gap: 10px;
 }
 
-@media (min-width: 992px) {
-  .hero-cta {
-    align-items: flex-start;
-  }
-}
-
 .trust-badge-wrap {
   margin-top: 0;
   text-align: center;
@@ -707,7 +701,7 @@
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 999px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 6px 14px;
+  padding: 3px 10px;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }

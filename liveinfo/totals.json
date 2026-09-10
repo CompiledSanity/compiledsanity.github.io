@@ -1,11 +1,11 @@
 {
    "Total": "40,000",
-   "dateLastChange": "2026-01-22",
-   "sale_text": "",
+   "dateLastChange": "2026-09-10",
+   "sale_text": "<div class=\"fw-bold text-primary h2 pb-2\">\u26a1\ufe0f FLASH SALE \u26a1</div>",
    "sheet_rate": {
-      "AUD": "8",
-      "EUR": "5",
-      "GBP": "4.50",
-      "USD": "6"
+      "AUD": "6",
+      "EUR": "4",
+      "GBP": "3.50",
+      "USD": "4.50"
    }
 }
